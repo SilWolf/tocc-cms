@@ -38,8 +38,24 @@
       "default": "PC",
       "required": true
     },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "characters"
+    },
     "race": {
-      "model": "race"
+      "type": "component",
+      "repeatable": false,
+      "component": "character-blocks.race-block",
+      "required": false
+    },
+    "city": {
+      "model": "city",
+      "via": "characters"
+    },
+    "characterId": {
+      "type": "uid",
+      "required": true
     }
   }
 }

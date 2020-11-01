@@ -61,6 +61,10 @@
     },
     "phone": {
       "type": "string"
+    },
+    "characters": {
+      "via": "player",
+      "collection": "character"
     }
   }
 }

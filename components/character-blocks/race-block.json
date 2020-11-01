@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_character_blocks_race_blocks",
+  "info": {
+    "name": "RaceBlock",
+    "icon": "person-booth"
+  },
+  "options": {},
+  "attributes": {
+    "race": {
+      "model": "race"
+    },
+    "mutations": {
+      "type": "json"
+    }
+  }
+}
