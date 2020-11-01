@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_common_renders",
+  "info": {
+    "name": "render",
+    "icon": "language"
+  },
+  "options": {},
+  "attributes": {
+    "en": {
+      "type": "string",
+      "required": true
+    },
+    "zh": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

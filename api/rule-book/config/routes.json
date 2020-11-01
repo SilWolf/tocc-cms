@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rule-books",
+      "handler": "rule-book.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rule-books/count",
+      "handler": "rule-book.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rule-books/:id",
+      "handler": "rule-book.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rule-books",
+      "handler": "rule-book.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rule-books/:id",
+      "handler": "rule-book.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rule-books/:id",
+      "handler": "rule-book.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
