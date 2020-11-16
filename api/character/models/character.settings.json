@@ -43,7 +43,7 @@
       "model": "user",
       "via": "characters"
     },
-    "race": {
+    "raceConfig": {
       "type": "component",
       "repeatable": false,
       "component": "character-blocks.race-block",
@@ -70,8 +70,29 @@
       "type": "string"
     },
     "activities": {
-      "via": "characters",
-      "collection": "activity"
+      "collection": "activity",
+      "via": "characters"
+    },
+    "race": {
+      "model": "race"
+    },
+    "classConfigs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "character-blocks.classes-config"
+    },
+    "classes": {
+      "collection": "class"
+    },
+    "level": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "xp": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
     }
   }
 }

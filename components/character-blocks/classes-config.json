@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_character_blocks_classes_configs",
+  "info": {
+    "name": "classesConfig",
+    "icon": "bible",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "class": {
+      "model": "class"
+    },
+    "mutations": {
+      "type": "json"
+    },
+    "level": {
+      "type": "integer",
+      "min": 1,
+      "default": 1,
+      "required": true
+    }
+  }
+}

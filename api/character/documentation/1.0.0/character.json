@@ -660,7 +660,7 @@
               }
             }
           },
-          "race": {
+          "raceConfig": {
             "type": "object",
             "required": [
               "id"
@@ -860,6 +860,115 @@
                 }
               }
             }
+          },
+          "race": {
+            "required": [
+              "id",
+              "name",
+              "render"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "raceId": {
+                "type": "uid"
+              },
+              "render": {
+                "type": "component"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "classConfigs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "level"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "class": {
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "render": {
+                      "type": "component"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "mutations": {
+                  "type": "object"
+                },
+                "level": {
+                  "type": "integer",
+                  "default": 1
+                }
+              }
+            }
+          },
+          "classes": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "render": {
+                "type": "component"
+              },
+              "description": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "level": {
+            "type": "integer",
+            "default": 0
+          },
+          "xp": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
@@ -887,7 +996,7 @@
           "player": {
             "type": "string"
           },
-          "race": {
+          "raceConfig": {
             "type": "object",
             "required": [
               "id"
@@ -942,6 +1051,68 @@
             "items": {
               "type": "string"
             }
+          },
+          "race": {
+            "type": "string"
+          },
+          "classConfigs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "level"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "class": {
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "render": {
+                      "type": "component"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "mutations": {
+                  "type": "object"
+                },
+                "level": {
+                  "type": "integer",
+                  "default": 1
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer",
+            "default": 0
+          },
+          "xp": {
+            "type": "integer",
+            "default": 0
           },
           "created_by": {
             "type": "string"

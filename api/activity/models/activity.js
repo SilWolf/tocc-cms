@@ -6,8 +6,6 @@
  */
 
 function transform(data) {
-  console.log(data);
-
   data.characters = data.characterRewards
     .filter((_) => _.character)
     .map((_) => _.character);

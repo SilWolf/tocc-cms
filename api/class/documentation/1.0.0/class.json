@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/activities": {
+    "/classes": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Activity"
+                    "$ref": "#/components/schemas/Class"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity"
+          "Class"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Activity"
+                  "$ref": "#/components/schemas/Class"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity"
+          "Class"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewActivity"
+                "$ref": "#/components/schemas/NewClass"
               }
             }
           }
         }
       }
     },
-    "/activities/count": {
+    "/classes/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Activity"
+          "Class"
         ],
         "parameters": []
       }
     },
-    "/activities/{id}": {
+    "/classes/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Activity"
+                  "$ref": "#/components/schemas/Class"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity"
+          "Class"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Activity"
+                  "$ref": "#/components/schemas/Class"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity"
+          "Class"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewActivity"
+                "$ref": "#/components/schemas/NewClass"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity"
+          "Class"
         ],
         "parameters": [
           {
@@ -514,374 +514,71 @@
   },
   "components": {
     "schemas": {
-      "Activity": {
+      "Class": {
         "required": [
           "id",
-          "title"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
-          "inGameStartAt": {
-            "type": "string",
-            "format": "date",
-            "default": "1261-12-31T16:23:18.000Z"
-          },
-          "inGameEndAt": {
-            "type": "string",
-            "format": "date",
-            "default": "1261-12-31T16:23:18.000Z"
+          "render": {
+            "type": "object",
+            "required": [
+              "id",
+              "en",
+              "zh"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "zh": {
+                "type": "string"
+              }
+            }
           },
           "description": {
             "type": "string"
-          },
-          "characterRewards": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "gp",
-                "xp"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "character": {
-                  "required": [
-                    "id",
-                    "name",
-                    "type",
-                    "characterId"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "portrait": {
-                      "type": "string"
-                    },
-                    "type": {
-                      "type": "string"
-                    },
-                    "player": {
-                      "type": "string"
-                    },
-                    "raceConfig": {
-                      "type": "component"
-                    },
-                    "city": {
-                      "type": "string"
-                    },
-                    "characterId": {
-                      "type": "uid"
-                    },
-                    "coverImage": {
-                      "type": "string"
-                    },
-                    "motto": {
-                      "type": "string"
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "race": {
-                      "type": "string"
-                    },
-                    "classConfigs": {
-                      "type": "component"
-                    },
-                    "classes": {
-                      "type": "string"
-                    },
-                    "level": {
-                      "type": "integer"
-                    },
-                    "xp": {
-                      "type": "integer"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rewards": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "name": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "gp": {
-                  "type": "number",
-                  "default": 0
-                },
-                "xp": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "remark": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "characters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "type",
-                "characterId"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "portrait": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "player": {
-                  "type": "string"
-                },
-                "raceConfig": {
-                  "type": "component"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "characterId": {
-                  "type": "uid"
-                },
-                "coverImage": {
-                  "type": "string"
-                },
-                "motto": {
-                  "type": "string"
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "race": {
-                  "type": "string"
-                },
-                "classConfigs": {
-                  "type": "component"
-                },
-                "classes": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "integer"
-                },
-                "xp": {
-                  "type": "integer"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
-      "NewActivity": {
+      "NewClass": {
         "required": [
-          "title"
+          "name"
         ],
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
-          "inGameStartAt": {
-            "type": "string",
-            "format": "date",
-            "default": "1261-12-31T16:23:18.000Z"
-          },
-          "inGameEndAt": {
-            "type": "string",
-            "format": "date",
-            "default": "1261-12-31T16:23:18.000Z"
-          },
-          "description": {
-            "type": "string"
-          },
-          "characterRewards": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "gp",
-                "xp"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "character": {
-                  "required": [
-                    "id",
-                    "name",
-                    "type",
-                    "characterId"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "portrait": {
-                      "type": "string"
-                    },
-                    "type": {
-                      "type": "string"
-                    },
-                    "player": {
-                      "type": "string"
-                    },
-                    "raceConfig": {
-                      "type": "component"
-                    },
-                    "city": {
-                      "type": "string"
-                    },
-                    "characterId": {
-                      "type": "uid"
-                    },
-                    "coverImage": {
-                      "type": "string"
-                    },
-                    "motto": {
-                      "type": "string"
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "race": {
-                      "type": "string"
-                    },
-                    "classConfigs": {
-                      "type": "component"
-                    },
-                    "classes": {
-                      "type": "string"
-                    },
-                    "level": {
-                      "type": "integer"
-                    },
-                    "xp": {
-                      "type": "integer"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rewards": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "name": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "gp": {
-                  "type": "number",
-                  "default": 0
-                },
-                "xp": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "remark": {
-                  "type": "string"
-                }
+          "render": {
+            "type": "object",
+            "required": [
+              "id",
+              "en",
+              "zh"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "zh": {
+                "type": "string"
               }
             }
           },
-          "characters": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "description": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -895,7 +592,7 @@
   },
   "tags": [
     {
-      "name": "Activity"
+      "name": "Class"
     }
   ]
 }

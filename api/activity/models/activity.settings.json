@@ -32,8 +32,8 @@
       "component": "character-blocks.character-reward"
     },
     "characters": {
-      "collection": "character",
       "via": "activities",
+      "collection": "character",
       "dominant": true
     }
   }

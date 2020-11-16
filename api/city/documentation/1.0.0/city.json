@@ -699,7 +699,7 @@
                 "player": {
                   "type": "string"
                 },
-                "race": {
+                "raceConfig": {
                   "type": "component"
                 },
                 "city": {
@@ -719,6 +719,21 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "race": {
+                  "type": "string"
+                },
+                "classConfigs": {
+                  "type": "component"
+                },
+                "classes": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "integer"
+                },
+                "xp": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"
