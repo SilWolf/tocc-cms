@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "Activity",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "inGameStartAt": {
+      "type": "date",
+      "default": "1261-12-31T16:23:18.000Z"
+    },
+    "inGameEndAt": {
+      "type": "date",
+      "default": "1261-12-31T16:23:18.000Z"
+    },
+    "description": {
+      "type": "text"
+    },
+    "characterRewards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "character-blocks.character-reward"
+    },
+    "characters": {
+      "collection": "character",
+      "via": "activities",
+      "dominant": true
+    }
+  }
+}

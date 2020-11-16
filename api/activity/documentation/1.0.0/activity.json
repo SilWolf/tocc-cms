@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/characters": {
+    "/activities": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Character"
+                    "$ref": "#/components/schemas/Activity"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Character"
+          "Activity"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Character"
+                  "$ref": "#/components/schemas/Activity"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Character"
+          "Activity"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCharacter"
+                "$ref": "#/components/schemas/NewActivity"
               }
             }
           }
         }
       }
     },
-    "/characters/count": {
+    "/activities/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Character"
+          "Activity"
         ],
         "parameters": []
       }
     },
-    "/characters/{id}": {
+    "/activities/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Character"
+                  "$ref": "#/components/schemas/Activity"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Character"
+          "Activity"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Character"
+                  "$ref": "#/components/schemas/Activity"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Character"
+          "Activity"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCharacter"
+                "$ref": "#/components/schemas/NewActivity"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Character"
+          "Activity"
         ],
         "parameters": [
           {
@@ -514,343 +514,181 @@
   },
   "components": {
     "schemas": {
-      "Character": {
+      "Activity": {
         "required": [
           "id",
-          "name",
-          "type",
-          "characterId"
+          "title"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
+          },
+          "inGameStartAt": {
+            "type": "string",
+            "format": "date",
+            "default": "1261-12-31T16:23:18.000Z"
+          },
+          "inGameEndAt": {
+            "type": "string",
+            "format": "date",
+            "default": "1261-12-31T16:23:18.000Z"
           },
           "description": {
             "type": "string"
           },
-          "portrait": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "type": {
-            "type": "string",
-            "default": "PC",
-            "enum": [
-              "PC",
-              "NPC"
-            ]
-          },
-          "player": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "race": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "race": {
-                "required": [
-                  "id",
-                  "name",
-                  "render"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "raceId": {
-                    "type": "uid"
-                  },
-                  "render": {
-                    "type": "component"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "mutations": {
-                "type": "object"
-              }
-            }
-          },
-          "city": {
-            "required": [
-              "id",
-              "name",
-              "shopName",
-              "shopAbbr"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "shopName": {
-                "type": "string"
-              },
-              "shopAddress": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "shopImage": {
-                "type": "string"
-              },
-              "shopAbbr": {
-                "type": "string"
-              },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "characterId": {
-            "type": "uid"
-          },
-          "coverImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "motto": {
-            "type": "string"
-          },
-          "activities": {
+          "characterRewards": {
             "type": "array",
             "items": {
+              "type": "object",
               "required": [
                 "id",
-                "title"
+                "gp",
+                "xp"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "title": {
+                "character": {
+                  "required": [
+                    "id",
+                    "name",
+                    "type",
+                    "characterId"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "portrait": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "race": {
+                      "type": "component"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "characterId": {
+                      "type": "uid"
+                    },
+                    "coverImage": {
+                      "type": "string"
+                    },
+                    "motto": {
+                      "type": "string"
+                    },
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rewards": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "gp": {
+                  "type": "number",
+                  "default": 0
+                },
+                "xp": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "remark": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "type",
+                "characterId"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
                 },
-                "inGameStartAt": {
-                  "type": "string"
-                },
-                "inGameEndAt": {
+                "name": {
                   "type": "string"
                 },
                 "description": {
                   "type": "string"
                 },
-                "characterRewards": {
+                "portrait": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "race": {
                   "type": "component"
                 },
-                "characters": {
+                "city": {
+                  "type": "string"
+                },
+                "characterId": {
+                  "type": "uid"
+                },
+                "coverImage": {
+                  "type": "string"
+                },
+                "motto": {
+                  "type": "string"
+                },
+                "activities": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "published_at": {
-                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -860,88 +698,145 @@
                 }
               }
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewCharacter": {
+      "NewActivity": {
         "required": [
-          "name",
-          "type",
-          "characterId"
+          "title"
         ],
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
+          },
+          "inGameStartAt": {
+            "type": "string",
+            "format": "date",
+            "default": "1261-12-31T16:23:18.000Z"
+          },
+          "inGameEndAt": {
+            "type": "string",
+            "format": "date",
+            "default": "1261-12-31T16:23:18.000Z"
           },
           "description": {
             "type": "string"
           },
-          "type": {
-            "type": "string",
-            "default": "PC",
-            "enum": [
-              "PC",
-              "NPC"
-            ]
-          },
-          "player": {
-            "type": "string"
-          },
-          "race": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "race": {
-                "required": [
-                  "id",
-                  "name",
-                  "render"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "raceId": {
-                    "type": "uid"
-                  },
-                  "render": {
-                    "type": "component"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
+          "characterRewards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "gp",
+                "xp"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "character": {
+                  "required": [
+                    "id",
+                    "name",
+                    "type",
+                    "characterId"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "portrait": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "race": {
+                      "type": "component"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "characterId": {
+                      "type": "uid"
+                    },
+                    "coverImage": {
+                      "type": "string"
+                    },
+                    "motto": {
+                      "type": "string"
+                    },
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
                   }
+                },
+                "rewards": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "gp": {
+                  "type": "number",
+                  "default": 0
+                },
+                "xp": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "remark": {
+                  "type": "string"
                 }
-              },
-              "mutations": {
-                "type": "object"
               }
             }
           },
-          "city": {
-            "type": "string"
-          },
-          "characterId": {
-            "type": "uid"
-          },
-          "motto": {
-            "type": "string"
-          },
-          "activities": {
+          "characters": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -955,7 +850,7 @@
   },
   "tags": [
     {
-      "name": "Character"
+      "name": "Activity"
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_common_rewards",
+  "info": {
+    "name": "Reward",
+    "icon": "file-invoice-dollar"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

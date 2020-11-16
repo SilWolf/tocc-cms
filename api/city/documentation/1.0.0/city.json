@@ -690,7 +690,7 @@
                 "description": {
                   "type": "string"
                 },
-                "protrait": {
+                "portrait": {
                   "type": "string"
                 },
                 "type": {
@@ -707,6 +707,18 @@
                 },
                 "characterId": {
                   "type": "uid"
+                },
+                "coverImage": {
+                  "type": "string"
+                },
+                "motto": {
+                  "type": "string"
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"

@@ -20,7 +20,7 @@
       "type": "text",
       "required": false
     },
-    "protrait": {
+    "portrait": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -56,6 +56,22 @@
     "characterId": {
       "type": "uid",
       "required": true
+    },
+    "coverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "motto": {
+      "type": "string"
+    },
+    "activities": {
+      "via": "characters",
+      "collection": "activity"
     }
   }
 }
