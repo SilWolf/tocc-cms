@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
         database: "tocc-cms-strapi",
       },
       options: {
-        ssl: true,
+        ssl: false,
       },
     },
   },
