@@ -43,7 +43,7 @@
       "model": "user",
       "via": "characters"
     },
-    "race": {
+    "raceConfig": {
       "type": "component",
       "repeatable": false,
       "component": "character-blocks.race-block",
@@ -56,6 +56,43 @@
     "characterId": {
       "type": "uid",
       "required": true
+    },
+    "coverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "motto": {
+      "type": "string"
+    },
+    "activities": {
+      "collection": "activity",
+      "via": "characters"
+    },
+    "race": {
+      "model": "race"
+    },
+    "classConfigs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "character-blocks.classes-config"
+    },
+    "classes": {
+      "collection": "class"
+    },
+    "level": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "xp": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
     }
   }
 }

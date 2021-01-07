@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_character_blocks_character_rewards",
+  "info": {
+    "name": "CharacterReward",
+    "icon": "dollar-sign",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "character": {
+      "model": "character"
+    },
+    "rewards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.reward"
+    },
+    "gp": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "xp": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "remark": {
+      "type": "text"
+    }
+  }
+}
