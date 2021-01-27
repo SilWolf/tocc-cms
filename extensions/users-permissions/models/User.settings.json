@@ -58,7 +58,7 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false,
-      "private": true
+      "private": false
     },
     "phone": {
       "type": "string"
@@ -69,9 +69,8 @@
       "via": "player"
     },
     "games": {
-      "private": true,
-      "collection": "game",
-      "via": "dm"
+      "via": "dm",
+      "collection": "game"
     },
     "portraitImage": {
       "model": "file",

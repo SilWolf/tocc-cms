@@ -628,7 +628,7 @@
                     }
                   }
                 },
-                "rewards": {
+                "items": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -857,7 +857,7 @@
                     }
                   }
                 },
-                "rewards": {
+                "items": {
                   "type": "array",
                   "items": {
                     "type": "object",

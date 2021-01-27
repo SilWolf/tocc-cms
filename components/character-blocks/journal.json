@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_character_blocks_journals",
+  "info": {
+    "name": "Journal",
+    "icon": "sticky-note"
+  },
+  "options": {},
+  "attributes": {
+    "subject": {
+      "type": "string",
+      "default": "世界"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

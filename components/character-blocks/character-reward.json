@@ -10,7 +10,7 @@
     "character": {
       "model": "character"
     },
-    "rewards": {
+    "items": {
       "type": "component",
       "repeatable": true,
       "component": "common.reward"

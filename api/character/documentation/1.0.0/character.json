@@ -1044,6 +1044,12 @@
                     "type": "string"
                   }
                 },
+                "characterAndRewards": {
+                  "type": "component"
+                },
+                "journals": {
+                  "type": "component"
+                },
                 "published_at": {
                   "type": "string"
                 },

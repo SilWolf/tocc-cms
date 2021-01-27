@@ -1214,8 +1214,125 @@
             "type": "boolean",
             "default": false
           },
+          "role": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "phone": {
             "type": "string"
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "startAt",
+                "worldStartAt",
+                "lvMin",
+                "capacityMin",
+                "capacityMax"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "startAt": {
+                  "type": "string"
+                },
+                "endAt": {
+                  "type": "string"
+                },
+                "worldStartAt": {
+                  "type": "string"
+                },
+                "worldEndAt": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "lvMin": {
+                  "type": "integer"
+                },
+                "lvMax": {
+                  "type": "integer"
+                },
+                "capacityMin": {
+                  "type": "integer"
+                },
+                "capacityMax": {
+                  "type": "integer"
+                },
+                "tags": {
+                  "type": "string"
+                },
+                "remark": {
+                  "type": "string"
+                },
+                "dm": {
+                  "type": "string"
+                },
+                "characters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "characterAndRewards": {
+                  "type": "component"
+                },
+                "journals": {
+                  "type": "component"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "portraitImage": {
             "required": [

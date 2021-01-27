@@ -24,7 +24,7 @@ TOCC CMS built with Strapi
 2. `yarn`
 3. `yarn docker:up` to create MongoDB instance and S3 instance on Docker.
 4. (skip if you already have one)`aws configure` to create a fake & dummy AWS credentials.
-5. `aws --endpoint-url=http://localhost:4566 s3 mb s3://minisite-tokyo-olympics-2020-api-bucket` to create a s3 bucket
+5. `aws --endpoint-url=http://localhost:4566 s3 mb s3://tocc-cms-strapi-bucket` to create a s3 bucket
 6. `yarn docker:stop`
 
 ## Development

@@ -58,14 +58,24 @@
       "type": "text"
     },
     "dm": {
-      "via": "games",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "games"
     },
     "characters": {
       "collection": "character",
       "via": "games",
       "dominant": true
+    },
+    "characterAndRewards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "character-blocks.character-reward"
+    },
+    "journals": {
+      "type": "component",
+      "repeatable": true,
+      "component": "character-blocks.journal"
     }
   }
 }

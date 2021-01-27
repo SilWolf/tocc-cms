@@ -717,6 +717,151 @@
               }
             }
           },
+          "characterAndRewards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "gp",
+                "xp"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "character": {
+                  "required": [
+                    "id",
+                    "name",
+                    "type",
+                    "characterId"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "portrait": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "raceConfig": {
+                      "type": "component"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "characterId": {
+                      "type": "uid"
+                    },
+                    "coverImage": {
+                      "type": "string"
+                    },
+                    "motto": {
+                      "type": "string"
+                    },
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "race": {
+                      "type": "string"
+                    },
+                    "classConfigs": {
+                      "type": "component"
+                    },
+                    "classes": {
+                      "type": "string"
+                    },
+                    "level": {
+                      "type": "integer"
+                    },
+                    "xp": {
+                      "type": "integer"
+                    },
+                    "games": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "gp": {
+                  "type": "number",
+                  "default": 0
+                },
+                "xp": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "remark": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "journals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string",
+                  "default": "世界"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -783,6 +928,151 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "characterAndRewards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "gp",
+                "xp"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "character": {
+                  "required": [
+                    "id",
+                    "name",
+                    "type",
+                    "characterId"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "portrait": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "raceConfig": {
+                      "type": "component"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "characterId": {
+                      "type": "uid"
+                    },
+                    "coverImage": {
+                      "type": "string"
+                    },
+                    "motto": {
+                      "type": "string"
+                    },
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "race": {
+                      "type": "string"
+                    },
+                    "classConfigs": {
+                      "type": "component"
+                    },
+                    "classes": {
+                      "type": "string"
+                    },
+                    "level": {
+                      "type": "integer"
+                    },
+                    "xp": {
+                      "type": "integer"
+                    },
+                    "games": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "gp": {
+                  "type": "number",
+                  "default": 0
+                },
+                "xp": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "remark": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "journals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string",
+                  "default": "世界"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
             }
           },
           "published_at": {
