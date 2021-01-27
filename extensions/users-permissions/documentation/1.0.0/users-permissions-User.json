@@ -1318,6 +1318,85 @@
                 "xp": {
                   "type": "integer"
                 },
+                "games": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "startAt",
+                "worldStartAt",
+                "lvMin",
+                "capacityMin",
+                "capacityMax"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "startAt": {
+                  "type": "string"
+                },
+                "endAt": {
+                  "type": "string"
+                },
+                "worldStartAt": {
+                  "type": "string"
+                },
+                "worldEndAt": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "lvMin": {
+                  "type": "integer"
+                },
+                "lvMax": {
+                  "type": "integer"
+                },
+                "capacityMin": {
+                  "type": "integer"
+                },
+                "capacityMax": {
+                  "type": "integer"
+                },
+                "tags": {
+                  "type": "string"
+                },
+                "remark": {
+                  "type": "string"
+                },
+                "dm": {
+                  "type": "string"
+                },
+                "characters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -1372,6 +1451,12 @@
             "type": "string"
           },
           "characters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "games": {
             "type": "array",
             "items": {
               "type": "string"

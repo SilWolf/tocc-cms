@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack:0.12.4
+    ports:
+      - '4566:4566'
+      - '4571:4571'
+      # admin port
+      - '38080:8080'
+    environment:
+      DEFAULT_REGION: ap-southeast-1
+      PORT_WEB_UI: 8080
+      SERVICES: s3,sts
+      DEBUG: 1
+      DATA_DIR: /tmp/localstack/data
+    volumes:
+      # data will be store here
+      - './.docker-compose-dev/localstack/data:/tmp/localstack/data'
+
+  mongodb-standalone:
+    image: mongo:4.2
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DATABASE_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MONGO_INITDB_DATABASE: ${DATABASE_NAME}
+    ports:
+      - '27017:27017'
+#  debug:
+#    image: hk01/docker-utils
+#    entrypoint: tail -f /dev/null
+##### localstack commands
+#### assume role
+##    aws --endpoint-url=http://localstack:4566 sts assume-role --role-arn arn:aws:iam::123456789012:role/xaccounts3access --role-session-name s3-access-example
+#### get identity
+##    aws --endpoint-url=http://localstack:4566 sts get-caller-identity
+#### create bucket
+##    aws --endpoint-url=http://localstack:4566 s3 mb s3://bucket-name
+#    environment:
+#      AWS_ACCESS_KEY_ID: foobar
+#      AWS_SECRET_ACCESS_KEY: foobar
+#      AWS_DEFAULT_REGION: foobar
+#    ## copy to services if the logs are too annoyed
+#    logging:
+#      driver: none

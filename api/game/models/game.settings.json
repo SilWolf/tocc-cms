@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "name": "game",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "startAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "endAt": {
+      "type": "datetime",
+      "required": false
+    },
+    "worldStartAt": {
+      "type": "date",
+      "required": true
+    },
+    "worldEndAt": {
+      "type": "date"
+    },
+    "description": {
+      "type": "text"
+    },
+    "lvMin": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "lvMax": {
+      "type": "integer"
+    },
+    "capacityMin": {
+      "type": "integer",
+      "default": 3,
+      "required": true
+    },
+    "capacityMax": {
+      "type": "integer",
+      "default": 6,
+      "required": true
+    },
+    "tags": {
+      "type": "string"
+    },
+    "remark": {
+      "type": "text"
+    },
+    "dm": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "games"
+    },
+    "characters": {
+      "collection": "character",
+      "via": "games",
+      "dominant": true
+    }
+  }
+}

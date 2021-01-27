@@ -93,6 +93,10 @@
       "type": "integer",
       "default": 0,
       "min": 0
+    },
+    "games": {
+      "via": "characters",
+      "collection": "game"
     }
   }
 }

@@ -65,6 +65,10 @@
     "characters": {
       "via": "player",
       "collection": "character"
+    },
+    "games": {
+      "via": "dm",
+      "collection": "game"
     }
   }
 }

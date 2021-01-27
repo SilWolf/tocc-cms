@@ -1,20 +1,17 @@
 module.exports = ({ env }) => ({
   upload: {
-    provider: "aws-s3",
+    provider: "s3-plus",
     providerOptions: {
       accessKeyId: env("AWS_ACCESS_KEY_ID"),
-      secretAccessKey: env("AWS_ACCESS_SECRET"),
-      region: env("AWS_S3_REGION"),
+      secretAccessKey: env("AWS_SECRET_ACCESS_KEY"),
+      region: env("AWS_REGION"),
+      endpoint: env("AWS_S3_ENDPOINT"),
       params: {
-        Bucket: env("AWS_S3_BUCKET"),
+        Bucket: env("AWS_S3_BUCKET_NAME"),
+        ACL: "public-read",
+        // folder: 'myapp/images',
       },
-    },
-  },
-  email: {
-    provider: "sendmail",
-    settings: {
-      defaultFrom: "dnd5etocc@gmail.com",
-      defaultReplyTo: "dnd5etocc@gmail.com",
+      s3ForcePathStyle: true, //needed for localstack s3 to work correctly
     },
   },
 });

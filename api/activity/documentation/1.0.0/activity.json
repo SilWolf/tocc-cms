@@ -614,6 +614,12 @@
                     "xp": {
                       "type": "integer"
                     },
+                    "games": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -719,6 +725,12 @@
                 },
                 "xp": {
                   "type": "integer"
+                },
+                "games": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -830,6 +842,12 @@
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "games": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "created_by": {
                       "type": "string"

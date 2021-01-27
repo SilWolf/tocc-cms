@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/cities": {
+    "/games": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/City"
+                    "$ref": "#/components/schemas/Game"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "City"
+          "Game"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/City"
+                  "$ref": "#/components/schemas/Game"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "City"
+          "Game"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCity"
+                "$ref": "#/components/schemas/NewGame"
               }
             }
           }
         }
       }
     },
-    "/cities/count": {
+    "/games/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "City"
+          "Game"
         ],
         "parameters": []
       }
     },
-    "/cities/{id}": {
+    "/games/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/City"
+                  "$ref": "#/components/schemas/Game"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "City"
+          "Game"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/City"
+                  "$ref": "#/components/schemas/Game"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "City"
+          "Game"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCity"
+                "$ref": "#/components/schemas/NewGame"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "City"
+          "Game"
         ],
         "parameters": [
           {
@@ -514,84 +514,114 @@
   },
   "components": {
     "schemas": {
-      "City": {
+      "Game": {
         "required": [
           "id",
-          "name",
-          "shopName",
-          "shopAbbr"
+          "title",
+          "startAt",
+          "worldStartAt",
+          "lvMin",
+          "capacityMin",
+          "capacityMax"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           },
-          "shopName": {
+          "startAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "worldStartAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "worldEndAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "description": {
             "type": "string"
           },
-          "shopAddress": {
+          "lvMin": {
+            "type": "integer",
+            "default": 1
+          },
+          "lvMax": {
+            "type": "integer"
+          },
+          "capacityMin": {
+            "type": "integer",
+            "default": 3
+          },
+          "capacityMax": {
+            "type": "integer",
+            "default": 6
+          },
+          "tags": {
             "type": "string"
           },
-          "image": {
+          "remark": {
+            "type": "string"
+          },
+          "dm": {
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "username",
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "username": {
                 "type": "string"
               },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
+              "email": {
                 "type": "string"
               },
               "provider": {
                 "type": "string"
               },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
+              "password": {
                 "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "characters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "games": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -600,76 +630,6 @@
                 "type": "string"
               }
             }
-          },
-          "shopImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "shopAbbr": {
-            "type": "string"
           },
           "characters": {
             "type": "array",
@@ -749,26 +709,67 @@
                 }
               }
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewCity": {
+      "NewGame": {
         "required": [
-          "name",
-          "shopName",
-          "shopAbbr"
+          "title",
+          "startAt",
+          "worldStartAt",
+          "lvMin",
+          "capacityMin",
+          "capacityMax"
         ],
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
           },
-          "shopName": {
+          "startAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "worldStartAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "worldEndAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "description": {
             "type": "string"
           },
-          "shopAddress": {
+          "lvMin": {
+            "type": "integer",
+            "default": 1
+          },
+          "lvMax": {
+            "type": "integer"
+          },
+          "capacityMin": {
+            "type": "integer",
+            "default": 3
+          },
+          "capacityMax": {
+            "type": "integer",
+            "default": 6
+          },
+          "tags": {
             "type": "string"
           },
-          "shopAbbr": {
+          "remark": {
+            "type": "string"
+          },
+          "dm": {
             "type": "string"
           },
           "characters": {
@@ -776,6 +777,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -789,7 +794,7 @@
   },
   "tags": [
     {
-      "name": "City"
+      "name": "Game"
     }
   ]
 }
