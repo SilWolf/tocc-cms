@@ -519,7 +519,7 @@
           "id",
           "name",
           "shopName",
-          "shopAbbr"
+          "code"
         ],
         "properties": {
           "id": {
@@ -668,9 +668,6 @@
               }
             }
           },
-          "shopAbbr": {
-            "type": "string"
-          },
           "characters": {
             "type": "array",
             "items": {
@@ -749,6 +746,9 @@
                 }
               }
             }
+          },
+          "code": {
+            "type": "string"
           }
         }
       },
@@ -756,7 +756,7 @@
         "required": [
           "name",
           "shopName",
-          "shopAbbr"
+          "code"
         ],
         "properties": {
           "name": {
@@ -768,14 +768,14 @@
           "shopAddress": {
             "type": "string"
           },
-          "shopAbbr": {
-            "type": "string"
-          },
           "characters": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "code": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

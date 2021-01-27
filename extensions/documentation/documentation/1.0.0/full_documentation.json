@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/26/2021 1:31:36 PM"
+    "x-generation-date": "01/27/2021 5:04:06 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6227,7 +6227,8 @@
             "required": [
               "id",
               "username",
-              "email"
+              "email",
+              "code"
             ],
             "properties": {
               "id": {
@@ -6274,6 +6275,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -6329,7 +6336,7 @@
               "id",
               "name",
               "shopName",
-              "shopAbbr"
+              "code"
             ],
             "properties": {
               "id": {
@@ -6350,14 +6357,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "shopAbbr": {
-                "type": "string"
-              },
               "characters": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "code": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -6829,7 +6836,7 @@
           "id",
           "name",
           "shopName",
-          "shopAbbr"
+          "code"
         ],
         "properties": {
           "id": {
@@ -6978,9 +6985,6 @@
               }
             }
           },
-          "shopAbbr": {
-            "type": "string"
-          },
           "characters": {
             "type": "array",
             "items": {
@@ -7059,6 +7063,9 @@
                 }
               }
             }
+          },
+          "code": {
+            "type": "string"
           }
         }
       },
@@ -7066,7 +7073,7 @@
         "required": [
           "name",
           "shopName",
-          "shopAbbr"
+          "code"
         ],
         "properties": {
           "name": {
@@ -7078,14 +7085,14 @@
           "shopAddress": {
             "type": "string"
           },
-          "shopAbbr": {
-            "type": "string"
-          },
           "characters": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "code": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -7230,7 +7237,8 @@
             "required": [
               "id",
               "username",
-              "email"
+              "email",
+              "code"
             ],
             "properties": {
               "id": {
@@ -7277,6 +7285,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -7700,7 +7714,8 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -7747,6 +7762,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "portraitImage": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -7798,7 +7819,8 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "code"
         ],
         "properties": {
           "id": {
@@ -7823,10 +7845,18 @@
             "type": "boolean",
             "default": false
           },
-          "role": {
+          "phone": {
+            "type": "string"
+          },
+          "portraitImage": {
             "required": [
               "id",
-              "name"
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
@@ -7835,23 +7865,47 @@
               "name": {
                 "type": "string"
               },
-              "description": {
+              "alternativeText": {
                 "type": "string"
               },
-              "type": {
+              "caption": {
                 "type": "string"
               },
-              "permissions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "width": {
+                "type": "integer"
               },
-              "users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -7861,167 +7915,16 @@
               }
             }
           },
-          "phone": {
+          "code": {
             "type": "string"
-          },
-          "characters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "type",
-                "characterId"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "portrait": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "player": {
-                  "type": "string"
-                },
-                "raceConfig": {
-                  "type": "component"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "characterId": {
-                  "type": "uid"
-                },
-                "coverImage": {
-                  "type": "string"
-                },
-                "motto": {
-                  "type": "string"
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "race": {
-                  "type": "string"
-                },
-                "classConfigs": {
-                  "type": "component"
-                },
-                "classes": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "integer"
-                },
-                "xp": {
-                  "type": "integer"
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "startAt",
-                "worldStartAt",
-                "lvMin",
-                "capacityMin",
-                "capacityMax"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "startAt": {
-                  "type": "string"
-                },
-                "endAt": {
-                  "type": "string"
-                },
-                "worldStartAt": {
-                  "type": "string"
-                },
-                "worldEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "lvMin": {
-                  "type": "integer"
-                },
-                "lvMax": {
-                  "type": "integer"
-                },
-                "capacityMin": {
-                  "type": "integer"
-                },
-                "capacityMax": {
-                  "type": "integer"
-                },
-                "tags": {
-                  "type": "string"
-                },
-                "remark": {
-                  "type": "string"
-                },
-                "dm": {
-                  "type": "string"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "code"
         ],
         "properties": {
           "username": {
@@ -8071,6 +7974,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "code": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

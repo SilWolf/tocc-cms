@@ -39,9 +39,9 @@
       "required": true
     },
     "player": {
+      "via": "characters",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "characters"
+      "model": "user"
     },
     "raceConfig": {
       "type": "component",
@@ -50,8 +50,8 @@
       "required": false
     },
     "city": {
-      "model": "city",
-      "via": "characters"
+      "via": "characters",
+      "model": "city"
     },
     "characterId": {
       "type": "uid",

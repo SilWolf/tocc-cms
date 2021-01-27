@@ -528,7 +528,8 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -575,6 +576,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "portraitImage": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

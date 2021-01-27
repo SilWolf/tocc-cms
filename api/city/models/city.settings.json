@@ -21,7 +21,7 @@
       "required": true
     },
     "shopAddress": {
-      "type": "text"
+      "type": "string"
     },
     "image": {
       "model": "file",
@@ -41,14 +41,15 @@
       "plugin": "upload",
       "required": false
     },
-    "shopAbbr": {
+    "characters": {
+      "collection": "character",
+      "via": "city"
+    },
+    "code": {
       "type": "string",
+      "private": false,
       "required": true,
       "unique": true
-    },
-    "characters": {
-      "via": "city",
-      "collection": "character"
     }
   }
 }

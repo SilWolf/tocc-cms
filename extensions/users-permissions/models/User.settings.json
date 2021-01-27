@@ -57,18 +57,34 @@
       "model": "role",
       "via": "users",
       "plugin": "users-permissions",
-      "configurable": false
+      "configurable": false,
+      "private": true
     },
     "phone": {
       "type": "string"
     },
     "characters": {
-      "via": "player",
-      "collection": "character"
+      "private": true,
+      "collection": "character",
+      "via": "player"
     },
     "games": {
-      "via": "dm",
-      "collection": "game"
+      "private": true,
+      "collection": "game",
+      "via": "dm"
+    },
+    "portraitImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "code": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -58,9 +58,9 @@
       "type": "text"
     },
     "dm": {
+      "via": "games",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "games"
+      "model": "user"
     },
     "characters": {
       "collection": "character",

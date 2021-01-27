@@ -610,7 +610,8 @@
             "required": [
               "id",
               "username",
-              "email"
+              "email",
+              "code"
             ],
             "properties": {
               "id": {
@@ -657,6 +658,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -712,7 +719,7 @@
               "id",
               "name",
               "shopName",
-              "shopAbbr"
+              "code"
             ],
             "properties": {
               "id": {
@@ -733,14 +740,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "shopAbbr": {
-                "type": "string"
-              },
               "characters": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "code": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
