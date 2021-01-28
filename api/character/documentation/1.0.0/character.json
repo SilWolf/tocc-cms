@@ -749,6 +749,12 @@
               "code": {
                 "type": "string"
               },
+              "games": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -993,7 +999,8 @@
                 "worldStartAt",
                 "lvMin",
                 "capacityMin",
-                "capacityMax"
+                "capacityMax",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -1049,6 +1056,12 @@
                 },
                 "journals": {
                   "type": "component"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

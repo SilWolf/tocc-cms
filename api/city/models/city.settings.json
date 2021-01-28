@@ -50,6 +50,10 @@
       "private": false,
       "required": true,
       "unique": true
+    },
+    "games": {
+      "via": "city",
+      "collection": "game"
     }
   }
 }

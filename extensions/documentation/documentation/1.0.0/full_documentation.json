@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/28/2021 1:28:10 AM"
+    "x-generation-date": "01/28/2021 10:48:24 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6366,6 +6366,12 @@
               "code": {
                 "type": "string"
               },
+              "games": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6610,7 +6616,8 @@
                 "worldStartAt",
                 "lvMin",
                 "capacityMin",
-                "capacityMax"
+                "capacityMax",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -6666,6 +6673,12 @@
                 },
                 "journals": {
                   "type": "component"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -7072,6 +7085,92 @@
           },
           "code": {
             "type": "string"
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "startAt",
+                "worldStartAt",
+                "lvMin",
+                "capacityMin",
+                "capacityMax",
+                "code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "startAt": {
+                  "type": "string"
+                },
+                "endAt": {
+                  "type": "string"
+                },
+                "worldStartAt": {
+                  "type": "string"
+                },
+                "worldEndAt": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "lvMin": {
+                  "type": "integer"
+                },
+                "lvMax": {
+                  "type": "integer"
+                },
+                "capacityMin": {
+                  "type": "integer"
+                },
+                "capacityMax": {
+                  "type": "integer"
+                },
+                "tags": {
+                  "type": "string"
+                },
+                "remark": {
+                  "type": "string"
+                },
+                "dm": {
+                  "type": "string"
+                },
+                "characters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "characterAndRewards": {
+                  "type": "component"
+                },
+                "journals": {
+                  "type": "component"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -7099,6 +7198,12 @@
           },
           "code": {
             "type": "string"
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -7190,7 +7295,8 @@
           "worldStartAt",
           "lvMin",
           "capacityMin",
-          "capacityMax"
+          "capacityMax",
+          "code"
         ],
         "properties": {
           "id": {
@@ -7530,6 +7636,58 @@
               }
             }
           },
+          "code": {
+            "type": "string"
+          },
+          "city": {
+            "required": [
+              "id",
+              "name",
+              "shopName",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shopName": {
+                "type": "string"
+              },
+              "shopAddress": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "shopImage": {
+                "type": "string"
+              },
+              "characters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "code": {
+                "type": "string"
+              },
+              "games": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7543,7 +7701,8 @@
           "worldStartAt",
           "lvMin",
           "capacityMin",
-          "capacityMax"
+          "capacityMax",
+          "code"
         ],
         "properties": {
           "title": {
@@ -7742,6 +7901,12 @@
                 }
               }
             }
+          },
+          "code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -8192,7 +8357,8 @@
                 "worldStartAt",
                 "lvMin",
                 "capacityMin",
-                "capacityMax"
+                "capacityMax",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -8248,6 +8414,12 @@
                 },
                 "journals": {
                   "type": "component"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

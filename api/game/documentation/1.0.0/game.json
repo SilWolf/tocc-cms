@@ -522,7 +522,8 @@
           "worldStartAt",
           "lvMin",
           "capacityMin",
-          "capacityMax"
+          "capacityMax",
+          "code"
         ],
         "properties": {
           "id": {
@@ -862,6 +863,58 @@
               }
             }
           },
+          "code": {
+            "type": "string"
+          },
+          "city": {
+            "required": [
+              "id",
+              "name",
+              "shopName",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shopName": {
+                "type": "string"
+              },
+              "shopAddress": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "shopImage": {
+                "type": "string"
+              },
+              "characters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "code": {
+                "type": "string"
+              },
+              "games": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -875,7 +928,8 @@
           "worldStartAt",
           "lvMin",
           "capacityMin",
-          "capacityMax"
+          "capacityMax",
+          "code"
         ],
         "properties": {
           "title": {
@@ -1074,6 +1128,12 @@
                 }
               }
             }
+          },
+          "code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
