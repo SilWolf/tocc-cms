@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/28/2021 10:48:24 AM"
+    "x-generation-date": "01/28/2021 11:11:10 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2547,6 +2547,210 @@
                 "schema": {
                   "type": "integer",
                   "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/games/{id}/draft": {
+      "patch": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/games/{id}/publish": {
+      "patch": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/games/{id}/complete": {
+      "patch": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -6617,7 +6821,8 @@
                 "lvMin",
                 "capacityMin",
                 "capacityMax",
-                "code"
+                "code",
+                "status"
               ],
               "properties": {
                 "id": {
@@ -6680,7 +6885,13 @@
                 "city": {
                   "type": "string"
                 },
-                "published_at": {
+                "publishedAt": {
+                  "type": "string"
+                },
+                "completedAt": {
+                  "type": "string"
+                },
+                "status": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7097,7 +7308,8 @@
                 "lvMin",
                 "capacityMin",
                 "capacityMax",
-                "code"
+                "code",
+                "status"
               ],
               "properties": {
                 "id": {
@@ -7160,7 +7372,13 @@
                 "city": {
                   "type": "string"
                 },
-                "published_at": {
+                "publishedAt": {
+                  "type": "string"
+                },
+                "completedAt": {
+                  "type": "string"
+                },
+                "status": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7296,7 +7514,8 @@
           "lvMin",
           "capacityMin",
           "capacityMax",
-          "code"
+          "code",
+          "status"
         ],
         "properties": {
           "id": {
@@ -7688,9 +7907,22 @@
               }
             }
           },
-          "published_at": {
+          "publishedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "default": "draft",
+            "enum": [
+              "draft",
+              "published",
+              "completed"
+            ]
           }
         }
       },
@@ -7702,7 +7934,8 @@
           "lvMin",
           "capacityMin",
           "capacityMax",
-          "code"
+          "code",
+          "status"
         ],
         "properties": {
           "title": {
@@ -7908,9 +8141,22 @@
           "city": {
             "type": "string"
           },
-          "published_at": {
+          "publishedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "default": "draft",
+            "enum": [
+              "draft",
+              "published",
+              "completed"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -8358,7 +8604,8 @@
                 "lvMin",
                 "capacityMin",
                 "capacityMax",
-                "code"
+                "code",
+                "status"
               ],
               "properties": {
                 "id": {
@@ -8421,7 +8668,13 @@
                 "city": {
                   "type": "string"
                 },
-                "published_at": {
+                "publishedAt": {
+                  "type": "string"
+                },
+                "completedAt": {
+                  "type": "string"
+                },
+                "status": {
                   "type": "string"
                 },
                 "created_by": {

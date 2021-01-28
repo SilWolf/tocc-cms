@@ -47,6 +47,30 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "PATCH",
+      "path": "/games/:id/draft",
+      "handler": "game.patchToDraft",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/games/:id/publish",
+      "handler": "game.patchToPublished",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/games/:id/complete",
+      "handler": "game.patchToCompleted",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

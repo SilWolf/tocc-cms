@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -84,6 +84,22 @@
     "city": {
       "model": "city",
       "via": "games"
+    },
+    "publishedAt": {
+      "type": "datetime"
+    },
+    "completedAt": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published",
+        "completed"
+      ],
+      "default": "draft",
+      "required": true
     }
   }
 }

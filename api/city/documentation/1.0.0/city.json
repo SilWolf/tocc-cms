@@ -761,7 +761,8 @@
                 "lvMin",
                 "capacityMin",
                 "capacityMax",
-                "code"
+                "code",
+                "status"
               ],
               "properties": {
                 "id": {
@@ -824,7 +825,13 @@
                 "city": {
                   "type": "string"
                 },
-                "published_at": {
+                "publishedAt": {
+                  "type": "string"
+                },
+                "completedAt": {
+                  "type": "string"
+                },
+                "status": {
                   "type": "string"
                 },
                 "created_by": {
