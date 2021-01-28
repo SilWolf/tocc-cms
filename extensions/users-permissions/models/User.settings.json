@@ -64,13 +64,12 @@
       "type": "string"
     },
     "characters": {
-      "private": true,
-      "collection": "character",
-      "via": "player"
+      "via": "player",
+      "collection": "character"
     },
     "games": {
-      "via": "dm",
-      "collection": "game"
+      "collection": "game",
+      "via": "dm"
     },
     "portraitImage": {
       "model": "file",
@@ -82,6 +81,10 @@
       "required": false
     },
     "code": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
       "type": "string",
       "required": true
     }

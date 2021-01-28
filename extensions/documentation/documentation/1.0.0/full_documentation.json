@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/28/2021 11:11:10 PM"
+    "x-generation-date": "01/29/2021 12:39:31 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5983,7 +5983,7 @@
                     "id",
                     "name",
                     "type",
-                    "characterId"
+                    "code"
                   ],
                   "properties": {
                     "id": {
@@ -6004,14 +6004,8 @@
                     "player": {
                       "type": "string"
                     },
-                    "raceConfig": {
-                      "type": "component"
-                    },
                     "city": {
                       "type": "string"
-                    },
-                    "characterId": {
-                      "type": "uid"
                     },
                     "coverImage": {
                       "type": "string"
@@ -6025,15 +6019,6 @@
                         "type": "string"
                       }
                     },
-                    "race": {
-                      "type": "string"
-                    },
-                    "classConfigs": {
-                      "type": "component"
-                    },
-                    "classes": {
-                      "type": "string"
-                    },
                     "level": {
                       "type": "integer"
                     },
@@ -6045,6 +6030,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "code": {
+                      "type": "string"
                     },
                     "created_by": {
                       "type": "string"
@@ -6095,7 +6083,7 @@
                 "id",
                 "name",
                 "type",
-                "characterId"
+                "code"
               ],
               "properties": {
                 "id": {
@@ -6116,14 +6104,8 @@
                 "player": {
                   "type": "string"
                 },
-                "raceConfig": {
-                  "type": "component"
-                },
                 "city": {
                   "type": "string"
-                },
-                "characterId": {
-                  "type": "uid"
                 },
                 "coverImage": {
                   "type": "string"
@@ -6137,15 +6119,6 @@
                     "type": "string"
                   }
                 },
-                "race": {
-                  "type": "string"
-                },
-                "classConfigs": {
-                  "type": "component"
-                },
-                "classes": {
-                  "type": "string"
-                },
                 "level": {
                   "type": "integer"
                 },
@@ -6157,6 +6130,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "code": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -6212,7 +6188,7 @@
                     "id",
                     "name",
                     "type",
-                    "characterId"
+                    "code"
                   ],
                   "properties": {
                     "id": {
@@ -6233,14 +6209,8 @@
                     "player": {
                       "type": "string"
                     },
-                    "raceConfig": {
-                      "type": "component"
-                    },
                     "city": {
                       "type": "string"
-                    },
-                    "characterId": {
-                      "type": "uid"
                     },
                     "coverImage": {
                       "type": "string"
@@ -6254,15 +6224,6 @@
                         "type": "string"
                       }
                     },
-                    "race": {
-                      "type": "string"
-                    },
-                    "classConfigs": {
-                      "type": "component"
-                    },
-                    "classes": {
-                      "type": "string"
-                    },
                     "level": {
                       "type": "integer"
                     },
@@ -6274,6 +6235,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "code": {
+                      "type": "string"
                     },
                     "created_by": {
                       "type": "string"
@@ -6340,7 +6304,7 @@
           "id",
           "name",
           "type",
-          "characterId"
+          "code"
         ],
         "properties": {
           "id": {
@@ -6432,7 +6396,8 @@
               "id",
               "username",
               "email",
-              "code"
+              "code",
+              "name"
             ],
             "properties": {
               "id": {
@@ -6486,52 +6451,14 @@
               "code": {
                 "type": "string"
               },
+              "name": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "raceConfig": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "race": {
-                "required": [
-                  "id",
-                  "name",
-                  "render"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "raceId": {
-                    "type": "uid"
-                  },
-                  "render": {
-                    "type": "component"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "mutations": {
-                "type": "object"
               }
             }
           },
@@ -6583,9 +6510,6 @@
                 "type": "string"
               }
             }
-          },
-          "characterId": {
-            "type": "uid"
           },
           "coverImage": {
             "required": [
@@ -6701,107 +6625,6 @@
               }
             }
           },
-          "race": {
-            "required": [
-              "id",
-              "name",
-              "render"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "raceId": {
-                "type": "uid"
-              },
-              "render": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "classConfigs": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "level"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "class": {
-                  "required": [
-                    "id",
-                    "name"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "render": {
-                      "type": "component"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "mutations": {
-                  "type": "object"
-                },
-                "level": {
-                  "type": "integer",
-                  "default": 1
-                }
-              }
-            }
-          },
-          "classes": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "render": {
-                "type": "component"
-              },
-              "description": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "level": {
             "type": "integer",
             "default": 0
@@ -6902,6 +6725,9 @@
                 }
               }
             }
+          },
+          "code": {
+            "type": "string"
           }
         }
       },
@@ -6909,7 +6735,7 @@
         "required": [
           "name",
           "type",
-          "characterId"
+          "code"
         ],
         "properties": {
           "name": {
@@ -6929,52 +6755,8 @@
           "player": {
             "type": "string"
           },
-          "raceConfig": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "race": {
-                "required": [
-                  "id",
-                  "name",
-                  "render"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "raceId": {
-                    "type": "uid"
-                  },
-                  "render": {
-                    "type": "component"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "mutations": {
-                "type": "object"
-              }
-            }
-          },
           "city": {
             "type": "string"
-          },
-          "characterId": {
-            "type": "uid"
           },
           "motto": {
             "type": "string"
@@ -6984,60 +6766,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "race": {
-            "type": "string"
-          },
-          "classConfigs": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "level"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "class": {
-                  "required": [
-                    "id",
-                    "name"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "render": {
-                      "type": "component"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "mutations": {
-                  "type": "object"
-                },
-                "level": {
-                  "type": "integer",
-                  "default": 1
-                }
-              }
-            }
-          },
-          "classes": {
-            "type": "string"
           },
           "level": {
             "type": "integer",
@@ -7052,6 +6780,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "code": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -7222,7 +6953,7 @@
                 "id",
                 "name",
                 "type",
-                "characterId"
+                "code"
               ],
               "properties": {
                 "id": {
@@ -7243,14 +6974,8 @@
                 "player": {
                   "type": "string"
                 },
-                "raceConfig": {
-                  "type": "component"
-                },
                 "city": {
                   "type": "string"
-                },
-                "characterId": {
-                  "type": "uid"
                 },
                 "coverImage": {
                   "type": "string"
@@ -7264,15 +6989,6 @@
                     "type": "string"
                   }
                 },
-                "race": {
-                  "type": "string"
-                },
-                "classConfigs": {
-                  "type": "component"
-                },
-                "classes": {
-                  "type": "string"
-                },
                 "level": {
                   "type": "integer"
                 },
@@ -7284,6 +7000,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "code": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -7569,7 +7288,8 @@
               "id",
               "username",
               "email",
-              "code"
+              "code",
+              "name"
             ],
             "properties": {
               "id": {
@@ -7623,6 +7343,9 @@
               "code": {
                 "type": "string"
               },
+              "name": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -7638,7 +7361,7 @@
                 "id",
                 "name",
                 "type",
-                "characterId"
+                "code"
               ],
               "properties": {
                 "id": {
@@ -7659,14 +7382,8 @@
                 "player": {
                   "type": "string"
                 },
-                "raceConfig": {
-                  "type": "component"
-                },
                 "city": {
                   "type": "string"
-                },
-                "characterId": {
-                  "type": "uid"
                 },
                 "coverImage": {
                   "type": "string"
@@ -7680,15 +7397,6 @@
                     "type": "string"
                   }
                 },
-                "race": {
-                  "type": "string"
-                },
-                "classConfigs": {
-                  "type": "component"
-                },
-                "classes": {
-                  "type": "string"
-                },
                 "level": {
                   "type": "integer"
                 },
@@ -7700,6 +7408,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "code": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -7728,7 +7439,7 @@
                     "id",
                     "name",
                     "type",
-                    "characterId"
+                    "code"
                   ],
                   "properties": {
                     "id": {
@@ -7749,14 +7460,8 @@
                     "player": {
                       "type": "string"
                     },
-                    "raceConfig": {
-                      "type": "component"
-                    },
                     "city": {
                       "type": "string"
-                    },
-                    "characterId": {
-                      "type": "uid"
                     },
                     "coverImage": {
                       "type": "string"
@@ -7770,15 +7475,6 @@
                         "type": "string"
                       }
                     },
-                    "race": {
-                      "type": "string"
-                    },
-                    "classConfigs": {
-                      "type": "component"
-                    },
-                    "classes": {
-                      "type": "string"
-                    },
                     "level": {
                       "type": "integer"
                     },
@@ -7790,6 +7486,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "code": {
+                      "type": "string"
                     },
                     "created_by": {
                       "type": "string"
@@ -8008,7 +7707,7 @@
                     "id",
                     "name",
                     "type",
-                    "characterId"
+                    "code"
                   ],
                   "properties": {
                     "id": {
@@ -8029,14 +7728,8 @@
                     "player": {
                       "type": "string"
                     },
-                    "raceConfig": {
-                      "type": "component"
-                    },
                     "city": {
                       "type": "string"
-                    },
-                    "characterId": {
-                      "type": "uid"
                     },
                     "coverImage": {
                       "type": "string"
@@ -8050,15 +7743,6 @@
                         "type": "string"
                       }
                     },
-                    "race": {
-                      "type": "string"
-                    },
-                    "classConfigs": {
-                      "type": "component"
-                    },
-                    "classes": {
-                      "type": "string"
-                    },
                     "level": {
                       "type": "integer"
                     },
@@ -8070,6 +7754,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "code": {
+                      "type": "string"
                     },
                     "created_by": {
                       "type": "string"
@@ -8422,7 +8109,8 @@
                 "id",
                 "username",
                 "email",
-                "code"
+                "code",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -8476,6 +8164,9 @@
                 "code": {
                   "type": "string"
                 },
+                "name": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -8527,7 +8218,8 @@
           "id",
           "username",
           "email",
-          "code"
+          "code",
+          "name"
         ],
         "properties": {
           "id": {
@@ -8592,6 +8284,73 @@
           },
           "phone": {
             "type": "string"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "type",
+                "code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "portrait": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "coverImage": {
+                  "type": "string"
+                },
+                "motto": {
+                  "type": "string"
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "level": {
+                  "type": "integer"
+                },
+                "xp": {
+                  "type": "integer"
+                },
+                "games": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "games": {
             "type": "array",
@@ -8755,6 +8514,9 @@
           },
           "code": {
             "type": "string"
+          },
+          "name": {
+            "type": "string"
           }
         }
       },
@@ -8762,7 +8524,8 @@
         "required": [
           "username",
           "email",
-          "code"
+          "code",
+          "name"
         ],
         "properties": {
           "username": {
@@ -8814,6 +8577,9 @@
             }
           },
           "code": {
+            "type": "string"
+          },
+          "name": {
             "type": "string"
           },
           "created_by": {

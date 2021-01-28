@@ -42,8 +42,8 @@
       "required": false
     },
     "characters": {
-      "collection": "character",
-      "via": "city"
+      "via": "city",
+      "collection": "character"
     },
     "code": {
       "type": "string",

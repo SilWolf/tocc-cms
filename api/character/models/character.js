@@ -13,10 +13,9 @@ function sum(numbers) {
 }
 
 function transform(data) {
-  console.log(JSON.stringify(data, null, 2));
-  data.race = data.raceConfig.race;
-  data.classes = data.classConfigs.map((_) => _.class);
-  data.level = sum(data.classConfigs.map((_) => _.level));
+  // data.race = data.raceConfig.race;
+  // data.classes = data.classConfigs.map((_) => _.class);
+  // data.level = sum(data.classConfigs.map((_) => _.level));
 }
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)

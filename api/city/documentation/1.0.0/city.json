@@ -675,7 +675,7 @@
                 "id",
                 "name",
                 "type",
-                "characterId"
+                "code"
               ],
               "properties": {
                 "id": {
@@ -696,14 +696,8 @@
                 "player": {
                   "type": "string"
                 },
-                "raceConfig": {
-                  "type": "component"
-                },
                 "city": {
                   "type": "string"
-                },
-                "characterId": {
-                  "type": "uid"
                 },
                 "coverImage": {
                   "type": "string"
@@ -717,15 +711,6 @@
                     "type": "string"
                   }
                 },
-                "race": {
-                  "type": "string"
-                },
-                "classConfigs": {
-                  "type": "component"
-                },
-                "classes": {
-                  "type": "string"
-                },
                 "level": {
                   "type": "integer"
                 },
@@ -737,6 +722,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "code": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

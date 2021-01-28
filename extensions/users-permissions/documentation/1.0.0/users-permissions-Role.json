@@ -529,7 +529,8 @@
                 "id",
                 "username",
                 "email",
-                "code"
+                "code",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -581,6 +582,9 @@
                   "type": "string"
                 },
                 "code": {
+                  "type": "string"
+                },
+                "name": {
                   "type": "string"
                 },
                 "created_by": {

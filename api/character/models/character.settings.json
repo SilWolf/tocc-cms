@@ -14,75 +14,39 @@
     "name": {
       "type": "string",
       "required": true,
+      "unique": false
+    },
+    "code": {
+      "type": "string",
+      "required": true,
       "unique": true
     },
     "description": {
       "type": "text",
       "required": false
     },
-    "portrait": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "PC",
-        "NPC"
-      ],
+      "enum": ["PC", "NPC"],
       "default": "PC",
       "required": true
     },
-    "player": {
-      "via": "characters",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
-    "raceConfig": {
-      "type": "component",
-      "repeatable": false,
-      "component": "character-blocks.race-block",
+    "portrait": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images"],
+      "plugin": "upload",
       "required": false
-    },
-    "city": {
-      "via": "characters",
-      "model": "city"
-    },
-    "characterId": {
-      "type": "uid",
-      "required": true
     },
     "coverImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },
     "motto": {
       "type": "string"
-    },
-    "activities": {
-      "collection": "activity",
-      "via": "characters"
-    },
-    "race": {
-      "model": "race"
-    },
-    "classConfigs": {
-      "type": "component",
-      "repeatable": true,
-      "component": "character-blocks.classes-config"
-    },
-    "classes": {
-      "collection": "class"
     },
     "level": {
       "type": "integer",
@@ -94,9 +58,22 @@
       "default": 0,
       "min": 0
     },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "characters"
+    },
+    "city": {
+      "model": "city",
+      "via": "characters"
+    },
     "games": {
-      "via": "characters",
-      "collection": "game"
+      "collection": "game",
+      "via": "characters"
+    },
+    "activities": {
+      "collection": "activity",
+      "via": "characters"
     }
   }
 }

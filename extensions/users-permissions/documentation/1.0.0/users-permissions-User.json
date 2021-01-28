@@ -1189,7 +1189,8 @@
           "id",
           "username",
           "email",
-          "code"
+          "code",
+          "name"
         ],
         "properties": {
           "id": {
@@ -1254,6 +1255,73 @@
           },
           "phone": {
             "type": "string"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "type",
+                "code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "portrait": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "coverImage": {
+                  "type": "string"
+                },
+                "motto": {
+                  "type": "string"
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "level": {
+                  "type": "integer"
+                },
+                "xp": {
+                  "type": "integer"
+                },
+                "games": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "games": {
             "type": "array",
@@ -1417,6 +1485,9 @@
           },
           "code": {
             "type": "string"
+          },
+          "name": {
+            "type": "string"
           }
         }
       },
@@ -1424,7 +1495,8 @@
         "required": [
           "username",
           "email",
-          "code"
+          "code",
+          "name"
         ],
         "properties": {
           "username": {
@@ -1476,6 +1548,9 @@
             }
           },
           "code": {
+            "type": "string"
+          },
+          "name": {
             "type": "string"
           },
           "created_by": {
