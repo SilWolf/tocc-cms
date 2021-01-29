@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/characters/me",
+      "handler": "character.me",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/characters/:id",
       "handler": "character.findOne",
       "config": {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/29/2021 12:39:31 AM"
+    "x-generation-date": "01/29/2021 10:32:33 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -823,6 +823,63 @@
                   "properties": {
                     "count": {
                       "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character"
+        ],
+        "parameters": []
+      }
+    },
+    "/characters/me": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -6303,8 +6360,8 @@
         "required": [
           "id",
           "name",
-          "type",
-          "code"
+          "code",
+          "type"
         ],
         "properties": {
           "id": {
@@ -6313,8 +6370,19 @@
           "name": {
             "type": "string"
           },
+          "code": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "default": "PC",
+            "enum": [
+              "PC",
+              "NPC"
+            ]
           },
           "portrait": {
             "required": [
@@ -6383,13 +6451,83 @@
               }
             }
           },
-          "type": {
-            "type": "string",
-            "default": "PC",
-            "enum": [
-              "PC",
-              "NPC"
-            ]
+          "coverImage": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "motto": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer",
+            "default": 0
+          },
+          "xp": {
+            "type": "integer",
+            "default": 0
           },
           "player": {
             "required": [
@@ -6511,128 +6649,6 @@
               }
             }
           },
-          "coverImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "motto": {
-            "type": "string"
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "inGameStartAt": {
-                  "type": "string"
-                },
-                "inGameEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "characterRewards": {
-                  "type": "component"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "level": {
-            "type": "integer",
-            "default": 0
-          },
-          "xp": {
-            "type": "integer",
-            "default": 0
-          },
           "games": {
             "type": "array",
             "items": {
@@ -6726,19 +6742,63 @@
               }
             }
           },
-          "code": {
-            "type": "string"
+          "activities": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "inGameStartAt": {
+                  "type": "string"
+                },
+                "inGameEndAt": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "characterRewards": {
+                  "type": "component"
+                },
+                "characters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewCharacter": {
         "required": [
           "name",
-          "type",
-          "code"
+          "code",
+          "type"
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "description": {
@@ -6752,20 +6812,8 @@
               "NPC"
             ]
           },
-          "player": {
-            "type": "string"
-          },
-          "city": {
-            "type": "string"
-          },
           "motto": {
             "type": "string"
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "level": {
             "type": "integer",
@@ -6775,14 +6823,23 @@
             "type": "integer",
             "default": 0
           },
+          "player": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
           "games": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "code": {
-            "type": "string"
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
