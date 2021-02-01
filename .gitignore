@@ -117,3 +117,4 @@ build
 # Docker Volume
 ############################
 .docker-compose-dev
+.strapi-updater.json

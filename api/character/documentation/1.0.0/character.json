@@ -948,6 +948,9 @@
                 "status": {
                   "type": "string"
                 },
+                "googleCalendarEventId": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

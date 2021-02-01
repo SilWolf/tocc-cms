@@ -68,8 +68,8 @@
       "collection": "character"
     },
     "games": {
-      "collection": "game",
-      "via": "dm"
+      "via": "dm",
+      "collection": "game"
     },
     "portraitImage": {
       "model": "file",

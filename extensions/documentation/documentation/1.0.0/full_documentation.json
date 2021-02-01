@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/29/2021 10:32:33 AM"
+    "x-generation-date": "02/02/2021 2:20:18 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6733,6 +6733,9 @@
                 "status": {
                   "type": "string"
                 },
+                "googleCalendarEventId": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7009,8 +7012,8 @@
               "required": [
                 "id",
                 "name",
-                "type",
-                "code"
+                "code",
+                "type"
               ],
               "properties": {
                 "id": {
@@ -7019,19 +7022,16 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
+                "code": {
                   "type": "string"
                 },
-                "portrait": {
+                "description": {
                   "type": "string"
                 },
                 "type": {
                   "type": "string"
                 },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
+                "portrait": {
                   "type": "string"
                 },
                 "coverImage": {
@@ -7040,17 +7040,17 @@
                 "motto": {
                   "type": "string"
                 },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "level": {
                   "type": "integer"
                 },
                 "xp": {
                   "type": "integer"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "games": {
                   "type": "array",
@@ -7058,8 +7058,11 @@
                     "type": "string"
                   }
                 },
-                "code": {
-                  "type": "string"
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -7155,6 +7158,9 @@
                   "type": "string"
                 },
                 "status": {
+                  "type": "string"
+                },
+                "googleCalendarEventId": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7417,8 +7423,8 @@
               "required": [
                 "id",
                 "name",
-                "type",
-                "code"
+                "code",
+                "type"
               ],
               "properties": {
                 "id": {
@@ -7427,19 +7433,16 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
+                "code": {
                   "type": "string"
                 },
-                "portrait": {
+                "description": {
                   "type": "string"
                 },
                 "type": {
                   "type": "string"
                 },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
+                "portrait": {
                   "type": "string"
                 },
                 "coverImage": {
@@ -7448,17 +7451,17 @@
                 "motto": {
                   "type": "string"
                 },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "level": {
                   "type": "integer"
                 },
                 "xp": {
                   "type": "integer"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "games": {
                   "type": "array",
@@ -7466,8 +7469,11 @@
                     "type": "string"
                   }
                 },
-                "code": {
-                  "type": "string"
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -7495,8 +7501,8 @@
                   "required": [
                     "id",
                     "name",
-                    "type",
-                    "code"
+                    "code",
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -7505,19 +7511,16 @@
                     "name": {
                       "type": "string"
                     },
-                    "description": {
+                    "code": {
                       "type": "string"
                     },
-                    "portrait": {
+                    "description": {
                       "type": "string"
                     },
                     "type": {
                       "type": "string"
                     },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
+                    "portrait": {
                       "type": "string"
                     },
                     "coverImage": {
@@ -7526,17 +7529,17 @@
                     "motto": {
                       "type": "string"
                     },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "level": {
                       "type": "integer"
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
                     },
                     "games": {
                       "type": "array",
@@ -7544,8 +7547,11 @@
                         "type": "string"
                       }
                     },
-                    "code": {
-                      "type": "string"
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "created_by": {
                       "type": "string"
@@ -7763,8 +7769,8 @@
                   "required": [
                     "id",
                     "name",
-                    "type",
-                    "code"
+                    "code",
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -7773,19 +7779,16 @@
                     "name": {
                       "type": "string"
                     },
-                    "description": {
+                    "code": {
                       "type": "string"
                     },
-                    "portrait": {
+                    "description": {
                       "type": "string"
                     },
                     "type": {
                       "type": "string"
                     },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
+                    "portrait": {
                       "type": "string"
                     },
                     "coverImage": {
@@ -7794,17 +7797,17 @@
                     "motto": {
                       "type": "string"
                     },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "level": {
                       "type": "integer"
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
                     },
                     "games": {
                       "type": "array",
@@ -7812,8 +7815,11 @@
                         "type": "string"
                       }
                     },
-                    "code": {
-                      "type": "string"
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "created_by": {
                       "type": "string"
@@ -7901,6 +7907,9 @@
               "published",
               "completed"
             ]
+          },
+          "googleCalendarEventId": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -8348,8 +8357,8 @@
               "required": [
                 "id",
                 "name",
-                "type",
-                "code"
+                "code",
+                "type"
               ],
               "properties": {
                 "id": {
@@ -8358,19 +8367,16 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
+                "code": {
                   "type": "string"
                 },
-                "portrait": {
+                "description": {
                   "type": "string"
                 },
                 "type": {
                   "type": "string"
                 },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
+                "portrait": {
                   "type": "string"
                 },
                 "coverImage": {
@@ -8379,17 +8385,17 @@
                 "motto": {
                   "type": "string"
                 },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "level": {
                   "type": "integer"
                 },
                 "xp": {
                   "type": "integer"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "games": {
                   "type": "array",
@@ -8397,8 +8403,11 @@
                     "type": "string"
                   }
                 },
-                "code": {
-                  "type": "string"
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -8491,6 +8500,9 @@
                   "type": "string"
                 },
                 "status": {
+                  "type": "string"
+                },
+                "googleCalendarEventId": {
                   "type": "string"
                 },
                 "created_by": {

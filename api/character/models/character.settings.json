@@ -27,21 +27,28 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": ["PC", "NPC"],
+      "enum": [
+        "PC",
+        "NPC"
+      ],
       "default": "PC",
       "required": true
     },
     "portrait": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
     },
     "coverImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
     },
@@ -68,8 +75,8 @@
       "via": "characters"
     },
     "games": {
-      "collection": "game",
-      "via": "characters"
+      "via": "characters",
+      "collection": "game"
     },
     "activities": {
       "collection": "activity",

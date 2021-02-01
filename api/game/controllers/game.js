@@ -1,6 +1,9 @@
 "use strict";
 
 const { sanitizeEntity } = require("strapi-utils");
+const {
+  insertEvent,
+} = require("../../../helpers/googleapis/calendar.googleapi.helper");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/controllers.html#core-controllers)
@@ -85,16 +88,45 @@ module.exports = {
         ...entity,
         status: "published",
         publishedAt: new Date().toISOString(),
+        worldEndAt: entity.worldStartAt,
       }
     );
 
-    return sanitizeEntity(updatedEntity, { model: strapi.models.game });
+    const output = sanitizeEntity(updatedEntity, { model: strapi.models.game });
+
+    // Publish to Google Calendar
+    const event = {
+      summary: output.title,
+      location: output.city.shopAddress,
+      description: output.description,
+      start: {
+        dateTime: output.startAt,
+        timeZone: "Asia/Hong_Kong",
+      },
+      end: {
+        dateTime: output.endAt,
+        timeZone: "Asia/Hong_Kong",
+      },
+      reminders: {
+        useDefault: false,
+        overrides: [
+          { method: "email", minutes: 24 * 60 },
+          { method: "popup", minutes: 60 },
+        ],
+      },
+    };
+    console.log(event);
+    insertEvent(event).then((res) => {
+      console.log(res);
+    });
+
+    return output;
   },
 
   async patchToCompleted(ctx) {
     const { id } = ctx.params;
 
-    const entity = await trapi.services.game.findOne({ id });
+    const entity = await strapi.services.game.findOne({ id });
     if (entity.status !== "published") {
       return ctx.badRequest();
     }
