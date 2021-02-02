@@ -75,12 +75,16 @@
       "via": "characters"
     },
     "games": {
-      "via": "characters",
-      "collection": "game"
+      "collection": "game",
+      "via": "characters"
     },
     "activities": {
       "collection": "activity",
       "via": "characters"
+    },
+    "gp": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

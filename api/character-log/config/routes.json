@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/character-logs",
+      "handler": "character-log.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-logs/count",
+      "handler": "character-log.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-logs/:id",
+      "handler": "character-log.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/character-logs",
+      "handler": "character-log.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/character-logs/:id",
+      "handler": "character-log.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/character-logs/:id",
+      "handler": "character-log.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

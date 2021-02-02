@@ -102,6 +102,17 @@ module.exports = {
       return ctx.badRequest();
     }
 
+    (entity.characterAndRewards || []).forEach((cr) => {
+      strapi.services["character-log"].create({
+        character: cr.character,
+        description: cr.description,
+        xp: cr.xp,
+        gp: cr.gp,
+        items: cr.items,
+        remark: cr.remark,
+      });
+    });
+
     const updatedEntity = await strapi.services.game.update(
       { id },
       {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/02/2021 1:41:08 PM"
+    "x-generation-date": "02/02/2021 8:18:04 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -556,6 +556,530 @@
         ]
       }
     },
+    "/character-logs": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-log"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-log"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCharacter-log"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/character-logs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-log"
+        ],
+        "parameters": []
+      }
+    },
+    "/character-logs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-log"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCharacter-log"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/characters": {
       "get": {
         "deprecated": false,
@@ -1071,6 +1595,74 @@
                 "schema": {
                   "type": "integer",
                   "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/characters/{id}/logs": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -6039,8 +6631,8 @@
                   "required": [
                     "id",
                     "name",
-                    "type",
-                    "code"
+                    "code",
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -6049,19 +6641,16 @@
                     "name": {
                       "type": "string"
                     },
-                    "description": {
+                    "code": {
                       "type": "string"
                     },
-                    "portrait": {
+                    "description": {
                       "type": "string"
                     },
                     "type": {
                       "type": "string"
                     },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
+                    "portrait": {
                       "type": "string"
                     },
                     "coverImage": {
@@ -6070,17 +6659,17 @@
                     "motto": {
                       "type": "string"
                     },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "level": {
                       "type": "integer"
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
                     },
                     "games": {
                       "type": "array",
@@ -6088,8 +6677,14 @@
                         "type": "string"
                       }
                     },
-                    "code": {
-                      "type": "string"
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
@@ -6139,8 +6734,8 @@
               "required": [
                 "id",
                 "name",
-                "type",
-                "code"
+                "code",
+                "type"
               ],
               "properties": {
                 "id": {
@@ -6149,19 +6744,16 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
+                "code": {
                   "type": "string"
                 },
-                "portrait": {
+                "description": {
                   "type": "string"
                 },
                 "type": {
                   "type": "string"
                 },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
+                "portrait": {
                   "type": "string"
                 },
                 "coverImage": {
@@ -6170,17 +6762,17 @@
                 "motto": {
                   "type": "string"
                 },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "level": {
                   "type": "integer"
                 },
                 "xp": {
                   "type": "integer"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "games": {
                   "type": "array",
@@ -6188,8 +6780,14 @@
                     "type": "string"
                   }
                 },
-                "code": {
-                  "type": "string"
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "gp": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"
@@ -6244,8 +6842,8 @@
                   "required": [
                     "id",
                     "name",
-                    "type",
-                    "code"
+                    "code",
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -6254,19 +6852,16 @@
                     "name": {
                       "type": "string"
                     },
-                    "description": {
+                    "code": {
                       "type": "string"
                     },
-                    "portrait": {
+                    "description": {
                       "type": "string"
                     },
                     "type": {
                       "type": "string"
                     },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
+                    "portrait": {
                       "type": "string"
                     },
                     "coverImage": {
@@ -6275,17 +6870,17 @@
                     "motto": {
                       "type": "string"
                     },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "level": {
                       "type": "integer"
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
                     },
                     "games": {
                       "type": "array",
@@ -6293,8 +6888,14 @@
                         "type": "string"
                       }
                     },
-                    "code": {
-                      "type": "string"
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
@@ -6345,6 +6946,281 @@
             }
           },
           "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Character-log": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "xp": {
+            "type": "integer",
+            "default": 0
+          },
+          "gp": {
+            "type": "integer",
+            "default": 0
+          },
+          "game": {
+            "required": [
+              "id",
+              "title",
+              "startAt",
+              "worldStartAt",
+              "lvMin",
+              "capacityMin",
+              "capacityMax",
+              "code",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "startAt": {
+                "type": "string"
+              },
+              "endAt": {
+                "type": "string"
+              },
+              "worldStartAt": {
+                "type": "string"
+              },
+              "worldEndAt": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "lvMin": {
+                "type": "integer"
+              },
+              "lvMax": {
+                "type": "integer"
+              },
+              "capacityMin": {
+                "type": "integer"
+              },
+              "capacityMax": {
+                "type": "integer"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "remark": {
+                "type": "string"
+              },
+              "dm": {
+                "type": "string"
+              },
+              "characters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "characterAndRewards": {
+                "type": "component"
+              },
+              "journals": {
+                "type": "component"
+              },
+              "code": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "publishedAt": {
+                "type": "string"
+              },
+              "completedAt": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "googleCalendarEventId": {
+                "type": "string"
+              },
+              "googleCalendarEventUrl": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "character": {
+            "required": [
+              "id",
+              "name",
+              "code",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "portrait": {
+                "type": "string"
+              },
+              "coverImage": {
+                "type": "string"
+              },
+              "motto": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "xp": {
+                "type": "integer"
+              },
+              "player": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "games": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "gp": {
+                "type": "integer"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "worldStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "default": "1261-12-31T16:23:18.000Z"
+          },
+          "worldEndAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewCharacter-log": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "xp": {
+            "type": "integer",
+            "default": 0
+          },
+          "gp": {
+            "type": "integer",
+            "default": 0
+          },
+          "game": {
+            "type": "string"
+          },
+          "character": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "worldStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "default": "1261-12-31T16:23:18.000Z"
+          },
+          "worldEndAt": {
             "type": "string",
             "format": "date-time"
           },
@@ -6791,6 +7667,10 @@
                 }
               }
             }
+          },
+          "gp": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
@@ -6846,6 +7726,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "gp": {
+            "type": "integer",
+            "default": 0
           },
           "created_by": {
             "type": "string"
@@ -7066,6 +7950,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "gp": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"
@@ -7481,6 +8368,9 @@
                     "type": "string"
                   }
                 },
+                "gp": {
+                  "type": "integer"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7558,6 +8448,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
@@ -7832,6 +8725,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
@@ -8423,6 +9319,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "gp": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"

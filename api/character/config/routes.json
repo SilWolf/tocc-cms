@@ -33,6 +33,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/characters/:id/logs",
+      "handler": "character.logs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/characters",
       "handler": "character.create",

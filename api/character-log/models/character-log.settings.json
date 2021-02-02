@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_logs",
+  "info": {
+    "name": "CharacterLog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "remark": {
+      "type": "text"
+    },
+    "xp": {
+      "type": "integer",
+      "default": 0,
+      "required": false
+    },
+    "gp": {
+      "type": "integer",
+      "default": 0
+    },
+    "game": {
+      "model": "game"
+    },
+    "character": {
+      "model": "character"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.reward"
+    },
+    "worldStartAt": {
+      "type": "datetime",
+      "default": "1261-12-31T16:23:18.000Z"
+    },
+    "worldEndAt": {
+      "type": "datetime"
+    }
+  }
+}

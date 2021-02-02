@@ -906,6 +906,9 @@
                     "type": "string"
                   }
                 },
+                "gp": {
+                  "type": "integer"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -983,6 +986,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
@@ -1257,6 +1263,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"

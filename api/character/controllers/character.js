@@ -23,4 +23,19 @@ module.exports = {
       sanitizeEntity(entity, { model: strapi.models.character })
     );
   },
+
+  async logs(ctx) {
+    const { id } = ctx.params;
+
+    const entities = await strapi.services["character-log"].find(
+      {
+        character: id,
+      },
+      ["game"]
+    );
+
+    return entities.map((entity) =>
+      sanitizeEntity(entity, { model: strapi.models["character-log"] })
+    );
+  },
 };

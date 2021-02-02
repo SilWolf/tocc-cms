@@ -15,7 +15,7 @@ const { formatGameToDescription } = require("../helpers/game");
 module.exports = {
   lifecycles: {
     async beforeUpdate(params, data) {
-      const entity = await strapi.services.game.findOne(params);
+      const entity = await strapi.services.game.findOne(params, []);
 
       // Case 1: update to draft and googleCalendarEventId exists
       if (data.status === "draft") {
@@ -69,6 +69,25 @@ module.exports = {
           }
         }
       }
+
+      // Temporary fix on Strapi update bug
+      data.characterAndRewards = data.characterAndRewards?.map((item) =>
+        !item._id
+          ? item
+          : {
+              ...item,
+              _id: item._id?.toString() || undefined,
+            }
+      );
+      data.journals = data.journals?.map((item) =>
+        !item._id
+          ? item
+          : {
+              ...item,
+              _id: item._id?.toString() || undefined,
+            }
+      );
+      // Temporary fix on Strapi update bug
     },
 
     async afterDelete(result) {

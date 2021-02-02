@@ -556,8 +556,8 @@
                   "required": [
                     "id",
                     "name",
-                    "type",
-                    "code"
+                    "code",
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -566,19 +566,16 @@
                     "name": {
                       "type": "string"
                     },
-                    "description": {
+                    "code": {
                       "type": "string"
                     },
-                    "portrait": {
+                    "description": {
                       "type": "string"
                     },
                     "type": {
                       "type": "string"
                     },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
+                    "portrait": {
                       "type": "string"
                     },
                     "coverImage": {
@@ -587,17 +584,17 @@
                     "motto": {
                       "type": "string"
                     },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "level": {
                       "type": "integer"
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
                     },
                     "games": {
                       "type": "array",
@@ -605,8 +602,14 @@
                         "type": "string"
                       }
                     },
-                    "code": {
-                      "type": "string"
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
@@ -656,8 +659,8 @@
               "required": [
                 "id",
                 "name",
-                "type",
-                "code"
+                "code",
+                "type"
               ],
               "properties": {
                 "id": {
@@ -666,19 +669,16 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
+                "code": {
                   "type": "string"
                 },
-                "portrait": {
+                "description": {
                   "type": "string"
                 },
                 "type": {
                   "type": "string"
                 },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
+                "portrait": {
                   "type": "string"
                 },
                 "coverImage": {
@@ -687,17 +687,17 @@
                 "motto": {
                   "type": "string"
                 },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "level": {
                   "type": "integer"
                 },
                 "xp": {
                   "type": "integer"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
                 },
                 "games": {
                   "type": "array",
@@ -705,8 +705,14 @@
                     "type": "string"
                   }
                 },
-                "code": {
-                  "type": "string"
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "gp": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"
@@ -761,8 +767,8 @@
                   "required": [
                     "id",
                     "name",
-                    "type",
-                    "code"
+                    "code",
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -771,19 +777,16 @@
                     "name": {
                       "type": "string"
                     },
-                    "description": {
+                    "code": {
                       "type": "string"
                     },
-                    "portrait": {
+                    "description": {
                       "type": "string"
                     },
                     "type": {
                       "type": "string"
                     },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
+                    "portrait": {
                       "type": "string"
                     },
                     "coverImage": {
@@ -792,17 +795,17 @@
                     "motto": {
                       "type": "string"
                     },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "level": {
                       "type": "integer"
                     },
                     "xp": {
                       "type": "integer"
+                    },
+                    "player": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
                     },
                     "games": {
                       "type": "array",
@@ -810,8 +813,14 @@
                         "type": "string"
                       }
                     },
-                    "code": {
-                      "type": "string"
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "gp": {
+                      "type": "integer"
                     },
                     "created_by": {
                       "type": "string"
