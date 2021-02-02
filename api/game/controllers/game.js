@@ -105,11 +105,14 @@ module.exports = {
     (entity.characterAndRewards || []).forEach((cr) => {
       strapi.services["character-log"].create({
         character: cr.character,
-        description: cr.description,
+        description: `${entity.code} - ${entity.title} 獎勵`,
         xp: cr.xp,
         gp: cr.gp,
         items: cr.items,
         remark: cr.remark,
+        worldStartAt: entity.worldStartAt,
+        worldEndAt: entity.worldEndAt,
+        game: entity.id,
       });
     });
 

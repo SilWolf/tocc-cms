@@ -30,6 +30,8 @@ module.exports = {
     const entities = await strapi.services["character-log"].find(
       {
         character: id,
+        _sort: "createdAt:DESC",
+        _limit: 10,
       },
       ["game"]
     );
