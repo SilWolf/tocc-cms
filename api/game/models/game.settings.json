@@ -103,8 +103,12 @@
     },
     "googleCalendarEventId": {
       "type": "string",
-      "private": true,
+      "private": false,
       "unique": true
+    },
+    "googleCalendarEventUrl": {
+      "type": "string",
+      "private": false
     }
   }
 }

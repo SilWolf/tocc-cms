@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/02/2021 2:20:18 AM"
+    "x-generation-date": "02/02/2021 1:41:08 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6736,6 +6736,9 @@
                 "googleCalendarEventId": {
                   "type": "string"
                 },
+                "googleCalendarEventUrl": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7161,6 +7164,9 @@
                   "type": "string"
                 },
                 "googleCalendarEventId": {
+                  "type": "string"
+                },
+                "googleCalendarEventUrl": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7685,6 +7691,12 @@
               "published",
               "completed"
             ]
+          },
+          "googleCalendarEventId": {
+            "type": "string"
+          },
+          "googleCalendarEventUrl": {
+            "type": "string"
           }
         }
       },
@@ -7909,6 +7921,9 @@
             ]
           },
           "googleCalendarEventId": {
+            "type": "string"
+          },
+          "googleCalendarEventUrl": {
             "type": "string"
           },
           "created_by": {
@@ -8503,6 +8518,9 @@
                   "type": "string"
                 },
                 "googleCalendarEventId": {
+                  "type": "string"
+                },
+                "googleCalendarEventUrl": {
                   "type": "string"
                 },
                 "created_by": {

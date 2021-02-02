@@ -951,6 +951,9 @@
                 "googleCalendarEventId": {
                   "type": "string"
                 },
+                "googleCalendarEventUrl": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

@@ -20,6 +20,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "date-fns": "^2.16.1",
     "googleapis": "^67.0.0",
     "ngrok": "^3.3.0",
     "strapi": "3.4.4",
