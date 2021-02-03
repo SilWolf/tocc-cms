@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/02/2021 8:18:04 PM"
+    "x-generation-date": "02/03/2021 12:38:44 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3451,6 +3451,63 @@
             }
           }
         ]
+      }
+    },
+    "/global/search": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Global"
+        ],
+        "parameters": []
       }
     },
     "/races": {
@@ -9615,6 +9672,9 @@
     },
     {
       "name": "Game"
+    },
+    {
+      "name": "Global"
     },
     {
       "name": "Race"
