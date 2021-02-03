@@ -108,6 +108,7 @@ coverage
 ############################
 
 .env
+.env.staging
 license.txt
 exports
 .cache
