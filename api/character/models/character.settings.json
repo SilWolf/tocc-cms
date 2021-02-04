@@ -75,8 +75,8 @@
       "via": "characters"
     },
     "games": {
-      "collection": "game",
-      "via": "characters"
+      "via": "characters",
+      "collection": "game"
     },
     "activities": {
       "collection": "activity",

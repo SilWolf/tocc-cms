@@ -63,8 +63,8 @@
       "via": "games"
     },
     "characters": {
-      "via": "games",
       "collection": "character",
+      "via": "games",
       "dominant": true
     },
     "characterAndRewards": {
@@ -104,7 +104,7 @@
     "googleCalendarEventId": {
       "type": "string",
       "private": false,
-      "unique": true
+      "unique": false
     },
     "googleCalendarEventUrl": {
       "type": "string",
