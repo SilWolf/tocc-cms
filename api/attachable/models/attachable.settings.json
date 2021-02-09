@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attachables",
+  "info": {
+    "name": "Attachable",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "features": {
+      "type": "json"
+    },
+    "race": {
+      "private": true,
+      "model": "race"
+    }
+  }
+}

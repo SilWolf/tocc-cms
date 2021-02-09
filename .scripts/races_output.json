@@ -1,0 +1,5722 @@
+[
+  {
+    "name": "Dragonborn",
+    "source": "PHB",
+    "page": 32,
+    "srd": true,
+    "size": "M",
+    "speed": 30,
+    "ability": [
+      {
+        "str": 2,
+        "cha": 1
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 66,
+      "heightMod": "2d8",
+      "baseWeight": 175,
+      "weightMod": "2d6"
+    },
+    "traitTags": [
+      "Uncommon Race"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "draconic": true
+      }
+    ],
+    "resist": [
+      {
+        "choose": {
+          "from": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "poison"
+          ]
+        }
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/dragonborn.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil (represented by Bahamut and Tiamat, respectively). Most dragonborn are good, but those who side with Tiamat can be terrible villains."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Draconic Ancestry",
+        "entries": [
+          "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+          {
+            "type": "table",
+            "caption": "Draconic Ancestry",
+            "colLabels": [
+              "Dragon",
+              "Damage Type",
+              "Breath Weapon"
+            ],
+            "colStyles": [
+              "col-3 text-center",
+              "col-3 text-center",
+              "col-6"
+            ],
+            "rows": [
+              [
+                "Black",
+                "Acid",
+                "5 by 30 ft. line (Dex. save)"
+              ],
+              [
+                "Blue",
+                "Lightning",
+                "5 by 30 ft. line (Dex. save)"
+              ],
+              [
+                "Brass",
+                "Fire",
+                "5 by 30 ft. line (Dex. save)"
+              ],
+              [
+                "Bronze",
+                "Lightning",
+                "5 by 30 ft. line (Dex. save)"
+              ],
+              [
+                "Copper",
+                "Acid",
+                "5 by 30 ft. line (Dex. save)"
+              ],
+              [
+                "Gold",
+                "Fire",
+                "15 ft. cone (Dex. save)"
+              ],
+              [
+                "Green",
+                "Poison",
+                "15 ft. cone (Con. save)"
+              ],
+              [
+                "Red",
+                "Fire",
+                "15 ft. cone (Dex. save)"
+              ],
+              [
+                "Silver",
+                "Cold",
+                "15 ft. cone (Con. save)"
+              ],
+              [
+                "White",
+                "Cold",
+                "15 ft. cone (Con. save)"
+              ]
+            ]
+          }
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Breath Weapon",
+        "entries": [
+          "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.",
+          "When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d6} damage on a failed save, and half as much damage on a successful one. The damage increases to {@dice 3d6} at 6th level, {@dice 4d6} at 11th level, and {@dice 5d6} at 16th level.",
+          "After you use your breath weapon, you can't use it again until you complete a short or long rest."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Damage Resistance",
+        "entries": [
+          "You have resistance to the damage type associated with your draconic ancestry."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {},
+      {
+        "name": "Draconblood",
+        "source": "EGW",
+        "page": 168,
+        "ability": [
+          {
+            "int": 2,
+            "cha": 1
+          }
+        ],
+        "darkvision": 60,
+        "traitTags": [],
+        "resist": null,
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Darkvision",
+            "entries": [
+              "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Forceful Presence",
+            "entries": [
+              "You can use your understanding of creative diplomacy or intimidation to guide a conversation in your favor. When you make a Charisma ({@skill Intimidation} or {@skill Persuasion}) check, you can do so with advantage. Once you use this trait, you can't do so again until you finish a short or long rest."
+            ],
+            "data": {
+              "overwrite": "Damage Resistance"
+            }
+          },
+          {
+            "name": "Draconic Ancestry",
+            "entries": [
+              "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon is determined by the dragon type, as shown in the table.",
+              {
+                "type": "table",
+                "caption": "Draconic Ancestry",
+                "colLabels": [
+                  "Dragon",
+                  "Damage Type",
+                  "Breath Weapon"
+                ],
+                "colStyles": [
+                  "col-3 text-center",
+                  "col-3 text-center",
+                  "col-6"
+                ],
+                "rows": [
+                  [
+                    "Black",
+                    "Acid",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Blue",
+                    "Lightning",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Brass",
+                    "Fire",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Bronze",
+                    "Lightning",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Copper",
+                    "Acid",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Gold",
+                    "Fire",
+                    "15 ft. cone (Dex. save)"
+                  ],
+                  [
+                    "Green",
+                    "Poison",
+                    "15 ft. cone (Con. save)"
+                  ],
+                  [
+                    "Red",
+                    "Fire",
+                    "15 ft. cone (Dex. save)"
+                  ],
+                  [
+                    "Silver",
+                    "Cold",
+                    "15 ft. cone (Con. save)"
+                  ],
+                  [
+                    "White",
+                    "Cold",
+                    "15 ft. cone (Con. save)"
+                  ]
+                ]
+              }
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Draconic Ancestry"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true,
+          "traitTags": true
+        }
+      },
+      {
+        "name": "Ravenite",
+        "source": "EGW",
+        "page": 168,
+        "ability": [
+          {
+            "str": 2,
+            "con": 1
+          }
+        ],
+        "darkvision": 60,
+        "traitTags": [],
+        "resist": null,
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Darkvision",
+            "entries": [
+              "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Vengeful Assault",
+            "entries": [
+              "When you take damage from a creature in range of a weapon you are wielding, you can use your reaction to make an attack with the weapon against that creature. Once you use this trait, you can't do so again until you finish a short or long rest."
+            ],
+            "data": {
+              "overwrite": "Damage Resistance"
+            }
+          },
+          {
+            "name": "Draconic Ancestry",
+            "entries": [
+              "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon is determined by the dragon type, as shown in the table.",
+              {
+                "type": "table",
+                "caption": "Draconic Ancestry",
+                "colLabels": [
+                  "Dragon",
+                  "Damage Type",
+                  "Breath Weapon"
+                ],
+                "colStyles": [
+                  "col-3 text-center",
+                  "col-3 text-center",
+                  "col-6"
+                ],
+                "rows": [
+                  [
+                    "Black",
+                    "Acid",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Blue",
+                    "Lightning",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Brass",
+                    "Fire",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Bronze",
+                    "Lightning",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Copper",
+                    "Acid",
+                    "5 by 30 ft. line (Dex. save)"
+                  ],
+                  [
+                    "Gold",
+                    "Fire",
+                    "15 ft. cone (Dex. save)"
+                  ],
+                  [
+                    "Green",
+                    "Poison",
+                    "15 ft. cone (Con. save)"
+                  ],
+                  [
+                    "Red",
+                    "Fire",
+                    "15 ft. cone (Dex. save)"
+                  ],
+                  [
+                    "Silver",
+                    "Cold",
+                    "15 ft. cone (Con. save)"
+                  ],
+                  [
+                    "White",
+                    "Cold",
+                    "15 ft. cone (Con. save)"
+                  ]
+                ]
+              }
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Draconic Ancestry"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true,
+          "traitTags": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dwarf",
+    "source": "PHB",
+    "page": 18,
+    "srd": true,
+    "size": "M",
+    "speed": 25,
+    "ability": [
+      {
+        "con": 2
+      }
+    ],
+    "darkvision": 60,
+    "traitTags": [
+      "Weapon Proficiency",
+      "Tool Proficiency",
+      "Skill Proficiency"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "dwarvish": true
+      }
+    ],
+    "resist": [
+      "poison"
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/dwarf.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Speed",
+        "entries": [
+          "Your speed is not reduced by wearing heavy armor."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Dwarven Resilience",
+        "entries": [
+          "You have advantage on saving throws against poison, and you have resistance against poison damage."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Dwarven Combat Training",
+        "entries": [
+          "You have proficiency with the {@item battleaxe|phb}, {@item handaxe|phb}, {@item light hammer|phb}, and {@item warhammer|phb}."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Tool Proficiency",
+        "entries": [
+          "You gain proficiency with the artisan's tools of your choice: {@item Smith's tools|phb}, {@item brewer's supplies|phb}, or {@item mason's tools|phb}."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Stonecunning",
+        "entries": [
+          "Whenever you make an Intelligence ({@skill History}) check related to the origin of stonework, you are considered proficient in the {@skill History} skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Duergar",
+        "source": "MTF",
+        "page": 81,
+        "otherSources": [
+          {
+            "source": "SCAG",
+            "page": 104
+          }
+        ],
+        "ability": [
+          {
+            "str": 1
+          }
+        ],
+        "darkvision": 120,
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "languageProficiencies": [
+          {
+            "common": true,
+            "dwarvish": true,
+            "undercommon": true
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "3": {
+                "rest": {
+                  "1": [
+                    "enlarge/reduce"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "invisibility"
+                  ]
+                }
+              }
+            },
+            "ability": "int"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Superior Darkvision",
+            "entries": [
+              "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ],
+            "data": {
+              "overwrite": "Darkvision"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Duergar Resilience",
+            "entries": [
+              "You have advantage on saving throws against poison, and you have resistance against poison damage. You also have advantage on saving throws against illusions and against being {@condition charmed} or {@condition paralyzed}."
+            ],
+            "data": {
+              "overwrite": "Dwarven Resilience"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common, Dwarvish, and Undercommon."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Duergar Magic",
+            "entries": [
+              "When you reach 3rd level, you can cast the {@spell Enlarge/Reduce} spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the {@spell Invisibility} spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Sunlight Sensitivity",
+            "entries": [
+              "You have disadvantage on attack rolls and Wisdom ({@skill Perception}) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+            ],
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "Hill",
+        "page": 20,
+        "srd": true,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 44,
+          "heightMod": "2d4",
+          "baseWeight": 115,
+          "weightMod": "2d6"
+        },
+        "entries": [
+          {
+            "name": "Dwarven Toughness",
+            "entries": [
+              "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Mark of Warding",
+        "source": "ERLW",
+        "page": 51,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 108
+          }
+        ],
+        "ability": [
+          {
+            "int": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "alarm",
+                "mage armor"
+              ]
+            },
+            "expanded": {
+              "s1": [
+                "alarm",
+                "armor of agathys"
+              ],
+              "s2": [
+                "arcane lock",
+                "knock"
+              ],
+              "s3": [
+                "glyph of warding",
+                "magic circle"
+              ],
+              "s4": [
+                "leomund's secret chest",
+                "mordenkainen's faithful hound"
+              ],
+              "s5": [
+                "antilife shell"
+              ]
+            },
+            "ability": "int"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Warder's Intuition",
+            "entries": [
+              "When you make an Intelligence ({@skill Investigation}) check or an ability check using {@item thieves' tools|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Wards and Seals",
+            "entries": [
+              "You can cast the {@spell alarm} and {@spell mage armor} spells with this trait. Starting at 3rd level, you can also cast the {@spell arcane lock} spell with it. Once you cast any of these spells with this trait, you can't cast that spell with it again until you finish a long rest. Intelligence is your spellcasting ability for these spells, and you don't need material components for them when you cast them with this trait."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Warding Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Warding Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell alarm}, {@spell armor of Agathys}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell arcane lock}, {@spell knock}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell glyph of warding}, {@spell magic circle}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell Leomund's secret chest}, {@spell Mordenkainen's faithful hound}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell antilife shell}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mountain",
+        "page": 20,
+        "ability": [
+          {
+            "str": 2
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 48,
+          "heightMod": "2d4",
+          "baseWeight": 130,
+          "weightMod": "2d6"
+        },
+        "traitTags": [
+          "Armor Proficiency"
+        ],
+        "entries": [
+          {
+            "name": "Dwarven Armor Training",
+            "entries": [
+              "You have proficiency with light and medium armor."
+            ],
+            "type": "entries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Elf",
+    "source": "PHB",
+    "page": 21,
+    "srd": true,
+    "size": "M",
+    "speed": 30,
+    "ability": [
+      {
+        "dex": 2
+      }
+    ],
+    "darkvision": 60,
+    "traitTags": [
+      "Skill Proficiency",
+      "Improved Resting"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/elf.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Keen Senses",
+        "entries": [
+          "You have proficiency in the {@skill Perception} skill."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Fey Ancestry",
+        "entries": [
+          "You have advantage on saving throws against being {@condition charmed}, and magic can't put you to sleep."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Trance",
+        "entries": [
+          "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
+          "{@note If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed.}"
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Avariel",
+        "source": "UAElfSubraces",
+        "page": 1,
+        "speed": {
+          "walk": 30,
+          "fly": 30
+        },
+        "languageProficiencies": [
+          {
+            "auran": true
+          }
+        ],
+        "entries": [
+          {
+            "name": "Extra Language",
+            "entries": [
+              "You can speak, read, and write Auran."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Flight",
+            "entries": [
+              "You have a flying speed of 30 feet. To use this speed, you can't be wearing medium or heavy armor."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Drow",
+        "alias": [
+          "Dark"
+        ],
+        "page": 24,
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 53,
+          "heightMod": "2d6",
+          "baseWeight": 75,
+          "weightMod": "1d6"
+        },
+        "darkvision": 120,
+        "traitTags": [
+          "Spellcasting",
+          "Weapon Proficiency"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "dancing lights"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "faerie fire"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "darkness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Superior Darkvision",
+            "entries": [
+              "Accustomed to the depths of the Underdark, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ],
+            "data": {
+              "overwrite": "Darkvision"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Sunlight Sensitivity",
+            "entries": [
+              "You have disadvantage on attack rolls and on Wisdom ({@skill Perception}) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Drow Magic",
+            "entries": [
+              "You know the {@spell dancing lights} cantrip. When you reach 3rd level, you can cast the {@spell faerie fire} spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the {@spell darkness} spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Drow Weapon Training",
+            "entries": [
+              "You have proficiency with {@item rapier|phb|rapiers}, {@item shortsword|phb|shortswords}, and {@item hand crossbow|phb|hand crossbows}."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Eladrin",
+        "source": "DMG",
+        "page": 286,
+        "ability": [
+          {
+            "int": 1
+          }
+        ],
+        "traitTags": [
+          "Weapon Proficiency",
+          "Spellcasting"
+        ],
+        "entries": [
+          {
+            "name": "Elf Weapon Training",
+            "entries": [
+              "You have proficiency with the {@item longsword|phb}, {@item shortsword|phb}, {@item shortbow|phb}, and {@item longbow|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Fey Step",
+            "entries": [
+              "You can cast the {@spell misty step} spell once using this trait. You regain the ability to do so when you finish a short or long rest."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Eladrin",
+        "source": "MTF",
+        "page": 61,
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 54,
+          "heightMod": "2d12",
+          "baseWeight": 90,
+          "weightMod": "1d4"
+        },
+        "entries": [
+          "{@i Choose your eladrin's season: autumn, winter, spring, or summer. When finishing a long rest, any eladrin can change their season. See the \"Info\" tab for more information.}",
+          {
+            "name": "Fey Step",
+            "entries": [
+              "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a short or long rest.",
+              "When you reach 3rd level, your Fey Step gains an additional effect based on your season; if the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Charisma modifier:",
+              {
+                "type": "list",
+                "style": "list-hang-notitle",
+                "items": [
+                  {
+                    "type": "item",
+                    "name": "Autumn",
+                    "entry": "Immediately after you use your Fey Step, up to two creatures of your choice that you can see within 10 feet of you must succeed on a Wisdom saving throw or be {@condition charmed} by you for 1 minute, or until you or your companions deal any damage to it."
+                  },
+                  {
+                    "type": "item",
+                    "name": "Winter",
+                    "entry": "When you use your Fey Step, one creature of your choice that you can see within 5 feet of you before you teleport must succeed on a Wisdom saving throw or be {@condition frightened} of you until the end of your next turn."
+                  },
+                  {
+                    "type": "item",
+                    "name": "Spring",
+                    "entry": "When you use your Fey Step, you can touch one willing creature within 5 feet of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30 feet of you."
+                  },
+                  {
+                    "type": "item",
+                    "name": "Summer",
+                    "entry": "Immediately after you use your Fey Step, each creature of your choice that you can see within 5 feet of you takes fire damage equal to your Charisma modifier (minimum of 1 damage)."
+                  }
+                ]
+              }
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Eladrin",
+        "source": "UAEladrinAndGith",
+        "page": 1,
+        "ability": [
+          {
+            "choose": {
+              "from": [
+                "int",
+                "cha"
+              ],
+              "count": 1
+            }
+          }
+        ],
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "friends",
+                "chill touch",
+                "minor illusion",
+                "fire bolt"
+              ]
+            }
+          }
+        ],
+        "entries": [
+          {
+            "name": "Fey Step",
+            "entries": [
+              "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a short or long rest."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Shifting Seasons",
+            "entries": [
+              "At the end of each short or long rest, you can align yourself with the magic of one season, regardless of the season that is dominating your personality. Doing so allows you to cast a certain cantrip, as shown in the Shifting Seasons Cantrips table. When you align yourself with a season's magic, you lose the cantrip associated with the previous season and gain the cantrip associated with the new season.",
+              "Your spellcasting ability for these cantrips is Intelligence or Charisma, whichever is higher.",
+              {
+                "type": "table",
+                "caption": "Shifting Seasons Cantrips",
+                "colLabels": [
+                  "Season",
+                  "Cantrip"
+                ],
+                "colStyles": [
+                  "col-6 text-center",
+                  "col-6 text-center"
+                ],
+                "rows": [
+                  [
+                    "Autumn",
+                    "{@spell Friends}"
+                  ],
+                  [
+                    "Winter",
+                    "{@spell Chill touch}"
+                  ],
+                  [
+                    "Spring",
+                    "{@spell Minor illusion}"
+                  ],
+                  [
+                    "Summer",
+                    "{@spell Fire bolt}"
+                  ]
+                ]
+              }
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Grugach",
+        "source": "UAElfSubraces",
+        "page": 1,
+        "ability": [
+          {
+            "str": 1
+          }
+        ],
+        "traitTags": [
+          "Weapon Proficiency",
+          "Spellcasting"
+        ],
+        "languageProficiencies": [
+          {
+            "sylvan": true,
+            "elvish": true,
+            "anyStandard": 1
+          }
+        ],
+        "entries": [
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Sylvan, Elvish, and one extra language of your choice. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Grugach Weapon Training",
+            "entries": [
+              "You have proficiency with the {@item spear|phb}, {@item shortbow|phb}, {@item longbow|phb}, and {@item net|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Cantrip",
+            "entries": [
+              "You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
+            ],
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "High",
+        "page": 23,
+        "srd": true,
+        "speed": 30,
+        "ability": [
+          {
+            "int": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 54,
+          "heightMod": "2d10",
+          "baseWeight": 90,
+          "weightMod": "1d4"
+        },
+        "traitTags": [
+          "Weapon Proficiency",
+          "Spellcasting"
+        ],
+        "entries": [
+          {
+            "name": "Elf Weapon Training",
+            "entries": [
+              "You have proficiency with the {@item longsword|phb}, {@item shortsword|phb}, {@item shortbow|phb}, and {@item longbow|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Cantrip",
+            "entries": [
+              "You know one {@filter cantrip of your choice from the wizard spell list|spells|level=0|class=Wizard}. Intelligence is your spellcasting ability for it."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Extra Language",
+            "entries": [
+              "You can speak, read, and write one extra language of your choosing."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "High; Aereni",
+        "source": "UAWGE",
+        "page": 73,
+        "speed": 30,
+        "ability": [
+          {
+            "int": 1
+          }
+        ],
+        "traitTags": [
+          "Skill Proficiency",
+          "Tool Proficiency",
+          "Spellcasting"
+        ],
+        "entries": [
+          {
+            "name": "Aereni Training",
+            "entries": [
+              "Choose one skill or {@book tool|phb|5|tools} proficiency. Your proficiency bonus is doubled for any ability check you make that uses this chosen proficiency."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Cantrip",
+            "entries": [
+              "You know one {@filter cantrip of your choice from the wizard spell list|spells|level=0|class=Wizard}. Intelligence is your spellcasting ability for it."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Extra Language",
+            "entries": [
+              "You can speak, read, and write one extra language of your choosing."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "High; Valenar",
+        "source": "UAWGE",
+        "page": 73,
+        "speed": 30,
+        "ability": [
+          {
+            "int": 1
+          }
+        ],
+        "traitTags": [
+          "Weapon Proficiency",
+          "Spellcasting"
+        ],
+        "entries": [
+          {
+            "name": "Valenar Weapon Training",
+            "entries": [
+              "A Valenar elf gains proficiency with the {@item scimitar|phb}, {@item Double-Bladed Scimitar|erlw|double scimitar}, {@item longbow|phb}, and {@item shortbow|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Cantrip",
+            "entries": [
+              "You know one {@filter cantrip of your choice from the wizard spell list|spells|level=0|class=Wizard}. Intelligence is your spellcasting ability for it."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Extra Language",
+            "entries": [
+              "You can speak, read, and write one extra language of your choosing."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Mark of Shadow",
+        "source": "ERLW",
+        "page": 49,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 105
+          }
+        ],
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "minor illusion"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "invisibility"
+                  ]
+                }
+              }
+            },
+            "expanded": {
+              "s1": [
+                "disguise self",
+                "silent image"
+              ],
+              "s2": [
+                "darkness",
+                "pass without trace"
+              ],
+              "s3": [
+                "clairvoyance",
+                "major image"
+              ],
+              "s4": [
+                "greater invisibility",
+                "hallucinatory terrain"
+              ],
+              "s5": [
+                "mislead"
+              ]
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Cunning Intuition",
+            "entries": [
+              "When you make a Charisma ({@skill Performance}) or Dexterity ({@skill Stealth}) check, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Shape Shadows",
+            "entries": [
+              "You know the {@spell minor illusion} cantrip. Starting at 3rd level, you can cast the {@spell invisibility} spell once with this trait, and you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Shadow Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Shadow Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell disguise self}, {@spell silent image}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell darkness}, {@spell pass without trace}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell clairvoyance}, {@spell major image}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell greater invisibility}, {@spell hallucinatory terrain}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell mislead}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pallid",
+        "source": "EGW",
+        "page": 21,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 54,
+          "heightMod": "2d10",
+          "baseWeight": 90,
+          "weightMod": "1d4"
+        },
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "light"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "sleep"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "invisibility"
+                  ]
+                }
+              }
+            },
+            "ability": "wis"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Incisive Sense",
+            "entries": [
+              "You have advantage on Intelligence ({@skill Investigation}) and Wisdom ({@skill Insight}) checks."
+            ],
+            "type": "entries"
+          },
+          {
+            "type": "entries",
+            "name": "Blessing of the Moon Weaver",
+            "entries": [
+              "You know the {@spell light} cantrip. When you reach 3rd level, you can cast the {@spell sleep} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell invisibility} spell (targeting yourself only) once with this trait and regain the ability to do so when you finish a long rest. Casting these spells with this trait doesn't require material components. Wisdom is your spellcasting ability for these spells."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sea",
+        "source": "MTF",
+        "page": 62,
+        "otherSources": [
+          {
+            "source": "EGW",
+            "page": 163
+          }
+        ],
+        "speed": {
+          "walk": 30,
+          "swim": 30
+        },
+        "ability": [
+          {
+            "con": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 54,
+          "heightMod": "2d8",
+          "baseWeight": 90,
+          "weightMod": "1d4"
+        },
+        "traitTags": [
+          "Weapon Proficiency",
+          "Amphibious"
+        ],
+        "entries": [
+          {
+            "name": "Sea Elf Training",
+            "entries": [
+              "You have proficiency with the {@item spear|phb}, {@item trident|phb}, {@item light crossbow|phb}, and {@item net|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Child of the Sea",
+            "entries": [
+              "You have a swimming speed of 30 feet, and you can breathe air and water."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Friend of the Sea",
+            "entries": [
+              "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Extra Language",
+            "entries": [
+              "You can speak, read, and write Aquan."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Sea",
+        "source": "UAElfSubraces",
+        "page": 1,
+        "speed": {
+          "walk": 30,
+          "swim": 30
+        },
+        "ability": [
+          {
+            "con": 1
+          }
+        ],
+        "traitTags": [
+          "Weapon Proficiency",
+          "Amphibious"
+        ],
+        "entries": [
+          {
+            "name": "Extra Language",
+            "entries": [
+              "You can speak, read, and write Aquan."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Sea Elf Weapon Training",
+            "entries": [
+              "You have proficiency with the {@item spear|phb}, {@item trident|phb}, {@item light crossbow|phb}, and {@item net|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Child of the Sea",
+            "entries": [
+              "You have a swimming speed of 30 feet, and you can breathe air and water."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Friend of the Sea",
+            "entries": [
+              "Using gestures and sounds, you can communicate simple ideas with Small or smaller beasts that have an inborn swimming speed."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Shadar-kai",
+        "source": "MTF",
+        "page": 62,
+        "ability": [
+          {
+            "con": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 56,
+          "heightMod": "2d8",
+          "baseWeight": 90,
+          "weightMod": "1d4"
+        },
+        "resist": [
+          "necrotic"
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Necrotic Resistance",
+            "entries": [
+              "You have resistance to necrotic damage."
+            ]
+          },
+          {
+            "name": "Blessing of the Raven Queen",
+            "entries": [
+              "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest.",
+              "Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Shadar-kai",
+        "source": "UAElfSubraces",
+        "page": 2,
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "languageProficiencies": [
+          {
+            "common": true,
+            "elvish": true,
+            "anyStandard": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "chill touch"
+              ]
+            },
+            "ability": "cha"
+          },
+          {
+            "innate": {
+              "1": [
+                "spare the dying"
+              ]
+            },
+            "ability": "cha"
+          },
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ]
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common, Elvish, and one extra language of your choice. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Cantrip",
+            "entries": [
+              "You know one of the following cantrips of your choice: {@spell chill touch}, {@spell spare the dying}, or {@spell thaumaturgy}. Charisma is your spellcasting ability for it."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Blessing of the Raven Queen",
+            "entries": [
+              "As a bonus action, you can magically teleport up to 15 feet to an unoccupied space you can see, and you gain resistance to all damage until the start of your next turn. During that time, you appear ghostly and translucent. Once you use this ability, you can't use it again until you finish a short or long rest."
+            ],
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "Wood",
+        "page": 24,
+        "speed": 35,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "heightAndWeight": {
+          "baseHeight": 54,
+          "heightMod": "2d10",
+          "baseWeight": 100,
+          "weightMod": "1d4"
+        },
+        "traitTags": [
+          "Weapon Proficiency"
+        ],
+        "entries": [
+          {
+            "name": "Elf Weapon Training",
+            "entries": [
+              "You have proficiency with the {@item longsword|phb}, {@item shortsword|phb}, {@item shortbow|phb}, and {@item longbow|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Fleet of Foot",
+            "entries": [
+              "Your base walking speed increases to 35 feet."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Mask of the Wild",
+            "entries": [
+              "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Wood; Aereni",
+        "source": "UAWGE",
+        "page": 73,
+        "speed": 35,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "traitTags": [
+          "Weapon Proficiency"
+        ],
+        "entries": [
+          {
+            "name": "Aereni Training",
+            "entries": [
+              "Choose one skill or {@book tool|phb|5|tools} proficiency. Your proficiency bonus is doubled for any ability check you make that uses this chosen proficiency."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Fleet of Foot",
+            "entries": [
+              "Your base walking speed increases to 35 feet."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Mask of the Wild",
+            "entries": [
+              "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Wood; Valenar",
+        "source": "UAWGE",
+        "page": 73,
+        "speed": 35,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "traitTags": [
+          "Weapon Proficiency"
+        ],
+        "entries": [
+          {
+            "name": "Valenar Weapon Training",
+            "entries": [
+              "A Valenar elf gains proficiency with the {@item scimitar|phb}, {@item Double-Bladed Scimitar|erlw|double scimitar}, {@item longbow|phb}, and {@item shortbow|phb}."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Fleet of Foot",
+            "entries": [
+              "Your base walking speed increases to 35 feet."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Mask of the Wild",
+            "entries": [
+              "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+            ],
+            "type": "entries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gnome",
+    "source": "PHB",
+    "page": 35,
+    "srd": true,
+    "size": "S",
+    "speed": 25,
+    "ability": [
+      {
+        "int": 2
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 35,
+      "heightMod": "2d4",
+      "baseWeight": 35
+    },
+    "darkvision": 60,
+    "traitTags": [
+      "Uncommon Race"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "gnomish": true
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/gnome.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small."
+        ]
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Gnome Cunning",
+        "entries": [
+          "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Deep",
+        "source": "MTF",
+        "page": 113,
+        "ability": [
+          {
+            "dex": 1
+          }
+        ],
+        "darkvision": 120,
+        "languageProficiencies": [
+          {
+            "common": true,
+            "gnomish": true,
+            "undercommon": true
+          }
+        ],
+        "entries": [
+          {
+            "name": "Age",
+            "type": "entries",
+            "entries": [
+              "Deep gnomes are short-lived for gnomes. They mature at the same rate humans do and are considered full-grown adults by 25. They live 200 to 250 years, although hard toil and the dangers of the Underdark often claim them before their time."
+            ],
+            "data": {
+              "overwrite": "Age"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Size",
+            "entries": [
+              "Unlike other gnomes, svirfneblin tend to weigh 80 to 120 pounds. Your size is Small."
+            ],
+            "data": {
+              "overwrite": "Size"
+            }
+          },
+          {
+            "name": "Alignment",
+            "type": "entries",
+            "entries": [
+              "Svirfneblin believe that survival depends on avoiding entanglements with other creatures and not making enemies, so they favor neutral alignments. They rarely wish others ill, and they are unlikely to take risks on behalf of others, except those dearest to them."
+            ],
+            "data": {
+              "overwrite": "Alignment"
+            }
+          },
+          {
+            "name": "Superior Darkvision",
+            "entries": [
+              "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ],
+            "data": {
+              "overwrite": "Darkvision"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Stone Camouflage",
+            "entries": [
+              "You have advantage on Dexterity ({@skill Stealth}) checks to hide in rocky terrain."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common, Gnomish, and Undercommon."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            },
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "Deep/Svirfneblin",
+        "source": "SCAG",
+        "page": 115,
+        "otherSources": [
+          {
+            "source": "EEPC",
+            "page": 5
+          }
+        ],
+        "ability": [
+          {
+            "dex": 1
+          }
+        ],
+        "darkvision": 120,
+        "languageProficiencies": [
+          {
+            "common": true,
+            "gnomish": true,
+            "undercommon": true
+          }
+        ],
+        "entries": [
+          {
+            "name": "Age",
+            "type": "entries",
+            "entries": [
+              "Deep gnomes are short-lived for gnomes. They mature at the same rate humans do and are considered full-grown adults by 25. They live 200 to 250 years, although hard toil and the dangers of the Underdark often claim them before their time."
+            ],
+            "data": {
+              "overwrite": "Age"
+            }
+          },
+          {
+            "name": "Alignment",
+            "type": "entries",
+            "entries": [
+              "Svirfneblin believe that survival depends on avoiding entanglements with other creatures and not making enemies, so they favor neutral alignments. They rarely wish others ill, and they are unlikely to take risks on behalf of others."
+            ],
+            "data": {
+              "overwrite": "Alignment"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Size",
+            "entries": [
+              "A typical svirfneblin stands about 3 to 3½ feet tall and weighs 80 to 120 pounds. Your size is Small."
+            ],
+            "data": {
+              "overwrite": "Size"
+            }
+          },
+          {
+            "name": "Superior Darkvision",
+            "entries": [
+              "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ],
+            "data": {
+              "overwrite": "Darkvision"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Stone Camouflage",
+            "entries": [
+              "You have advantage on Dexterity ({@skill Stealth}) checks to hide in rocky terrain."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common, Gnomish, and Undercommon. The svirfneblin dialect is more guttural than surface Gnomish, and most svirfneblin know only a little bit of Common, but those who deal with outsiders (and that includes you as an adventurer) pick up enough Common to get by in other lands."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            },
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "Forest",
+        "page": 37,
+        "ability": [
+          {
+            "dex": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "minor illusion"
+              ]
+            },
+            "ability": "int"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Natural Illusionist",
+            "entries": [
+              "You know the {@spell minor illusion} cantrip. Intelligence is your spellcasting ability for it."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Speak with Small Beasts",
+            "entries": [
+              "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Mark of Scribing",
+        "source": "ERLW",
+        "page": 47,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 103
+          }
+        ],
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "comprehend languages",
+                "message"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "magic mouth"
+                  ]
+                }
+              }
+            },
+            "expanded": {
+              "s1": [
+                "comprehend languages",
+                "illusory script"
+              ],
+              "s2": [
+                "animal messenger",
+                "silence"
+              ],
+              "s3": [
+                "sending",
+                "tongues"
+              ],
+              "s4": [
+                "arcane eye",
+                "confusion"
+              ],
+              "s5": [
+                "dream"
+              ]
+            },
+            "ability": "int"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Gifted Scribe",
+            "entries": [
+              "When you make an Intelligence ({@skill History}) check or an ability check using {@item calligrapher's supplies|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Scribe's Insight",
+            "entries": [
+              "You know the {@spell message} cantrip. You can also cast {@spell comprehend languages} once with this trait, and you regain the ability to cast it when you finish a short or long rest. Starting at 3rd level, you can cast the {@spell magic mouth} spell with this trait, and you regain the ability to cast it when you finish a long rest. Intelligence is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Scribing Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Scribing Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell comprehend languages}, {@spell illusory script}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell animal messenger}, {@spell silence}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell sending}, {@spell tongues}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell arcane eye}, {@spell confusion}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell dream}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rock",
+        "page": 37,
+        "srd": true,
+        "ability": [
+          {
+            "con": 1
+          }
+        ],
+        "traitTags": [
+          "Tool Proficiency"
+        ],
+        "entries": [
+          {
+            "name": "Artificer's Lore",
+            "entries": [
+              "Whenever you make an Intelligence ({@skill History}) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Tinker",
+            "entries": [
+              "You have proficiency with artisan's tools ({@item tinker's tools|phb}). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.",
+              "When you create a device, choose one of the following options:",
+              {
+                "type": "entries",
+                "name": "Clockwork Toy",
+                "entries": [
+                  "This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents."
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Fire Starter",
+                "entries": [
+                  "The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action."
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Music Box",
+                "entries": [
+                  "When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+                ]
+              }
+            ],
+            "type": "entries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Half-Elf",
+    "source": "PHB",
+    "page": 38,
+    "srd": true,
+    "size": "M",
+    "speed": 30,
+    "ability": [
+      {
+        "cha": 2,
+        "choose": {
+          "from": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis"
+          ],
+          "count": 2
+        }
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "heightMod": "2d8",
+      "baseWeight": 110,
+      "weightMod": "2d4"
+    },
+    "darkvision": 60,
+    "traitTags": [
+      "Skill Proficiency",
+      "Uncommon Race"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true,
+        "anyStandard": 1
+      }
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "athletics",
+            "acrobatics",
+            "sleight of hand",
+            "stealth",
+            "arcana",
+            "history",
+            "investigation",
+            "nature",
+            "religion",
+            "animal handling",
+            "insight",
+            "medicine",
+            "perception",
+            "survival",
+            "deception",
+            "intimidation",
+            "performance",
+            "persuasion"
+          ],
+          "count": 2
+        }
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/half-elf.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Fey Ancestry",
+        "entries": [
+          "You have advantage on saving throws against being {@condition charmed}, and magic can't put you to sleep."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Skill Versatility",
+        "entries": [
+          "You gain proficiency in two skills of your choice."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common, Elvish, and one extra language of your choice."
+        ],
+        "type": "entries"
+      }
+    ]
+  },
+  {
+    "name": "Half-Elf (Variant)",
+    "source": "PHB",
+    "page": 38,
+    "size": "M",
+    "speed": 30,
+    "ability": [
+      {
+        "cha": 2,
+        "choose": {
+          "from": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis"
+          ],
+          "count": 2
+        }
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "heightMod": "2d8",
+      "baseWeight": 110,
+      "weightMod": "2d4"
+    },
+    "darkvision": 60,
+    "traitTags": [
+      "Skill Proficiency",
+      "Uncommon Race"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true,
+        "anyStandard": 1
+      }
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "athletics",
+            "acrobatics",
+            "sleight of hand",
+            "stealth",
+            "arcana",
+            "history",
+            "investigation",
+            "nature",
+            "religion",
+            "animal handling",
+            "insight",
+            "medicine",
+            "perception",
+            "survival",
+            "deception",
+            "intimidation",
+            "performance",
+            "persuasion"
+          ],
+          "count": 2
+        }
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/half-elf.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Fey Ancestry",
+        "entries": [
+          "You have advantage on saving throws against being {@condition charmed}, and magic can't put you to sleep."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Skill Versatility",
+        "entries": [
+          "You gain proficiency in two skills of your choice."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common, Elvish, and one extra language of your choice."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Aquatic Elf Descent",
+        "source": "SCAG",
+        "page": 116,
+        "speed": 30,
+        "traitTags": [
+          "Skill Proficiency"
+        ],
+        "skillProficiencies": [
+          {
+            "choose": {
+              "from": [
+                "athletics",
+                "acrobatics",
+                "sleight of hand",
+                "stealth",
+                "arcana",
+                "history",
+                "investigation",
+                "nature",
+                "religion",
+                "animal handling",
+                "insight",
+                "medicine",
+                "perception",
+                "survival",
+                "deception",
+                "intimidation",
+                "performance",
+                "persuasion"
+              ],
+              "count": 2
+            }
+          }
+        ],
+        "entries": [
+          {
+            "type": "inset",
+            "name": "Variant Feature (Choose 1)",
+            "entries": [
+              {
+                "name": "Skill Versatility",
+                "entries": [
+                  "You gain proficiency in two skills of your choice."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Keen Senses",
+                "entries": [
+                  "You have proficiency in the {@skill Perception} skill."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Swim",
+                "entries": [
+                  "You gain a swimming speed of 30 ft."
+                ],
+                "type": "entries"
+              }
+            ],
+            "data": {
+              "overwrite": "Skill Versatility"
+            }
+          }
+        ],
+        "overwrite": {
+          "skillProficiencies": true
+        }
+      },
+      {
+        "name": "Drow Descent",
+        "source": "SCAG",
+        "page": 116,
+        "traitTags": [
+          "Skill Proficiency",
+          "Spellcasting"
+        ],
+        "skillProficiencies": [
+          {
+            "choose": {
+              "from": [
+                "athletics",
+                "acrobatics",
+                "sleight of hand",
+                "stealth",
+                "arcana",
+                "history",
+                "investigation",
+                "nature",
+                "religion",
+                "animal handling",
+                "insight",
+                "medicine",
+                "perception",
+                "survival",
+                "deception",
+                "intimidation",
+                "performance",
+                "persuasion"
+              ],
+              "count": 2
+            }
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "dancing lights"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "faerie fire"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "darkness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "type": "inset",
+            "name": "Variant Feature (Choose 1)",
+            "entries": [
+              {
+                "name": "Skill Versatility",
+                "entries": [
+                  "You gain proficiency in two skills of your choice."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Keen Senses",
+                "entries": [
+                  "You have proficiency in the {@skill Perception} skill."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Drow Magic",
+                "entries": [
+                  "You know the {@spell dancing lights} cantrip. When you reach 3rd level, you can cast the {@spell faerie fire} spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the {@spell darkness} spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells."
+                ],
+                "type": "entries"
+              }
+            ],
+            "data": {
+              "overwrite": "Skill Versatility"
+            }
+          }
+        ],
+        "overwrite": {
+          "skillProficiencies": true
+        }
+      },
+      {
+        "name": "Mark of Detection",
+        "source": "ERLW",
+        "page": 40,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 96
+          }
+        ],
+        "ability": [
+          {
+            "wis": 2,
+            "choose": {
+              "from": [
+                "str",
+                "dex",
+                "con",
+                "int",
+                "cha"
+              ],
+              "count": 1
+            }
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "detect magic",
+                "detect poison and disease"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "see invisibility"
+                  ]
+                }
+              }
+            },
+            "expanded": {
+              "s1": [
+                "detect evil and good",
+                "detect poison and disease"
+              ],
+              "s2": [
+                "detect thoughts",
+                "find traps"
+              ],
+              "s3": [
+                "clairvoyance",
+                "nondetection"
+              ],
+              "s4": [
+                "arcane eye",
+                "divination"
+              ],
+              "s5": [
+                "legend lore"
+              ]
+            },
+            "ability": "int"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Deductive Intuition",
+            "entries": [
+              "When you make an Intelligence ({@skill Investigation}) or a Wisdom ({@skill Insight}) check, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ],
+            "data": {
+              "overwrite": "Skill Versatility"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Magical Detection",
+            "entries": [
+              "You can cast the {@spell detect magic} and {@spell detect poison and disease} spells with this trait. Starting at 3rd level, you can also cast the {@spell see invisibility} spell with it. Once you cast any of these spells with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells, and you don't require material components for them."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Detection Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Detection Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell detect evil and good}, {@spell detect poison and disease}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell detect thoughts}, {@spell find traps}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell clairvoyance}, {@spell nondetection}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell arcane eye}, {@spell divination}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell legend lore}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Mark of Storm",
+        "source": "ERLW",
+        "page": 50,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 106
+          }
+        ],
+        "ability": [
+          {
+            "cha": 2,
+            "dex": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "resist": [
+          "lightning"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "gust|xge"
+              ]
+            },
+            "expanded": {
+              "s1": [
+                "feather fall",
+                "fog cloud"
+              ],
+              "s2": [
+                "gust of wind",
+                "levitate"
+              ],
+              "s3": [
+                "sleet storm",
+                "wind wall"
+              ],
+              "s4": [
+                "conjure minor elementals",
+                "control water"
+              ],
+              "s5": [
+                "conjure elemental"
+              ]
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Windwright's Intuition",
+            "entries": [
+              "When you make a Dexterity ({@skill Acrobatics}) check or any ability check involving {@item navigator's tools|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ],
+            "data": {
+              "overwrite": "Skill Versatility"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Storm's Boon",
+            "entries": [
+              "You have resistance to lightning damage."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Headwinds",
+            "entries": [
+              "You know the {@spell gust|XGE} cantrip. Starting at 3rd level, you can cast the {@spell gust of wind} spell once with this trait, and you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Storm Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Storm Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell feather fall}, {@spell fog cloud}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell gust of wind}, {@spell levitate}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell sleet storm}, {@spell wind wall}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell conjure minor elementals}, {@spell control water}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell conjure elemental}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Moon Elf or Sun Elf Descent",
+        "source": "SCAG",
+        "page": 116,
+        "traitTags": [
+          "Skill Proficiency",
+          "Weapon Proficiency",
+          "Spellcasting"
+        ],
+        "skillProficiencies": [
+          {
+            "choose": {
+              "from": [
+                "athletics",
+                "acrobatics",
+                "sleight of hand",
+                "stealth",
+                "arcana",
+                "history",
+                "investigation",
+                "nature",
+                "religion",
+                "animal handling",
+                "insight",
+                "medicine",
+                "perception",
+                "survival",
+                "deception",
+                "intimidation",
+                "performance",
+                "persuasion"
+              ],
+              "count": 2
+            }
+          }
+        ],
+        "entries": [
+          {
+            "type": "inset",
+            "name": "Variant Feature (Choose 1)",
+            "entries": [
+              {
+                "name": "Skill Versatility",
+                "entries": [
+                  "You gain proficiency in two skills of your choice."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Keen Senses",
+                "entries": [
+                  "You have proficiency in the {@skill Perception} skill."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Elf Weapon Training",
+                "entries": [
+                  "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Cantrip",
+                "entries": [
+                  "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+                ],
+                "type": "entries"
+              }
+            ],
+            "data": {
+              "overwrite": "Skill Versatility"
+            }
+          }
+        ],
+        "overwrite": {
+          "skillProficiencies": true
+        }
+      },
+      {
+        "name": "Wood Elf Descent",
+        "source": "SCAG",
+        "page": 116,
+        "traitTags": [
+          "Skill Proficiency",
+          "Weapon Proficiency"
+        ],
+        "skillProficiencies": [
+          {
+            "choose": {
+              "from": [
+                "athletics",
+                "acrobatics",
+                "sleight of hand",
+                "stealth",
+                "arcana",
+                "history",
+                "investigation",
+                "nature",
+                "religion",
+                "animal handling",
+                "insight",
+                "medicine",
+                "perception",
+                "survival",
+                "deception",
+                "intimidation",
+                "performance",
+                "persuasion"
+              ],
+              "count": 2
+            }
+          }
+        ],
+        "entries": [
+          {
+            "type": "inset",
+            "name": "Variant Feature (Choose 1)",
+            "entries": [
+              {
+                "name": "Skill Versatility",
+                "entries": [
+                  "You gain proficiency in two skills of your choice."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Keen Senses",
+                "entries": [
+                  "You have proficiency in the {@skill Perception} skill."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Elf Weapon Training",
+                "entries": [
+                  "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Fleet of Foot",
+                "entries": [
+                  "Your base walking speed increases to 35 feet."
+                ],
+                "type": "entries"
+              },
+              {
+                "name": "Mask of the Wild",
+                "entries": [
+                  "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+                ],
+                "type": "entries"
+              }
+            ],
+            "data": {
+              "overwrite": "Skill Versatility"
+            }
+          }
+        ],
+        "overwrite": {
+          "skillProficiencies": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Half-Orc",
+    "source": "PHB",
+    "page": 40,
+    "srd": true,
+    "size": "M",
+    "speed": 30,
+    "ability": [
+      {
+        "str": 2,
+        "con": 1
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 58,
+      "heightMod": "2d10",
+      "baseWeight": 140,
+      "weightMod": "2d6"
+    },
+    "darkvision": 60,
+    "traitTags": [
+      "Uncommon Race",
+      "Skill Proficiency"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "orc": true
+      }
+    ],
+    "skillProficiencies": [
+      {
+        "intimidation": true
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/half-orc.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Menacing",
+        "entries": [
+          "You gain proficiency in the {@skill Intimidation} skill."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Relentless Endurance",
+        "entries": [
+          "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Savage Attacks",
+        "entries": [
+          "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script."
+        ],
+        "type": "entries"
+      }
+    ]
+  },
+  {
+    "name": "Halfling",
+    "source": "PHB",
+    "page": 26,
+    "srd": true,
+    "size": "S",
+    "speed": 25,
+    "ability": [
+      {
+        "dex": 2
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "heightMod": "2d4",
+      "baseWeight": 35
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/halfling.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small."
+        ]
+      },
+      {
+        "name": "Lucky",
+        "entries": [
+          "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Brave",
+        "entries": [
+          "You have advantage on saving throws against being {@condition frightened}."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Halfling Nimbleness",
+        "entries": [
+          "You can move through the space of any creature that is of a size larger than yours."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Ghostwise",
+        "source": "SCAG",
+        "page": 110,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "entries": [
+          {
+            "name": "Silent Speech",
+            "entries": [
+              "You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Lightfoot",
+        "page": 28,
+        "srd": true,
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "entries": [
+          {
+            "name": "Naturally Stealthy",
+            "entries": [
+              "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+            ],
+            "type": "entries"
+          }
+        ]
+      },
+      {
+        "name": "Lotusden",
+        "source": "EGW",
+        "page": 164,
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "druidcraft"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "entangle"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "spike growth"
+                  ]
+                }
+              }
+            },
+            "ability": "wis"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Child of the Wood",
+            "entries": [
+              "You know the {@spell druidcraft} cantrip. When you reach 3rd level, you can cast the {@spell entangle} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell spike growth} spell once with this trait and regain the ability to do so when you finish a long rest. Casting these spells with this trait doesn't require material components. Wisdom is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Timberwalk",
+            "entries": [
+              "Ability checks made to track you have disadvantage, and you can move across difficult terrain made of nonmagical plants and undergrowth without expending extra movement."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mark of Healing",
+        "source": "ERLW",
+        "page": 43,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 99
+          }
+        ],
+        "ability": [
+          {
+            "wis": 1
+          }
+        ],
+        "traitTags": [
+          "Dragonmark",
+          "Spellcasting"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "cure wounds"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "lesser restoration"
+                  ]
+                }
+              }
+            },
+            "expanded": {
+              "s1": [
+                "cure wounds",
+                "healing word"
+              ],
+              "s2": [
+                "lesser restoration",
+                "prayer of healing"
+              ],
+              "s3": [
+                "aura of vitality",
+                "mass healing word"
+              ],
+              "s4": [
+                "aura of purity",
+                "aura of life"
+              ],
+              "s5": [
+                "greater restoration"
+              ]
+            },
+            "ability": "wis"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Medical Intuition",
+            "entries": [
+              "When you make a Wisdom ({@skill Medicine}) check or an ability check using an {@item herbalism kit|phb}, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Healing Touch",
+            "entries": [
+              "You can cast the {@spell cure wounds} spell with this trait. Starting at 3rd level, you can also cast {@spell lesser restoration} with it. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Healing Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Healing Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell cure wounds}, {@spell healing word}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell lesser restoration}, {@spell prayer of healing}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell aura of vitality}, {@spell mass healing word}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell aura of purity}, {@spell aura of life}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell greater restoration}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mark of Hospitality",
+        "source": "ERLW",
+        "page": 44,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 100
+          }
+        ],
+        "ability": [
+          {
+            "cha": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "prestidigitation",
+                "purify food and drink",
+                "unseen servant"
+              ]
+            },
+            "expanded": {
+              "s1": [
+                "goodberry",
+                "sleep"
+              ],
+              "s2": [
+                "aid",
+                "calm emotions"
+              ],
+              "s3": [
+                "create food and water",
+                "leomund's tiny hut"
+              ],
+              "s4": [
+                "aura of purity",
+                "mordenkainen's private sanctum"
+              ],
+              "s5": [
+                "hallow"
+              ]
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Ever Hospitable",
+            "entries": [
+              "When you make a Charisma ({@skill Persuasion}) check or an ability check involving {@item brewer's supplies|PHB} or {@item cook's utensils|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Innkeeper's Magic",
+            "entries": [
+              "You know the {@spell prestidigitation} cantrip. You can also cast the {@spell purify food and drink} and {@spell unseen servant} spells with this trait. Once you cast either spell with this trait, you can't cast that spell with it again until you finish long rest. Charisma is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Hospitality Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Hospitality Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell goodberry}, {@spell sleep}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell aid}, {@spell calm emotions}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell create food and water}, {@spell Leomund's tiny hut}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell aura of purity}, {@spell Mordenkainen's private sanctum}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell hallow}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stout",
+        "page": 28,
+        "ability": [
+          {
+            "con": 1
+          }
+        ],
+        "resist": [
+          "poison"
+        ],
+        "entries": [
+          {
+            "name": "Stout Resilience",
+            "entries": [
+              "You have advantage on saving throws against poison, and you have resistance against poison damage."
+            ],
+            "type": "entries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Human",
+    "source": "PHB",
+    "page": 29,
+    "srd": true,
+    "size": "M",
+    "speed": 30,
+    "heightAndWeight": {
+      "baseHeight": 56,
+      "heightMod": "2d10",
+      "baseWeight": 110,
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "anyStandard": 1
+      }
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/human.mp3"
+    },
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Humans reach adulthood in their late teens and live less than a century."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Humans tend toward no particular alignment. The best and the worst are found among them."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium."
+        ]
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "srd": true,
+        "ability": [
+          {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          }
+        ]
+      },
+      {
+        "name": "Keldon",
+        "source": "PSD",
+        "page": 19,
+        "ability": [
+          {
+            "str": 2,
+            "con": 1
+          }
+        ],
+        "traitTags": [
+          "Skill Proficiency"
+        ],
+        "languageProficiencies": [
+          {
+            "common": true,
+            "other": true
+          }
+        ],
+        "skillProficiencies": [
+          {
+            "athletics": true
+          }
+        ],
+        "entries": [
+          {
+            "name": "Age",
+            "type": "entries",
+            "entries": [
+              "Keldons reach adulthood in their late teens and live less than a century."
+            ],
+            "data": {
+              "overwrite": "Age"
+            }
+          },
+          {
+            "name": "Alignment",
+            "type": "entries",
+            "entries": [
+              "Keldons tend toward chaotic alignments, and many walk a fine line between good and evil."
+            ],
+            "data": {
+              "overwrite": "Alignment"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Size",
+            "entries": [
+              "Keldons are taller and heavier than the human norms of other cultures, standing almost universally above 6 feet tall and reaching heights above 7 feet. Your size is Medium."
+            ],
+            "data": {
+              "overwrite": "Size"
+            }
+          },
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common and Keldon."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Languages"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Natural Athlete",
+            "entries": [
+              "You have proficiency in the {@skill Athletics} skill."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Keldon Resilience",
+            "entries": [
+              "You have proficiency in Strength saving throws."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Icehaven Born",
+            "entries": [
+              "You are naturally adapted to cold climates, as described in chapter 5 of the {@i Dungeon Master's Guide}."
+            ]
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "Mark of Finding",
+        "source": "ERLW",
+        "page": 41,
+        "ability": [
+          {
+            "con": 1,
+            "wis": 2
+          }
+        ],
+        "darkvision": 60,
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "languageProficiencies": [
+          {
+            "common": true,
+            "goblin": true
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "hunter's mark"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "locate object"
+                  ]
+                }
+              }
+            },
+            "expanded": {
+              "s1": [
+                "faerie fire",
+                "longstrider"
+              ],
+              "s2": [
+                "locate animals or plants",
+                "locate object"
+              ],
+              "s3": [
+                "clairvoyance",
+                "speak with plants"
+              ],
+              "s4": [
+                "divination",
+                "locate creature"
+              ],
+              "s5": [
+                "commune with nature"
+              ]
+            },
+            "ability": "wis"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Darkvision",
+            "entries": [
+              "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Hunter's Intuition",
+            "entries": [
+              "When you make a Wisdom ({@skill Perception}) or Wisdom ({@skill Survival}) check, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Finder's Magic",
+            "entries": [
+              "You can cast the {@spell hunter's mark} spell with this trait. Starting at 3rd level, you can also cast the {@spell locate object} spell with it. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common and Goblin."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            }
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Finding Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Finding Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell faerie fire}, {@spell longstrider}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell locate animals or plants}, {@spell locate object}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell clairvoyance}, {@spell speak with plants}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell divination}, {@spell locate creature}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell commune with nature}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "overwrite": {
+          "traitTags": true,
+          "languageProficiencies": true
+        }
+      },
+      {
+        "name": "Mark of Handling",
+        "source": "ERLW",
+        "page": 42,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 98
+          }
+        ],
+        "ability": [
+          {
+            "wis": 2,
+            "choose": {
+              "from": [
+                "str",
+                "dex",
+                "con",
+                "int",
+                "cha"
+              ],
+              "count": 1
+            }
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "expanded": {
+              "s1": [
+                "animal friendship",
+                "speak with animals"
+              ],
+              "s2": [
+                "beast sense",
+                "calm emotions"
+              ],
+              "s3": [
+                "beacon of hope",
+                "conjure animals"
+              ],
+              "s4": [
+                "aura of life",
+                "dominate beast"
+              ],
+              "s5": [
+                "awaken"
+              ]
+            },
+            "ability": "wis"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Wild Intuition",
+            "entries": [
+              "When you make a Wisdom ({@skill Animal Handling}) or Intelligence ({@skill Nature}) check, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Primal Connection",
+            "entries": [
+              "You can cast the {@spell animal friendship} and {@spell speak with animals} spells with this trait, requiring no material component. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a short or long rest. Wisdom is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "The Bigger They Are",
+            "entries": [
+              "Starting at 3rd level, you can target a beast or monstrosity when you cast {@spell animal friendship} or {@spell speak with animals}, provided the creature's Intelligence score is 3 or lower."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Handling Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Handling Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell animal friendship}, {@spell speak with animals}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell beast sense}, {@spell calm emotions}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell beacon of hope}, {@spell conjure animals}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell aura of life}, {@spell dominate beast}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell awaken}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mark of Making",
+        "source": "ERLW",
+        "page": 45,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 101
+          }
+        ],
+        "ability": [
+          {
+            "int": 2,
+            "choose": {
+              "from": [
+                "str",
+                "dex",
+                "con",
+                "wis",
+                "cha"
+              ],
+              "count": 1
+            }
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "skillProficiencies": [
+          {
+            "tool": true
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "mending",
+                "magic weapon"
+              ]
+            },
+            "expanded": {
+              "s1": [
+                "identify",
+                "tenser's floating disk"
+              ],
+              "s2": [
+                "continual flame",
+                "magic weapon"
+              ],
+              "s3": [
+                "conjure barrage",
+                "elemental weapon"
+              ],
+              "s4": [
+                "fabricate",
+                "stone shape"
+              ],
+              "s5": [
+                "creation"
+              ]
+            },
+            "ability": "int"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Artisan's Intuition",
+            "entries": [
+              "When you make an {@skill Arcana} check or an ability check involving artisan's tools, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Maker's Gift",
+            "entries": [
+              "You gain proficiency with one type of artisan's tools of your choice."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spellsmith",
+            "entries": [
+              "You know the {@spell mending} cantrip. You can also cast the {@spell magic weapon} spell with this trait. When you do so, the spell lasts for 1 hour and doesn't require concentration. Once you cast the spell with this trait, you can't do so again until you finish a long rest. Intelligence is your spellcasting ability for these spells."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Making Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Making Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell identify}, {@spell Tenser's floating disk}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell continual flame}, {@spell magic weapon}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell conjure barrage}, {@spell elemental weapon}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell fabricate}, {@spell stone shape}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell creation}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mark of Passage",
+        "source": "ERLW",
+        "page": 46,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 102
+          }
+        ],
+        "speed": 35,
+        "ability": [
+          {
+            "dex": 2,
+            "choose": {
+              "from": [
+                "str",
+                "con",
+                "int",
+                "wis",
+                "cha"
+              ],
+              "count": 1
+            }
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "misty step"
+              ]
+            },
+            "expanded": {
+              "s1": [
+                "expeditious retreat",
+                "jump"
+              ],
+              "s2": [
+                "misty step",
+                "pass without trace"
+              ],
+              "s3": [
+                "blink",
+                "phantom steed"
+              ],
+              "s4": [
+                "dimension door",
+                "freedom of movement"
+              ],
+              "s5": [
+                "teleportation circle"
+              ]
+            },
+            "ability": "dex"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Courier's Speed",
+            "entries": [
+              "Your base walking speed increases to 35 feet."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Intuitive Motion",
+            "entries": [
+              "When you make a Dexterity ({@skill Acrobatics}) check or any ability check to operate or maintain a land vehicle, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Magical Passage",
+            "entries": [
+              "You can cast the {@spell misty step} spell once with this trait, and you regain the ability to cast it when you finish a long rest. Dexterity is your spellcasting ability for this spell."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Passage Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Passage Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell expeditious retreat}, {@spell jump}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell misty step}, {@spell pass without trace}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell blink}, {@spell phantom steed}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell dimension door}, {@spell freedom of movement}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell teleportation circle}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mark of Sentinel",
+        "source": "ERLW",
+        "page": 48,
+        "otherSources": [
+          {
+            "source": "UAWGE",
+            "page": 104
+          }
+        ],
+        "ability": [
+          {
+            "con": 2,
+            "wis": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting",
+          "Dragonmark"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "shield"
+              ]
+            },
+            "expanded": {
+              "s1": [
+                "compelled duel",
+                "shield of faith"
+              ],
+              "s2": [
+                "warding bond",
+                "zone of truth"
+              ],
+              "s3": [
+                "counterspell",
+                "protection from energy"
+              ],
+              "s4": [
+                "death ward",
+                "guardian of faith"
+              ],
+              "s5": [
+                "bigby's hand"
+              ]
+            },
+            "ability": "wis"
+          }
+        ],
+        "entries": [
+          {
+            "type": "entries",
+            "name": "Sentinel's Intuition",
+            "entries": [
+              "When you make a Wisdom ({@skill Insight}) or Wisdom ({@skill Perception}) check, you can roll a {@dice d4} and add the number rolled to the ability check."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Guardian's Shield",
+            "entries": [
+              "You can cast the {@spell shield} spell once with this trait, and you regain the ability to cast it after you finish a long rest. Wisdom is your spellcasting ability for this spell."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Vigilant Guardian",
+            "entries": [
+              "When a creature you can see within 5 feet of you is hit by an attack roll, you can use your reaction to swap places with that creature, and you are hit by the attack instead. Once you use this trait, you can't do so again until you finish a long rest."
+            ]
+          },
+          {
+            "type": "entries",
+            "name": "Spells of the Mark",
+            "entries": [
+              "If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Sentinel Spells table are added to the spell list of your spellcasting class.",
+              {
+                "type": "table",
+                "caption": "Mark of Sentinel Spells",
+                "colLabels": [
+                  "Spell Level",
+                  "Spells"
+                ],
+                "colStyles": [
+                  "col-2 text-center",
+                  "col-10"
+                ],
+                "rows": [
+                  [
+                    "1st",
+                    "{@spell compelled duel}, {@spell shield of faith}"
+                  ],
+                  [
+                    "2nd",
+                    "{@spell warding bond}, {@spell zone of truth}"
+                  ],
+                  [
+                    "3rd",
+                    "{@spell counterspell}, {@spell protection from energy}"
+                  ],
+                  [
+                    "4th",
+                    "{@spell death ward}, {@spell guardian of faith}"
+                  ],
+                  [
+                    "5th",
+                    "{@spell Bigby's hand}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Variant",
+        "page": 31,
+        "srd": true,
+        "ability": [
+          {
+            "choose": {
+              "from": [
+                "str",
+                "dex",
+                "con",
+                "int",
+                "wis",
+                "cha"
+              ],
+              "count": 2
+            }
+          }
+        ],
+        "traitTags": [
+          "Skill Proficiency",
+          "Feat"
+        ],
+        "skillProficiencies": [
+          {
+            "choose": {
+              "from": [
+                "athletics",
+                "acrobatics",
+                "sleight of hand",
+                "stealth",
+                "arcana",
+                "history",
+                "investigation",
+                "nature",
+                "religion",
+                "animal handling",
+                "insight",
+                "medicine",
+                "perception",
+                "survival",
+                "deception",
+                "intimidation",
+                "performance",
+                "persuasion"
+              ]
+            }
+          }
+        ],
+        "entries": [
+          {
+            "name": "Skills",
+            "entries": [
+              "You gain proficiency in one skill of your choice."
+            ],
+            "type": "entries"
+          },
+          {
+            "name": "Feat",
+            "entries": [
+              "You gain one {@5etools feat|feats.html} of your choice."
+            ],
+            "type": "entries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tiefling",
+    "source": "PHB",
+    "page": 42,
+    "srd": true,
+    "size": "M",
+    "speed": 30,
+    "ability": [
+      {
+        "cha": 2,
+        "int": 1
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "heightMod": "2d8",
+      "baseWeight": 110,
+      "weightMod": "2d4"
+    },
+    "darkvision": 60,
+    "traitTags": [
+      "Uncommon Race",
+      "Spellcasting"
+    ],
+    "languageProficiencies": [
+      {
+        "common": true,
+        "infernal": true
+      }
+    ],
+    "resist": [
+      "fire"
+    ],
+    "soundClip": {
+      "type": "internal",
+      "path": "races/tiefling.mp3"
+    },
+    "additionalSpells": [
+      {
+        "innate": {
+          "1": [
+            "thaumaturgy"
+          ],
+          "3": {
+            "rest": {
+              "1": [
+                "hellish rebuke"
+              ]
+            }
+          },
+          "5": {
+            "rest": {
+              "1": [
+                "darkness"
+              ]
+            }
+          }
+        },
+        "ability": "cha"
+      }
+    ],
+    "entries": [
+      {
+        "name": "Age",
+        "type": "entries",
+        "entries": [
+          "Tieflings mature at the same rate as humans but live a few years longer."
+        ]
+      },
+      {
+        "name": "Alignment",
+        "type": "entries",
+        "entries": [
+          "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment."
+        ]
+      },
+      {
+        "type": "entries",
+        "name": "Size",
+        "entries": [
+          "Tieflings are about the same size and build as humans. Your size is Medium."
+        ]
+      },
+      {
+        "name": "Darkvision",
+        "entries": [
+          "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Hellish Resistance",
+        "entries": [
+          "You have resistance to fire damage."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Infernal Legacy",
+        "entries": [
+          "You know the {@spell thaumaturgy} cantrip. Once you reach 3rd level, you can cast the {@spell hellish rebuke} spell as a 2nd-level spell; you must finish a long rest in order to cast the spell again using this trait. Once you reach 5th level, you can also cast the {@spell darkness} spell; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells."
+        ],
+        "type": "entries"
+      },
+      {
+        "name": "Languages",
+        "entries": [
+          "You can speak, read, and write Common and Infernal."
+        ],
+        "type": "entries"
+      }
+    ],
+    "subraces": [
+      {
+        "srd": true
+      },
+      {
+        "name": "Abyssal",
+        "source": "UAThatOldBlackMagic",
+        "page": 1,
+        "ability": [
+          {
+            "cha": 2,
+            "con": 1
+          }
+        ],
+        "traitTags": [
+          "Uncommon Race",
+          "Spellcasting"
+        ],
+        "languageProficiencies": [
+          {
+            "common": true,
+            "abyssal": true
+          }
+        ],
+        "resist": null,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "dancing lights",
+                "true strike",
+                "light",
+                "message",
+                "spare the dying",
+                "prestidigitation"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "burning hands",
+                    "charm person",
+                    "magic missile",
+                    "cure wounds",
+                    "tasha's hideous laughter",
+                    "thunderwave"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "alter self",
+                    "darkness",
+                    "invisibility",
+                    "levitate",
+                    "mirror image",
+                    "spider climb"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "entries": [
+          {
+            "name": "Abyssal Arcana",
+            "entries": [
+              "Each time you finish a long rest, you gain the ability to cast cantrips and spells randomly determined from a short list. At 1st level, you can cast a cantrip. When you reach 3rd level, you can also cast a 1st-level spell. At 5th level, you can cast a 2nd-level spell.",
+              "You can cast a spell gained from this trait only once until you complete your next long rest. You can cast a cantrip gained from this trait at will, as normal. For 1st-level spells whose effect changes if cast using a spell slot of 2nd level or higher, you cast the spell as if using a 2nd-level slot. Spells of 2nd level are cast as if using a 2nd-level slot",
+              "At the end of each long rest, you lose the cantrips and spells previously granted by this feature, even if you did not cast them. You replace those cantrips and spells by rolling for new ones on the Abyssal Arcana Spells table. Roll separately for each cantrip and spell. If you roll the same spell or cantrip you gained at the end of your previous long rest, roll again until you get a different result.",
+              {
+                "type": "table",
+                "caption": "Abyssal Arcana Spells",
+                "colLabels": [
+                  "d6",
+                  "1st Level",
+                  "3rd Level",
+                  "5th Level"
+                ],
+                "colStyles": [
+                  "col-1 text-center",
+                  "col-3-67",
+                  "col-3-67",
+                  "col-3-67"
+                ],
+                "rows": [
+                  [
+                    "1",
+                    "{@spell Dancing lights}",
+                    "{@spell Burning hands}",
+                    "{@spell Alter self}"
+                  ],
+                  [
+                    "2",
+                    "{@spell True strike}",
+                    "{@spell Charm person}",
+                    "{@spell Darkness}"
+                  ],
+                  [
+                    "3",
+                    "{@spell Light}",
+                    "{@spell Magic missile}",
+                    "{@spell Invisibility}"
+                  ],
+                  [
+                    "4",
+                    "{@spell Message}",
+                    "{@spell Cure wounds}",
+                    "{@spell Levitate}"
+                  ],
+                  [
+                    "5",
+                    "{@spell Spare the dying}",
+                    "{@spell Tasha's hideous laughter}",
+                    "{@spell Mirror Image}"
+                  ],
+                  [
+                    "6",
+                    "{@spell Prestidigitation}",
+                    "{@spell Thunderwave}",
+                    "{@spell Spider climb}"
+                  ]
+                ]
+              }
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          },
+          {
+            "name": "Abyssal Fortitude",
+            "entries": [
+              "Your hit point maximum increases by half your level (minimum 1)."
+            ],
+            "data": {
+              "overwrite": "Hellish Resistance"
+            },
+            "type": "entries"
+          },
+          {
+            "name": "Languages",
+            "entries": [
+              "You can speak, read, and write Common and Abyssal."
+            ],
+            "data": {
+              "overwrite": "Languages"
+            },
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "languageProficiencies": true,
+          "ability": true,
+          "traitTags": true
+        }
+      },
+      {
+        "name": "Asmodeus",
+        "source": "MTF",
+        "page": 21
+      },
+      {
+        "name": "Asmodeus",
+        "source": "UAFiendishOptions",
+        "page": 1
+      },
+      {
+        "name": "Baalzebul",
+        "source": "MTF",
+        "page": 21,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "ray of sickness"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "crown of madness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Maladomini",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. When you reach 3rd level, you can cast the {@spell ray of sickness} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell crown of madness} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Baalzebul",
+        "source": "UAFiendishOptions",
+        "page": 1,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "ray of sickness"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "crown of madness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Maladomini",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. When you reach 3rd level, you can cast the {@spell ray of sickness} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell crown of madness} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dispater",
+        "source": "MTF",
+        "page": 21,
+        "ability": [
+          {
+            "cha": 2,
+            "dex": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "disguise self"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "detect thoughts"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Dis",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. When you reach 3rd level, you can cast the {@spell disguise self} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell detect thoughts} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Dispater",
+        "source": "UAFiendishOptions",
+        "page": 1,
+        "ability": [
+          {
+            "cha": 2,
+            "dex": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "disguise self"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "invisibility"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Dis",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. When you reach 3rd level, you can cast the {@spell disguise self} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell invisibility} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Fierna",
+        "source": "MTF",
+        "page": 21,
+        "ability": [
+          {
+            "cha": 2,
+            "wis": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "friends"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "charm person"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "suggestion"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Phlegethos",
+            "entries": [
+              "You know the {@spell friends} cantrip. When you reach 3rd level, you can cast the {@spell charm person} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell suggestion} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Fierna",
+        "source": "UAFiendishOptions",
+        "page": 1,
+        "ability": [
+          {
+            "cha": 2,
+            "wis": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "friends"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "charm person"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "suggestion"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Phlegethos",
+            "entries": [
+              "You know the {@spell friends} cantrip. When you reach 3rd level, you can cast the {@spell charm person} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell suggestion} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Glasya",
+        "source": "MTF",
+        "page": 22,
+        "ability": [
+          {
+            "cha": 2,
+            "dex": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "minor illusion"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "disguise self"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "invisibility"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Malbolge",
+            "entries": [
+              "You know the {@spell minor illusion} cantrip. When you reach 3rd level, you can cast the {@spell disguise self} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell invisibility} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Glasya",
+        "source": "UAFiendishOptions",
+        "page": 2,
+        "ability": [
+          {
+            "cha": 2,
+            "dex": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "minor illusion"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "disguise self"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "invisibility"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Malbolge",
+            "entries": [
+              "You know the {@spell minor illusion} cantrip. When you reach 3rd level, you can cast the {@spell disguise self} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell invisibility} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Levistus",
+        "source": "MTF",
+        "page": 22,
+        "ability": [
+          {
+            "cha": 2,
+            "con": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "ray of frost"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "armor of agathys"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "darkness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Stygia",
+            "entries": [
+              "You know the {@spell ray of frost} cantrip. When you reach 3rd level, you can cast the {@spell armor of Agathys} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell darkness} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Levistus",
+        "source": "UAFiendishOptions",
+        "page": 2,
+        "ability": [
+          {
+            "cha": 2,
+            "con": 1
+          }
+        ],
+        "traitTags": [
+          "Spellcasting"
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "ray of frost"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "armor of agathys"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "darkness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Stygia",
+            "entries": [
+              "You know the {@spell ray of frost} cantrip. When you reach 3rd level, you can cast the {@spell armor of Agathys} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell darkness} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Mammon",
+        "source": "MTF",
+        "page": 22,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "mage hand"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "tenser's floating disk"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "arcane lock"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Minauros",
+            "entries": [
+              "You know the {@spell mage hand} cantrip. When you reach 3rd level, you can cast the {@spell Tenser's floating disk} spell once with this trait and regain the ability to do so when you finish a short or long rest. When you reach 5th level, you can cast the {@spell arcane lock} spell once with this trait, requiring no material component, and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Mammon",
+        "source": "UAFiendishOptions",
+        "page": 2,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "mage hand"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "tenser's floating disk"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "arcane lock"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Minauros",
+            "entries": [
+              "You know the {@spell mage hand} cantrip. When you reach 3rd level, you can cast the {@spell Tenser's floating disk} spell once with this trait and regain the ability to do so when you finish a short or long rest. When you reach 5th level, you can cast the {@spell arcane lock} spell once with this trait, requiring no material component, and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Mephistopheles",
+        "source": "MTF",
+        "page": 23,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "mage hand"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "burning hands"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "flame blade"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Cania",
+            "entries": [
+              "You know the {@spell mage hand} cantrip. When you reach 3rd level, you can cast the {@spell burning hands} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell flame blade} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Mephistopheles",
+        "source": "UAFiendishOptions",
+        "page": 2,
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "mage hand"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "magic missile"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "web"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Cania",
+            "entries": [
+              "You know the {@spell mage hand} cantrip. When you reach 3rd level, you can cast the {@spell magic missile} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell web} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Variant; Devil's Tongue",
+        "source": "SCAG",
+        "page": 118,
+        "ability": [
+          {
+            "int": 1,
+            "choose": {
+              "from": [
+                "dex",
+                "cha"
+              ],
+              "count": 1,
+              "amount": 2
+            }
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "vicious mockery"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "charm person"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "enthrall"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Appearance",
+            "entries": [
+              "Your tiefling might not look like other tieflings. Rather than having the physical characteristics described in the Player's Handbook, choose {@dice 1d4+1} of the following features: small horns; fangs or sharp teeth; a forked tongue; catlike eyes; six fingers on each hand; goatlike legs; cloven hoofs; a forked tail; leathery or scaly skin; red or dark blue skin; cast no shadow or reflection; exude a smell of brimstone."
+            ],
+            "type": "entries"
+          },
+          {
+            "type": "entries",
+            "name": "Devil's Tongue",
+            "entries": [
+              "You know the {@spell vicious mockery} cantrip. When your reach 3rd level, you can cast the {@spell charm person} spell as a 2nd-level spell once with this trait. When you reach 5th level, you can cast the {@spell enthrall} spell once with this trait. You must finish a long rest to cast these spells once again with this trait. Charisma is your spellcasting ability for them. This trait replaces the Infernal Legacy trait."
+            ],
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Variant; Hellfire",
+        "source": "SCAG",
+        "page": 118,
+        "ability": [
+          {
+            "int": 1,
+            "choose": {
+              "from": [
+                "dex",
+                "cha"
+              ],
+              "count": 1,
+              "amount": 2
+            }
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "burning hands"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "darkness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Appearance",
+            "entries": [
+              "Your tiefling might not look like other tieflings. Rather than having the physical characteristics described in the Player's Handbook, choose {@dice 1d4+1} of the following features: small horns; fangs or sharp teeth; a forked tongue; catlike eyes; six fingers on each hand; goatlike legs; cloven hoofs; a forked tail; leathery or scaly skin; red or dark blue skin; cast no shadow or reflection; exude a smell of brimstone."
+            ],
+            "type": "entries"
+          },
+          {
+            "type": "entries",
+            "name": "Hellfire",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. Once you reach 3rd level, you can cast the {@spell burning hands} spell once per day as a 2nd-level spell; you must finish a long rest in order to cast the spell again using this trait. Once you reach 5th level, you can also cast the {@spell darkness} spell; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells."
+            ],
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Variant; Infernal Legacy",
+        "source": "SCAG",
+        "page": 118,
+        "ability": [
+          {
+            "int": 1,
+            "choose": {
+              "from": [
+                "dex",
+                "cha"
+              ],
+              "count": 1,
+              "amount": 2
+            }
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "hellish rebuke"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "darkness"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Appearance",
+            "entries": [
+              "Your tiefling might not look like other tieflings. Rather than having the physical characteristics described in the Player's Handbook, choose {@dice 1d4+1} of the following features: small horns; fangs or sharp teeth; a forked tongue; catlike eyes; six fingers on each hand; goatlike legs; cloven hoofs; a forked tail; leathery or scaly skin; red or dark blue skin; cast no shadow or reflection; exude a smell of brimstone."
+            ],
+            "type": "entries"
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Variant; Winged",
+        "source": "SCAG",
+        "page": 118,
+        "speed": {
+          "walk": 30,
+          "fly": 30
+        },
+        "ability": [
+          {
+            "int": 1,
+            "choose": {
+              "from": [
+                "dex",
+                "cha"
+              ],
+              "count": 1,
+              "amount": 2
+            }
+          }
+        ],
+        "traitTags": [
+          "Uncommon Race"
+        ],
+        "additionalSpells": null,
+        "entries": [
+          {
+            "name": "Appearance",
+            "entries": [
+              "Your tiefling might not look like other tieflings. Rather than having the physical characteristics described in the Player's Handbook, choose {@dice 1d4+1} of the following features: small horns; fangs or sharp teeth; a forked tongue; catlike eyes; six fingers on each hand; goatlike legs; cloven hoofs; a forked tail; leathery or scaly skin; red or dark blue skin; cast no shadow or reflection; exude a smell of brimstone."
+            ],
+            "type": "entries"
+          },
+          {
+            "type": "entries",
+            "name": "Winged",
+            "entries": [
+              "You have bat-like wings sprouting from your shoulder blades. You have a flying speed of 30 feet while you aren't wearing heavy armor."
+            ],
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true,
+          "traitTags": true
+        }
+      },
+      {
+        "name": "Zariel",
+        "source": "MTF",
+        "page": 23,
+        "ability": [
+          {
+            "cha": 2,
+            "str": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "searing smite"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "branding smite"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Avernus",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. When you reach 3rd level, you can cast the {@spell searing smite} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell branding smite} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      },
+      {
+        "name": "Zariel",
+        "source": "UAFiendishOptions",
+        "page": 2,
+        "ability": [
+          {
+            "cha": 2,
+            "str": 1
+          }
+        ],
+        "additionalSpells": [
+          {
+            "innate": {
+              "1": [
+                "thaumaturgy"
+              ],
+              "3": {
+                "rest": {
+                  "1": [
+                    "searing smite"
+                  ]
+                }
+              },
+              "5": {
+                "rest": {
+                  "1": [
+                    "branding smite"
+                  ]
+                }
+              }
+            },
+            "ability": "cha"
+          }
+        ],
+        "entries": [
+          {
+            "name": "Legacy of Avernus",
+            "entries": [
+              "You know the {@spell thaumaturgy} cantrip. When you reach 3rd level, you can cast the {@spell searing smite} spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell branding smite} spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+            ],
+            "type": "entries",
+            "data": {
+              "overwrite": "Infernal Legacy"
+            }
+          }
+        ],
+        "overwrite": {
+          "ability": true
+        }
+      }
+    ]
+  }
+]

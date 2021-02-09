@@ -2,56 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/races",
-      "handler": "race.find",
+      "path": "/attachables",
+      "handler": "attachable.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/races/count",
-      "handler": "race.count",
+      "path": "/attachables/count",
+      "handler": "attachable.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/races/:id/attachable",
-      "handler": "race.attachable",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/races/:id",
-      "handler": "race.findOne",
+      "path": "/attachables/:id",
+      "handler": "attachable.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/races",
-      "handler": "race.create",
+      "path": "/attachables",
+      "handler": "attachable.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/races/:id",
-      "handler": "race.update",
+      "path": "/attachables/:id",
+      "handler": "attachable.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/races/:id",
-      "handler": "race.delete",
+      "path": "/attachables/:id",
+      "handler": "attachable.delete",
       "config": {
         "policies": []
       }

@@ -16,15 +16,10 @@
       "unique": true,
       "required": true
     },
-    "raceId": {
-      "type": "uid",
-      "targetField": "name"
-    },
-    "render": {
-      "type": "component",
-      "repeatable": false,
-      "component": "common.render",
-      "required": true
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
