@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "classes",
+  "collectionName": "clses",
   "info": {
-    "name": "Class"
+    "name": "Cls",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -13,15 +14,10 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
-    "render": {
-      "type": "component",
-      "repeatable": false,
-      "component": "common.render"
-    },
-    "description": {
-      "type": "richtext"
+    "code": {
+      "type": "string"
     }
   }
 }

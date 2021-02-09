@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/classes": {
+    "/clses": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Class"
+                    "$ref": "#/components/schemas/Cls"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Cls"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Class"
+                  "$ref": "#/components/schemas/Cls"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Cls"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClass"
+                "$ref": "#/components/schemas/NewCls"
               }
             }
           }
         }
       }
     },
-    "/classes/count": {
+    "/clses/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Cls"
         ],
         "parameters": []
       }
     },
-    "/classes/{id}": {
+    "/clses/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Class"
+                  "$ref": "#/components/schemas/Cls"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Cls"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Class"
+                  "$ref": "#/components/schemas/Cls"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Cls"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClass"
+                "$ref": "#/components/schemas/NewCls"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Cls"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Class": {
+      "Cls": {
         "required": [
           "id",
           "name"
@@ -526,31 +526,12 @@
           "name": {
             "type": "string"
           },
-          "render": {
-            "type": "object",
-            "required": [
-              "id",
-              "en",
-              "zh"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "en": {
-                "type": "string"
-              },
-              "zh": {
-                "type": "string"
-              }
-            }
-          },
-          "description": {
+          "code": {
             "type": "string"
           }
         }
       },
-      "NewClass": {
+      "NewCls": {
         "required": [
           "name"
         ],
@@ -558,26 +539,7 @@
           "name": {
             "type": "string"
           },
-          "render": {
-            "type": "object",
-            "required": [
-              "id",
-              "en",
-              "zh"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "en": {
-                "type": "string"
-              },
-              "zh": {
-                "type": "string"
-              }
-            }
-          },
-          "description": {
+          "code": {
             "type": "string"
           },
           "created_by": {
@@ -592,7 +554,7 @@
   },
   "tags": [
     {
-      "name": "Class"
+      "name": "Cls"
     }
   ]
 }

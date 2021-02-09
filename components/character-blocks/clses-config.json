@@ -1,14 +1,14 @@
 {
-  "collectionName": "components_character_blocks_classes_configs",
+  "collectionName": "components_character_blocks_clses_configs",
   "info": {
-    "name": "classesConfig",
+    "name": "clsesConfig",
     "icon": "bible",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "class": {
-      "model": "class"
+    "cls": {
+      "model": "cls"
     },
     "mutations": {
       "type": "json"

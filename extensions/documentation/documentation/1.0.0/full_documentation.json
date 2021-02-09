@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/09/2021 6:37:05 PM"
+    "x-generation-date": "02/10/2021 2:27:44 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2738,7 +2738,7 @@
         ]
       }
     },
-    "/classes": {
+    "/clses": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2750,7 +2750,12 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Class"
+                    "$ref": "#/components/schemas/Cls"
+                  },
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -2789,7 +2794,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Unclassified"
         ],
         "parameters": [
           {
@@ -2939,72 +2944,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Class"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Class"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewClass"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/classes/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
+                  "$ref": "#/components/schemas/Cls",
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -3044,12 +2987,22 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Unclassified"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUnclassified"
+              }
+            }
+          }
+        }
       }
     },
-    "/classes/{id}": {
+    "/clses/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -3059,7 +3012,14 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Class"
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    },
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -3097,7 +3057,65 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Unclassified"
+        ],
+        "parameters": []
+      }
+    },
+    "/clses/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cls",
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Unclassified"
         ],
         "parameters": [
           {
@@ -3121,7 +3139,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Class"
+                  "$ref": "#/components/schemas/Cls",
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -3159,7 +3182,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Unclassified"
         ],
         "requestBody": {
           "description": "",
@@ -3167,7 +3190,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClass"
+                "$ref": "#/components/schemas/NewUnclassified"
               }
             }
           }
@@ -3233,7 +3256,7 @@
         },
         "summary": "",
         "tags": [
-          "Class"
+          "Unclassified"
         ],
         "parameters": [
           {
@@ -7612,6 +7635,29 @@
           },
           "features": {
             "type": "object"
+          },
+          "cls": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -7630,6 +7676,9 @@
             "type": "object"
           },
           "race": {
+            "type": "string"
+          },
+          "cls": {
             "type": "string"
           },
           "created_by": {
@@ -8789,7 +8838,7 @@
           }
         }
       },
-      "Class": {
+      "Cls": {
         "required": [
           "id",
           "name"
@@ -8801,31 +8850,12 @@
           "name": {
             "type": "string"
           },
-          "render": {
-            "type": "object",
-            "required": [
-              "id",
-              "en",
-              "zh"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "en": {
-                "type": "string"
-              },
-              "zh": {
-                "type": "string"
-              }
-            }
-          },
-          "description": {
+          "code": {
             "type": "string"
           }
         }
       },
-      "NewClass": {
+      "NewCls": {
         "required": [
           "name"
         ],
@@ -8833,26 +8863,7 @@
           "name": {
             "type": "string"
           },
-          "render": {
-            "type": "object",
-            "required": [
-              "id",
-              "en",
-              "zh"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "en": {
-                "type": "string"
-              },
-              "zh": {
-                "type": "string"
-              }
-            }
-          },
-          "description": {
+          "code": {
             "type": "string"
           },
           "created_by": {
@@ -10259,7 +10270,10 @@
       "name": "City"
     },
     {
-      "name": "Class"
+      "name": "Cls"
+    },
+    {
+      "name": "Unclassified"
     },
     {
       "name": "Game"

@@ -26,6 +26,9 @@
     "race": {
       "private": true,
       "model": "race"
+    },
+    "cls": {
+      "model": "cls"
     }
   }
 }
