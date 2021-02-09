@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/clses/:id/attachable",
+      "handler": "cls.attachable",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/clses/:id",
       "handler": "cls.findOne",
       "config": {
