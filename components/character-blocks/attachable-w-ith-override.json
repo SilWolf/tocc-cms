@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_character_blocks_attachable_w_ith_overrides",
+  "info": {
+    "name": "attachableWIthOverride",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "origin": {
+      "model": "attachable"
+    },
+    "override": {
+      "type": "json"
+    }
+  }
+}

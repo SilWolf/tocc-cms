@@ -41,6 +41,22 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/characters/:id/detail",
+      "handler": "character.getDetail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/characters/:id/detail",
+      "handler": "character.postDetail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/characters",
       "handler": "character.create",

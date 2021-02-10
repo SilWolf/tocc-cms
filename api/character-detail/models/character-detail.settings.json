@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_details",
+  "info": {
+    "name": "CharacterDetail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "character": {
+      "model": "character"
+    },
+    "attachables": {
+      "type": "component",
+      "repeatable": true,
+      "component": "character-blocks.attachable-w-ith-override"
+    }
+  }
+}

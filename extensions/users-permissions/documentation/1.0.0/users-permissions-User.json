@@ -1317,6 +1317,9 @@
                 "gp": {
                   "type": "integer"
                 },
+                "property": {
+                  "type": "object"
+                },
                 "created_by": {
                   "type": "string"
                 },

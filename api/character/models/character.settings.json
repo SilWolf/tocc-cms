@@ -75,8 +75,8 @@
       "via": "characters"
     },
     "games": {
-      "via": "characters",
-      "collection": "game"
+      "collection": "game",
+      "via": "characters"
     },
     "activities": {
       "collection": "activity",
@@ -85,6 +85,9 @@
     "gp": {
       "type": "integer",
       "default": 0
+    },
+    "property": {
+      "type": "json"
     }
   }
 }

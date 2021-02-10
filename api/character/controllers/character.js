@@ -40,4 +40,29 @@ module.exports = {
       sanitizeEntity(entity, { model: strapi.models["character-log"] })
     );
   },
+
+  async getDetail(ctx) {
+    const { id } = ctx.params;
+
+    const entities = await strapi.services["character-detail"].findOne(
+      {
+        character: id,
+      },
+      [""]
+    );
+
+    return entities.map((entity) =>
+      sanitizeEntity(entity, { model: strapi.models["character-detail"] })
+    );
+  },
+
+  async postDetail(ctx) {
+    const { id } = ctx.params;
+
+    const entity = await strapi.services["character-detail"].create({
+      ...ctx.request.body,
+      character: id,
+    });
+    return sanitizeEntity(entity, { model: strapi.models["character-detail"] });
+  },
 };
