@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/attachables": {
+    "/backgrounds": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Attachable"
+                    "$ref": "#/components/schemas/Background"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Attachable"
+          "Background"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Attachable"
+                  "$ref": "#/components/schemas/Background"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Attachable"
+          "Background"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAttachable"
+                "$ref": "#/components/schemas/NewBackground"
               }
             }
           }
         }
       }
     },
-    "/attachables/count": {
+    "/backgrounds/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Attachable"
+          "Background"
         ],
         "parameters": []
       }
     },
-    "/attachables/{id}": {
+    "/backgrounds/{id}/attachable": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Attachable"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +363,71 @@
         },
         "summary": "",
         "tags": [
-          "Attachable"
+          "Background"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/backgrounds/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Background"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Background"
         ],
         "parameters": [
           {
@@ -383,7 +451,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Attachable"
+                  "$ref": "#/components/schemas/Background"
                 }
               }
             }
@@ -421,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Attachable"
+          "Background"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +497,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAttachable"
+                "$ref": "#/components/schemas/NewBackground"
               }
             }
           }
@@ -495,7 +563,7 @@
         },
         "summary": "",
         "tags": [
-          "Attachable"
+          "Background"
         ],
         "parameters": [
           {
@@ -514,7 +582,7 @@
   },
   "components": {
     "schemas": {
-      "Attachable": {
+      "Background": {
         "required": [
           "id"
         ],
@@ -525,83 +593,17 @@
           "name": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
-          },
           "code": {
             "type": "string"
-          },
-          "features": {
-            "type": "object"
-          },
-          "cls": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "background": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewAttachable": {
+      "NewBackground": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
-          },
           "code": {
-            "type": "string"
-          },
-          "features": {
-            "type": "object"
-          },
-          "race": {
-            "type": "string"
-          },
-          "cls": {
-            "type": "string"
-          },
-          "background": {
             "type": "string"
           },
           "created_by": {
@@ -616,7 +618,7 @@
   },
   "tags": [
     {
-      "name": "Attachable"
+      "name": "Background"
     }
   ]
 }
