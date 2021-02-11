@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/attachables/dnd5e",
+      "handler": "attachable.getDnd5eRulesetAttachable",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/attachables/:id",
       "handler": "attachable.findOne",
       "config": {

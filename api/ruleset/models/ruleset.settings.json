@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rulesets",
+  "info": {
+    "name": "Ruleset"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}

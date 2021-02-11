@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rulesets",
+      "handler": "ruleset.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rulesets/count",
+      "handler": "ruleset.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rulesets/:id/attachable",
+      "handler": "ruleset.attachable",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rulesets/dnd5e",
+      "handler": "ruleset.findOne_dnd5e",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rulesets/:id",
+      "handler": "ruleset.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rulesets",
+      "handler": "ruleset.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rulesets/:id",
+      "handler": "ruleset.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rulesets/:id",
+      "handler": "ruleset.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

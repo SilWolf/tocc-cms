@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/character-details": {
+    "/rulesets": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ruleset"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Character-detail"
+          "Ruleset"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ruleset"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Character-detail"
+          "Ruleset"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCharacter-detail"
+                "$ref": "#/components/schemas/NewRuleset"
               }
             }
           }
         }
       }
     },
-    "/character-details/count": {
+    "/rulesets/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Character-detail"
+          "Ruleset"
         ],
         "parameters": []
       }
     },
-    "/character-details/{id}": {
+    "/rulesets/{id}/attachable": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +363,128 @@
         },
         "summary": "",
         "tags": [
-          "Character-detail"
+          "Ruleset"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/rulesets/dnd5e": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ruleset"
+        ],
+        "parameters": []
+      }
+    },
+    "/rulesets/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ruleset"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ruleset"
         ],
         "parameters": [
           {
@@ -392,11 +508,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ruleset"
                 }
               }
             }
@@ -434,7 +546,7 @@
         },
         "summary": "",
         "tags": [
-          "Character-detail"
+          "Ruleset"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +554,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCharacter-detail"
+                "$ref": "#/components/schemas/NewRuleset"
               }
             }
           }
@@ -508,7 +620,7 @@
         },
         "summary": "",
         "tags": [
-          "Character-detail"
+          "Ruleset"
         ],
         "parameters": [
           {
@@ -527,7 +639,7 @@
   },
   "components": {
     "schemas": {
-      "Character-detail": {
+      "Ruleset": {
         "required": [
           "id"
         ],
@@ -535,208 +647,21 @@
           "id": {
             "type": "string"
           },
-          "character": {
-            "required": [
-              "id",
-              "name",
-              "code",
-              "type"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              },
-              "portrait": {
-                "type": "string"
-              },
-              "coverImage": {
-                "type": "string"
-              },
-              "motto": {
-                "type": "string"
-              },
-              "level": {
-                "type": "integer"
-              },
-              "xp": {
-                "type": "integer"
-              },
-              "player": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "activities": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "gp": {
-                "type": "integer"
-              },
-              "property": {
-                "type": "object"
-              },
-              "race": {
-                "type": "string"
-              },
-              "clses": {
-                "type": "string"
-              },
-              "background": {
-                "type": "string"
-              },
-              "ruleset": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "name": {
+            "type": "string"
           },
-          "attachables": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "origin": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "category": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "features": {
-                      "type": "object"
-                    },
-                    "race": {
-                      "type": "string"
-                    },
-                    "cls": {
-                      "type": "string"
-                    },
-                    "background": {
-                      "type": "string"
-                    },
-                    "ruleset": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "override": {
-                  "type": "object"
-                }
-              }
-            }
+          "code": {
+            "type": "string"
           }
         }
       },
-      "NewCharacter-detail": {
+      "NewRuleset": {
         "properties": {
-          "character": {
+          "name": {
             "type": "string"
           },
-          "attachables": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "origin": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "category": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "features": {
-                      "type": "object"
-                    },
-                    "race": {
-                      "type": "string"
-                    },
-                    "cls": {
-                      "type": "string"
-                    },
-                    "background": {
-                      "type": "string"
-                    },
-                    "ruleset": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "override": {
-                  "type": "object"
-                }
-              }
-            }
+          "code": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -748,5 +673,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Ruleset"
+    }
+  ]
 }

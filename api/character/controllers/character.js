@@ -1,6 +1,6 @@
 "use strict";
 
-const { sanitizeEntity } = require("strapi-utils");
+const { parseMultipartData, sanitizeEntity } = require("strapi-utils");
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -8,6 +8,31 @@ const { sanitizeEntity } = require("strapi-utils");
  */
 
 module.exports = {
+  async create(ctx) {
+    const user = ctx.state?.user;
+    if (!user) {
+      return ctx.forbidden();
+    }
+
+    let entity;
+    if (ctx.is("multipart")) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.character.create(
+        {
+          ...data,
+          player: user.id,
+        },
+        { files }
+      );
+    } else {
+      entity = await strapi.services.character.create({
+        ...ctx.request.body,
+        player: user.id,
+      });
+    }
+    return sanitizeEntity(entity, { model: strapi.models.character });
+  },
+
   async me(ctx) {
     const user = ctx.state?.user;
     if (!user) {

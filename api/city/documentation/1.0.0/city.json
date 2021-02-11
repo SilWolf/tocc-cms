@@ -732,6 +732,18 @@
                 "property": {
                   "type": "object"
                 },
+                "race": {
+                  "type": "string"
+                },
+                "clses": {
+                  "type": "string"
+                },
+                "background": {
+                  "type": "string"
+                },
+                "ruleset": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

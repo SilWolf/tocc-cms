@@ -88,6 +88,18 @@
     },
     "property": {
       "type": "json"
+    },
+    "race": {
+      "model": "race"
+    },
+    "clses": {
+      "collection": "cls"
+    },
+    "background": {
+      "model": "background"
+    },
+    "ruleset": {
+      "model": "ruleset"
     }
   }
 }
