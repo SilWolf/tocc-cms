@@ -14,6 +14,11 @@ module.exports = {
       return ctx.forbidden();
     }
 
+    // get total number of characters owned by player
+    const characterCount = await strapi.services.character.count({
+      player: user.id,
+    });
+
     let entity;
     if (ctx.is("multipart")) {
       const { data, files } = parseMultipartData(ctx);
@@ -21,6 +26,9 @@ module.exports = {
         {
           ...data,
           player: user.id,
+          code: `${user.code}-NEW${(characterCount + 1)
+            .toString()
+            .padStart(2, "0")}`,
         },
         { files }
       );
@@ -28,6 +36,9 @@ module.exports = {
       entity = await strapi.services.character.create({
         ...ctx.request.body,
         player: user.id,
+        code: `${user.code}-NEW${(characterCount + 1)
+          .toString()
+          .padStart(2, "0")}`,
       });
     }
     return sanitizeEntity(entity, { model: strapi.models.character });

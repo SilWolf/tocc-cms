@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/11/2021 4:06:56 PM"
+    "x-generation-date": "02/12/2021 6:00:00 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9361,6 +9361,9 @@
                     "ruleset": {
                       "type": "string"
                     },
+                    "features": {
+                      "type": "object"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -9478,6 +9481,9 @@
                 },
                 "ruleset": {
                   "type": "string"
+                },
+                "features": {
+                  "type": "object"
                 },
                 "created_by": {
                   "type": "string"
@@ -9601,6 +9607,9 @@
                     },
                     "ruleset": {
                       "type": "string"
+                    },
+                    "features": {
+                      "type": "object"
                     },
                     "created_by": {
                       "type": "string"
@@ -9898,6 +9907,9 @@
               },
               "ruleset": {
                 "type": "string"
+              },
+              "features": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -10227,6 +10239,9 @@
               },
               "ruleset": {
                 "type": "string"
+              },
+              "features": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -10859,6 +10874,9 @@
                 "type": "string"
               }
             }
+          },
+          "features": {
+            "type": "object"
           }
         }
       },
@@ -10933,6 +10951,9 @@
           },
           "ruleset": {
             "type": "string"
+          },
+          "features": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"
@@ -11171,6 +11192,9 @@
                 },
                 "ruleset": {
                   "type": "string"
+                },
+                "features": {
+                  "type": "object"
                 },
                 "created_by": {
                   "type": "string"
@@ -11566,6 +11590,9 @@
                 "ruleset": {
                   "type": "string"
                 },
+                "features": {
+                  "type": "object"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -11661,6 +11688,9 @@
                     },
                     "ruleset": {
                       "type": "string"
+                    },
+                    "features": {
+                      "type": "object"
                     },
                     "created_by": {
                       "type": "string"
@@ -11953,6 +11983,9 @@
                     },
                     "ruleset": {
                       "type": "string"
+                    },
+                    "features": {
+                      "type": "object"
                     },
                     "created_by": {
                       "type": "string"
@@ -12556,6 +12589,9 @@
                 },
                 "ruleset": {
                   "type": "string"
+                },
+                "features": {
+                  "type": "object"
                 },
                 "created_by": {
                   "type": "string"

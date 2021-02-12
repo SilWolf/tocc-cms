@@ -719,6 +719,9 @@
               "ruleset": {
                 "type": "string"
               },
+              "features": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },

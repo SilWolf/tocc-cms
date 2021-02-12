@@ -100,6 +100,9 @@
     },
     "ruleset": {
       "model": "ruleset"
+    },
+    "features": {
+      "type": "json"
     }
   }
 }
