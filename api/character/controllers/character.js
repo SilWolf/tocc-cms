@@ -44,6 +44,34 @@ module.exports = {
     return sanitizeEntity(entity, { model: strapi.models.character });
   },
 
+  async update(ctx) {
+    const user = ctx.state?.user;
+    if (!user) {
+      return ctx.forbidden();
+    }
+
+    const { id } = ctx.params;
+
+    let entity;
+    if (ctx.is("multipart")) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.character.update(
+        { id, player: user.id },
+        data,
+        {
+          files,
+        }
+      );
+    } else {
+      entity = await strapi.services.character.update(
+        { id, player: user.id },
+        ctx.request.body
+      );
+    }
+
+    return sanitizeEntity(entity, { model: strapi.models.character });
+  },
+
   async me(ctx) {
     const user = ctx.state?.user;
     if (!user) {
@@ -80,16 +108,14 @@ module.exports = {
   async getDetail(ctx) {
     const { id } = ctx.params;
 
-    const entities = await strapi.services["character-detail"].findOne(
+    const entity = await strapi.services["character-detail"].findOne(
       {
         character: id,
       },
       [""]
     );
 
-    return entities.map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models["character-detail"] })
-    );
+    return sanitizeEntity(entity, { model: strapi.models["character-detail"] });
   },
 
   async postDetail(ctx) {
@@ -100,5 +126,15 @@ module.exports = {
       character: id,
     });
     return sanitizeEntity(entity, { model: strapi.models["character-detail"] });
+  },
+
+  async putDetail(ctx) {
+    const { id } = ctx.params;
+
+    const entity = await strapi.services["character-detail"].update(
+      { character: id },
+      ctx.request.body
+    );
+    return {};
   },
 };

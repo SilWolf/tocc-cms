@@ -591,6 +591,30 @@
           "features": {
             "type": "object"
           },
+          "race": {
+            "required": [
+              "id",
+              "name",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "cls": {
             "required": [
               "id",

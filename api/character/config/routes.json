@@ -57,6 +57,14 @@
       }
     },
     {
+      "method": "PUT",
+      "path": "/characters/:id/detail",
+      "handler": "character.putDetail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/characters",
       "handler": "character.create",

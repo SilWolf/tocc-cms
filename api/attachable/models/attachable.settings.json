@@ -24,7 +24,6 @@
       "type": "json"
     },
     "race": {
-      "private": true,
       "model": "race"
     },
     "cls": {
