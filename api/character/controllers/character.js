@@ -131,7 +131,7 @@ module.exports = {
   async putDetail(ctx) {
     const { id } = ctx.params;
 
-    const entity = await strapi.services["character-detail"].update(
+    await strapi.services["character-detail"].update(
       { character: id },
       ctx.request.body
     );
