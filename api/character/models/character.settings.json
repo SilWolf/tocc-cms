@@ -3,6 +3,7 @@
   "collectionName": "characters",
   "info": {
     "name": "Character",
+    "displayName": "BII. 玩家角色",
     "description": ""
   },
   "options": {
@@ -27,28 +28,21 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "PC",
-        "NPC"
-      ],
+      "enum": ["PC", "NPC"],
       "default": "PC",
       "required": true
     },
     "portrait": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },
     "coverImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },

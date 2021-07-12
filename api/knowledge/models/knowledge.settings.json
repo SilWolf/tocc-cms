@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "rulesets",
+  "collectionName": "knowledges",
   "info": {
-    "name": "Ruleset",
-    "displayName": "XI. 規則模組"
+    "name": "Knowledge",
+    "displayName": "AIV. 知識"
   },
   "options": {
     "increments": true,
@@ -14,8 +14,8 @@
     "name": {
       "type": "string"
     },
-    "code": {
-      "type": "string"
+    "description": {
+      "type": "richtext"
     }
   }
 }

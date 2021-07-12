@@ -3,6 +3,7 @@
   "collectionName": "character_details",
   "info": {
     "name": "CharacterDetail",
+    "displayName": "XV. 玩家能力值詳細",
     "description": ""
   },
   "options": {

@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "races",
+  "collectionName": "shops",
   "info": {
-    "name": "Race",
-    "displayName": "XIIIa. 種族",
+    "name": "Shop",
+    "displayName": "AI. 店舖",
     "description": ""
   },
   "options": {
@@ -14,13 +14,19 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true,
-      "required": true
-    },
-    "code": {
-      "type": "string",
       "required": true,
       "unique": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "float",
+      "default": 22.302711
+    },
+    "lng": {
+      "type": "float",
+      "default": 114.177216
     }
   }
 }

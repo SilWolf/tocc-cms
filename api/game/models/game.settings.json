@@ -3,6 +3,7 @@
   "collectionName": "games",
   "info": {
     "name": "game",
+    "displayName": "CI. 劇本",
     "description": ""
   },
   "options": {
@@ -93,11 +94,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": [
-        "draft",
-        "published",
-        "completed"
-      ],
+      "enum": ["draft", "published", "completed"],
       "default": "draft",
       "required": true
     },

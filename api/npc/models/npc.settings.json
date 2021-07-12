@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "rulesets",
+  "collectionName": "npcs",
   "info": {
-    "name": "Ruleset",
-    "displayName": "XI. 規則模組"
+    "name": "NPC",
+    "displayName": "AIII. 據點/組織/NPC/物件"
   },
   "options": {
     "increments": true,
@@ -14,8 +14,8 @@
     "name": {
       "type": "string"
     },
-    "code": {
-      "type": "string"
+    "description": {
+      "type": "richtext"
     }
   }
 }

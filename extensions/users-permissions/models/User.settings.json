@@ -3,6 +3,7 @@
   "collectionName": "users-permissions_user",
   "info": {
     "name": "user",
+    "displayName": "BI. 玩家/DM/用戶",
     "description": ""
   },
   "options": {
@@ -74,9 +75,7 @@
     "portraitImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },

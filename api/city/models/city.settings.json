@@ -3,6 +3,7 @@
   "collectionName": "cities",
   "info": {
     "name": "City",
+    "displayName": "AII. 城市",
     "description": ""
   },
   "options": {
@@ -26,18 +27,14 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },
     "shopImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },
