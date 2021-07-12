@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/15/2021 1:08:33 PM"
+    "x-generation-date": "07/12/2021 3:20:11 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -37,7 +37,7 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/developer-docs/latest/"
+    "url": "https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html"
   },
   "security": [
     {
@@ -7300,6 +7300,134 @@
         }
       }
     },
+    "/email/test": {
+      "post": {
+        "deprecated": false,
+        "description": "Send an test email",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email - Email"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/email/settings": {
+      "get": {
+        "deprecated": false,
+        "description": "Get the email settings",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email - Email"
+        ],
+        "parameters": []
+      }
+    },
     "/upload/": {
       "post": {
         "deprecated": false,
@@ -9389,7 +9517,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -9434,7 +9566,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -9510,7 +9645,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -9555,7 +9694,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -9636,7 +9778,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -9681,7 +9827,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -9960,7 +10109,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "PC",
+                  "NPC"
+                ]
               },
               "portrait": {
                 "type": "string"
@@ -10005,7 +10158,10 @@
                 "type": "string"
               },
               "clses": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "background": {
                 "type": "string"
@@ -10255,7 +10411,12 @@
                 "type": "string"
               },
               "status": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "draft",
+                  "published",
+                  "completed"
+                ]
               },
               "googleCalendarEventId": {
                 "type": "string"
@@ -10292,7 +10453,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "PC",
+                  "NPC"
+                ]
               },
               "portrait": {
                 "type": "string"
@@ -10337,7 +10502,10 @@
                 "type": "string"
               },
               "clses": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "background": {
                 "type": "string"
@@ -10821,7 +10989,12 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "draft",
+                    "published",
+                    "completed"
+                  ]
                 },
                 "googleCalendarEventId": {
                   "type": "string"
@@ -10914,25 +11087,28 @@
             }
           },
           "clses": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -11049,7 +11225,10 @@
             "type": "string"
           },
           "clses": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "background": {
             "type": "string"
@@ -11245,7 +11424,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -11290,7 +11473,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -11395,7 +11581,12 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "draft",
+                    "published",
+                    "completed"
+                  ]
                 },
                 "googleCalendarEventId": {
                   "type": "string"
@@ -11642,7 +11833,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -11687,7 +11882,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -11741,7 +11939,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -11786,7 +11988,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -12036,7 +12241,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -12081,7 +12290,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -12642,7 +12854,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -12687,7 +12903,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -12789,7 +13008,12 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "draft",
+                    "published",
+                    "completed"
+                  ]
                 },
                 "googleCalendarEventId": {
                   "type": "string"

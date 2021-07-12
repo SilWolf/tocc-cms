@@ -691,7 +691,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -736,7 +740,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -841,7 +848,12 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "draft",
+                    "published",
+                    "completed"
+                  ]
                 },
                 "googleCalendarEventId": {
                   "type": "string"
