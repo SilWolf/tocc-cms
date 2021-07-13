@@ -92,8 +92,6 @@ function ListView({
   pagination: { total },
   slug,
 }) {
-  console.log(layout);
-
   const {
     contentType: {
       attributes,
@@ -411,8 +409,6 @@ function ListView({
     [tabsWithComponent]
   );
 
-  console.log(tabsKeys);
-
   return (
     <>
       <ListViewProvider
@@ -463,33 +459,35 @@ function ListView({
 
           {canRead && (
             <>
-              <ul className="nav nav-tabs mb-4">
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${
-                      activeTab === "table" ? "active" : ""
-                    }`}
-                    href="#"
-                    onClick={handleChangeTab("table")}
-                  >
-                    表格
-                  </a>
-                </li>
-
-                {tabsKeys.map((key) => (
-                  <li key={key} className="nav-item">
+              {tabsKeys.length > 0 && (
+                <ul className="nav nav-tabs mb-4">
+                  <li className="nav-item">
                     <a
                       className={`nav-link ${
-                        activeTab === key ? "active" : ""
+                        activeTab === "table" ? "active" : ""
                       }`}
                       href="#"
-                      onClick={handleChangeTab(key)}
+                      onClick={handleChangeTab("table")}
                     >
-                      {tabsWithComponent[key].label}
+                      表格
                     </a>
                   </li>
-                ))}
-              </ul>
+
+                  {tabsKeys.map((key) => (
+                    <li key={key} className="nav-item">
+                      <a
+                        className={`nav-link ${
+                          activeTab === key ? "active" : ""
+                        }`}
+                        href="#"
+                        onClick={handleChangeTab(key)}
+                      >
+                        {tabsWithComponent[key].label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               {tabsKeys.map((key) => (
                 <Wrapper
