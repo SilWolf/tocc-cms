@@ -409,6 +409,8 @@ function ListView({
     [tabsWithComponent]
   );
 
+  console.log(data);
+
   return (
     <>
       <ListViewProvider

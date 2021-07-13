@@ -1,4 +1,7 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo } from "react";
+import { useHistory, useLocation } from "react-router-dom";
+import { request } from "strapi-helper-plugin";
+import endOfMonth from "date-fns/endOfMonth";
 
 import Calendar from "../components/Calendar/Calendar";
 
@@ -25,34 +28,50 @@ const _components = {
 };
 
 const Component = () => {
-  const handleCalendarMonthChange = useCallback(({ start }) => {
-    // const prevMonth = addMonths(start, -1)
-    // const nextMonth = addMonths(start, 1)
-    // const thisMonth = start
-    // Promise.all(
-    // 	[prevMonth, thisMonth, nextMonth].map((date) => {
-    // 		const queryKey = `${date?.getFullYear()}-${date?.getMonth()}`
-    // 		const endOfMonthOfDate = endOfMonth(date)
-    // 		return queryClient.fetchQuery(
-    // 			['games', queryKey],
-    // 			() => getGamesByDateRange(date, endOfMonthOfDate),
-    // 			{
-    // 				staleTime: 60000,
-    // 			}
-    // 		)
-    // 	})
-    // ).then((arrayOfGames) => {
-    // 	setGames(([]).concat(...arrayOfGames))
-    // })
-  }, []);
+  const { pathname } = useLocation();
+  const { push } = useHistory();
 
-  const handleCalendarSelectEvent = useCallback(() => {}, []);
+  const [gamesMonthMap, setGamesMonthMap] = useState({});
+
+  const handleCalendarMonthChange = useCallback(
+    ({ start }) => {
+      const date = start;
+      const endOfMonthOfDate = endOfMonth(date);
+
+      const queryKey = `${date?.getFullYear()}-${date?.getMonth()}`;
+      if (gamesMonthMap[queryKey]) {
+        return;
+      }
+
+      const requestUrl = `/content-manager/collection-types/application::game.game?page=1&pageSize=50&_sort=title:ASC&_where[0][startAt_gte]=${date.toISOString()}&_where[1][startAt_lte]=${endOfMonthOfDate.toISOString()}`;
+
+      request(requestUrl, { method: "GET" }).then((result) => {
+        setGamesMonthMap((prev) => ({
+          ...prev,
+          [queryKey]: result.results,
+        }));
+      });
+    },
+    [gamesMonthMap, setGamesMonthMap]
+  );
+
+  const handleCalendarSelectEvent = useCallback(
+    (game) => {
+      push({
+        pathname: `${pathname}/${game.id}`,
+      });
+    },
+    [pathname, push]
+  );
   // (game) => {
   // 	history.push(`${routeMatch.url}/${game.id}`)
   // },
   // [history]
 
-  const games = useMemo(() => [], []);
+  const games = useMemo(
+    () => [].concat(...Object.values(gamesMonthMap)),
+    [gamesMonthMap]
+  );
 
   return (
     <Calendar
