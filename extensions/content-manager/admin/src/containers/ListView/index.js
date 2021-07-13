@@ -60,6 +60,8 @@ import {
   buildQueryString,
 } from "./utils";
 
+import extraTabsWithComponent from "./extra";
+
 /* eslint-disable react/no-array-index-key */
 function ListView({
   canCreate,
@@ -90,6 +92,8 @@ function ListView({
   pagination: { total },
   slug,
 }) {
+  console.log(layout);
+
   const {
     contentType: {
       attributes,
@@ -116,6 +120,7 @@ function ListView({
 
   const [isFilterPickerOpen, setFilterPickerState] = useState(false);
   const [idToDelete, setIdToDelete] = useState(null);
+  const [activeTab, setActiveTab] = useState("table");
   const contentType = layout.contentType;
   const hasDraftAndPublish = get(contentType, "options.draftAndPublish", false);
   const allAllowedHeaders = useMemo(
@@ -388,6 +393,26 @@ function ListView({
     toggleModalDeleteAll(e);
   };
 
+  const handleChangeTab = useCallback(
+    (tabName) => (e) => {
+      e.preventDefault();
+      setActiveTab(tabName);
+    },
+    []
+  );
+
+  const tabsWithComponent = useMemo(
+    () => extraTabsWithComponent({ slug }),
+    [extraTabsWithComponent, slug]
+  );
+
+  const tabsKeys = useMemo(
+    () => Object.keys(tabsWithComponent),
+    [tabsWithComponent]
+  );
+
+  console.log(tabsKeys);
+
   return (
     <>
       <ListViewProvider
@@ -438,7 +463,44 @@ function ListView({
 
           {canRead && (
             <>
-              <Wrapper>
+              <ul className="nav nav-tabs mb-4">
+                <li className="nav-item">
+                  <a
+                    className={`nav-link ${
+                      activeTab === "table" ? "active" : ""
+                    }`}
+                    href="#"
+                    onClick={handleChangeTab("table")}
+                  >
+                    表格
+                  </a>
+                </li>
+
+                {tabsKeys.map((key) => (
+                  <li key={key} className="nav-item">
+                    <a
+                      className={`nav-link ${
+                        activeTab === key ? "active" : ""
+                      }`}
+                      href="#"
+                      onClick={handleChangeTab(key)}
+                    >
+                      {tabsWithComponent[key].label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              {tabsKeys.map((key) => (
+                <Wrapper
+                  key={key}
+                  className={activeTab !== key ? "d-none" : ""}
+                >
+                  {tabsWithComponent[key].component}
+                </Wrapper>
+              ))}
+
+              <Wrapper className={activeTab !== "table" ? "d-none" : ""}>
                 <div className="row" style={{ marginBottom: "5px" }}>
                   <div className="col-9">
                     <div
