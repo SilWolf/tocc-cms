@@ -16,28 +16,28 @@ const findOrSearchFn = (params) => {
     populate: [
       {
         path: "player",
-        select: "id name",
+        select: "id name code",
       },
       {
         path: "city",
-        select: "id name",
+        select: "id name code",
       },
-      {
-        path: "race",
-        select: "id name",
-      },
-      {
-        path: "clses",
-        select: "id name",
-      },
-      {
-        path: "background",
-        select: "id name",
-      },
-      {
-        path: "ruleset",
-        select: "id name",
-      },
+      // {
+      //   path: "race",
+      //   select: "id name",
+      // },
+      // {
+      //   path: "clses",
+      //   select: "id name",
+      // },
+      // {
+      //   path: "background",
+      //   select: "id name",
+      // },
+      // {
+      //   path: "ruleset",
+      //   select: "id name",
+      // },
     ],
   }).select("-property");
 };
