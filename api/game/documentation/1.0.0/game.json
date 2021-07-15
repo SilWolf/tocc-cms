@@ -819,18 +819,6 @@
               "phone": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "portraitImage": {
                 "type": "string"
               },
@@ -897,18 +885,6 @@
                 },
                 "city": {
                   "type": "string"
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "gp": {
                   "type": "integer"
@@ -1003,18 +979,6 @@
                     },
                     "city": {
                       "type": "string"
-                    },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
                     },
                     "gp": {
                       "type": "integer"
@@ -1133,20 +1097,8 @@
               "shopImage": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "code": {
                 "type": "string"
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "created_by": {
                 "type": "string"
@@ -1168,9 +1120,12 @@
             "type": "string",
             "default": "draft",
             "enum": [
+              "new",
               "draft",
               "published",
-              "completed"
+              "confirmed",
+              "completed",
+              "done"
             ]
           },
           "googleCalendarEventId": {
@@ -1306,18 +1261,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -1424,9 +1367,12 @@
             "type": "string",
             "default": "draft",
             "enum": [
+              "new",
               "draft",
               "published",
-              "completed"
+              "confirmed",
+              "completed",
+              "done"
             ]
           },
           "googleCalendarEventId": {

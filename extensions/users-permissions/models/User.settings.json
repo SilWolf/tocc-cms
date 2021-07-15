@@ -64,14 +64,6 @@
     "phone": {
       "type": "string"
     },
-    "characters": {
-      "via": "player",
-      "collection": "character"
-    },
-    "games": {
-      "via": "dm",
-      "collection": "game"
-    },
     "portraitImage": {
       "model": "file",
       "via": "related",

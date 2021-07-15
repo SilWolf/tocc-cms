@@ -1072,18 +1072,6 @@
               "phone": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "portraitImage": {
                 "type": "string"
               },
@@ -1127,174 +1115,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "code": {
                 "type": "string"
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "startAt",
-                "worldStartAt",
-                "lvMin",
-                "capacityMin",
-                "capacityMax",
-                "code",
-                "status"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "startAt": {
-                  "type": "string"
-                },
-                "endAt": {
-                  "type": "string"
-                },
-                "worldStartAt": {
-                  "type": "string"
-                },
-                "worldEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "lvMin": {
-                  "type": "integer"
-                },
-                "lvMax": {
-                  "type": "integer"
-                },
-                "capacityMin": {
-                  "type": "integer"
-                },
-                "capacityMax": {
-                  "type": "integer"
-                },
-                "tags": {
-                  "type": "string"
-                },
-                "remark": {
-                  "type": "string"
-                },
-                "dm": {
-                  "type": "string"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "characterAndRewards": {
-                  "type": "component"
-                },
-                "journals": {
-                  "type": "component"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "publishedAt": {
-                  "type": "string"
-                },
-                "completedAt": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string",
-                  "enum": [
-                    "draft",
-                    "published",
-                    "completed"
-                  ]
-                },
-                "googleCalendarEventId": {
-                  "type": "string"
-                },
-                "googleCalendarEventUrl": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "inGameStartAt": {
-                  "type": "string"
-                },
-                "inGameEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "characterRewards": {
-                  "type": "component"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -1444,18 +1272,6 @@
           },
           "city": {
             "type": "string"
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "gp": {
             "type": "integer",

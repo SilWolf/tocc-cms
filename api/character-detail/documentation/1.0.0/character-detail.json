@@ -583,18 +583,6 @@
               "city": {
                 "type": "string"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "activities": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "gp": {
                 "type": "integer"
               },

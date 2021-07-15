@@ -3,7 +3,7 @@
   "collectionName": "npcs",
   "info": {
     "name": "NPC",
-    "displayName": "AIII. 據點/組織/NPC/物件"
+    "displayName": "AII. 據點/組織/NPC/物件"
   },
   "options": {
     "increments": true,

@@ -566,18 +566,6 @@
                 "phone": {
                   "type": "string"
                 },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "portraitImage": {
                   "type": "string"
                 },

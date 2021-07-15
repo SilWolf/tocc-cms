@@ -3,7 +3,7 @@
   "collectionName": "cities",
   "info": {
     "name": "City",
-    "displayName": "AII. 城市",
+    "displayName": "AI. 城市",
     "description": ""
   },
   "options": {
@@ -14,6 +14,12 @@
   "attributes": {
     "name": {
       "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "code": {
+      "type": "string",
+      "private": false,
       "required": true,
       "unique": true
     },
@@ -37,20 +43,6 @@
       "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
-    },
-    "characters": {
-      "via": "city",
-      "collection": "character"
-    },
-    "code": {
-      "type": "string",
-      "private": false,
-      "required": true,
-      "unique": true
-    },
-    "games": {
-      "via": "city",
-      "collection": "game"
     }
   }
 }

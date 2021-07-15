@@ -60,11 +60,9 @@
     },
     "dm": {
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "games"
+      "model": "user"
     },
     "characters": {
-      "via": "games",
       "collection": "character",
       "dominant": true
     },
@@ -83,8 +81,7 @@
       "required": true
     },
     "city": {
-      "model": "city",
-      "via": "games"
+      "model": "city"
     },
     "publishedAt": {
       "type": "datetime"
@@ -94,7 +91,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["draft", "published", "completed"],
+      "enum": ["new", "draft", "published", "confirmed", "completed", "done"],
       "default": "draft",
       "required": true
     },
