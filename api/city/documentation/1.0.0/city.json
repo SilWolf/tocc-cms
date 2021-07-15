@@ -254,6 +254,63 @@
         }
       }
     },
+    "/dm/cities": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "City"
+        ],
+        "parameters": []
+      }
+    },
     "/cities/count": {
       "get": {
         "deprecated": false,
@@ -518,14 +575,19 @@
         "required": [
           "id",
           "name",
+          "code",
           "shopName",
-          "code"
+          "prosperity",
+          "prosperityMax"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "shopName": {
@@ -668,19 +730,33 @@
               }
             }
           },
-          "code": {
-            "type": "string"
+          "level": {
+            "type": "integer",
+            "default": 1
+          },
+          "prosperity": {
+            "type": "integer",
+            "default": 0
+          },
+          "prosperityMax": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewCity": {
         "required": [
           "name",
+          "code",
           "shopName",
-          "code"
+          "prosperity",
+          "prosperityMax"
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "shopName": {
@@ -689,8 +765,17 @@
           "shopAddress": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
+          "level": {
+            "type": "integer",
+            "default": 1
+          },
+          "prosperity": {
+            "type": "integer",
+            "default": 0
+          },
+          "prosperityMax": {
+            "type": "integer",
+            "default": 0
           },
           "created_by": {
             "type": "string"

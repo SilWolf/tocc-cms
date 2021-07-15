@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/15/2021 4:37:12 PM"
+    "x-generation-date": "07/15/2021 5:38:33 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3857,6 +3857,63 @@
             }
           }
         }
+      }
+    },
+    "/dm/cities": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "City"
+        ],
+        "parameters": []
       }
     },
     "/cities/count": {
@@ -12282,7 +12339,8 @@
               "username",
               "email",
               "code",
-              "name"
+              "name",
+              "isPlayer"
             ],
             "properties": {
               "id": {
@@ -12327,6 +12385,12 @@
               "name": {
                 "type": "string"
               },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -12339,14 +12403,19 @@
             "required": [
               "id",
               "name",
+              "code",
               "shopName",
-              "code"
+              "prosperity",
+              "prosperityMax"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "shopName": {
@@ -12361,8 +12430,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "code": {
-                "type": "string"
+              "level": {
+                "type": "integer"
+              },
+              "prosperity": {
+                "type": "integer"
+              },
+              "prosperityMax": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -12556,14 +12631,19 @@
         "required": [
           "id",
           "name",
+          "code",
           "shopName",
-          "code"
+          "prosperity",
+          "prosperityMax"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "shopName": {
@@ -12706,19 +12786,33 @@
               }
             }
           },
-          "code": {
-            "type": "string"
+          "level": {
+            "type": "integer",
+            "default": 1
+          },
+          "prosperity": {
+            "type": "integer",
+            "default": 0
+          },
+          "prosperityMax": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewCity": {
         "required": [
           "name",
+          "code",
           "shopName",
-          "code"
+          "prosperity",
+          "prosperityMax"
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "shopName": {
@@ -12727,8 +12821,17 @@
           "shopAddress": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
+          "level": {
+            "type": "integer",
+            "default": 1
+          },
+          "prosperity": {
+            "type": "integer",
+            "default": 0
+          },
+          "prosperityMax": {
+            "type": "integer",
+            "default": 0
           },
           "created_by": {
             "type": "string"
@@ -12976,7 +13079,8 @@
               "username",
               "email",
               "code",
-              "name"
+              "name",
+              "isPlayer"
             ],
             "properties": {
               "id": {
@@ -13020,6 +13124,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -13268,14 +13378,19 @@
             "required": [
               "id",
               "name",
+              "code",
               "shopName",
-              "code"
+              "prosperity",
+              "prosperityMax"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "shopName": {
@@ -13290,8 +13405,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "code": {
-                "type": "string"
+              "level": {
+                "type": "integer"
+              },
+              "prosperity": {
+                "type": "integer"
+              },
+              "prosperityMax": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -13897,7 +14018,8 @@
                 "username",
                 "email",
                 "code",
-                "name"
+                "name",
+                "isPlayer"
               ],
               "properties": {
                 "id": {
@@ -13941,6 +14063,12 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "isPlayer": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"
@@ -13994,7 +14122,8 @@
           "username",
           "email",
           "code",
-          "name"
+          "name",
+          "isPlayer"
         ],
         "properties": {
           "id": {
@@ -14132,6 +14261,58 @@
           },
           "name": {
             "type": "string"
+          },
+          "city": {
+            "required": [
+              "id",
+              "name",
+              "code",
+              "shopName",
+              "prosperity",
+              "prosperityMax"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "shopName": {
+                "type": "string"
+              },
+              "shopAddress": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "shopImage": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "prosperity": {
+                "type": "integer"
+              },
+              "prosperityMax": {
+                "type": "integer"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isPlayer": {
+            "type": "boolean",
+            "default": true
           }
         }
       },
@@ -14140,7 +14321,8 @@
           "username",
           "email",
           "code",
-          "name"
+          "name",
+          "isPlayer"
         ],
         "properties": {
           "username": {
@@ -14184,6 +14366,13 @@
           },
           "name": {
             "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "isPlayer": {
+            "type": "boolean",
+            "default": true
           },
           "created_by": {
             "type": "string"

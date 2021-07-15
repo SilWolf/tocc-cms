@@ -530,7 +530,8 @@
                 "username",
                 "email",
                 "code",
-                "name"
+                "name",
+                "isPlayer"
               ],
               "properties": {
                 "id": {
@@ -574,6 +575,12 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "isPlayer": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"

@@ -33,16 +33,36 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "shopImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
+    },
+    "level": {
+      "type": "integer",
+      "default": 1
+    },
+    "prosperity": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "prosperityMax": {
+      "default": 0,
+      "type": "integer",
+      "required": true
     }
   }
 }
