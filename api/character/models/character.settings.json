@@ -28,14 +28,19 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": ["PC", "NPC"],
+      "enum": [
+        "PC",
+        "NPC"
+      ],
       "default": "PC",
       "required": true
     },
     "portrait": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
@@ -43,7 +48,9 @@
     "coverImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}

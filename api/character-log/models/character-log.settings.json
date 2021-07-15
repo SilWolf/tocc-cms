@@ -33,11 +33,6 @@
     "character": {
       "model": "character"
     },
-    "items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "common.reward"
-    },
     "worldStartAt": {
       "type": "datetime",
       "default": "1261-12-31T16:23:18.000Z"

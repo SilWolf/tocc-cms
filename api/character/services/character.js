@@ -8,6 +8,7 @@ const { convertRestQueryParams, buildQuery } = require("strapi-utils");
  */
 
 const findOrSearchFn = (params) => {
+  console.log(params);
   const { _q, ...rest } = params;
   return buildQuery({
     model: strapi.query("character").model,
@@ -44,6 +45,7 @@ const findOrSearchFn = (params) => {
 
 module.exports = {
   find(params, populate) {
+    console.log(params);
     return findOrSearchFn(params);
   },
   search(params, populate) {
