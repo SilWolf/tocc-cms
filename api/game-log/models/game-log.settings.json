@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_logs",
+  "info": {
+    "name": "GameLog",
+    "displayName": "CII. 劇本操作紀錄",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "game": {
+      "model": "game"
+    }
+  }
+}
