@@ -1,13 +1,13 @@
-version: '3.3'
+version: "3.3"
 
 services:
   localstack:
     image: localstack/localstack:0.12.4
     ports:
-      - '4566:4566'
-      - '4571:4571'
+      - "4566:4566"
+      - "4571:4571"
       # admin port
-      - '38080:8080'
+      - "38080:8080"
     environment:
       DEFAULT_REGION: ap-southeast-1
       PORT_WEB_UI: 8080
@@ -16,16 +16,22 @@ services:
       DATA_DIR: /tmp/localstack/data
     volumes:
       # data will be store here
-      - './.docker-compose-dev/localstack/data:/tmp/localstack/data'
+      - "./.docker-compose-dev/localstack/data:/tmp/localstack/data"
 
-  mongodb-standalone:
-    image: mongo:4.2
+  mysql:
+    image: mysql:5.7
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${DATABASE_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${DATABASE_PASSWORD}
-      MONGO_INITDB_DATABASE: ${DATABASE_NAME}
+      MYSQL_ROOT_PASSWORD: strapi
+      MYSQL_USER: strapi
+      MYSQL_PASSWORD: strapi
+      MYSQL_DATABASE: strapi-api
     ports:
-      - '27017:27017'
+      - "3307:3306"
+    volumes:
+      # permission init scripts
+      - "./.docker-compose-infra/mysql/initdb.d:/docker-entrypoint-initdb.d"
+      # data will be store here
+      - "./.docker-compose-infra/mysql/data:/var/lib/mysql"
 #  debug:
 #    image: hk01/docker-utils
 #    entrypoint: tail -f /dev/null
