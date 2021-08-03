@@ -8,6 +8,7 @@ const { convertRestQueryParams, buildQuery } = require("strapi-utils");
  */
 
 const findOrSearchFn = (params) => {
+  console.log(params);
   const { _q, ...rest } = params;
   return buildQuery({
     model: strapi.query("character").model,
@@ -16,34 +17,35 @@ const findOrSearchFn = (params) => {
     populate: [
       {
         path: "player",
-        select: "id name",
+        select: "id name code",
       },
       {
         path: "city",
-        select: "id name",
+        select: "id name code",
       },
-      {
-        path: "race",
-        select: "id name",
-      },
-      {
-        path: "clses",
-        select: "id name",
-      },
-      {
-        path: "background",
-        select: "id name",
-      },
-      {
-        path: "ruleset",
-        select: "id name",
-      },
+      // {
+      //   path: "race",
+      //   select: "id name",
+      // },
+      // {
+      //   path: "clses",
+      //   select: "id name",
+      // },
+      // {
+      //   path: "background",
+      //   select: "id name",
+      // },
+      // {
+      //   path: "ruleset",
+      //   select: "id name",
+      // },
     ],
   }).select("-property");
 };
 
 module.exports = {
   find(params, populate) {
+    console.log(params);
     return findOrSearchFn(params);
   },
   search(params, populate) {

@@ -629,7 +629,15 @@
                 "type": "string"
               },
               "status": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "new",
+                  "draft",
+                  "published",
+                  "confirmed",
+                  "completed",
+                  "done"
+                ]
               },
               "googleCalendarEventId": {
                 "type": "string"
@@ -666,7 +674,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "PC",
+                  "NPC"
+                ]
               },
               "portrait": {
                 "type": "string"
@@ -689,18 +701,6 @@
               "city": {
                 "type": "string"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "activities": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "gp": {
                 "type": "integer"
               },
@@ -711,7 +711,10 @@
                 "type": "string"
               },
               "clses": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "background": {
                 "type": "string"
@@ -727,26 +730,6 @@
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -782,26 +765,6 @@
           },
           "character": {
             "type": "string"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "worldStartAt": {
             "type": "string",

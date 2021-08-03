@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/15/2021 1:08:33 PM"
+    "x-generation-date": "07/15/2021 10:34:43 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -37,7 +37,7 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/developer-docs/latest/"
+    "url": "https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html"
   },
   "security": [
     {
@@ -3859,6 +3859,63 @@
         }
       }
     },
+    "/dm/cities": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "City"
+        ],
+        "parameters": []
+      }
+    },
     "/cities/count": {
       "get": {
         "deprecated": false,
@@ -4718,6 +4775,530 @@
         ]
       }
     },
+    "/game-logs": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game-log"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game-log"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewGame-log"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/game-logs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game-log"
+        ],
+        "parameters": []
+      }
+    },
+    "/game-logs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game-log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game-log"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewGame-log"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game-log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/games": {
       "get": {
         "deprecated": false,
@@ -5488,6 +6069,1028 @@
           "Global"
         ],
         "parameters": []
+      }
+    },
+    "/knowledges": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Knowledge"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Knowledge"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Knowledge"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Knowledge"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewKnowledge"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/knowledges/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Knowledge"
+        ],
+        "parameters": []
+      }
+    },
+    "/knowledges/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Knowledge"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Knowledge"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Knowledge"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Knowledge"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewKnowledge"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Knowledge"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/npcs": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Npc"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Npc"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Npc"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Npc"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewNpc"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/npcs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Npc"
+        ],
+        "parameters": []
+      }
+    },
+    "/npcs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Npc"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Npc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Npc"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Npc"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewNpc"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Npc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/races": {
@@ -7298,6 +8901,134 @@
             }
           }
         }
+      }
+    },
+    "/email/test": {
+      "post": {
+        "deprecated": false,
+        "description": "Send an test email",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email - Email"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/email/settings": {
+      "get": {
+        "deprecated": false,
+        "description": "Get the email settings",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email - Email"
+        ],
+        "parameters": []
       }
     },
     "/upload/": {
@@ -9389,7 +11120,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -9412,18 +11147,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -9434,7 +11157,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -9510,7 +11236,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -9533,18 +11263,6 @@
                 "city": {
                   "type": "string"
                 },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "gp": {
                   "type": "integer"
                 },
@@ -9555,7 +11273,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -9636,7 +11357,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -9659,18 +11384,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -9681,7 +11394,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -9960,7 +11676,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "PC",
+                  "NPC"
+                ]
               },
               "portrait": {
                 "type": "string"
@@ -9983,18 +11703,6 @@
               "city": {
                 "type": "string"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "activities": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "gp": {
                 "type": "integer"
               },
@@ -10005,7 +11713,10 @@
                 "type": "string"
               },
               "clses": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "background": {
                 "type": "string"
@@ -10255,7 +11966,15 @@
                 "type": "string"
               },
               "status": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "new",
+                  "draft",
+                  "published",
+                  "confirmed",
+                  "completed",
+                  "done"
+                ]
               },
               "googleCalendarEventId": {
                 "type": "string"
@@ -10292,7 +12011,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "PC",
+                  "NPC"
+                ]
               },
               "portrait": {
                 "type": "string"
@@ -10315,18 +12038,6 @@
               "city": {
                 "type": "string"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "activities": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "gp": {
                 "type": "integer"
               },
@@ -10337,7 +12048,10 @@
                 "type": "string"
               },
               "clses": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "background": {
                 "type": "string"
@@ -10353,26 +12067,6 @@
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -10408,26 +12102,6 @@
           },
           "character": {
             "type": "string"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "worldStartAt": {
             "type": "string",
@@ -10625,7 +12299,8 @@
               "username",
               "email",
               "code",
-              "name"
+              "name",
+              "isPlayer"
             ],
             "properties": {
               "id": {
@@ -10661,18 +12336,6 @@
               "phone": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "portraitImage": {
                 "type": "string"
               },
@@ -10681,6 +12344,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -10694,14 +12363,19 @@
             "required": [
               "id",
               "name",
+              "code",
               "shopName",
-              "code"
+              "prosperity",
+              "prosperityMax"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "shopName": {
@@ -10716,169 +12390,20 @@
               "shopImage": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "level": {
+                "type": "integer"
               },
-              "code": {
-                "type": "string"
+              "prosperity": {
+                "type": "integer"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "prosperityMax": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "startAt",
-                "worldStartAt",
-                "lvMin",
-                "capacityMin",
-                "capacityMax",
-                "code",
-                "status"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "startAt": {
-                  "type": "string"
-                },
-                "endAt": {
-                  "type": "string"
-                },
-                "worldStartAt": {
-                  "type": "string"
-                },
-                "worldEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "lvMin": {
-                  "type": "integer"
-                },
-                "lvMax": {
-                  "type": "integer"
-                },
-                "capacityMin": {
-                  "type": "integer"
-                },
-                "capacityMax": {
-                  "type": "integer"
-                },
-                "tags": {
-                  "type": "string"
-                },
-                "remark": {
-                  "type": "string"
-                },
-                "dm": {
-                  "type": "string"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "characterAndRewards": {
-                  "type": "component"
-                },
-                "journals": {
-                  "type": "component"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "publishedAt": {
-                  "type": "string"
-                },
-                "completedAt": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "googleCalendarEventId": {
-                  "type": "string"
-                },
-                "googleCalendarEventUrl": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "inGameStartAt": {
-                  "type": "string"
-                },
-                "inGameEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "characterRewards": {
-                  "type": "component"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -10914,25 +12439,28 @@
             }
           },
           "clses": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -11026,18 +12554,6 @@
           "city": {
             "type": "string"
           },
-          "games": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "gp": {
             "type": "integer",
             "default": 0
@@ -11049,7 +12565,10 @@
             "type": "string"
           },
           "clses": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "background": {
             "type": "string"
@@ -11072,14 +12591,19 @@
         "required": [
           "id",
           "name",
+          "code",
           "shopName",
-          "code"
+          "prosperity",
+          "prosperityMax"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "shopName": {
@@ -11222,206 +12746,33 @@
               }
             }
           },
-          "characters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "code",
-                "type"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "portrait": {
-                  "type": "string"
-                },
-                "coverImage": {
-                  "type": "string"
-                },
-                "motto": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "integer"
-                },
-                "xp": {
-                  "type": "integer"
-                },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "gp": {
-                  "type": "integer"
-                },
-                "property": {
-                  "type": "object"
-                },
-                "race": {
-                  "type": "string"
-                },
-                "clses": {
-                  "type": "string"
-                },
-                "background": {
-                  "type": "string"
-                },
-                "ruleset": {
-                  "type": "string"
-                },
-                "features": {
-                  "type": "object"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "level": {
+            "type": "integer",
+            "default": 1
           },
-          "code": {
-            "type": "string"
+          "prosperity": {
+            "type": "integer",
+            "default": 0
           },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "startAt",
-                "worldStartAt",
-                "lvMin",
-                "capacityMin",
-                "capacityMax",
-                "code",
-                "status"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "startAt": {
-                  "type": "string"
-                },
-                "endAt": {
-                  "type": "string"
-                },
-                "worldStartAt": {
-                  "type": "string"
-                },
-                "worldEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "lvMin": {
-                  "type": "integer"
-                },
-                "lvMax": {
-                  "type": "integer"
-                },
-                "capacityMin": {
-                  "type": "integer"
-                },
-                "capacityMax": {
-                  "type": "integer"
-                },
-                "tags": {
-                  "type": "string"
-                },
-                "remark": {
-                  "type": "string"
-                },
-                "dm": {
-                  "type": "string"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "characterAndRewards": {
-                  "type": "component"
-                },
-                "journals": {
-                  "type": "component"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "publishedAt": {
-                  "type": "string"
-                },
-                "completedAt": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "googleCalendarEventId": {
-                  "type": "string"
-                },
-                "googleCalendarEventUrl": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "prosperityMax": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewCity": {
         "required": [
           "name",
+          "code",
           "shopName",
-          "code"
+          "prosperity",
+          "prosperityMax"
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "shopName": {
@@ -11430,20 +12781,17 @@
           "shopAddress": {
             "type": "string"
           },
-          "characters": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "level": {
+            "type": "integer",
+            "default": 1
           },
-          "code": {
-            "type": "string"
+          "prosperity": {
+            "type": "integer",
+            "default": 0
           },
-          "games": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "prosperityMax": {
+            "type": "integer",
+            "default": 0
           },
           "created_by": {
             "type": "string"
@@ -11479,6 +12827,143 @@
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Game-log": {
+        "required": [
+          "id",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "game": {
+            "required": [
+              "id",
+              "title",
+              "startAt",
+              "worldStartAt",
+              "lvMin",
+              "capacityMin",
+              "capacityMax",
+              "code",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "startAt": {
+                "type": "string"
+              },
+              "endAt": {
+                "type": "string"
+              },
+              "worldStartAt": {
+                "type": "string"
+              },
+              "worldEndAt": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "lvMin": {
+                "type": "integer"
+              },
+              "lvMax": {
+                "type": "integer"
+              },
+              "capacityMin": {
+                "type": "integer"
+              },
+              "capacityMax": {
+                "type": "integer"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "remark": {
+                "type": "string"
+              },
+              "dm": {
+                "type": "string"
+              },
+              "characters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "characterAndRewards": {
+                "type": "component"
+              },
+              "journals": {
+                "type": "component"
+              },
+              "code": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "publishedAt": {
+                "type": "string"
+              },
+              "completedAt": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "new",
+                  "draft",
+                  "published",
+                  "confirmed",
+                  "completed",
+                  "done"
+                ]
+              },
+              "googleCalendarEventId": {
+                "type": "string"
+              },
+              "googleCalendarEventUrl": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "NewGame-log": {
+        "required": [
+          "description"
+        ],
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "game": {
             "type": "string"
           },
           "created_by": {
@@ -11554,7 +13039,8 @@
               "username",
               "email",
               "code",
-              "name"
+              "name",
+              "isPlayer"
             ],
             "properties": {
               "id": {
@@ -11590,18 +13076,6 @@
               "phone": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "portraitImage": {
                 "type": "string"
               },
@@ -11610,6 +13084,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -11642,7 +13122,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -11665,18 +13149,6 @@
                 "city": {
                   "type": "string"
                 },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "gp": {
                   "type": "integer"
                 },
@@ -11687,7 +13159,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -11741,7 +13216,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -11764,18 +13243,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -11786,7 +13253,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -11868,14 +13338,19 @@
             "required": [
               "id",
               "name",
+              "code",
               "shopName",
-              "code"
+              "prosperity",
+              "prosperityMax"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "shopName": {
@@ -11890,20 +13365,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "level": {
+                "type": "integer"
               },
-              "code": {
-                "type": "string"
+              "prosperity": {
+                "type": "integer"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "prosperityMax": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -11925,9 +13394,12 @@
             "type": "string",
             "default": "draft",
             "enum": [
+              "new",
               "draft",
               "published",
-              "completed"
+              "confirmed",
+              "completed",
+              "done"
             ]
           },
           "googleCalendarEventId": {
@@ -12036,7 +13508,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -12059,18 +13535,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -12081,7 +13545,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -12174,15 +13641,82 @@
             "type": "string",
             "default": "draft",
             "enum": [
+              "new",
               "draft",
               "published",
-              "completed"
+              "confirmed",
+              "completed",
+              "done"
             ]
           },
           "googleCalendarEventId": {
             "type": "string"
           },
           "googleCalendarEventUrl": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Knowledge": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "NewKnowledge": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Npc": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "NewNpc": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "created_by": {
@@ -12444,7 +13978,8 @@
                 "username",
                 "email",
                 "code",
-                "name"
+                "name",
+                "isPlayer"
               ],
               "properties": {
                 "id": {
@@ -12480,18 +14015,6 @@
                 "phone": {
                   "type": "string"
                 },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "portraitImage": {
                   "type": "string"
                 },
@@ -12500,6 +14023,12 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "isPlayer": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"
@@ -12553,7 +14082,8 @@
           "username",
           "email",
           "code",
-          "name"
+          "name",
+          "isPlayer"
         ],
         "properties": {
           "id": {
@@ -12618,193 +14148,6 @@
           },
           "phone": {
             "type": "string"
-          },
-          "characters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "code",
-                "type"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "portrait": {
-                  "type": "string"
-                },
-                "coverImage": {
-                  "type": "string"
-                },
-                "motto": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "integer"
-                },
-                "xp": {
-                  "type": "integer"
-                },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "gp": {
-                  "type": "integer"
-                },
-                "property": {
-                  "type": "object"
-                },
-                "race": {
-                  "type": "string"
-                },
-                "clses": {
-                  "type": "string"
-                },
-                "background": {
-                  "type": "string"
-                },
-                "ruleset": {
-                  "type": "string"
-                },
-                "features": {
-                  "type": "object"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "startAt",
-                "worldStartAt",
-                "lvMin",
-                "capacityMin",
-                "capacityMax",
-                "code",
-                "status"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "startAt": {
-                  "type": "string"
-                },
-                "endAt": {
-                  "type": "string"
-                },
-                "worldStartAt": {
-                  "type": "string"
-                },
-                "worldEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "lvMin": {
-                  "type": "integer"
-                },
-                "lvMax": {
-                  "type": "integer"
-                },
-                "capacityMin": {
-                  "type": "integer"
-                },
-                "capacityMax": {
-                  "type": "integer"
-                },
-                "tags": {
-                  "type": "string"
-                },
-                "remark": {
-                  "type": "string"
-                },
-                "dm": {
-                  "type": "string"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "characterAndRewards": {
-                  "type": "component"
-                },
-                "journals": {
-                  "type": "component"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "publishedAt": {
-                  "type": "string"
-                },
-                "completedAt": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "googleCalendarEventId": {
-                  "type": "string"
-                },
-                "googleCalendarEventUrl": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "portraitImage": {
             "required": [
@@ -12878,6 +14221,58 @@
           },
           "name": {
             "type": "string"
+          },
+          "city": {
+            "required": [
+              "id",
+              "name",
+              "code",
+              "shopName",
+              "prosperity",
+              "prosperityMax"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "shopName": {
+                "type": "string"
+              },
+              "shopAddress": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "shopImage": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "prosperity": {
+                "type": "integer"
+              },
+              "prosperityMax": {
+                "type": "integer"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isPlayer": {
+            "type": "boolean",
+            "default": true
           }
         }
       },
@@ -12886,7 +14281,8 @@
           "username",
           "email",
           "code",
-          "name"
+          "name",
+          "isPlayer"
         ],
         "properties": {
           "username": {
@@ -12925,23 +14321,18 @@
           "phone": {
             "type": "string"
           },
-          "characters": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "code": {
             "type": "string"
           },
           "name": {
             "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "isPlayer": {
+            "type": "boolean",
+            "default": true
           },
           "created_by": {
             "type": "string"
@@ -13002,6 +14393,12 @@
     },
     {
       "name": "Global"
+    },
+    {
+      "name": "Knowledge"
+    },
+    {
+      "name": "Npc"
     },
     {
       "name": "Race"

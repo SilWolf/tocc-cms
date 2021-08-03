@@ -3,6 +3,7 @@
   "collectionName": "games",
   "info": {
     "name": "game",
+    "displayName": "CI. 劇本",
     "description": ""
   },
   "options": {
@@ -59,11 +60,9 @@
     },
     "dm": {
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "games"
+      "model": "user"
     },
     "characters": {
-      "via": "games",
       "collection": "character",
       "dominant": true
     },
@@ -82,8 +81,7 @@
       "required": true
     },
     "city": {
-      "model": "city",
-      "via": "games"
+      "model": "city"
     },
     "publishedAt": {
       "type": "datetime"
@@ -94,9 +92,12 @@
     "status": {
       "type": "enumeration",
       "enum": [
+        "new",
         "draft",
         "published",
-        "completed"
+        "confirmed",
+        "completed",
+        "done"
       ],
       "default": "draft",
       "required": true

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "npcs",
+  "info": {
+    "name": "NPC",
+    "displayName": "AII. 據點/組織/NPC/物件"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

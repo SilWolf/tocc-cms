@@ -3,6 +3,7 @@
   "collectionName": "characters",
   "info": {
     "name": "Character",
+    "displayName": "BII. 玩家角色",
     "description": ""
   },
   "options": {
@@ -41,7 +42,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "coverImage": {
       "model": "file",
@@ -50,7 +52,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "motto": {
       "type": "string"
@@ -67,20 +70,10 @@
     },
     "player": {
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "characters"
+      "model": "user"
     },
     "city": {
-      "model": "city",
-      "via": "characters"
-    },
-    "games": {
-      "collection": "game",
-      "via": "characters"
-    },
-    "activities": {
-      "collection": "activity",
-      "via": "characters"
+      "model": "city"
     },
     "gp": {
       "type": "integer",

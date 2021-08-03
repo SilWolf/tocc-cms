@@ -3,6 +3,7 @@
   "collectionName": "cities",
   "info": {
     "name": "City",
+    "displayName": "AI. 城市",
     "description": ""
   },
   "options": {
@@ -13,6 +14,12 @@
   "attributes": {
     "name": {
       "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "code": {
+      "type": "string",
+      "private": false,
       "required": true,
       "unique": true
     },
@@ -30,7 +37,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "shopImage": {
       "model": "file",
@@ -39,21 +47,22 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
-    "characters": {
-      "via": "city",
-      "collection": "character"
+    "level": {
+      "type": "integer",
+      "default": 1
     },
-    "code": {
-      "type": "string",
-      "private": false,
-      "required": true,
-      "unique": true
+    "prosperity": {
+      "type": "integer",
+      "default": 0,
+      "required": true
     },
-    "games": {
-      "via": "city",
-      "collection": "game"
+    "prosperityMax": {
+      "default": 0,
+      "type": "integer",
+      "required": true
     }
   }
 }

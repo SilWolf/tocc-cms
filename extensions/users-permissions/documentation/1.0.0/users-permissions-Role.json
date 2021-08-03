@@ -530,7 +530,8 @@
                 "username",
                 "email",
                 "code",
-                "name"
+                "name",
+                "isPlayer"
               ],
               "properties": {
                 "id": {
@@ -566,18 +567,6 @@
                 "phone": {
                   "type": "string"
                 },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "portraitImage": {
                   "type": "string"
                 },
@@ -586,6 +575,12 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "isPlayer": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"

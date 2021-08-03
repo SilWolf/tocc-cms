@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "rulesets",
   "info": {
-    "name": "Ruleset"
+    "name": "Ruleset",
+    "displayName": "XI. 規則模組"
   },
   "options": {
     "increments": true,

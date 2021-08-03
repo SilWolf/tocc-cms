@@ -783,7 +783,8 @@
               "username",
               "email",
               "code",
-              "name"
+              "name",
+              "isPlayer"
             ],
             "properties": {
               "id": {
@@ -819,18 +820,6 @@
               "phone": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "portraitImage": {
                 "type": "string"
               },
@@ -839,6 +828,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -871,7 +866,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -894,18 +893,6 @@
                 "city": {
                   "type": "string"
                 },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "gp": {
                   "type": "integer"
                 },
@@ -916,7 +903,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -970,7 +960,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -993,18 +987,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -1015,7 +997,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -1097,14 +1082,19 @@
             "required": [
               "id",
               "name",
+              "code",
               "shopName",
-              "code"
+              "prosperity",
+              "prosperityMax"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "shopName": {
@@ -1119,20 +1109,14 @@
               "shopImage": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "level": {
+                "type": "integer"
               },
-              "code": {
-                "type": "string"
+              "prosperity": {
+                "type": "integer"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "prosperityMax": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -1154,9 +1138,12 @@
             "type": "string",
             "default": "draft",
             "enum": [
+              "new",
               "draft",
               "published",
-              "completed"
+              "confirmed",
+              "completed",
+              "done"
             ]
           },
           "googleCalendarEventId": {
@@ -1265,7 +1252,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -1288,18 +1279,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -1310,7 +1289,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -1403,9 +1385,12 @@
             "type": "string",
             "default": "draft",
             "enum": [
+              "new",
               "draft",
               "published",
-              "completed"
+              "confirmed",
+              "completed",
+              "done"
             ]
           },
           "googleCalendarEventId": {

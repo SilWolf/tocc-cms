@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "knowledges",
+  "info": {
+    "name": "Knowledge",
+    "displayName": "AIII. 知識"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/dm/cities",
+      "handler": "city.dmFind",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/cities/count",
       "handler": "city.count",
       "config": {

@@ -1036,7 +1036,8 @@
               "username",
               "email",
               "code",
-              "name"
+              "name",
+              "isPlayer"
             ],
             "properties": {
               "id": {
@@ -1072,18 +1073,6 @@
               "phone": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "portraitImage": {
                 "type": "string"
               },
@@ -1092,6 +1081,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -1105,14 +1100,19 @@
             "required": [
               "id",
               "name",
+              "code",
               "shopName",
-              "code"
+              "prosperity",
+              "prosperityMax"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "shopName": {
@@ -1127,169 +1127,20 @@
               "shopImage": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "level": {
+                "type": "integer"
               },
-              "code": {
-                "type": "string"
+              "prosperity": {
+                "type": "integer"
               },
-              "games": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "prosperityMax": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "startAt",
-                "worldStartAt",
-                "lvMin",
-                "capacityMin",
-                "capacityMax",
-                "code",
-                "status"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "startAt": {
-                  "type": "string"
-                },
-                "endAt": {
-                  "type": "string"
-                },
-                "worldStartAt": {
-                  "type": "string"
-                },
-                "worldEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "lvMin": {
-                  "type": "integer"
-                },
-                "lvMax": {
-                  "type": "integer"
-                },
-                "capacityMin": {
-                  "type": "integer"
-                },
-                "capacityMax": {
-                  "type": "integer"
-                },
-                "tags": {
-                  "type": "string"
-                },
-                "remark": {
-                  "type": "string"
-                },
-                "dm": {
-                  "type": "string"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "characterAndRewards": {
-                  "type": "component"
-                },
-                "journals": {
-                  "type": "component"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "publishedAt": {
-                  "type": "string"
-                },
-                "completedAt": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "googleCalendarEventId": {
-                  "type": "string"
-                },
-                "googleCalendarEventUrl": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "inGameStartAt": {
-                  "type": "string"
-                },
-                "inGameEndAt": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "characterRewards": {
-                  "type": "component"
-                },
-                "characters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -1325,25 +1176,28 @@
             }
           },
           "clses": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -1437,18 +1291,6 @@
           "city": {
             "type": "string"
           },
-          "games": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "activities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "gp": {
             "type": "integer",
             "default": 0
@@ -1460,7 +1302,10 @@
             "type": "string"
           },
           "clses": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "background": {
             "type": "string"

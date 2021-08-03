@@ -573,7 +573,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -596,18 +600,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -618,7 +610,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"
@@ -694,7 +689,11 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "PC",
+                    "NPC"
+                  ]
                 },
                 "portrait": {
                   "type": "string"
@@ -717,18 +716,6 @@
                 "city": {
                   "type": "string"
                 },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "activities": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "gp": {
                   "type": "integer"
                 },
@@ -739,7 +726,10 @@
                   "type": "string"
                 },
                 "clses": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "background": {
                   "type": "string"
@@ -820,7 +810,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "PC",
+                        "NPC"
+                      ]
                     },
                     "portrait": {
                       "type": "string"
@@ -843,18 +837,6 @@
                     "city": {
                       "type": "string"
                     },
-                    "games": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "activities": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "gp": {
                       "type": "integer"
                     },
@@ -865,7 +847,10 @@
                       "type": "string"
                     },
                     "clses": {
-                      "type": "string"
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "background": {
                       "type": "string"

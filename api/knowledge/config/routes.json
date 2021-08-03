@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/knowledges",
+      "handler": "knowledge.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/knowledges/count",
+      "handler": "knowledge.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/knowledges/:id",
+      "handler": "knowledge.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/knowledges",
+      "handler": "knowledge.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/knowledges/:id",
+      "handler": "knowledge.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/knowledges/:id",
+      "handler": "knowledge.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

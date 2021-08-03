@@ -3,6 +3,7 @@
   "collectionName": "users-permissions_user",
   "info": {
     "name": "user",
+    "displayName": "BI. 玩家/DM/用戶",
     "description": ""
   },
   "options": {
@@ -63,14 +64,6 @@
     "phone": {
       "type": "string"
     },
-    "characters": {
-      "via": "player",
-      "collection": "character"
-    },
-    "games": {
-      "via": "dm",
-      "collection": "game"
-    },
     "portraitImage": {
       "model": "file",
       "via": "related",
@@ -78,7 +71,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "code": {
       "type": "string",
@@ -86,6 +80,14 @@
     },
     "name": {
       "type": "string",
+      "required": true
+    },
+    "city": {
+      "model": "city"
+    },
+    "isPlayer": {
+      "type": "boolean",
+      "default": true,
       "required": true
     }
   }

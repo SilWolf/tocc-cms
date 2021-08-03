@@ -3,6 +3,7 @@
   "collectionName": "activities",
   "info": {
     "name": "Activity",
+    "displayName": "ZI. Activity",
     "description": ""
   },
   "options": {
@@ -32,7 +33,6 @@
       "component": "character-blocks.character-reward"
     },
     "characters": {
-      "via": "activities",
       "collection": "character",
       "dominant": true
     }
