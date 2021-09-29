@@ -861,8 +861,7 @@
         "required": [
           "id",
           "name",
-          "code",
-          "type"
+          "code"
         ],
         "properties": {
           "id": {
@@ -877,82 +876,7 @@
           "description": {
             "type": "string"
           },
-          "type": {
-            "type": "string",
-            "default": "PC",
-            "enum": [
-              "PC",
-              "NPC"
-            ]
-          },
           "portrait": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "coverImage": {
             "required": [
               "id",
               "name",
@@ -1027,6 +951,10 @@
             "default": 0
           },
           "xp": {
+            "type": "integer",
+            "default": 0
+          },
+          "gp": {
             "type": "integer",
             "default": 0
           },
@@ -1144,12 +1072,27 @@
               }
             }
           },
-          "gp": {
-            "type": "integer",
-            "default": 0
-          },
-          "property": {
-            "type": "object"
+          "ruleset": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "race": {
             "required": [
@@ -1223,28 +1166,6 @@
               }
             }
           },
-          "ruleset": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "features": {
             "type": "object"
           }
@@ -1253,8 +1174,7 @@
       "NewCharacter": {
         "required": [
           "name",
-          "code",
-          "type"
+          "code"
         ],
         "properties": {
           "name": {
@@ -1265,14 +1185,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "default": "PC",
-            "enum": [
-              "PC",
-              "NPC"
-            ]
           },
           "motto": {
             "type": "string"
@@ -1285,18 +1197,18 @@
             "type": "integer",
             "default": 0
           },
+          "gp": {
+            "type": "integer",
+            "default": 0
+          },
           "player": {
             "type": "string"
           },
           "city": {
             "type": "string"
           },
-          "gp": {
-            "type": "integer",
-            "default": 0
-          },
-          "property": {
-            "type": "object"
+          "ruleset": {
+            "type": "string"
           },
           "race": {
             "type": "string"
@@ -1308,9 +1220,6 @@
             }
           },
           "background": {
-            "type": "string"
-          },
-          "ruleset": {
             "type": "string"
           },
           "features": {
