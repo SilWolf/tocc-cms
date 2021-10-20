@@ -89,6 +89,15 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "telegramUserId": {
+      "type": "string"
+    },
+    "telegramChatId": {
+      "type": "string"
+    },
+    "telegramValidationCode": {
+      "type": "string"
     }
   }
 }

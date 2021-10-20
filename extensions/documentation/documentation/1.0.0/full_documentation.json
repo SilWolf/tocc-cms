@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/29/2021 4:57:32 PM"
+    "x-generation-date": "10/20/2021 6:28:59 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -12720,6 +12720,15 @@
               "isPlayer": {
                 "type": "boolean"
               },
+              "telegramUserId": {
+                "type": "string"
+              },
+              "telegramChatId": {
+                "type": "string"
+              },
+              "telegramValidationCode": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -13440,6 +13449,15 @@
               },
               "isPlayer": {
                 "type": "boolean"
+              },
+              "telegramUserId": {
+                "type": "string"
+              },
+              "telegramChatId": {
+                "type": "string"
+              },
+              "telegramValidationCode": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -14433,6 +14451,15 @@
                 "isPlayer": {
                   "type": "boolean"
                 },
+                "telegramUserId": {
+                  "type": "string"
+                },
+                "telegramChatId": {
+                  "type": "string"
+                },
+                "telegramValidationCode": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -14676,6 +14703,15 @@
           "isPlayer": {
             "type": "boolean",
             "default": true
+          },
+          "telegramUserId": {
+            "type": "string"
+          },
+          "telegramChatId": {
+            "type": "string"
+          },
+          "telegramValidationCode": {
+            "type": "string"
           }
         }
       },
@@ -14736,6 +14772,15 @@
           "isPlayer": {
             "type": "boolean",
             "default": true
+          },
+          "telegramUserId": {
+            "type": "string"
+          },
+          "telegramChatId": {
+            "type": "string"
+          },
+          "telegramValidationCode": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

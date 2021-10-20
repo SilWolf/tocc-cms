@@ -1016,6 +1016,15 @@
               "isPlayer": {
                 "type": "boolean"
               },
+              "telegramUserId": {
+                "type": "string"
+              },
+              "telegramChatId": {
+                "type": "string"
+              },
+              "telegramValidationCode": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

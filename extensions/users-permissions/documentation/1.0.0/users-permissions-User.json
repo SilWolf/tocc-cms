@@ -1381,6 +1381,15 @@
           "isPlayer": {
             "type": "boolean",
             "default": true
+          },
+          "telegramUserId": {
+            "type": "string"
+          },
+          "telegramChatId": {
+            "type": "string"
+          },
+          "telegramValidationCode": {
+            "type": "string"
           }
         }
       },
@@ -1441,6 +1450,15 @@
           "isPlayer": {
             "type": "boolean",
             "default": true
+          },
+          "telegramUserId": {
+            "type": "string"
+          },
+          "telegramChatId": {
+            "type": "string"
+          },
+          "telegramValidationCode": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
