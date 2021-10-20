@@ -26,26 +26,7 @@
       "type": "text",
       "required": false
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "PC",
-        "NPC"
-      ],
-      "default": "PC",
-      "required": true
-    },
     "portrait": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "coverImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -68,6 +49,10 @@
       "default": 0,
       "min": 0
     },
+    "gp": {
+      "type": "integer",
+      "default": 0
+    },
     "player": {
       "plugin": "users-permissions",
       "model": "user"
@@ -75,12 +60,8 @@
     "city": {
       "model": "city"
     },
-    "gp": {
-      "type": "integer",
-      "default": 0
-    },
-    "property": {
-      "type": "json"
+    "ruleset": {
+      "model": "ruleset"
     },
     "race": {
       "model": "race"
@@ -90,9 +71,6 @@
     },
     "background": {
       "model": "background"
-    },
-    "ruleset": {
-      "model": "ruleset"
     },
     "features": {
       "type": "json"

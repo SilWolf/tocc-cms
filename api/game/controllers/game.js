@@ -9,13 +9,17 @@ const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async find(ctx) {
-    const query = ctx.query;
+    const { _pending, ...query } = ctx.query;
     if (ctx.state?.user?.role?.name !== "Dungeon Master") {
       query["status_ne"] = "draft";
     }
 
     let entities;
-    if (query._q) {
+    if (_pending) {
+      entities = await strapi.services.game.find({
+        status: "published",
+      });
+    } else if (query._q) {
       entities = await strapi.services.game.search(query);
     } else {
       entities = await strapi.services.game.find(query);

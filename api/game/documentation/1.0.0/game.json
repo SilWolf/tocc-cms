@@ -849,8 +849,7 @@
               "required": [
                 "id",
                 "name",
-                "code",
-                "type"
+                "code"
               ],
               "properties": {
                 "id": {
@@ -865,17 +864,7 @@
                 "description": {
                   "type": "string"
                 },
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "PC",
-                    "NPC"
-                  ]
-                },
                 "portrait": {
-                  "type": "string"
-                },
-                "coverImage": {
                   "type": "string"
                 },
                 "motto": {
@@ -887,17 +876,17 @@
                 "xp": {
                   "type": "integer"
                 },
+                "gp": {
+                  "type": "integer"
+                },
                 "player": {
                   "type": "string"
                 },
                 "city": {
                   "type": "string"
                 },
-                "gp": {
-                  "type": "integer"
-                },
-                "property": {
-                  "type": "object"
+                "ruleset": {
+                  "type": "string"
                 },
                 "race": {
                   "type": "string"
@@ -909,9 +898,6 @@
                   }
                 },
                 "background": {
-                  "type": "string"
-                },
-                "ruleset": {
                   "type": "string"
                 },
                 "features": {
@@ -943,8 +929,7 @@
                   "required": [
                     "id",
                     "name",
-                    "code",
-                    "type"
+                    "code"
                   ],
                   "properties": {
                     "id": {
@@ -959,17 +944,7 @@
                     "description": {
                       "type": "string"
                     },
-                    "type": {
-                      "type": "string",
-                      "enum": [
-                        "PC",
-                        "NPC"
-                      ]
-                    },
                     "portrait": {
-                      "type": "string"
-                    },
-                    "coverImage": {
                       "type": "string"
                     },
                     "motto": {
@@ -981,17 +956,17 @@
                     "xp": {
                       "type": "integer"
                     },
+                    "gp": {
+                      "type": "integer"
+                    },
                     "player": {
                       "type": "string"
                     },
                     "city": {
                       "type": "string"
                     },
-                    "gp": {
-                      "type": "integer"
-                    },
-                    "property": {
-                      "type": "object"
+                    "ruleset": {
+                      "type": "string"
                     },
                     "race": {
                       "type": "string"
@@ -1003,9 +978,6 @@
                       }
                     },
                     "background": {
-                      "type": "string"
-                    },
-                    "ruleset": {
                       "type": "string"
                     },
                     "features": {
@@ -1235,8 +1207,7 @@
                   "required": [
                     "id",
                     "name",
-                    "code",
-                    "type"
+                    "code"
                   ],
                   "properties": {
                     "id": {
@@ -1251,17 +1222,7 @@
                     "description": {
                       "type": "string"
                     },
-                    "type": {
-                      "type": "string",
-                      "enum": [
-                        "PC",
-                        "NPC"
-                      ]
-                    },
                     "portrait": {
-                      "type": "string"
-                    },
-                    "coverImage": {
                       "type": "string"
                     },
                     "motto": {
@@ -1273,17 +1234,17 @@
                     "xp": {
                       "type": "integer"
                     },
+                    "gp": {
+                      "type": "integer"
+                    },
                     "player": {
                       "type": "string"
                     },
                     "city": {
                       "type": "string"
                     },
-                    "gp": {
-                      "type": "integer"
-                    },
-                    "property": {
-                      "type": "object"
+                    "ruleset": {
+                      "type": "string"
                     },
                     "race": {
                       "type": "string"
@@ -1295,9 +1256,6 @@
                       }
                     },
                     "background": {
-                      "type": "string"
-                    },
-                    "ruleset": {
                       "type": "string"
                     },
                     "features": {
