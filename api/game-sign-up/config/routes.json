@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/game-sign-ups",
+      "handler": "game-sign-up.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/game-sign-ups/count",
+      "handler": "game-sign-up.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/game-sign-ups/:id",
+      "handler": "game-sign-up.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/game-sign-ups",
+      "handler": "game-sign-up.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/game-sign-ups/:id",
+      "handler": "game-sign-up.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/game-sign-ups/:id",
+      "handler": "game-sign-up.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

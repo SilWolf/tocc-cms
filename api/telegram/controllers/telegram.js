@@ -1,5 +1,8 @@
 "use strict";
 
+const mongoose = require("mongoose");
+const { formatGameToDescription } = require("../../game/helpers/game");
+
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
@@ -19,12 +22,16 @@ module.exports = {
 
     const userService = strapi.plugins["users-permissions"].services["user"];
 
+    let chat = { id: "" };
+
     const replyChat = (text) =>
       bot.sendMessage(chat.id, text, { parse_mode: "HTML" });
 
     const { message, callback_query: callbackQuery } = ctx.request.body;
 
     if (callbackQuery) {
+      chat.id = callbackQuery.message.chat.id;
+
       bot.answerCallbackQuery(callbackQuery.id);
 
       const [key, value] = callbackQuery.data.split(":");
@@ -68,6 +75,38 @@ module.exports = {
             youAreSigningUpMessage +
               "\n你必須先綁定帳號才能報名！\n/bind - 綁定帳號"
           );
+          return;
+        }
+
+        const signUp = await strapi.services["game-sign-up"].findOne({
+          player: player.id,
+          game: game.id,
+        });
+
+        if (signUp) {
+          if (signUp.status === "pending") {
+            replyChat(
+              youAreSigningUpMessage +
+                "\n您已經提交報名申請了，請耐心等待DM確認你的申請。"
+            );
+          } else if (signUp.status === "accepted") {
+            replyChat(
+              [
+                youAreSigningUpMessage,
+                "你已成功報名，請記得出席遊戲哦 >.0",
+                "--------------------",
+                formatGameToDescription(game),
+              ].join("\n")
+            );
+          } else if (signUp.status === "rejected") {
+            replyChat(
+              [
+                youAreSigningUpMessage,
+                "抱歉，DM拒絕了你的報名",
+                signUp.remarks,
+              ].join("\n")
+            );
+          }
           return;
         }
 
@@ -127,8 +166,48 @@ module.exports = {
           return;
         }
 
+        let signUp = await strapi.services["game-sign-up"].findOne({
+          player: character.player.id,
+          game: game.id,
+        });
+
+        if (signUp) {
+          if (signUp.status === "pending") {
+            replyChat(
+              youAreSigningUpMessage +
+                "\n您已經提交報名申請了，請耐心等待DM確認你的申請。"
+            );
+          } else if (signUp.status === "accepted") {
+            replyChat(
+              [
+                youAreSigningUpMessage,
+                "你已成功報名，請記得出席遊戲哦 >.0",
+                "--------------------",
+                formatGameToDescription(game),
+              ].join("\n")
+            );
+          } else if (signUp.status === "rejected") {
+            replyChat(
+              [
+                youAreSigningUpMessage,
+                "抱歉，DM拒絕了你的報名",
+                signUp.remarks,
+              ].join("\n")
+            );
+          }
+          return;
+        }
+
+        signUp = await strapi.services["game-sign-up"].create({
+          player: character.player.id,
+          character: character.id,
+          game: game.id,
+          status: "pending",
+          remarks: "",
+        });
+
         bot.editMessageText(
-          `<b>[${game.code}]${game.title}</b> 的報名申請已提交！\n當DM確認你的報名後，我會再通知你～\n謝謝你的支持和參與！`,
+          `＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n<b>[${game.code}]${game.title}</b> 的報名申請已提交！\n當DM確認你的報名後，我會再通知你～\n謝謝你的支持和參與！\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝`,
           {
             parse_mode: "HTML",
             chat_id: callbackQuery.message.chat.id,
@@ -137,10 +216,15 @@ module.exports = {
         );
 
         if (game.dm.telegramChatId) {
+          const signUpSummary = await strapi.services["game-sign-up"].summary({
+            game: mongoose.Types.ObjectId(game.id),
+          });
+          console.log(signUpSummary);
           bot.sendMessage(
             game.dm.telegramChatId,
             [
-              `[通知] 有新玩家報名了 <b>[${game.code}] ${game.title}</b> (玩家人數: 0/${game.capacityMax})`,
+              `[通知] 有新玩家報名了 <b>[${game.code}] ${game.title}</b>`,
+              `已確認:${signUpSummary.accepted}/${game.capacityMax} | 待確認:${signUpSummary.pending} | 拒絕:${signUpSummary.rejected}`,
               `-----------------------------------`,
               `玩家: ${character.player.name} (${character.player.code})`,
               `角色: ${character.name} (${character.code})`,
@@ -152,7 +236,7 @@ module.exports = {
                   [
                     {
                       text: `確認報名`,
-                      callback_data: `acceptSignUp:abc`,
+                      callback_data: `acceptSignUp:${signUp.id}`,
                     },
                   ],
                 ],
@@ -166,7 +250,8 @@ module.exports = {
     if (!message) {
       return;
     }
-    const { text: inputText, from: foreignUser, chat } = message;
+    const { text: inputText, from: foreignUser } = message;
+    chat.id = message.chat.id;
 
     // 指令
     if (inputText === "/start") {
