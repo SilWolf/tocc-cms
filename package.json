@@ -24,6 +24,7 @@
     "date-fns": "^2.22.1",
     "googleapis": "^81.0.0",
     "ngrok": "^4.0.1",
+    "node-telegram-bot-api": "^0.54.0",
     "react-big-calendar": "^0.33.5",
     "strapi": "3.6.5",
     "strapi-admin": "3.6.5",

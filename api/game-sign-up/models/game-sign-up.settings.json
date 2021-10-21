@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_sign_ups",
+  "info": {
+    "name": "gameSignUp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "game": {
+      "model": "game"
+    },
+    "character": {
+      "model": "character"
+    },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "remarks": {
+      "type": "string"
+    }
+  }
+}

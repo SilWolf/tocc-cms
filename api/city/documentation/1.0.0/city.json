@@ -741,6 +741,9 @@
           "prosperityMax": {
             "type": "integer",
             "default": 0
+          },
+          "telegramChatId": {
+            "type": "string"
           }
         }
       },
@@ -776,6 +779,9 @@
           "prosperityMax": {
             "type": "integer",
             "default": 0
+          },
+          "telegramChatId": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

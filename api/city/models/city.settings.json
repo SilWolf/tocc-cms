@@ -63,6 +63,9 @@
       "default": 0,
       "type": "integer",
       "required": true
+    },
+    "telegramChatId": {
+      "type": "string"
     }
   }
 }

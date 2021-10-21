@@ -1,6 +1,7 @@
 "use strict";
 
 const { sanitizeEntity } = require("strapi-utils");
+const { formatGameToDescription } = require("../helpers/game");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/controllers.html#core-controllers)
@@ -9,13 +10,17 @@ const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async find(ctx) {
-    const query = ctx.query;
+    const { _pending, ...query } = ctx.query;
     if (ctx.state?.user?.role?.name !== "Dungeon Master") {
       query["status_ne"] = "draft";
     }
 
     let entities;
-    if (query._q) {
+    if (_pending) {
+      entities = await strapi.services.game.find({
+        status: "published",
+      });
+    } else if (query._q) {
       entities = await strapi.services.game.search(query);
     } else {
       entities = await strapi.services.game.find(query);
@@ -126,5 +131,77 @@ module.exports = {
     );
 
     return sanitizeEntity(updatedEntity, { model: strapi.models.game });
+  },
+
+  async broadcast(ctx) {
+    const { id } = ctx.params;
+
+    const game = await strapi.services.game.findOne({ id });
+    if (game.status === "draft") {
+      return ctx.notFound();
+    }
+
+    const players = await strapi
+      .query("user", "users-permissions")
+      .model.find({ telegramChatId: { $exists: 1 } }, "_id telegramChatId")
+      .exec();
+
+    // const message = [
+    //   `#${game.code}`,
+    //   `<b>${game.code} - ${game.title}</b>`,
+    //   `時間: ${}`,
+    //   `地點: ${game.city.shopName}`,
+    //   `費用: (待補)`,
+    //   `等級: Lv ${game.lvMin}-${game.lvMax}`,
+    //   `DM: ${game.dm.name}`,
+    //   `[任務開始日期：第三紀元${worldDate.getFullYear()}年${worldDate.getMonth() + 1}月${worldDate.getDate()}]`,
+    //   '',
+    //   game.description
+    // ].join("\n");
+
+    const message = formatGameToDescription(game);
+
+    const bot = strapi.services.telegramBot;
+    players.forEach((player) => {
+      bot.sendMessage(
+        player.telegramChatId,
+        ["嗨！又有一場新的冒險等待著你！", "", message].join("\n"),
+        {
+          parse_mode: "HTML",
+          reply_markup: {
+            inline_keyboard: [
+              [
+                {
+                  text: "馬上報名",
+                  callback_data: `signUpForGame:${game.id}`,
+                },
+              ],
+            ],
+          },
+        }
+      );
+    });
+
+    if (game.city && game.city.telegramChatId) {
+      bot.sendMessage(
+        game.city.telegramChatId,
+        ["嗨！又有一場新的冒險等待著你們！", "", message].join("\n"),
+        {
+          parse_mode: "HTML",
+          reply_markup: {
+            inline_keyboard: [
+              [
+                {
+                  text: "馬上報名",
+                  url: "https://forms.gle/obScEGkKtSW54Dee7",
+                },
+              ],
+            ],
+          },
+        }
+      );
+    }
+
+    return sanitizeEntity(game, { model: strapi.models.game });
   },
 };

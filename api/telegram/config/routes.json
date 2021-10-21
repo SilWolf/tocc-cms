@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/telegram/:secret",
+      "handler": "telegram.index",
+      "config": {
+        "policies": ["match-secret"]
+      }
+    }
+  ]
+}
