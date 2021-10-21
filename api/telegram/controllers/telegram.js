@@ -219,7 +219,6 @@ module.exports = {
           const signUpSummary = await strapi.services["game-sign-up"].summary({
             game: mongoose.Types.ObjectId(game.id),
           });
-          console.log(signUpSummary);
           bot.sendMessage(
             game.dm.telegramChatId,
             [
@@ -244,6 +243,39 @@ module.exports = {
             }
           );
         }
+      } else if (key === "acceptSignUp") {
+        const signUp = await strapi.services["game-sign-up"].findOne({
+          id: value,
+        });
+        if (!signUp) {
+          replyChat("錯誤:找不到報名資料");
+          return;
+        }
+        if (signUp.status === "accepted") {
+          replyChat("錯誤:你已經接受他的報名了");
+          return;
+        }
+
+        await strapi.services["game-sign-up"].update(
+          { id: signUp.id },
+          { status: "accepted" }
+        );
+        const signUpSummary = await strapi.services["game-sign-up"].summary({
+          game: mongoose.Types.ObjectId(signUp.game.id),
+        });
+
+        bot.editMessageText(
+          [
+            `[通知] 有新玩家報名了 <b>[${signUp.game.code}] ${signUp.game.title}</b>`,
+            `你已接受了 <b>${signUp.player.name}</b> 在 <b>${signUp.game.title}</b> 的報名。`,
+            `已確認:${signUpSummary.accepted}/${signUp.game.capacityMax} | 待確認:${signUpSummary.pending} | 拒絕:${signUpSummary.rejected}`,
+          ].join("\n"),
+          {
+            parse_mode: "HTML",
+            chat_id: callbackQuery.message.chat.id,
+            message_id: callbackQuery.message.message_id,
+          }
+        );
       }
     }
 
