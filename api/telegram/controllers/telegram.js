@@ -282,8 +282,23 @@ module.exports = {
     if (!message) {
       return;
     }
-    const { text: inputText, from: foreignUser } = message;
+
+    const { from: foreignUser } = message;
+    let inputText = message.text;
     chat.id = message.chat.id;
+
+    // if (message.chat.type === "group" && inputText) {
+    //   inputText = inputText.split("@")[0];
+    //   if (inputText.startsWith("/bind")) {
+    //     const [, cityId] = inputText.split("_");
+    //     console.log(cityId);
+    //     await strapi.services["city"].update(
+    //       { id: cityId },
+    //       { telegramChatId: chat.id }
+    //     );
+    //   }
+    //   return;
+    // }
 
     // 指令
     if (inputText === "/start") {

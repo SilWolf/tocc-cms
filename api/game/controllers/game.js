@@ -182,6 +182,26 @@ module.exports = {
       );
     });
 
+    if (game.city && game.city.telegramChatId) {
+      bot.sendMessage(
+        game.city.telegramChatId,
+        ["嗨！又有一場新的冒險等待著你們！", "", message].join("\n"),
+        {
+          parse_mode: "HTML",
+          reply_markup: {
+            inline_keyboard: [
+              [
+                {
+                  text: "馬上報名",
+                  url: "https://forms.gle/obScEGkKtSW54Dee7",
+                },
+              ],
+            ],
+          },
+        }
+      );
+    }
+
     return sanitizeEntity(game, { model: strapi.models.game });
   },
 };

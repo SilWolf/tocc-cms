@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/21/2021 4:44:33 PM"
+    "x-generation-date": "10/21/2021 5:38:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13443,6 +13443,9 @@
               "prosperityMax": {
                 "type": "integer"
               },
+              "telegramChatId": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -13782,6 +13785,9 @@
           "prosperityMax": {
             "type": "integer",
             "default": 0
+          },
+          "telegramChatId": {
+            "type": "string"
           }
         }
       },
@@ -13817,6 +13823,9 @@
           "prosperityMax": {
             "type": "integer",
             "default": 0
+          },
+          "telegramChatId": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -14681,6 +14690,9 @@
               },
               "prosperityMax": {
                 "type": "integer"
+              },
+              "telegramChatId": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -15659,6 +15671,9 @@
               },
               "prosperityMax": {
                 "type": "integer"
+              },
+              "telegramChatId": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"

@@ -1073,6 +1073,9 @@
               "prosperityMax": {
                 "type": "integer"
               },
+              "telegramChatId": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
