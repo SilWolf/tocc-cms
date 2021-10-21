@@ -25,6 +25,8 @@ module.exports = {
     const { message, callback_query: callbackQuery } = ctx.request.body;
 
     if (callbackQuery) {
+      bot.answerCallbackQuery(callbackQuery.id);
+
       const [key, value] = callbackQuery.data.split(":");
 
       if (key === "character") {
@@ -37,21 +39,127 @@ module.exports = {
             message_id: callbackQuery.message.message_id,
           });
         }
-        if (character) {
+
+        bot.editMessageText(
+          [
+            `<b>${character.name} [${character.code}]</b>`,
+            `<b>${character.city.name}</b>`,
+          ].join("\n"),
+          {
+            chat_id: callbackQuery.message.chat.id,
+            message_id: callbackQuery.message.message_id,
+            parse_mode: "HTML",
+          }
+        );
+      } else if (key === "signUpForGame") {
+        const game = await strapi.services["game"].findOne({ id: value });
+        if (!game) {
+          replyChat(["錯誤:末能找到遊戲，或遊戲報名已結束。"].join("\n"));
+          return;
+        }
+
+        const youAreSigningUpMessage = `＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n你正在報名 <b>[${game.code}]${game.title}</b>`;
+
+        const player = await userService.fetch({
+          telegramUserId: callbackQuery.from.id,
+        });
+        if (!player) {
+          replyChat(
+            youAreSigningUpMessage +
+              "\n你必須先綁定帳號才能報名！\n/bind - 綁定帳號"
+          );
+          return;
+        }
+
+        const characters = await strapi.services["character"].find({
+          player: player.id,
+        });
+
+        if (!characters || characters.length <= 0) {
+          replyChat(youAreSigningUpMessage + "\n你沒有可供報名的角色。");
+          return;
+        }
+
+        bot.sendMessage(
+          callbackQuery.message.chat.id,
+          [youAreSigningUpMessage, "", "請選擇欲參與的角色"].join("\n"),
+          {
+            parse_mode: "HTML",
+            reply_markup: {
+              inline_keyboard: characters.map((character) => [
+                {
+                  text: `[${character.code}] ${character.name}`,
+                  callback_data: `sufgChar:${game.id},${character.id}`,
+                },
+              ]),
+            },
+          }
+        );
+      } else if (key === "sufgChar") {
+        const [gameId, characterId] = value.split(",");
+
+        const game = await strapi.services["game"].findOne({ id: gameId });
+        if (!game) {
           bot.editMessageText(
-            [
-              `<b>${character.name} [${character.code}]</b>`,
-              `<b>${character.city.name}</b>`,
-            ].join("\n"),
+            ["錯誤:末能找到遊戲，或遊戲報名已結束。"].join("\n"),
             {
               chat_id: callbackQuery.message.chat.id,
               message_id: callbackQuery.message.message_id,
+            }
+          );
+          return;
+        }
+
+        const youAreSigningUpMessage = `＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n你正在報名 <b>[${game.code}]${game.title}</b>`;
+
+        const character = await strapi.services["character"].findOne({
+          id: characterId,
+        });
+        if (!character) {
+          bot.editMessageText(
+            youAreSigningUpMessage + "\n錯誤:所選角色無法報名。",
+            {
               parse_mode: "HTML",
+              chat_id: callbackQuery.message.chat.id,
+              message_id: callbackQuery.message.message_id,
+            }
+          );
+          return;
+        }
+
+        bot.editMessageText(
+          `<b>[${game.code}]${game.title}</b> 的報名申請已提交！\n當DM確認你的報名後，我會再通知你～\n謝謝你的支持和參與！`,
+          {
+            parse_mode: "HTML",
+            chat_id: callbackQuery.message.chat.id,
+            message_id: callbackQuery.message.message_id,
+          }
+        );
+
+        if (game.dm.telegramChatId) {
+          bot.sendMessage(
+            game.dm.telegramChatId,
+            [
+              `[通知] 有新玩家報名了 <b>[${game.code}] ${game.title}</b> (玩家人數: 0/${game.capacityMax})`,
+              `-----------------------------------`,
+              `玩家: ${character.player.name} (${character.player.code})`,
+              `角色: ${character.name} (${character.code})`,
+            ].join("\n"),
+            {
+              parse_mode: "HTML",
+              reply_markup: {
+                inline_keyboard: [
+                  [
+                    {
+                      text: `確認報名`,
+                      callback_data: `acceptSignUp:abc`,
+                    },
+                  ],
+                ],
+              },
             }
           );
         }
-
-        bot.answerCallbackQuery(callbackQuery.id);
       }
     }
 
