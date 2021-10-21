@@ -2,7 +2,7 @@ module.exports = {
   settings: {
     telegramBot: {
       enabled: true,
-      publicUrl: process.env.PUBLIC_URL,
+      apiEndpoint: process.env.API_ENDPOINT,
       token: process.env.TELEGRAM_BOT_TOKEN,
       urlSecret: process.env.TELEGRAM_BOT_URL_SECRET,
     },
