@@ -105,6 +105,13 @@ module.exports = {
     );
   },
 
+  async byName(ctx) {
+    const { name } = ctx.params;
+    const entity = await strapi.services["character"].findOne({ name });
+
+    return sanitizeEntity(entity, { model: strapi.models["character"] });
+  },
+
   async getDetail(ctx) {
     const { id } = ctx.params;
 
