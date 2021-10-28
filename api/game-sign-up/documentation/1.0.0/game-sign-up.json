@@ -659,7 +659,7 @@
               "description": {
                 "type": "string"
               },
-              "portrait": {
+              "portraitImage": {
                 "type": "string"
               },
               "motto": {
@@ -792,6 +792,81 @@
           },
           "remarks": {
             "type": "string"
+          },
+          "applier": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "code",
+              "name",
+              "isPlayer"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "isPlayer": {
+                "type": "boolean"
+              },
+              "telegramUserId": {
+                "type": "string"
+              },
+              "telegramChatId": {
+                "type": "string"
+              },
+              "telegramValidationCode": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -819,6 +894,9 @@
             ]
           },
           "remarks": {
+            "type": "string"
+          },
+          "applier": {
             "type": "string"
           },
           "created_by": {

@@ -204,4 +204,59 @@ module.exports = {
 
     return sanitizeEntity(game, { model: strapi.models.game });
   },
+
+  async postSignUp(ctx) {
+    const user = ctx.state?.user;
+    if (!user) {
+      return ctx.unauthorized({ errorCode: "NOT_AUTHORIZED" });
+    }
+
+    const { id } = ctx.params;
+    const signUp = await strapi.services["game-sign-up"].findOne({
+      player: user.id,
+      game: id,
+    });
+
+    if (signUp) {
+      return ctx.badRequest({
+        errorCode: "ALREADY_SIGN_UP",
+        data: sanitizeEntity(signUp, {
+          model: strapi.models["game-sign-up"],
+        }),
+      });
+    }
+
+    const game = await strapi.services.game.findOne({ id });
+    if (!game) {
+      return ctx.notFound({ errorCode: "GAME_NOT_FOUND" });
+    }
+    if (game.status !== "published") {
+      return ctx.badRequest({ errorCode: "NOT_PUBLISHED" });
+    }
+
+    const body = ctx.request.body;
+    if (!body.character) {
+      return ctx.badRequest({ errorCode: "MISSING_CHARACTER" });
+    }
+    const character = await strapi.services.character.findOne({
+      id: body.character,
+    });
+    if (!character) {
+      return ctx.notFound({ errorCode: "CHARACTER_NOT_FOUND" });
+    }
+
+    const payload = {
+      game: game.id,
+      character: character.id,
+      player: character.player.id,
+      applier: user.id,
+      remarks: body.remarks,
+    };
+
+    const createdSignUp = await strapi.services["game-sign-up"].create(payload);
+
+    return sanitizeEntity(createdSignUp, {
+      model: strapi.models["game-sign-up"],
+    });
+  },
 };

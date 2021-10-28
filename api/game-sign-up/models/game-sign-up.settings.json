@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "game_sign_ups",
   "info": {
-    "name": "gameSignUp"
+    "name": "gameSignUp",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -32,6 +33,10 @@
     },
     "remarks": {
       "type": "string"
+    },
+    "applier": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

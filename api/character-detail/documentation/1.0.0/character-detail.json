@@ -554,7 +554,7 @@
               "description": {
                 "type": "string"
               },
-              "portrait": {
+              "portraitImage": {
                 "type": "string"
               },
               "motto": {
