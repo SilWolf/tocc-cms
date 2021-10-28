@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/users/me/games/:gameId/game-sign-ups",
+      "handler": "users-extend.getMyGameSignUpsByGameId",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
