@@ -66,9 +66,91 @@ module.exports = {
               },
             },
           },
+
+          {
+            $lookup: {
+              from: strapi.plugins["users-permissions"].models["user"]
+                .collectionName,
+              let: { player: "$player" },
+              pipeline: [
+                {
+                  $match: {
+                    $expr: {
+                      $and: [{ $eq: ["$_id", "$$player"] }],
+                    },
+                  },
+                },
+              ],
+              as: "player",
+            },
+          },
+          {
+            $unwind: { path: "$player", preserveNullAndEmptyArrays: true },
+          },
+
+          {
+            $lookup: {
+              from: strapi.models["character"].collectionName,
+              let: { character: "$character" },
+              pipeline: [
+                {
+                  $match: {
+                    $expr: {
+                      $and: [{ $eq: ["$_id", "$$character"] }],
+                    },
+                  },
+                },
+
+                {
+                  $lookup: {
+                    from: strapi.plugins["upload"].models["file"]
+                      .collectionName,
+                    let: { portraitImage: "$portraitImage" },
+                    pipeline: [
+                      {
+                        $match: {
+                          $expr: {
+                            $and: [{ $eq: ["$_id", "$$portraitImage"] }],
+                          },
+                        },
+                      },
+                    ],
+                    as: "portraitImage",
+                  },
+                },
+                {
+                  $unwind: {
+                    path: "$portraitImage",
+                    preserveNullAndEmptyArrays: true,
+                  },
+                },
+              ],
+              as: "character",
+            },
+          },
+          {
+            $unwind: { path: "$character", preserveNullAndEmptyArrays: true },
+          },
         ],
         as: "gameSignUps",
       })
+
+      .lookup({
+        from: strapi.models["city"].collectionName,
+        let: { city: "$city" },
+        pipeline: [
+          {
+            $match: {
+              $expr: {
+                $and: [{ $eq: ["$_id", "$$city"] }],
+              },
+            },
+          },
+        ],
+        as: "city",
+      })
+      .unwind({ path: "$city", preserveNullAndEmptyArrays: true })
+
       .exec();
 
     const games = await gamesAggregate.exec();
