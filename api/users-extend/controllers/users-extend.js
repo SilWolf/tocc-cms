@@ -36,4 +36,43 @@ module.exports = {
       return gameSignUps;
     }
   },
+
+  async getMyDMGames(ctx) {
+    const user = ctx.state?.user;
+    if (!user) {
+      return ctx.unauthorized({ errorCode: "NOT_AUTHORIZED" });
+    }
+
+    const gamesAggregate = strapi.query("game").model.aggregate();
+    gamesAggregate.match({
+      dm: ObjectId(user.id),
+    });
+
+    if (ctx.query._pending) {
+      gamesAggregate.match({
+        status: { $ne: "done" },
+      });
+    }
+
+    gamesAggregate
+      .lookup({
+        from: strapi.models["game-sign-up"].collectionName,
+        let: { game: "$_id" },
+        pipeline: [
+          {
+            $match: {
+              $expr: {
+                $and: [{ $eq: ["$game", "$$game"] }],
+              },
+            },
+          },
+        ],
+        as: "gameSignUps",
+      })
+      .exec();
+
+    const games = await gamesAggregate.exec();
+
+    return games;
+  },
 };
