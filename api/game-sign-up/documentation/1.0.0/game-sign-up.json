@@ -698,6 +698,9 @@
               "features": {
                 "type": "object"
               },
+              "nickname": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -709,20 +712,35 @@
           "player": {
             "required": [
               "id",
-              "username",
-              "email",
-              "code",
               "name",
+              "code",
+              "email",
+              "username",
               "isPlayer"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "username": {
                 "type": "string"
               },
               "provider": {
@@ -746,18 +764,6 @@
               "role": {
                 "type": "string"
               },
-              "phone": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
               "city": {
                 "type": "string"
               },
@@ -771,9 +777,6 @@
                 "type": "string"
               },
               "telegramValidationCode": {
-                "type": "string"
-              },
-              "displayName": {
                 "type": "string"
               },
               "created_by": {
@@ -799,20 +802,35 @@
           "applier": {
             "required": [
               "id",
-              "username",
-              "email",
-              "code",
               "name",
+              "code",
+              "email",
+              "username",
               "isPlayer"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "username": {
                 "type": "string"
               },
               "provider": {
@@ -836,18 +854,6 @@
               "role": {
                 "type": "string"
               },
-              "phone": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
               "city": {
                 "type": "string"
               },
@@ -861,9 +867,6 @@
                 "type": "string"
               },
               "telegramValidationCode": {
-                "type": "string"
-              },
-              "displayName": {
                 "type": "string"
               },
               "created_by": {

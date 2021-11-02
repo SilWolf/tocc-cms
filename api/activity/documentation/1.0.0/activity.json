@@ -610,6 +610,9 @@
                     "features": {
                       "type": "object"
                     },
+                    "nickname": {
+                      "type": "string"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -711,6 +714,9 @@
                 },
                 "features": {
                   "type": "object"
+                },
+                "nickname": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -818,6 +824,9 @@
                     },
                     "features": {
                       "type": "object"
+                    },
+                    "nickname": {
+                      "type": "string"
                     },
                     "created_by": {
                       "type": "string"
