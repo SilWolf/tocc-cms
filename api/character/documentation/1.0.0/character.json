@@ -1025,6 +1025,9 @@
               "telegramValidationCode": {
                 "type": "string"
               },
+              "displayName": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

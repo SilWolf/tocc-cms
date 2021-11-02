@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/29/2021 12:35:45 PM"
+    "x-generation-date": "11/02/2021 4:03:40 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13591,6 +13591,9 @@
               "telegramValidationCode": {
                 "type": "string"
               },
+              "displayName": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14450,6 +14453,9 @@
               "telegramValidationCode": {
                 "type": "string"
               },
+              "displayName": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14535,6 +14541,9 @@
                 "type": "string"
               },
               "telegramValidationCode": {
+                "type": "string"
+              },
+              "displayName": {
                 "type": "string"
               },
               "created_by": {
@@ -14708,6 +14717,9 @@
                 "type": "string"
               },
               "telegramValidationCode": {
+                "type": "string"
+              },
+              "displayName": {
                 "type": "string"
               },
               "created_by": {
@@ -15714,6 +15726,9 @@
                 "telegramValidationCode": {
                   "type": "string"
                 },
+                "displayName": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -15969,6 +15984,9 @@
           },
           "telegramValidationCode": {
             "type": "string"
+          },
+          "displayName": {
+            "type": "string"
           }
         }
       },
@@ -16037,6 +16055,9 @@
             "type": "string"
           },
           "telegramValidationCode": {
+            "type": "string"
+          },
+          "displayName": {
             "type": "string"
           },
           "created_by": {

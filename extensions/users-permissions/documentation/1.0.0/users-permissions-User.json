@@ -1393,6 +1393,9 @@
           },
           "telegramValidationCode": {
             "type": "string"
+          },
+          "displayName": {
+            "type": "string"
           }
         }
       },
@@ -1461,6 +1464,9 @@
             "type": "string"
           },
           "telegramValidationCode": {
+            "type": "string"
+          },
+          "displayName": {
             "type": "string"
           },
           "created_by": {
