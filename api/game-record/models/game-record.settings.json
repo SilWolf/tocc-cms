@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_records",
+  "info": {
+    "name": "GameRecord",
+    "displayName": "CIII. 劇本遊玩紀錄"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "game": {
+      "model": "game"
+    },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "character": {
+      "model": "character"
+    },
+    "xp": {
+      "default": 0,
+      "type": "integer"
+    },
+    "gp": {
+      "type": "decimal",
+      "default": 0
+    }
+  }
+}

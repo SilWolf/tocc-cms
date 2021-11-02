@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/knowledges",
-      "handler": "knowledge.find",
+      "path": "/character-ownables",
+      "handler": "character-ownable.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/knowledges/count",
-      "handler": "knowledge.count",
+      "path": "/character-ownables/count",
+      "handler": "character-ownable.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/knowledges/:id",
-      "handler": "knowledge.findOne",
+      "path": "/character-ownables/:id",
+      "handler": "character-ownable.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/knowledges",
-      "handler": "knowledge.create",
+      "path": "/character-ownables",
+      "handler": "character-ownable.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/knowledges/:id",
-      "handler": "knowledge.update",
+      "path": "/character-ownables/:id",
+      "handler": "character-ownable.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/knowledges/:id",
-      "handler": "knowledge.delete",
+      "path": "/character-ownables/:id",
+      "handler": "character-ownable.delete",
       "config": {
         "policies": []
       }

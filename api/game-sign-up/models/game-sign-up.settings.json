@@ -3,6 +3,7 @@
   "collectionName": "game_sign_ups",
   "info": {
     "name": "gameSignUp",
+    "displayName": "CII. 劇本報名",
     "description": ""
   },
   "options": {
@@ -23,11 +24,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": [
-        "pending",
-        "accepted",
-        "rejected"
-      ],
+      "enum": ["pending", "accepted", "rejected"],
       "default": "pending",
       "required": true
     },

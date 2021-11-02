@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/character-learnables",
+      "handler": "character-learnable.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-learnables/count",
+      "handler": "character-learnable.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-learnables/:id",
+      "handler": "character-learnable.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/character-learnables",
+      "handler": "character-learnable.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/character-learnables/:id",
+      "handler": "character-learnable.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/character-learnables/:id",
+      "handler": "character-learnable.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

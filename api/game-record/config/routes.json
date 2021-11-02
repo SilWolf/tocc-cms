@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/npcs",
-      "handler": "npc.find",
+      "path": "/game-records",
+      "handler": "game-record.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/npcs/count",
-      "handler": "npc.count",
+      "path": "/game-records/count",
+      "handler": "game-record.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/npcs/:id",
-      "handler": "npc.findOne",
+      "path": "/game-records/:id",
+      "handler": "game-record.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/npcs",
-      "handler": "npc.create",
+      "path": "/game-records",
+      "handler": "game-record.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/npcs/:id",
-      "handler": "npc.update",
+      "path": "/game-records/:id",
+      "handler": "game-record.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/npcs/:id",
-      "handler": "npc.delete",
+      "path": "/game-records/:id",
+      "handler": "game-record.delete",
       "config": {
         "policies": []
       }
