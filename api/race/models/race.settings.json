@@ -21,6 +21,16 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "nameEn": {
+      "type": "string"
+    },
+    "isSelectable": {
+      "type": "boolean",
+      "default": true
+    },
+    "parentRace": {
+      "model": "race"
     }
   }
 }

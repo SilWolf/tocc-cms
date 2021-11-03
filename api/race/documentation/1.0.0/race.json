@@ -597,6 +597,46 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "isSelectable": {
+            "type": "boolean",
+            "default": true
+          },
+          "parentRace": {
+            "required": [
+              "id",
+              "name",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "isSelectable": {
+                "type": "boolean"
+              },
+              "parentRace": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -610,6 +650,16 @@
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "isSelectable": {
+            "type": "boolean",
+            "default": true
+          },
+          "parentRace": {
             "type": "string"
           },
           "created_by": {

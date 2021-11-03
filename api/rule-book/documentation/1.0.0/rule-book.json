@@ -531,8 +531,7 @@
         "required": [
           "id",
           "name",
-          "abbr",
-          "slug"
+          "abbr"
         ],
         "properties": {
           "id": {
@@ -543,9 +542,6 @@
           },
           "abbr": {
             "type": "string"
-          },
-          "slug": {
-            "type": "uid"
           },
           "image": {
             "required": [
@@ -619,8 +615,7 @@
       "NewRule-book": {
         "required": [
           "name",
-          "abbr",
-          "slug"
+          "abbr"
         ],
         "properties": {
           "name": {
@@ -628,9 +623,6 @@
           },
           "abbr": {
             "type": "string"
-          },
-          "slug": {
-            "type": "uid"
           },
           "created_by": {
             "type": "string"

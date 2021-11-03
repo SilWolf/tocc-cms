@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/02/2021 6:00:16 PM"
+    "x-generation-date": "11/03/2021 4:03:35 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13394,6 +13394,15 @@
               "code": {
                 "type": "string"
               },
+              "nameEn": {
+                "type": "string"
+              },
+              "isSelectable": {
+                "type": "boolean"
+              },
+              "parentRace": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14632,6 +14641,15 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "isSelectable": {
+                "type": "boolean"
+              },
+              "parentRace": {
                 "type": "string"
               },
               "created_by": {
@@ -16622,6 +16640,46 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "isSelectable": {
+            "type": "boolean",
+            "default": true
+          },
+          "parentRace": {
+            "required": [
+              "id",
+              "name",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "isSelectable": {
+                "type": "boolean"
+              },
+              "parentRace": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -16637,6 +16695,16 @@
           "code": {
             "type": "string"
           },
+          "nameEn": {
+            "type": "string"
+          },
+          "isSelectable": {
+            "type": "boolean",
+            "default": true
+          },
+          "parentRace": {
+            "type": "string"
+          },
           "created_by": {
             "type": "string"
           },
@@ -16649,8 +16717,7 @@
         "required": [
           "id",
           "name",
-          "abbr",
-          "slug"
+          "abbr"
         ],
         "properties": {
           "id": {
@@ -16661,9 +16728,6 @@
           },
           "abbr": {
             "type": "string"
-          },
-          "slug": {
-            "type": "uid"
           },
           "image": {
             "required": [
@@ -16737,8 +16801,7 @@
       "NewRule-book": {
         "required": [
           "name",
-          "abbr",
-          "slug"
+          "abbr"
         ],
         "properties": {
           "name": {
@@ -16746,9 +16809,6 @@
           },
           "abbr": {
             "type": "string"
-          },
-          "slug": {
-            "type": "uid"
           },
           "created_by": {
             "type": "string"

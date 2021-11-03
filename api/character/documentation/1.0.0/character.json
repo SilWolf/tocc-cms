@@ -1125,6 +1125,15 @@
               "code": {
                 "type": "string"
               },
+              "nameEn": {
+                "type": "string"
+              },
+              "isSelectable": {
+                "type": "boolean"
+              },
+              "parentRace": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
