@@ -89,6 +89,28 @@
     },
     "bioStory": {
       "type": "richtext"
+    },
+    "bioSpeech": {
+      "type": "string"
+    },
+    "bioTitle": {
+      "type": "string"
+    },
+    "bioRole": {
+      "type": "string"
+    },
+    "bioOrganization": {
+      "type": "string"
+    },
+    "coverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

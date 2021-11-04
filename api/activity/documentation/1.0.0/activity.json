@@ -625,6 +625,21 @@
                     "bioStory": {
                       "type": "string"
                     },
+                    "bioSpeech": {
+                      "type": "string"
+                    },
+                    "bioTitle": {
+                      "type": "string"
+                    },
+                    "bioRole": {
+                      "type": "string"
+                    },
+                    "bioOrganization": {
+                      "type": "string"
+                    },
+                    "coverImage": {
+                      "type": "string"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -740,6 +755,21 @@
                   "type": "string"
                 },
                 "bioStory": {
+                  "type": "string"
+                },
+                "bioSpeech": {
+                  "type": "string"
+                },
+                "bioTitle": {
+                  "type": "string"
+                },
+                "bioRole": {
+                  "type": "string"
+                },
+                "bioOrganization": {
+                  "type": "string"
+                },
+                "coverImage": {
                   "type": "string"
                 },
                 "created_by": {
@@ -862,6 +892,21 @@
                       "type": "string"
                     },
                     "bioStory": {
+                      "type": "string"
+                    },
+                    "bioSpeech": {
+                      "type": "string"
+                    },
+                    "bioTitle": {
+                      "type": "string"
+                    },
+                    "bioRole": {
+                      "type": "string"
+                    },
+                    "bioOrganization": {
+                      "type": "string"
+                    },
+                    "coverImage": {
                       "type": "string"
                     },
                     "created_by": {
