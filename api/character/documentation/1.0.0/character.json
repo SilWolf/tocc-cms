@@ -1101,6 +1101,9 @@
               "code": {
                 "type": "string"
               },
+              "nameEn": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -1134,6 +1137,15 @@
               "parentRace": {
                 "type": "string"
               },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "isParentRace": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -1147,7 +1159,8 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -1158,6 +1171,18 @@
                 },
                 "code": {
                   "type": "string"
+                },
+                "nameEn": {
+                  "type": "string"
+                },
+                "parentCls": {
+                  "type": "string"
+                },
+                "isParentCls": {
+                  "type": "boolean"
+                },
+                "level": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"
@@ -1170,7 +1195,8 @@
           },
           "background": {
             "required": [
-              "id"
+              "id",
+              "code"
             ],
             "properties": {
               "id": {
@@ -1180,6 +1206,15 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
                 "type": "string"
               },
               "created_by": {
@@ -1194,6 +1229,46 @@
             "type": "object"
           },
           "nickname": {
+            "type": "string"
+          },
+          "levelWithClsesString": {
+            "type": "string"
+          },
+          "deity": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "bioAppearance": {
+            "type": "string"
+          },
+          "bioStory": {
             "type": "string"
           }
         }
@@ -1253,6 +1328,18 @@
             "type": "object"
           },
           "nickname": {
+            "type": "string"
+          },
+          "levelWithClsesString": {
+            "type": "string"
+          },
+          "deity": {
+            "type": "string"
+          },
+          "bioAppearance": {
+            "type": "string"
+          },
+          "bioStory": {
             "type": "string"
           },
           "created_by": {

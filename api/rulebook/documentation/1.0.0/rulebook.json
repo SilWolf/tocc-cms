@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/game-records": {
+    "/rulebooks": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rulebook"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Rulebook"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Rulebook"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Rulebook"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewGame-record"
+                "$ref": "#/components/schemas/NewRulebook"
               }
             }
           }
         }
       }
     },
-    "/game-records/count": {
+    "/rulebooks/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Rulebook"
         ],
         "parameters": []
       }
     },
-    "/game-records/{id}": {
+    "/rulebooks/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Rulebook"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Rulebook"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Rulebook"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Rulebook"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewGame-record"
+                "$ref": "#/components/schemas/NewRulebook"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Rulebook"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Game-record": {
+      "Rulebook": {
         "required": [
           "id"
         ],
@@ -535,193 +522,18 @@
           "id": {
             "type": "string"
           },
-          "game": {
-            "required": [
-              "id",
-              "title",
-              "startAt",
-              "worldStartAt",
-              "lvMin",
-              "capacityMin",
-              "capacityMax",
-              "code",
-              "status"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "startAt": {
-                "type": "string"
-              },
-              "endAt": {
-                "type": "string"
-              },
-              "worldStartAt": {
-                "type": "string"
-              },
-              "worldEndAt": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "lvMin": {
-                "type": "integer"
-              },
-              "lvMax": {
-                "type": "integer"
-              },
-              "capacityMin": {
-                "type": "integer"
-              },
-              "capacityMax": {
-                "type": "integer"
-              },
-              "tags": {
-                "type": "string"
-              },
-              "remark": {
-                "type": "string"
-              },
-              "dm": {
-                "type": "string"
-              },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "characterAndRewards": {
-                "type": "component"
-              },
-              "journals": {
-                "type": "component"
-              },
-              "code": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "publishedAt": {
-                "type": "string"
-              },
-              "completedAt": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "new",
-                  "draft",
-                  "published",
-                  "confirmed",
-                  "completed",
-                  "done"
-                ]
-              },
-              "googleCalendarEventId": {
-                "type": "string"
-              },
-              "googleCalendarEventUrl": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "name": {
+            "type": "string"
           },
-          "player": {
-            "required": [
-              "id",
-              "name",
-              "code",
-              "email",
-              "username",
-              "isPlayer"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "isPlayer": {
-                "type": "boolean"
-              },
-              "telegramUserId": {
-                "type": "string"
-              },
-              "telegramChatId": {
-                "type": "string"
-              },
-              "telegramValidationCode": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "nameEn": {
+            "type": "string"
           },
-          "character": {
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
             "required": [
-              "id",
-              "name",
-              "code"
+              "id"
             ],
             "properties": {
               "id": {
@@ -733,61 +545,7 @@
               "code": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "motto": {
-                "type": "string"
-              },
-              "level": {
-                "type": "integer"
-              },
-              "xp": {
-                "type": "integer"
-              },
-              "gp": {
-                "type": "integer"
-              },
-              "player": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "ruleset": {
-                "type": "string"
-              },
-              "race": {
-                "type": "string"
-              },
-              "clses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "background": {
-                "type": "string"
-              },
-              "features": {
-                "type": "object"
-              },
-              "nickname": {
-                "type": "string"
-              },
-              "levelWithClsesString": {
-                "type": "string"
-              },
-              "deity": {
-                "type": "string"
-              },
-              "bioAppearance": {
-                "type": "string"
-              },
-              "bioStory": {
+              "nameEn": {
                 "type": "string"
               },
               "created_by": {
@@ -798,34 +556,29 @@
               }
             }
           },
-          "xp": {
-            "type": "integer",
-            "default": 0
-          },
-          "gp": {
-            "type": "number",
-            "default": 0
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewGame-record": {
+      "NewRulebook": {
         "properties": {
-          "game": {
+          "name": {
             "type": "string"
           },
-          "player": {
+          "nameEn": {
             "type": "string"
           },
-          "character": {
+          "code": {
             "type": "string"
           },
-          "xp": {
-            "type": "integer",
-            "default": 0
+          "ruleset": {
+            "type": "string"
           },
-          "gp": {
-            "type": "number",
-            "default": 0
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -837,5 +590,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Rulebook"
+    }
+  ]
 }

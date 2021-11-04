@@ -585,7 +585,8 @@
       "Cls": {
         "required": [
           "id",
-          "name"
+          "name",
+          "code"
         ],
         "properties": {
           "id": {
@@ -596,12 +597,59 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "parentCls": {
+            "required": [
+              "id",
+              "name",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "parentCls": {
+                "type": "string"
+              },
+              "isParentCls": {
+                "type": "boolean"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isParentCls": {
+            "type": "boolean",
+            "default": false
+          },
+          "level": {
+            "type": "integer"
           }
         }
       },
       "NewCls": {
         "required": [
-          "name"
+          "name",
+          "code"
         ],
         "properties": {
           "name": {
@@ -609,6 +657,19 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "parentCls": {
+            "type": "string"
+          },
+          "isParentCls": {
+            "type": "boolean",
+            "default": false
+          },
+          "level": {
+            "type": "integer"
           },
           "created_by": {
             "type": "string"

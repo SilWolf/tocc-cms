@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/03/2021 4:03:35 PM"
+    "x-generation-date": "11/04/2021 6:10:30 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5823,6 +5823,517 @@
         ]
       }
     },
+    "/deities": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Deity"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Deity"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Deity"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Deity"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDeity"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/deities/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Deity"
+        ],
+        "parameters": []
+      }
+    },
+    "/deities/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Deity"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Deity"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Deity"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Deity"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDeity"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Deity"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/game-logs": {
       "get": {
         "deprecated": false,
@@ -9399,7 +9910,7 @@
         ]
       }
     },
-    "/rule-books": {
+    "/rulebooks": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -9409,10 +9920,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rulebook"
                   }
                 }
               }
@@ -9451,7 +9961,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Rulebook"
         ],
         "parameters": [
           {
@@ -9601,11 +10111,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Rulebook"
                 }
               }
             }
@@ -9643,7 +10149,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Rulebook"
         ],
         "requestBody": {
           "description": "",
@@ -9651,14 +10157,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRule-book"
+                "$ref": "#/components/schemas/NewRulebook"
               }
             }
           }
         }
       }
     },
-    "/rule-books/count": {
+    "/rulebooks/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -9669,8 +10175,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -9710,12 +10216,12 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Rulebook"
         ],
         "parameters": []
       }
     },
-    "/rule-books/{id}": {
+    "/rulebooks/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -9725,11 +10231,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Rulebook"
                 }
               }
             }
@@ -9767,7 +10269,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Rulebook"
         ],
         "parameters": [
           {
@@ -9791,11 +10293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Rulebook"
                 }
               }
             }
@@ -9833,7 +10331,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Rulebook"
         ],
         "requestBody": {
           "description": "",
@@ -9841,7 +10339,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRule-book"
+                "$ref": "#/components/schemas/NewRulebook"
               }
             }
           }
@@ -9907,7 +10405,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Rulebook"
         ],
         "parameters": [
           {
@@ -13083,6 +13581,18 @@
                     "nickname": {
                       "type": "string"
                     },
+                    "levelWithClsesString": {
+                      "type": "string"
+                    },
+                    "deity": {
+                      "type": "string"
+                    },
+                    "bioAppearance": {
+                      "type": "string"
+                    },
+                    "bioStory": {
+                      "type": "string"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -13186,6 +13696,18 @@
                   "type": "object"
                 },
                 "nickname": {
+                  "type": "string"
+                },
+                "levelWithClsesString": {
+                  "type": "string"
+                },
+                "deity": {
+                  "type": "string"
+                },
+                "bioAppearance": {
+                  "type": "string"
+                },
+                "bioStory": {
                   "type": "string"
                 },
                 "created_by": {
@@ -13298,6 +13820,18 @@
                     "nickname": {
                       "type": "string"
                     },
+                    "levelWithClsesString": {
+                      "type": "string"
+                    },
+                    "deity": {
+                      "type": "string"
+                    },
+                    "bioAppearance": {
+                      "type": "string"
+                    },
+                    "bioStory": {
+                      "type": "string"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -13403,6 +13937,15 @@
               "parentRace": {
                 "type": "string"
               },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "isParentRace": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -13414,7 +13957,8 @@
           "cls": {
             "required": [
               "id",
-              "name"
+              "name",
+              "code"
             ],
             "properties": {
               "id": {
@@ -13425,6 +13969,18 @@
               },
               "code": {
                 "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "parentCls": {
+                "type": "string"
+              },
+              "isParentCls": {
+                "type": "boolean"
+              },
+              "level": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -13436,7 +13992,8 @@
           },
           "background": {
             "required": [
-              "id"
+              "id",
+              "code"
             ],
             "properties": {
               "id": {
@@ -13446,6 +14003,15 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
                 "type": "string"
               },
               "created_by": {
@@ -13468,6 +14034,9 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
                 "type": "string"
               },
               "created_by": {
@@ -13516,7 +14085,8 @@
       },
       "Background": {
         "required": [
-          "id"
+          "id",
+          "code"
         ],
         "properties": {
           "id": {
@@ -13527,15 +14097,86 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "ruleset": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rulebook": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewBackground": {
+        "required": [
+          "code"
+        ],
         "properties": {
           "name": {
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "ruleset": {
+            "type": "string"
+          },
+          "rulebook": {
             "type": "string"
           },
           "created_by": {
@@ -13613,6 +14254,18 @@
                 "type": "object"
               },
               "nickname": {
+                "type": "string"
+              },
+              "levelWithClsesString": {
+                "type": "string"
+              },
+              "deity": {
+                "type": "string"
+              },
+              "bioAppearance": {
+                "type": "string"
+              },
+              "bioStory": {
                 "type": "string"
               },
               "created_by": {
@@ -14128,6 +14781,18 @@
               "nickname": {
                 "type": "string"
               },
+              "levelWithClsesString": {
+                "type": "string"
+              },
+              "deity": {
+                "type": "string"
+              },
+              "bioAppearance": {
+                "type": "string"
+              },
+              "bioStory": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14619,6 +15284,9 @@
               "code": {
                 "type": "string"
               },
+              "nameEn": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14652,6 +15320,15 @@
               "parentRace": {
                 "type": "string"
               },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "isParentRace": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14665,7 +15342,8 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "code"
               ],
               "properties": {
                 "id": {
@@ -14676,6 +15354,18 @@
                 },
                 "code": {
                   "type": "string"
+                },
+                "nameEn": {
+                  "type": "string"
+                },
+                "parentCls": {
+                  "type": "string"
+                },
+                "isParentCls": {
+                  "type": "boolean"
+                },
+                "level": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"
@@ -14688,7 +15378,8 @@
           },
           "background": {
             "required": [
-              "id"
+              "id",
+              "code"
             ],
             "properties": {
               "id": {
@@ -14698,6 +15389,15 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
                 "type": "string"
               },
               "created_by": {
@@ -14712,6 +15412,46 @@
             "type": "object"
           },
           "nickname": {
+            "type": "string"
+          },
+          "levelWithClsesString": {
+            "type": "string"
+          },
+          "deity": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "bioAppearance": {
+            "type": "string"
+          },
+          "bioStory": {
             "type": "string"
           }
         }
@@ -14771,6 +15511,18 @@
             "type": "object"
           },
           "nickname": {
+            "type": "string"
+          },
+          "levelWithClsesString": {
+            "type": "string"
+          },
+          "deity": {
+            "type": "string"
+          },
+          "bioAppearance": {
+            "type": "string"
+          },
+          "bioStory": {
             "type": "string"
           },
           "created_by": {
@@ -15004,7 +15756,8 @@
       "Cls": {
         "required": [
           "id",
-          "name"
+          "name",
+          "code"
         ],
         "properties": {
           "id": {
@@ -15015,18 +15768,178 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "parentCls": {
+            "required": [
+              "id",
+              "name",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "parentCls": {
+                "type": "string"
+              },
+              "isParentCls": {
+                "type": "boolean"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isParentCls": {
+            "type": "boolean",
+            "default": false
+          },
+          "level": {
+            "type": "integer"
           }
         }
       },
       "NewCls": {
         "required": [
-          "name"
+          "name",
+          "code"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "parentCls": {
+            "type": "string"
+          },
+          "isParentCls": {
+            "type": "boolean",
+            "default": false
+          },
+          "level": {
+            "type": "integer"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Deity": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rulebook": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "NewDeity": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
+            "type": "string"
+          },
+          "rulebook": {
             "type": "string"
           },
           "created_by": {
@@ -15425,6 +16338,18 @@
               "nickname": {
                 "type": "string"
               },
+              "levelWithClsesString": {
+                "type": "string"
+              },
+              "deity": {
+                "type": "string"
+              },
+              "bioAppearance": {
+                "type": "string"
+              },
+              "bioStory": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -15642,6 +16567,18 @@
                 "type": "object"
               },
               "nickname": {
+                "type": "string"
+              },
+              "levelWithClsesString": {
+                "type": "string"
+              },
+              "deity": {
+                "type": "string"
+              },
+              "bioAppearance": {
+                "type": "string"
+              },
+              "bioStory": {
                 "type": "string"
               },
               "created_by": {
@@ -16059,6 +16996,18 @@
                 "nickname": {
                   "type": "string"
                 },
+                "levelWithClsesString": {
+                  "type": "string"
+                },
+                "deity": {
+                  "type": "string"
+                },
+                "bioAppearance": {
+                  "type": "string"
+                },
+                "bioStory": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -16140,6 +17089,18 @@
                       "type": "object"
                     },
                     "nickname": {
+                      "type": "string"
+                    },
+                    "levelWithClsesString": {
+                      "type": "string"
+                    },
+                    "deity": {
+                      "type": "string"
+                    },
+                    "bioAppearance": {
+                      "type": "string"
+                    },
+                    "bioStory": {
                       "type": "string"
                     },
                     "created_by": {
@@ -16426,6 +17387,18 @@
                     "nickname": {
                       "type": "string"
                     },
+                    "levelWithClsesString": {
+                      "type": "string"
+                    },
+                    "deity": {
+                      "type": "string"
+                    },
+                    "bioAppearance": {
+                      "type": "string"
+                    },
+                    "bioStory": {
+                      "type": "string"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -16673,6 +17646,15 @@
               "parentRace": {
                 "type": "string"
               },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "isParentRace": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -16680,6 +17662,66 @@
                 "type": "string"
               }
             }
+          },
+          "ruleset": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rulebook": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isParentRace": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -16705,6 +17747,16 @@
           "parentRace": {
             "type": "string"
           },
+          "ruleset": {
+            "type": "string"
+          },
+          "rulebook": {
+            "type": "string"
+          },
+          "isParentRace": {
+            "type": "boolean",
+            "default": false
+          },
           "created_by": {
             "type": "string"
           },
@@ -16713,11 +17765,9 @@
           }
         }
       },
-      "Rule-book": {
+      "Rulebook": {
         "required": [
-          "id",
-          "name",
-          "abbr"
+          "id"
         ],
         "properties": {
           "id": {
@@ -16726,18 +17776,15 @@
           "name": {
             "type": "string"
           },
-          "abbr": {
+          "nameEn": {
             "type": "string"
           },
-          "image": {
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
@@ -16746,46 +17793,10 @@
               "name": {
                 "type": "string"
               },
-              "alternativeText": {
+              "code": {
                 "type": "string"
               },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
+              "nameEn": {
                 "type": "string"
               },
               "created_by": {
@@ -16795,20 +17806,30 @@
                 "type": "string"
               }
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewRule-book": {
-        "required": [
-          "name",
-          "abbr"
-        ],
+      "NewRulebook": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "abbr": {
+          "nameEn": {
             "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -16831,6 +17852,9 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
           }
         }
       },
@@ -16840,6 +17864,9 @@
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "nameEn": {
             "type": "string"
           },
           "created_by": {
@@ -17368,6 +18395,9 @@
       "name": "Unclassified"
     },
     {
+      "name": "Deity"
+    },
+    {
       "name": "Game"
     },
     {
@@ -17378,6 +18408,9 @@
     },
     {
       "name": "Race"
+    },
+    {
+      "name": "Rulebook"
     },
     {
       "name": "Ruleset"

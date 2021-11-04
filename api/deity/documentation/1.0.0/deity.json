@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/rule-books": {
+    "/deities": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Deity"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Deity"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Deity"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Deity"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRule-book"
+                "$ref": "#/components/schemas/NewDeity"
               }
             }
           }
         }
       }
     },
-    "/rule-books/count": {
+    "/deities/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Deity"
         ],
         "parameters": []
       }
     },
-    "/rule-books/{id}": {
+    "/deities/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Deity"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Deity"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Deity"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Deity"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRule-book"
+                "$ref": "#/components/schemas/NewDeity"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Rule-book"
+          "Deity"
         ],
         "parameters": [
           {
@@ -527,11 +514,9 @@
   },
   "components": {
     "schemas": {
-      "Rule-book": {
+      "Deity": {
         "required": [
-          "id",
-          "name",
-          "abbr"
+          "id"
         ],
         "properties": {
           "id": {
@@ -540,18 +525,15 @@
           "name": {
             "type": "string"
           },
-          "abbr": {
+          "nameEn": {
             "type": "string"
           },
-          "image": {
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
@@ -560,46 +542,41 @@
               "name": {
                 "type": "string"
               },
-              "alternativeText": {
+              "code": {
                 "type": "string"
               },
-              "caption": {
+              "nameEn": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "created_by": {
                 "type": "string"
               },
-              "ext": {
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rulebook": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
                 "type": "string"
               },
-              "mime": {
+              "name": {
                 "type": "string"
               },
-              "size": {
-                "type": "number"
-              },
-              "url": {
+              "nameEn": {
                 "type": "string"
               },
-              "previewUrl": {
+              "code": {
                 "type": "string"
               },
-              "provider": {
+              "ruleset": {
                 "type": "string"
               },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
+              "published_at": {
                 "type": "string"
               },
               "created_by": {
@@ -612,16 +589,21 @@
           }
         }
       },
-      "NewRule-book": {
-        "required": [
-          "name",
-          "abbr"
-        ],
+      "NewDeity": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "abbr": {
+          "nameEn": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "ruleset": {
+            "type": "string"
+          },
+          "rulebook": {
             "type": "string"
           },
           "created_by": {
@@ -634,5 +616,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Deity"
+    }
+  ]
 }

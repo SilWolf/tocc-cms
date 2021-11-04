@@ -23,22 +23,6 @@ const findOrSearchFn = (params) => {
         path: "city",
         select: "id name code",
       },
-      // {
-      //   path: "race",
-      //   select: "id name",
-      // },
-      // {
-      //   path: "clses",
-      //   select: "id name",
-      // },
-      // {
-      //   path: "background",
-      //   select: "id name",
-      // },
-      // {
-      //   path: "ruleset",
-      //   select: "id name",
-      // },
     ],
   }).select("-property");
 };

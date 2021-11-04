@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rulebooks",
+      "handler": "rulebook.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rulebooks/count",
+      "handler": "rulebook.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rulebooks/:id",
+      "handler": "rulebook.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rulebooks",
+      "handler": "rulebook.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rulebooks/:id",
+      "handler": "rulebook.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rulebooks/:id",
+      "handler": "rulebook.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

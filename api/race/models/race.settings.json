@@ -14,7 +14,7 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true,
+      "unique": false,
       "required": true
     },
     "code": {
@@ -31,6 +31,16 @@
     },
     "parentRace": {
       "model": "race"
+    },
+    "ruleset": {
+      "model": "ruleset"
+    },
+    "rulebook": {
+      "model": "rulebook"
+    },
+    "isParentRace": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

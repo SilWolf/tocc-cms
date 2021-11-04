@@ -16,7 +16,18 @@
       "type": "string"
     },
     "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "nameEn": {
       "type": "string"
+    },
+    "ruleset": {
+      "model": "ruleset"
+    },
+    "rulebook": {
+      "model": "rulebook"
     }
   }
 }

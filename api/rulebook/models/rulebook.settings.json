@@ -1,25 +1,28 @@
 {
   "kind": "collectionType",
-  "collectionName": "rulesets",
+  "collectionName": "rulebooks",
   "info": {
-    "name": "Ruleset",
-    "displayName": "XI. 規則模組",
+    "name": "Rulebook",
+    "displayName": "XII. 規則書",
     "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
       "type": "string"
     },
+    "nameEn": {
+      "type": "string"
+    },
     "code": {
       "type": "string"
     },
-    "nameEn": {
-      "type": "string"
+    "ruleset": {
+      "model": "ruleset"
     }
   }
 }

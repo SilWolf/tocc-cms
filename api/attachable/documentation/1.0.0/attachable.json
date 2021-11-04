@@ -616,6 +616,15 @@
               "parentRace": {
                 "type": "string"
               },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "isParentRace": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -627,7 +636,8 @@
           "cls": {
             "required": [
               "id",
-              "name"
+              "name",
+              "code"
             ],
             "properties": {
               "id": {
@@ -638,6 +648,18 @@
               },
               "code": {
                 "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "parentCls": {
+                "type": "string"
+              },
+              "isParentCls": {
+                "type": "boolean"
+              },
+              "level": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -649,7 +671,8 @@
           },
           "background": {
             "required": [
-              "id"
+              "id",
+              "code"
             ],
             "properties": {
               "id": {
@@ -659,6 +682,15 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
                 "type": "string"
               },
               "created_by": {
@@ -681,6 +713,9 @@
                 "type": "string"
               },
               "code": {
+                "type": "string"
+              },
+              "nameEn": {
                 "type": "string"
               },
               "created_by": {

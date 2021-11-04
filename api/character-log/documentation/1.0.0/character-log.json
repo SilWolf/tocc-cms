@@ -714,6 +714,18 @@
               "nickname": {
                 "type": "string"
               },
+              "levelWithClsesString": {
+                "type": "string"
+              },
+              "deity": {
+                "type": "string"
+              },
+              "bioAppearance": {
+                "type": "string"
+              },
+              "bioStory": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

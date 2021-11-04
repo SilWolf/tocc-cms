@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/rule-books",
-      "handler": "rule-book.find",
+      "path": "/deities",
+      "handler": "deity.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/rule-books/count",
-      "handler": "rule-book.count",
+      "path": "/deities/count",
+      "handler": "deity.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/rule-books/:id",
-      "handler": "rule-book.findOne",
+      "path": "/deities/:id",
+      "handler": "deity.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/rule-books",
-      "handler": "rule-book.create",
+      "path": "/deities",
+      "handler": "deity.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/rule-books/:id",
-      "handler": "rule-book.update",
+      "path": "/deities/:id",
+      "handler": "deity.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/rule-books/:id",
-      "handler": "rule-book.delete",
+      "path": "/deities/:id",
+      "handler": "deity.delete",
       "config": {
         "policies": []
       }

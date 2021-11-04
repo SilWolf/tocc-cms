@@ -18,7 +18,22 @@
       "unique": false
     },
     "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "nameEn": {
       "type": "string"
+    },
+    "parentCls": {
+      "model": "cls"
+    },
+    "isParentCls": {
+      "type": "boolean",
+      "default": false
+    },
+    "level": {
+      "type": "integer"
     }
   }
 }

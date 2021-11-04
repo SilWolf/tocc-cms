@@ -584,7 +584,8 @@
     "schemas": {
       "Background": {
         "required": [
-          "id"
+          "id",
+          "code"
         ],
         "properties": {
           "id": {
@@ -595,15 +596,86 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "ruleset": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rulebook": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewBackground": {
+        "required": [
+          "code"
+        ],
         "properties": {
           "name": {
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "ruleset": {
+            "type": "string"
+          },
+          "rulebook": {
             "type": "string"
           },
           "created_by": {

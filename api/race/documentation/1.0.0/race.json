@@ -630,6 +630,15 @@
               "parentRace": {
                 "type": "string"
               },
+              "ruleset": {
+                "type": "string"
+              },
+              "rulebook": {
+                "type": "string"
+              },
+              "isParentRace": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -637,6 +646,66 @@
                 "type": "string"
               }
             }
+          },
+          "ruleset": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rulebook": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "nameEn": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "ruleset": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isParentRace": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -661,6 +730,16 @@
           },
           "parentRace": {
             "type": "string"
+          },
+          "ruleset": {
+            "type": "string"
+          },
+          "rulebook": {
+            "type": "string"
+          },
+          "isParentRace": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"

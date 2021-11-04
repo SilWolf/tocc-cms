@@ -1,10 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "rulesets",
+  "collectionName": "deities",
   "info": {
-    "name": "Ruleset",
-    "displayName": "XI. 規則模組",
-    "description": ""
+    "name": "Deity",
+    "displayName": "XIIId. 神祗"
   },
   "options": {
     "increments": true,
@@ -15,11 +14,17 @@
     "name": {
       "type": "string"
     },
+    "nameEn": {
+      "type": "string"
+    },
     "code": {
       "type": "string"
     },
-    "nameEn": {
-      "type": "string"
+    "ruleset": {
+      "model": "ruleset"
+    },
+    "rulebook": {
+      "model": "rulebook"
     }
   }
 }

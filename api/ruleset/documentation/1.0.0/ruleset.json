@@ -652,6 +652,9 @@
           },
           "code": {
             "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
           }
         }
       },
@@ -661,6 +664,9 @@
             "type": "string"
           },
           "code": {
+            "type": "string"
+          },
+          "nameEn": {
             "type": "string"
           },
           "created_by": {
