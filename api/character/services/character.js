@@ -23,8 +23,20 @@ const findOrSearchFn = (params) => {
         path: "city",
         select: "id name code",
       },
+      {
+        path: "race",
+        select: "id name code",
+      },
+      {
+        path: "background",
+        select: "id name code",
+      },
+      {
+        path: "deity",
+        select: "id name code",
+      },
     ],
-  }).select("-property");
+  }).select("_id name nickname level levelWithClsesString");
 };
 
 module.exports = {

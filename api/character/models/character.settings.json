@@ -3,7 +3,7 @@
   "collectionName": "characters",
   "info": {
     "name": "Character",
-    "displayName": "BI. 玩家角色",
+    "displayName": "BII. 玩家角色",
     "description": ""
   },
   "options": {
@@ -29,9 +29,7 @@
     "portraitImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
@@ -105,9 +103,7 @@
     "coverImage": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}

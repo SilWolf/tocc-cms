@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "location_shops",
+  "info": {
+    "name": "LocationShop",
+    "displayName": "EI. 地點商店"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "nameEn": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}
