@@ -645,6 +645,12 @@
               "googleCalendarEventUrl": {
                 "type": "string"
               },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
+              "outline": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },

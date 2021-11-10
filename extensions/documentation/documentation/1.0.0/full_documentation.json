@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/05/2021 4:09:56 PM"
+    "x-generation-date": "11/10/2021 6:06:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -16318,6 +16318,12 @@
               "googleCalendarEventUrl": {
                 "type": "string"
               },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
+              "outline": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17770,6 +17776,12 @@
               "googleCalendarEventUrl": {
                 "type": "string"
               },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
+              "outline": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17902,6 +17914,12 @@
               },
               "googleCalendarEventUrl": {
                 "type": "string"
+              },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
+              "outline": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -18226,6 +18244,12 @@
               },
               "googleCalendarEventUrl": {
                 "type": "string"
+              },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
+              "outline": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -19018,6 +19042,12 @@
           },
           "googleCalendarEventUrl": {
             "type": "string"
+          },
+          "timeLengthInMin": {
+            "type": "integer"
+          },
+          "outline": {
+            "type": "object"
           }
         }
       },
@@ -19281,6 +19311,12 @@
           },
           "googleCalendarEventUrl": {
             "type": "string"
+          },
+          "timeLengthInMin": {
+            "type": "integer"
+          },
+          "outline": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

@@ -87,10 +87,8 @@ module.exports = {
     const updatedEntity = await strapi.services.game.update(
       { id },
       {
-        ...entity,
         status: "published",
         publishedAt: new Date().toISOString(),
-        worldEndAt: entity.worldStartAt,
       }
     );
 

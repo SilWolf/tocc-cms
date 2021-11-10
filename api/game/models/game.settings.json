@@ -63,8 +63,7 @@
       "model": "user"
     },
     "characters": {
-      "collection": "character",
-      "dominant": true
+      "collection": "character"
     },
     "characterAndRewards": {
       "type": "component",
@@ -110,6 +109,12 @@
     "googleCalendarEventUrl": {
       "type": "string",
       "private": false
+    },
+    "timeLengthInMin": {
+      "type": "biginteger"
+    },
+    "outline": {
+      "type": "json"
     }
   }
 }
