@@ -257,4 +257,17 @@ module.exports = {
       model: strapi.models["game-sign-up"],
     });
   },
+
+  async getChecklists(ctx) {
+    const trelloBot = strapi.services.trelloBot;
+
+    const { id } = ctx.params;
+    const game = await strapi.services.game.findOne({ id });
+
+    if (game && game.trelloCardId) {
+      return trelloBot.getCheckListsByCardId(game.trelloCardId);
+    }
+
+    return [];
+  },
 };

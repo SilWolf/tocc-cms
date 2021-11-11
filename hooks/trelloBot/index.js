@@ -66,6 +66,10 @@ module.exports = (strapi) => {
             .post(`/checklists/${id}/checkItems`, payload)
             .then((res) => res.data);
         },
+
+        getCheckListsByCardId: async (id) => {
+          return api.get(`/cards/${id}/checklists`).then((res) => res.data);
+        },
       };
 
       strapi.services.trelloBot = bot;

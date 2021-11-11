@@ -49,6 +49,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/games/:id/checklists",
+      "handler": "game.getChecklists",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PATCH",
       "path": "/games/:id/draft",
       "handler": "game.patchToDraft",

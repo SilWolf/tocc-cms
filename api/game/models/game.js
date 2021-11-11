@@ -73,7 +73,6 @@ const createTrelloCard = async (game) => {
   };
 
   const createdTrellloCard = await trelloBot.createCard(payload);
-  console.log(createdTrellloCard);
 
   const createdTrelloCheckList = await trelloBot.createCheckListByCardId(
     createdTrellloCard.id,
@@ -82,7 +81,6 @@ const createTrelloCard = async (game) => {
       pos: "top",
     }
   );
-  console.log(createdTrelloCheckList);
 
   for (const name of [
     "填寫劇本大綱",
@@ -97,6 +95,8 @@ const createTrelloCard = async (game) => {
       pos: "bottom",
     });
   }
+
+  return createdTrellloCard;
 };
 
 const deleteTrelloCard = async (game) => {
