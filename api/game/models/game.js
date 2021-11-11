@@ -7,7 +7,7 @@ const { formatGameToDescription } = require("../../game/helpers/game");
  * to customize this model
  */
 
-const createOrUpdateCalendarEvent = async (game) => {
+const createOrUpdateGCEvent = async (game) => {
   const calendarBot = strapi.services.googleCalendarBot;
 
   const payload = {
@@ -40,7 +40,7 @@ const createOrUpdateCalendarEvent = async (game) => {
         {
           googleCalendarEventId: event.data.id,
           googleCalendarEventUrl: event.data.htmlLink,
-          _doNotUpdateGoogleCalendar: true,
+          _slient: true,
         }
       );
     });
@@ -54,33 +54,98 @@ const deleteCalendarEvent = async (googleCalendarEventId) => {
       {
         googleCalendarEventId: null,
         googleCalendarEventUrl: null,
-        _doNotUpdateGoogleCalendar: true,
+        _slient: true,
       }
     );
   });
 };
 
+const createTrelloCard = async (game) => {
+  const trelloBot = strapi.services.trelloBot;
+
+  const payload = {
+    name: `${game.code} - ${game.title}`,
+    desc: formatGameToDescription(game),
+    due: game.startAt,
+    pos: "top",
+    locationName: game.city.shopName,
+    address: game.city.shopAddress,
+  };
+
+  const createdTrellloCard = await trelloBot.createCard(payload);
+  console.log(createdTrellloCard);
+
+  const createdTrelloCheckList = await trelloBot.createCheckListByCardId(
+    createdTrellloCard.id,
+    {
+      name: "待辦事項",
+      pos: "top",
+    }
+  );
+  console.log(createdTrelloCheckList);
+
+  for (const name of [
+    "填寫劇本大綱",
+    "給其他DM檢查",
+    "發佈",
+    "確認玩家的報名",
+    "跑團",
+    "派發獎勵及記錄",
+  ]) {
+    await trelloBot.createCheckItemByCheckListId(createdTrelloCheckList.id, {
+      name: name,
+      pos: "bottom",
+    });
+  }
+};
+
+const deleteTrelloCard = async (game) => {
+  const trelloBot = strapi.services.trelloBot;
+  if (game.trelloCardId) {
+    trelloBot.deleteCardById(game.trelloCardId);
+  }
+};
+
 module.exports = {
   lifecycles: {
-    async afterCreate(event, data) {
-      if (!data._doNotUpdateGoogleCalendar && event.status !== "draft") {
-        createOrUpdateCalendarEvent(event);
+    async afterCreate(game, data) {
+      if (data._slient) {
+        return;
+      }
+
+      if (game.status !== "draft") {
+        createOrUpdateGCEvent(game);
+      }
+
+      if (!data.trelloCardId) {
+        createTrelloCard(game).then((createdTrelloCard) => {
+          strapi.services["game"].update(
+            { id: game.id },
+            {
+              trelloCardId: createdTrelloCard.id,
+              _slient: true,
+            }
+          );
+        });
       }
     },
 
-    async afterUpdate(event, _, data) {
-      if (!data._doNotUpdateGoogleCalendar) {
-        if (event.status !== "draft") {
-          createOrUpdateCalendarEvent(event);
+    async afterUpdate(game, _, data) {
+      if (!data._slient) {
+        if (game.status !== "draft") {
+          createOrUpdateGCEvent(game);
         } else {
-          deleteCalendarEvent(result.googleCalendarEventId);
+          deleteCalendarEvent(game.googleCalendarEventId);
         }
       }
     },
 
-    async afterDelete(result) {
-      if (result.googleCalendarEventId) {
-        deleteCalendarEvent(result.googleCalendarEventId);
+    async afterDelete(game) {
+      if (game.googleCalendarEventId) {
+        deleteCalendarEvent(game.googleCalendarEventId);
+      }
+      if (game.trelloCardId) {
+        deleteTrelloCard(game);
       }
     },
   },

@@ -1346,6 +1346,9 @@
           },
           "outline": {
             "type": "object"
+          },
+          "trelloCardId": {
+            "type": "string"
           }
         }
       },
@@ -1615,6 +1618,9 @@
           },
           "outline": {
             "type": "object"
+          },
+          "trelloCardId": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

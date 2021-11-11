@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/11/2021 12:00:35 PM"
+    "x-generation-date": "11/11/2021 3:42:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -16324,6 +16324,9 @@
               "outline": {
                 "type": "object"
               },
+              "trelloCardId": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17782,6 +17785,9 @@
               "outline": {
                 "type": "object"
               },
+              "trelloCardId": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17920,6 +17926,9 @@
               },
               "outline": {
                 "type": "object"
+              },
+              "trelloCardId": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -18250,6 +18259,9 @@
               },
               "outline": {
                 "type": "object"
+              },
+              "trelloCardId": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -19048,6 +19060,9 @@
           },
           "outline": {
             "type": "object"
+          },
+          "trelloCardId": {
+            "type": "string"
           }
         }
       },
@@ -19317,6 +19332,9 @@
           },
           "outline": {
             "type": "object"
+          },
+          "trelloCardId": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

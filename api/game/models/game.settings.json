@@ -115,6 +115,10 @@
     },
     "outline": {
       "type": "json"
+    },
+    "trelloCardId": {
+      "type": "string",
+      "private": false
     }
   }
 }
