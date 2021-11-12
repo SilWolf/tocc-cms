@@ -538,17 +538,20 @@
           "game": {
             "required": [
               "id",
+              "code",
               "title",
               "startAt",
               "worldStartAt",
               "lvMin",
               "capacityMin",
               "capacityMax",
-              "code",
               "status"
             ],
             "properties": {
               "id": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "title": {
@@ -560,6 +563,9 @@
               "endAt": {
                 "type": "string"
               },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
               "worldStartAt": {
                 "type": "string"
               },
@@ -568,6 +574,9 @@
               },
               "description": {
                 "type": "string"
+              },
+              "outline": {
+                "type": "object"
               },
               "lvMin": {
                 "type": "integer"
@@ -590,28 +599,16 @@
               "dm": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "characterAndRewards": {
-                "type": "component"
-              },
-              "journals": {
-                "type": "component"
-              },
-              "code": {
-                "type": "string"
-              },
               "city": {
                 "type": "string"
               },
-              "publishedAt": {
+              "googleCalendarEventId": {
                 "type": "string"
               },
-              "completedAt": {
+              "googleCalendarEventUrl": {
+                "type": "string"
+              },
+              "trelloCardId": {
                 "type": "string"
               },
               "status": {
@@ -625,19 +622,13 @@
                   "done"
                 ]
               },
-              "googleCalendarEventId": {
+              "publishedAt": {
                 "type": "string"
               },
-              "googleCalendarEventUrl": {
+              "confirmedAt": {
                 "type": "string"
               },
-              "timeLengthInMin": {
-                "type": "integer"
-              },
-              "outline": {
-                "type": "object"
-              },
-              "trelloCardId": {
+              "completedAt": {
                 "type": "string"
               },
               "created_by": {
@@ -829,6 +820,63 @@
           "gp": {
             "type": "number",
             "default": 0
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "pending",
+              "done"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "gameSignUp": {
+            "required": [
+              "id",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "game": {
+                "type": "string"
+              },
+              "character": {
+                "type": "string"
+              },
+              "player": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "accepted",
+                  "rejected_full",
+                  "rejected_invalidLevel",
+                  "rejected_invalidCity",
+                  "rejected_notPrioritize"
+                ]
+              },
+              "remarks": {
+                "type": "string"
+              },
+              "applier": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -850,6 +898,23 @@
           "gp": {
             "type": "number",
             "default": 0
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "pending",
+              "done"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "gameSignUp": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

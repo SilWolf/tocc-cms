@@ -542,17 +542,20 @@
           "game": {
             "required": [
               "id",
+              "code",
               "title",
               "startAt",
               "worldStartAt",
               "lvMin",
               "capacityMin",
               "capacityMax",
-              "code",
               "status"
             ],
             "properties": {
               "id": {
+                "type": "string"
+              },
+              "code": {
                 "type": "string"
               },
               "title": {
@@ -564,6 +567,9 @@
               "endAt": {
                 "type": "string"
               },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
               "worldStartAt": {
                 "type": "string"
               },
@@ -572,6 +578,9 @@
               },
               "description": {
                 "type": "string"
+              },
+              "outline": {
+                "type": "object"
               },
               "lvMin": {
                 "type": "integer"
@@ -594,28 +603,16 @@
               "dm": {
                 "type": "string"
               },
-              "characters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "characterAndRewards": {
-                "type": "component"
-              },
-              "journals": {
-                "type": "component"
-              },
-              "code": {
-                "type": "string"
-              },
               "city": {
                 "type": "string"
               },
-              "publishedAt": {
+              "googleCalendarEventId": {
                 "type": "string"
               },
-              "completedAt": {
+              "googleCalendarEventUrl": {
+                "type": "string"
+              },
+              "trelloCardId": {
                 "type": "string"
               },
               "status": {
@@ -629,19 +626,13 @@
                   "done"
                 ]
               },
-              "googleCalendarEventId": {
+              "publishedAt": {
                 "type": "string"
               },
-              "googleCalendarEventUrl": {
+              "confirmedAt": {
                 "type": "string"
               },
-              "timeLengthInMin": {
-                "type": "integer"
-              },
-              "outline": {
-                "type": "object"
-              },
-              "trelloCardId": {
+              "completedAt": {
                 "type": "string"
               },
               "created_by": {

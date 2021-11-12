@@ -715,6 +715,74 @@
         ]
       }
     },
+    "/games/{id}/confirm": {
+      "patch": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Game"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/games/{id}/complete": {
       "patch": {
         "deprecated": false,
@@ -931,17 +999,20 @@
       "Game": {
         "required": [
           "id",
+          "code",
           "title",
           "startAt",
           "worldStartAt",
           "lvMin",
           "capacityMin",
           "capacityMax",
-          "code",
           "status"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           },
           "title": {
@@ -955,6 +1026,9 @@
             "type": "string",
             "format": "date-time"
           },
+          "timeLengthInMin": {
+            "type": "integer"
+          },
           "worldStartAt": {
             "type": "string",
             "format": "date"
@@ -965,6 +1039,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "outline": {
+            "type": "object"
           },
           "lvMin": {
             "type": "integer",
@@ -1065,273 +1142,6 @@
               }
             }
           },
-          "characters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "code"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "portraitImage": {
-                  "type": "string"
-                },
-                "motto": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "integer"
-                },
-                "xp": {
-                  "type": "integer"
-                },
-                "gp": {
-                  "type": "integer"
-                },
-                "player": {
-                  "type": "string"
-                },
-                "city": {
-                  "type": "string"
-                },
-                "ruleset": {
-                  "type": "string"
-                },
-                "race": {
-                  "type": "string"
-                },
-                "clses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "background": {
-                  "type": "string"
-                },
-                "features": {
-                  "type": "object"
-                },
-                "nickname": {
-                  "type": "string"
-                },
-                "levelWithClsesString": {
-                  "type": "string"
-                },
-                "deity": {
-                  "type": "string"
-                },
-                "bioAppearance": {
-                  "type": "string"
-                },
-                "bioStory": {
-                  "type": "string"
-                },
-                "bioSpeech": {
-                  "type": "string"
-                },
-                "bioTitle": {
-                  "type": "string"
-                },
-                "bioRole": {
-                  "type": "string"
-                },
-                "bioOrganization": {
-                  "type": "string"
-                },
-                "coverImage": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "characterAndRewards": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "gp",
-                "xp"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "character": {
-                  "required": [
-                    "id",
-                    "name",
-                    "code"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "portraitImage": {
-                      "type": "string"
-                    },
-                    "motto": {
-                      "type": "string"
-                    },
-                    "level": {
-                      "type": "integer"
-                    },
-                    "xp": {
-                      "type": "integer"
-                    },
-                    "gp": {
-                      "type": "integer"
-                    },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
-                      "type": "string"
-                    },
-                    "ruleset": {
-                      "type": "string"
-                    },
-                    "race": {
-                      "type": "string"
-                    },
-                    "clses": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "background": {
-                      "type": "string"
-                    },
-                    "features": {
-                      "type": "object"
-                    },
-                    "nickname": {
-                      "type": "string"
-                    },
-                    "levelWithClsesString": {
-                      "type": "string"
-                    },
-                    "deity": {
-                      "type": "string"
-                    },
-                    "bioAppearance": {
-                      "type": "string"
-                    },
-                    "bioStory": {
-                      "type": "string"
-                    },
-                    "bioSpeech": {
-                      "type": "string"
-                    },
-                    "bioTitle": {
-                      "type": "string"
-                    },
-                    "bioRole": {
-                      "type": "string"
-                    },
-                    "bioOrganization": {
-                      "type": "string"
-                    },
-                    "coverImage": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "name": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "gp": {
-                  "type": "number",
-                  "default": 0
-                },
-                "xp": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "remark": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "journals": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "subject": {
-                  "type": "string",
-                  "default": "世界"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "code": {
-            "type": "string"
-          },
           "city": {
             "required": [
               "id",
@@ -1383,13 +1193,14 @@
               }
             }
           },
-          "publishedAt": {
-            "type": "string",
-            "format": "date-time"
+          "googleCalendarEventId": {
+            "type": "string"
           },
-          "completedAt": {
-            "type": "string",
-            "format": "date-time"
+          "googleCalendarEventUrl": {
+            "type": "string"
+          },
+          "trelloCardId": {
+            "type": "string"
           },
           "status": {
             "type": "string",
@@ -1403,35 +1214,35 @@
               "done"
             ]
           },
-          "googleCalendarEventId": {
-            "type": "string"
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "googleCalendarEventUrl": {
-            "type": "string"
+          "confirmedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "timeLengthInMin": {
-            "type": "integer"
-          },
-          "outline": {
-            "type": "object"
-          },
-          "trelloCardId": {
-            "type": "string"
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
       "NewGame": {
         "required": [
+          "code",
           "title",
           "startAt",
           "worldStartAt",
           "lvMin",
           "capacityMin",
           "capacityMax",
-          "code",
           "status"
         ],
         "properties": {
+          "code": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
@@ -1443,6 +1254,9 @@
             "type": "string",
             "format": "date-time"
           },
+          "timeLengthInMin": {
+            "type": "integer"
+          },
           "worldStartAt": {
             "type": "string",
             "format": "date"
@@ -1453,6 +1267,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "outline": {
+            "type": "object"
           },
           "lvMin": {
             "type": "integer",
@@ -1478,190 +1295,17 @@
           "dm": {
             "type": "string"
           },
-          "characters": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "characterAndRewards": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "gp",
-                "xp"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "character": {
-                  "required": [
-                    "id",
-                    "name",
-                    "code"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "portraitImage": {
-                      "type": "string"
-                    },
-                    "motto": {
-                      "type": "string"
-                    },
-                    "level": {
-                      "type": "integer"
-                    },
-                    "xp": {
-                      "type": "integer"
-                    },
-                    "gp": {
-                      "type": "integer"
-                    },
-                    "player": {
-                      "type": "string"
-                    },
-                    "city": {
-                      "type": "string"
-                    },
-                    "ruleset": {
-                      "type": "string"
-                    },
-                    "race": {
-                      "type": "string"
-                    },
-                    "clses": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "background": {
-                      "type": "string"
-                    },
-                    "features": {
-                      "type": "object"
-                    },
-                    "nickname": {
-                      "type": "string"
-                    },
-                    "levelWithClsesString": {
-                      "type": "string"
-                    },
-                    "deity": {
-                      "type": "string"
-                    },
-                    "bioAppearance": {
-                      "type": "string"
-                    },
-                    "bioStory": {
-                      "type": "string"
-                    },
-                    "bioSpeech": {
-                      "type": "string"
-                    },
-                    "bioTitle": {
-                      "type": "string"
-                    },
-                    "bioRole": {
-                      "type": "string"
-                    },
-                    "bioOrganization": {
-                      "type": "string"
-                    },
-                    "coverImage": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "name": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "gp": {
-                  "type": "number",
-                  "default": 0
-                },
-                "xp": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "remark": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "journals": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "subject": {
-                  "type": "string",
-                  "default": "世界"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "code": {
-            "type": "string"
-          },
           "city": {
             "type": "string"
           },
-          "publishedAt": {
-            "type": "string",
-            "format": "date-time"
+          "googleCalendarEventId": {
+            "type": "string"
           },
-          "completedAt": {
-            "type": "string",
-            "format": "date-time"
+          "googleCalendarEventUrl": {
+            "type": "string"
+          },
+          "trelloCardId": {
+            "type": "string"
           },
           "status": {
             "type": "string",
@@ -1675,20 +1319,17 @@
               "done"
             ]
           },
-          "googleCalendarEventId": {
-            "type": "string"
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "googleCalendarEventUrl": {
-            "type": "string"
+          "confirmedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "timeLengthInMin": {
-            "type": "integer"
-          },
-          "outline": {
-            "type": "object"
-          },
-          "trelloCardId": {
-            "type": "string"
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

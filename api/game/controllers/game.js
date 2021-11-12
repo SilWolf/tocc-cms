@@ -97,6 +97,47 @@ module.exports = {
     return output;
   },
 
+  async patchToConfirmed(ctx) {
+    const { id } = ctx.params;
+
+    const entity = await strapi.services.game.findOne({ id });
+    if (entity.status !== "published") {
+      return ctx.badRequest();
+    }
+
+    const { gameSignUps } = await ctx.request.body;
+
+    for (const gameSignUp of gameSignUps) {
+      const updatedGameSignUp = await strapi.services["game-sign-up"].update(
+        { id: gameSignUp.id },
+        {
+          status: gameSignUp.status,
+        }
+      );
+
+      if (updatedGameSignUp.status === "accepted") {
+        await strapi.services["game-record"].create({
+          game: id,
+          player: updatedGameSignUp.player.id,
+          character: updatedGameSignUp.character.id,
+          gameSignUp: updatedGameSignUp.id,
+        });
+      }
+    }
+
+    const updatedEntity = await strapi.services.game.update(
+      { id },
+      {
+        status: "confirmed",
+        confirmedAt: new Date().toISOString(),
+      }
+    );
+
+    const output = sanitizeEntity(updatedEntity, { model: strapi.models.game });
+
+    return output;
+  },
+
   async patchToCompleted(ctx) {
     const { id } = ctx.params;
 

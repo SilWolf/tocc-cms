@@ -3,7 +3,8 @@
   "collectionName": "game_records",
   "info": {
     "name": "GameRecord",
-    "displayName": "CIII. 劇本遊玩紀錄"
+    "displayName": "CIII. 劇本遊玩紀錄",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -28,6 +29,23 @@
     "gp": {
       "type": "decimal",
       "default": 0
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "done"
+      ],
+      "default": "pending"
+    },
+    "description": {
+      "type": "text"
+    },
+    "remark": {
+      "type": "text"
+    },
+    "gameSignUp": {
+      "model": "game-sign-up"
     }
   }
 }

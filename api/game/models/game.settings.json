@@ -12,6 +12,10 @@
     "draftAndPublish": false
   },
   "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
     "title": {
       "type": "string",
       "required": true
@@ -24,6 +28,9 @@
       "type": "datetime",
       "required": false
     },
+    "timeLengthInMin": {
+      "type": "integer"
+    },
     "worldStartAt": {
       "type": "date",
       "required": true
@@ -33,6 +40,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "outline": {
+      "type": "json"
     },
     "lvMin": {
       "type": "integer",
@@ -62,44 +72,8 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "characters": {
-      "collection": "character"
-    },
-    "characterAndRewards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "character-blocks.character-reward"
-    },
-    "journals": {
-      "type": "component",
-      "repeatable": true,
-      "component": "character-blocks.journal"
-    },
-    "code": {
-      "type": "string",
-      "required": true
-    },
     "city": {
       "model": "city"
-    },
-    "publishedAt": {
-      "type": "datetime"
-    },
-    "completedAt": {
-      "type": "datetime"
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "new",
-        "draft",
-        "published",
-        "confirmed",
-        "completed",
-        "done"
-      ],
-      "default": "draft",
-      "required": true
     },
     "googleCalendarEventId": {
       "type": "string",
@@ -110,15 +84,24 @@
       "type": "string",
       "private": false
     },
-    "timeLengthInMin": {
-      "type": "biginteger"
-    },
-    "outline": {
-      "type": "json"
-    },
     "trelloCardId": {
       "type": "string",
       "private": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["new", "draft", "published", "confirmed", "completed", "done"],
+      "default": "draft",
+      "required": true
+    },
+    "publishedAt": {
+      "type": "datetime"
+    },
+    "confirmedAt": {
+      "type": "datetime"
+    },
+    "completedAt": {
+      "type": "datetime"
     }
   }
 }

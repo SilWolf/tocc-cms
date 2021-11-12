@@ -24,7 +24,14 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["pending", "accepted", "rejected"],
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected_full",
+        "rejected_invalidLevel",
+        "rejected_invalidCity",
+        "rejected_notPrioritize"
+      ],
       "default": "pending",
       "required": true
     },

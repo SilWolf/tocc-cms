@@ -74,6 +74,14 @@
     },
     {
       "method": "PATCH",
+      "path": "/games/:id/confirm",
+      "handler": "game.patchToConfirmed",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PATCH",
       "path": "/games/:id/complete",
       "handler": "game.patchToCompleted",
       "config": {
