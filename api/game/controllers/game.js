@@ -3,6 +3,9 @@
 const { sanitizeEntity } = require("strapi-utils");
 const { formatGameToDescription } = require("../helpers/game");
 
+const mongoose = require("mongoose");
+const ObjectId = mongoose.Types.ObjectId;
+
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/controllers.html#core-controllers)
  * to customize this controller
@@ -310,5 +313,70 @@ module.exports = {
     }
 
     return [];
+  },
+
+  async getRecords(ctx) {
+    const { id } = ctx.params;
+
+    const aggregate = strapi.query("game-record").model.aggregate();
+    aggregate.match({
+      game: ObjectId(id),
+    });
+    aggregate.lookup({
+      from: strapi.models["character"].collectionName,
+      let: { character: "$character" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $and: [{ $eq: ["$_id", "$$character"] }],
+            },
+          },
+        },
+
+        {
+          $lookup: {
+            from: strapi.plugins["upload"].models["file"].collectionName,
+            let: { portraitImage: "$portraitImage" },
+            pipeline: [
+              {
+                $match: {
+                  $expr: {
+                    $and: [{ $eq: ["$_id", "$$portraitImage"] }],
+                  },
+                },
+              },
+            ],
+            as: "portraitImage",
+          },
+        },
+
+        {
+          $unwind: {
+            path: "$portraitImage",
+            preserveNullAndEmptyArrays: true,
+          },
+        },
+
+        {
+          $project: {
+            id: "$_id",
+            _id: 1,
+            name: 1,
+            nickname: 1,
+            portraitImage: 1,
+          },
+        },
+      ],
+      as: "character",
+    });
+    aggregate.unwind("character");
+    aggregate.addFields({
+      id: "$_id",
+    });
+
+    const results = await aggregate.exec();
+
+    return results;
   },
 };

@@ -57,6 +57,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/games/:id/records",
+      "handler": "game.getRecords",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PATCH",
       "path": "/games/:id/draft",
       "handler": "game.patchToDraft",
