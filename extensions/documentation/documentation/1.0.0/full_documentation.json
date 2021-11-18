@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/17/2021 11:47:14 AM"
+    "x-generation-date": "11/18/2021 5:51:16 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -18353,6 +18353,9 @@
                 "type": "string"
               }
             }
+          },
+          "rewardRatioMap": {
+            "type": "object"
           }
         }
       },
@@ -18391,6 +18394,9 @@
           },
           "gameSignUp": {
             "type": "string"
+          },
+          "rewardRatioMap": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

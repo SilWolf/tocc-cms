@@ -90,7 +90,14 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["new", "draft", "published", "confirmed", "completed", "done"],
+      "enum": [
+        "new",
+        "draft",
+        "published",
+        "confirmed",
+        "completed",
+        "done"
+      ],
       "default": "draft",
       "required": true
     },

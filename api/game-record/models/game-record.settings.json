@@ -46,6 +46,9 @@
     },
     "gameSignUp": {
       "model": "game-sign-up"
+    },
+    "rewardRatioMap": {
+      "type": "json"
     }
   }
 }
