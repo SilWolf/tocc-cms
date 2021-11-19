@@ -30,9 +30,6 @@
     },
     "game": {
       "model": "game"
-    },
-    "gameRecord": {
-      "model": "game-record"
     }
   }
 }

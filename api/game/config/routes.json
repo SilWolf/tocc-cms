@@ -58,8 +58,8 @@
     },
     {
       "method": "GET",
-      "path": "/games/:id/records",
-      "handler": "game.getRecords",
+      "path": "/games/:id/characters",
+      "handler": "game.getCharacters",
       "config": {
         "policies": []
       }

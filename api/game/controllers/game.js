@@ -370,12 +370,13 @@ module.exports = {
     return [];
   },
 
-  async getRecords(ctx) {
+  async getCharacters(ctx) {
     const { id } = ctx.params;
 
-    const aggregate = strapi.query("game-record").model.aggregate();
+    const aggregate = strapi.query("game-sign-up").model.aggregate();
     aggregate.match({
       game: ObjectId(id),
+      status: "accepted",
     });
     aggregate.lookup({
       from: strapi.models["character"].collectionName,
@@ -426,12 +427,9 @@ module.exports = {
       as: "character",
     });
     aggregate.unwind("character");
-    aggregate.addFields({
-      id: "$_id",
-    });
 
-    const results = await aggregate.exec();
+    const gameSignUps = await aggregate.exec();
 
-    return results;
+    return gameSignUps.map((gameSignUp) => gameSignUp.character);
   },
 };

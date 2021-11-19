@@ -632,7 +632,7 @@
               "completedAt": {
                 "type": "string"
               },
-              "characterRewardMap": {
+              "outlineRewardCharacterMap": {
                 "type": "object"
               },
               "created_by": {

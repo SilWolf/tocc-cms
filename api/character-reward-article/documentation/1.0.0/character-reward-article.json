@@ -851,63 +851,7 @@
               "completedAt": {
                 "type": "string"
               },
-              "characterRewardMap": {
-                "type": "object"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "gameRecord": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "game": {
-                "type": "string"
-              },
-              "player": {
-                "type": "string"
-              },
-              "character": {
-                "type": "string"
-              },
-              "xp": {
-                "type": "integer"
-              },
-              "gp": {
-                "type": "number"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "pending",
-                  "done"
-                ]
-              },
-              "description": {
-                "type": "string"
-              },
-              "remark": {
-                "type": "string"
-              },
-              "gameSignUp": {
-                "type": "string"
-              },
-              "rewardRatioMap": {
-                "type": "object"
-              },
-              "outline": {
-                "type": "object"
-              },
-              "otherRewardMap": {
+              "outlineRewardCharacterMap": {
                 "type": "object"
               },
               "created_by": {
@@ -938,9 +882,6 @@
             "type": "string"
           },
           "game": {
-            "type": "string"
-          },
-          "gameRecord": {
             "type": "string"
           },
           "created_by": {

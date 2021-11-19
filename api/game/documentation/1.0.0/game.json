@@ -579,7 +579,7 @@
         ]
       }
     },
-    "/games/{id}/records": {
+    "/games/{id}/characters": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1294,7 +1294,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "characterRewardMap": {
+          "outlineRewardCharacterMap": {
             "type": "object"
           }
         }
@@ -1402,7 +1402,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "characterRewardMap": {
+          "outlineRewardCharacterMap": {
             "type": "object"
           },
           "created_by": {

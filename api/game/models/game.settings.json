@@ -110,7 +110,7 @@
     "completedAt": {
       "type": "datetime"
     },
-    "characterRewardMap": {
+    "outlineRewardCharacterMap": {
       "type": "json"
     }
   }
