@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/game-records": {
+    "/character-records": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Character-record"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Character-record"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewGame-record"
+                "$ref": "#/components/schemas/NewCharacter-record"
               }
             }
           }
         }
       }
     },
-    "/game-records/count": {
+    "/character-records/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Character-record"
         ],
         "parameters": []
       }
     },
-    "/game-records/{id}": {
+    "/character-records/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Character-record"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Character-record"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewGame-record"
+                "$ref": "#/components/schemas/NewCharacter-record"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Game-record"
+          "Character-record"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Game-record": {
+      "Character-record": {
         "required": [
           "id"
         ],
@@ -535,109 +535,20 @@
           "id": {
             "type": "string"
           },
-          "game": {
-            "required": [
-              "id",
-              "code",
-              "title",
-              "startAt",
-              "worldStartAt",
-              "lvMin",
-              "capacityMin",
-              "capacityMax",
-              "status"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "startAt": {
-                "type": "string"
-              },
-              "endAt": {
-                "type": "string"
-              },
-              "timeLengthInMin": {
-                "type": "integer"
-              },
-              "worldStartAt": {
-                "type": "string"
-              },
-              "worldEndAt": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "outline": {
-                "type": "object"
-              },
-              "lvMin": {
-                "type": "integer"
-              },
-              "lvMax": {
-                "type": "integer"
-              },
-              "capacityMin": {
-                "type": "integer"
-              },
-              "capacityMax": {
-                "type": "integer"
-              },
-              "tags": {
-                "type": "string"
-              },
-              "remark": {
-                "type": "string"
-              },
-              "dm": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "googleCalendarEventId": {
-                "type": "string"
-              },
-              "googleCalendarEventUrl": {
-                "type": "string"
-              },
-              "trelloCardId": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "new",
-                  "draft",
-                  "published",
-                  "confirmed",
-                  "completed",
-                  "done"
-                ]
-              },
-              "publishedAt": {
-                "type": "string"
-              },
-              "confirmedAt": {
-                "type": "string"
-              },
-              "completedAt": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "subject": {
+            "type": "string"
+          },
+          "worldStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "default": "1262-12-31T16:23:18.000Z"
+          },
+          "worldEndAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "content": {
+            "type": "string"
           },
           "player": {
             "required": [
@@ -813,61 +724,100 @@
               }
             }
           },
-          "xp": {
-            "type": "integer",
-            "default": 0
-          },
-          "gp": {
-            "type": "number",
-            "default": 0
-          },
-          "status": {
-            "type": "string",
-            "default": "pending",
-            "enum": [
-              "pending",
-              "done"
-            ]
-          },
-          "description": {
-            "type": "string"
-          },
-          "remark": {
-            "type": "string"
-          },
-          "gameSignUp": {
+          "game": {
             "required": [
               "id",
+              "code",
+              "title",
+              "startAt",
+              "worldStartAt",
+              "lvMin",
+              "capacityMin",
+              "capacityMax",
               "status"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "game": {
+              "code": {
                 "type": "string"
               },
-              "character": {
+              "title": {
                 "type": "string"
               },
-              "player": {
+              "startAt": {
+                "type": "string"
+              },
+              "endAt": {
+                "type": "string"
+              },
+              "timeLengthInMin": {
+                "type": "integer"
+              },
+              "worldStartAt": {
+                "type": "string"
+              },
+              "worldEndAt": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "outline": {
+                "type": "object"
+              },
+              "lvMin": {
+                "type": "integer"
+              },
+              "lvMax": {
+                "type": "integer"
+              },
+              "capacityMin": {
+                "type": "integer"
+              },
+              "capacityMax": {
+                "type": "integer"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "remark": {
+                "type": "string"
+              },
+              "dm": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "googleCalendarEventId": {
+                "type": "string"
+              },
+              "googleCalendarEventUrl": {
+                "type": "string"
+              },
+              "trelloCardId": {
                 "type": "string"
               },
               "status": {
                 "type": "string",
                 "enum": [
-                  "pending",
-                  "accepted",
-                  "rejected_full",
-                  "rejected_invalidLevel",
-                  "rejected_invalidCity",
-                  "rejected_notPrioritize"
+                  "new",
+                  "draft",
+                  "published",
+                  "confirmed",
+                  "completed",
+                  "done"
                 ]
               },
-              "remarks": {
+              "publishedAt": {
                 "type": "string"
               },
-              "applier": {
+              "confirmedAt": {
+                "type": "string"
+              },
+              "completedAt": {
                 "type": "string"
               },
               "created_by": {
@@ -878,17 +828,76 @@
               }
             }
           },
-          "rewardRatioMap": {
-            "type": "object"
-          },
-          "rewardItemDetails": {
-            "type": "object"
+          "gameRecord": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "game": {
+                "type": "string"
+              },
+              "player": {
+                "type": "string"
+              },
+              "character": {
+                "type": "string"
+              },
+              "xp": {
+                "type": "integer"
+              },
+              "gp": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "done"
+                ]
+              },
+              "description": {
+                "type": "string"
+              },
+              "remark": {
+                "type": "string"
+              },
+              "gameSignUp": {
+                "type": "string"
+              },
+              "rewardRatioMap": {
+                "type": "object"
+              },
+              "rewardItemDetails": {
+                "type": "object"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewGame-record": {
+      "NewCharacter-record": {
         "properties": {
-          "game": {
+          "subject": {
+            "type": "string"
+          },
+          "worldStartAt": {
+            "type": "string",
+            "format": "date-time",
+            "default": "1262-12-31T16:23:18.000Z"
+          },
+          "worldEndAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "content": {
             "type": "string"
           },
           "player": {
@@ -897,36 +906,11 @@
           "character": {
             "type": "string"
           },
-          "xp": {
-            "type": "integer",
-            "default": 0
-          },
-          "gp": {
-            "type": "number",
-            "default": 0
-          },
-          "status": {
-            "type": "string",
-            "default": "pending",
-            "enum": [
-              "pending",
-              "done"
-            ]
-          },
-          "description": {
+          "game": {
             "type": "string"
           },
-          "remark": {
+          "gameRecord": {
             "type": "string"
-          },
-          "gameSignUp": {
-            "type": "string"
-          },
-          "rewardRatioMap": {
-            "type": "object"
-          },
-          "rewardItemDetails": {
-            "type": "object"
           },
           "created_by": {
             "type": "string"

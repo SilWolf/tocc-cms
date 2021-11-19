@@ -49,6 +49,9 @@
     },
     "rewardRatioMap": {
       "type": "json"
+    },
+    "rewardItemDetails": {
+      "type": "json"
     }
   }
 }

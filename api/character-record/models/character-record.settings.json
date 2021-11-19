@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_records",
+  "info": {
+    "name": "CharacterRecord",
+    "displayName": "BIII. 角色紀錄"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "worldStartAt": {
+      "type": "datetime",
+      "default": "1262-12-31T16:23:18.000Z"
+    },
+    "worldEndAt": {
+      "type": "datetime"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "character": {
+      "model": "character"
+    },
+    "game": {
+      "model": "game"
+    },
+    "gameRecord": {
+      "model": "game-record"
+    }
+  }
+}

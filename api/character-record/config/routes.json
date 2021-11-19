@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/character-logs",
-      "handler": "character-log.find",
+      "path": "/character-records",
+      "handler": "character-record.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/character-logs/count",
-      "handler": "character-log.count",
+      "path": "/character-records/count",
+      "handler": "character-record.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/character-logs/:id",
-      "handler": "character-log.findOne",
+      "path": "/character-records/:id",
+      "handler": "character-record.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/character-logs",
-      "handler": "character-log.create",
+      "path": "/character-records",
+      "handler": "character-record.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/character-logs/:id",
-      "handler": "character-log.update",
+      "path": "/character-records/:id",
+      "handler": "character-record.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/character-logs/:id",
-      "handler": "character-log.delete",
+      "path": "/character-records/:id",
+      "handler": "character-record.delete",
       "config": {
         "policies": []
       }

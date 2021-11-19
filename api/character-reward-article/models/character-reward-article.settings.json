@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_reward_articles",
+  "info": {
+    "name": "CharacterRewardArticle",
+    "displayName": "BIV. 角色紀錄文章 (後記)",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "character": {
+      "model": "character"
+    },
+    "characterRecord": {
+      "model": "character-record"
+    },
+    "game": {
+      "model": "game"
+    },
+    "gameRecord": {
+      "model": "game-record"
+    }
+  }
+}

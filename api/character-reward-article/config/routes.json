@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/character-reward-articles",
+      "handler": "character-reward-article.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-reward-articles/count",
+      "handler": "character-reward-article.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/character-reward-articles/:id",
+      "handler": "character-reward-article.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/character-reward-articles",
+      "handler": "character-reward-article.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/character-reward-articles/:id",
+      "handler": "character-reward-article.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/character-reward-articles/:id",
+      "handler": "character-reward-article.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

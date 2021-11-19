@@ -309,7 +309,11 @@ module.exports = {
     const game = await strapi.services.game.findOne({ id });
 
     if (game && game.trelloCardId) {
-      return trelloBot.getCheckListsByCardId(game.trelloCardId);
+      try {
+        return trelloBot.getCheckListsByCardId(game.trelloCardId);
+      } catch (e) {
+        return [];
+      }
     }
 
     return [];
