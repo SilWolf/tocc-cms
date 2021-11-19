@@ -632,6 +632,9 @@
               "completedAt": {
                 "type": "string"
               },
+              "characterRewardMap": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },

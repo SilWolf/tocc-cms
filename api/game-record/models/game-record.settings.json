@@ -50,7 +50,10 @@
     "rewardRatioMap": {
       "type": "json"
     },
-    "rewardItemDetails": {
+    "outline": {
+      "type": "json"
+    },
+    "otherRewardMap": {
       "type": "json"
     }
   }

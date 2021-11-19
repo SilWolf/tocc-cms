@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/19/2021 12:16:38 PM"
+    "x-generation-date": "11/19/2021 4:29:23 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9281,7 +9281,7 @@
         ]
       }
     },
-    "/games/{id}/complete": {
+    "/games/{id}/completed": {
       "patch": {
         "deprecated": false,
         "description": "",
@@ -17410,6 +17410,9 @@
               "completedAt": {
                 "type": "string"
               },
+              "characterRewardMap": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17418,58 +17421,8 @@
               }
             }
           },
-          "gameRecord": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "game": {
-                "type": "string"
-              },
-              "player": {
-                "type": "string"
-              },
-              "character": {
-                "type": "string"
-              },
-              "xp": {
-                "type": "integer"
-              },
-              "gp": {
-                "type": "number"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "pending",
-                  "done"
-                ]
-              },
-              "description": {
-                "type": "string"
-              },
-              "remark": {
-                "type": "string"
-              },
-              "gameSignUp": {
-                "type": "string"
-              },
-              "rewardRatioMap": {
-                "type": "object"
-              },
-              "rewardItemDetails": {
-                "type": "object"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "reward": {
+            "type": "object"
           }
         }
       },
@@ -17499,8 +17452,8 @@
           "game": {
             "type": "string"
           },
-          "gameRecord": {
-            "type": "string"
+          "reward": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"
@@ -17727,8 +17680,8 @@
               "game": {
                 "type": "string"
               },
-              "gameRecord": {
-                "type": "string"
+              "reward": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -17834,6 +17787,9 @@
               "completedAt": {
                 "type": "string"
               },
+              "characterRewardMap": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17884,7 +17840,10 @@
               "rewardRatioMap": {
                 "type": "object"
               },
-              "rewardItemDetails": {
+              "outline": {
+                "type": "object"
+              },
+              "otherRewardMap": {
                 "type": "object"
               },
               "created_by": {
@@ -19037,6 +18996,9 @@
               "completedAt": {
                 "type": "string"
               },
+              "characterRewardMap": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -19169,6 +19131,9 @@
               },
               "completedAt": {
                 "type": "string"
+              },
+              "characterRewardMap": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -19420,7 +19385,10 @@
           "rewardRatioMap": {
             "type": "object"
           },
-          "rewardItemDetails": {
+          "outline": {
+            "type": "object"
+          },
+          "otherRewardMap": {
             "type": "object"
           }
         }
@@ -19464,7 +19432,10 @@
           "rewardRatioMap": {
             "type": "object"
           },
-          "rewardItemDetails": {
+          "outline": {
+            "type": "object"
+          },
+          "otherRewardMap": {
             "type": "object"
           },
           "created_by": {
@@ -19579,6 +19550,9 @@
               },
               "completedAt": {
                 "type": "string"
+              },
+              "characterRewardMap": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -20126,6 +20100,9 @@
           "completedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "characterRewardMap": {
+            "type": "object"
           }
         }
       },
@@ -20231,6 +20208,9 @@
           "completedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "characterRewardMap": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

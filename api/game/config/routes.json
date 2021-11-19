@@ -90,7 +90,7 @@
     },
     {
       "method": "PATCH",
-      "path": "/games/:id/complete",
+      "path": "/games/:id/completed",
       "handler": "game.patchToCompleted",
       "config": {
         "policies": []

@@ -631,6 +631,9 @@
               "completedAt": {
                 "type": "string"
               },
+              "characterRewardMap": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -881,7 +884,10 @@
           "rewardRatioMap": {
             "type": "object"
           },
-          "rewardItemDetails": {
+          "outline": {
+            "type": "object"
+          },
+          "otherRewardMap": {
             "type": "object"
           }
         }
@@ -925,7 +931,10 @@
           "rewardRatioMap": {
             "type": "object"
           },
-          "rewardItemDetails": {
+          "outline": {
+            "type": "object"
+          },
+          "otherRewardMap": {
             "type": "object"
           },
           "created_by": {

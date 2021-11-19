@@ -3,7 +3,8 @@
   "collectionName": "character_records",
   "info": {
     "name": "CharacterRecord",
-    "displayName": "BIII. 角色紀錄"
+    "displayName": "BIII. 角色紀錄",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -34,8 +35,8 @@
     "game": {
       "model": "game"
     },
-    "gameRecord": {
-      "model": "game-record"
+    "reward": {
+      "type": "json"
     }
   }
 }

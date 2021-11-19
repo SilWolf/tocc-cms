@@ -109,6 +109,9 @@
     },
     "completedAt": {
       "type": "datetime"
+    },
+    "characterRewardMap": {
+      "type": "json"
     }
   }
 }

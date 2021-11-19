@@ -851,7 +851,7 @@
         ]
       }
     },
-    "/games/{id}/complete": {
+    "/games/{id}/completed": {
       "patch": {
         "deprecated": false,
         "description": "",
@@ -1293,6 +1293,9 @@
           "completedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "characterRewardMap": {
+            "type": "object"
           }
         }
       },
@@ -1398,6 +1401,9 @@
           "completedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "characterRewardMap": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

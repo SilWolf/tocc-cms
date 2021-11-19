@@ -144,35 +144,86 @@ module.exports = {
   async patchToCompleted(ctx) {
     const { id } = ctx.params;
 
-    const entity = await strapi.services.game.findOne({ id });
-    if (entity.status !== "published") {
+    const game = await strapi
+      .query("game")
+      .model.findOne({ _id: ObjectId(id) });
+
+    console.log(game);
+
+    if (!game) {
+      return ctx.notFound();
+    }
+    if (game.status !== "confirmed") {
       return ctx.badRequest();
     }
 
-    (entity.characterAndRewards || []).forEach((cr) => {
-      strapi.services["character-log"].create({
-        character: cr.character,
-        description: `${entity.code} - ${entity.title} 獎勵`,
-        xp: cr.xp,
-        gp: cr.gp,
-        items: cr.items,
-        remark: cr.remark,
-        worldStartAt: entity.worldStartAt,
-        worldEndAt: entity.worldEndAt,
-        game: entity.id,
-      });
-    });
+    const gameRecords = await strapi
+      .query("game-record")
+      .model.find({ game: Object(game._id) });
 
-    const updatedEntity = await strapi.services.game.update(
-      { id },
-      {
-        ...entity,
-        status: "completed",
-        completedAt: new Date().toISOString(),
+    const characterRecordMap = gameRecords.reduce((prev, gameRecord) => {
+      prev[gameRecord.character] = {
+        subject: `[${game.code}] ${game.title}獎勵`,
+        content: "",
+        worldStartAt: game.worldStartAt,
+        worldEndAt: game.worldEndAt,
+        player: gameRecord.player,
+        character: gameRecord.character,
+        game: game._id,
+        reward: {},
+      };
+
+      return prev;
+    }, {});
+
+    for (const outlineItem of game.outline) {
+      for (const reward of outlineItem.rewards) {
+        const characterHasThisRewardCount = gameRecords.reduce((prev, curr) => {
+          prev +=
+            curr.rewardRatioMap[reward.id] !== undefined
+              ? Math.abs(curr[reward.id])
+              : 0;
+          return prev;
+        }, 0);
+
+        if (characterHasThisRewardCount === 0) {
+          continue;
+        }
+
+        const denominator = reward.isPerPlayer
+          ? 1
+          : characterHasThisRewardCount;
+        const unit = reward.type === "others" ? reward.othersName : reward.type;
+
+        gameRecords.forEach((gameRecord) => {
+          if (gameRecord.rewardRatioMap[reward.id] !== undefined) {
+            if (!characterRecordMap[gameRecord.character].reward[unit]) {
+              characterRecordMap[gameRecord.character].reward[unit] = {
+                amount: 0,
+                unit: unit,
+                details: [],
+              };
+            }
+
+            const amount =
+              (reward.amount / denominator) *
+              gameRecord.rewardRatioMap[reward.id];
+
+            characterRecordMap[gameRecord.character].reward[unit].amount +=
+              amount;
+            characterRecordMap[gameRecord.character].reward[unit].details.push({
+              rewardId: reward.id,
+              amount: amount,
+              unit: unit,
+            });
+          }
+        });
       }
-    );
+    }
 
-    return sanitizeEntity(updatedEntity, { model: strapi.models.game });
+    console.log(characterRecordMap);
+
+    return {};
   },
 
   async broadcast(ctx) {

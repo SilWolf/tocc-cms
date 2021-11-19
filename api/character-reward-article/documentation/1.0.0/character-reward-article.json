@@ -744,8 +744,8 @@
               "game": {
                 "type": "string"
               },
-              "gameRecord": {
-                "type": "string"
+              "reward": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -851,6 +851,9 @@
               "completedAt": {
                 "type": "string"
               },
+              "characterRewardMap": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -901,7 +904,10 @@
               "rewardRatioMap": {
                 "type": "object"
               },
-              "rewardItemDetails": {
+              "outline": {
+                "type": "object"
+              },
+              "otherRewardMap": {
                 "type": "object"
               },
               "created_by": {
