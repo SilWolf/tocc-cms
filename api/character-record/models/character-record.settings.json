@@ -37,6 +37,14 @@
     },
     "reward": {
       "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted"
+      ],
+      "default": "pending"
     }
   }
 }

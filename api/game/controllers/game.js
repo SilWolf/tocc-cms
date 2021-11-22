@@ -157,18 +157,18 @@ module.exports = {
       return ctx.badRequest();
     }
 
-    const gameRecords = await strapi
-      .query("game-record")
-      .model.find({ game: Object(game._id) });
+    const gameSignUps = await strapi
+      .query("game-sign-up")
+      .model.find({ game: Object(game._id), status: "accepted" });
 
-    const characterRecordMap = gameRecords.reduce((prev, gameRecord) => {
-      prev[gameRecord.character] = {
+    const characterRecordMap = gameSignUps.reduce((prev, gameSignUp) => {
+      prev[gameSignUp.character] = {
         subject: `[${game.code}] ${game.title}獎勵`,
         content: "",
         worldStartAt: game.worldStartAt,
         worldEndAt: game.worldEndAt,
-        player: gameRecord.player,
-        character: gameRecord.character,
+        player: gameSignUp.player,
+        character: gameSignUp.character,
         game: game._id,
         reward: {},
       };
@@ -176,52 +176,70 @@ module.exports = {
       return prev;
     }, {});
 
-    for (const outlineItem of game.outline) {
-      for (const reward of outlineItem.rewards) {
-        const characterHasThisRewardCount = gameRecords.reduce((prev, curr) => {
-          prev +=
-            curr.rewardRatioMap[reward.id] !== undefined
-              ? Math.abs(curr[reward.id])
-              : 0;
-          return prev;
-        }, 0);
+    const applyRewardToCharacter = (
+      characterId,
+      amount,
+      unit,
+      description,
+      metadata
+    ) => {
+      if (!characterRecordMap[characterId]) {
+        return;
+      }
 
-        if (characterHasThisRewardCount === 0) {
+      if (!characterRecordMap[characterId].reward[unit]) {
+        characterRecordMap[characterId].reward[unit] = {
+          amount: 0,
+          details: [],
+        };
+      }
+
+      characterRecordMap[characterId].reward[unit].amount += amount;
+      characterRecordMap[characterId].reward[unit].details.push({
+        description,
+        amount,
+        metadata,
+      });
+    };
+
+    const outline = game.outline;
+    const outlineRewardCharacterMap = game.outlineRewardCharacterMap;
+
+    for (const outlineItem of outline) {
+      for (const rewardConfig of outlineItem.rewards) {
+        const reward = {
+          ...rewardConfig,
+          ...(outlineRewardCharacterMap[rewardConfig.id] || {}),
+        };
+
+        if (!reward.characterMap) {
+          continue;
+        }
+        if (reward.denominator === 0) {
           continue;
         }
 
-        const denominator = reward.isPerPlayer
-          ? 1
-          : characterHasThisRewardCount;
-        const unit = reward.type === "others" ? reward.othersName : reward.type;
-
-        gameRecords.forEach((gameRecord) => {
-          if (gameRecord.rewardRatioMap[reward.id] !== undefined) {
-            if (!characterRecordMap[gameRecord.character].reward[unit]) {
-              characterRecordMap[gameRecord.character].reward[unit] = {
-                amount: 0,
-                unit: unit,
-                details: [],
-              };
-            }
-
-            const amount =
-              (reward.amount / denominator) *
-              gameRecord.rewardRatioMap[reward.id];
-
-            characterRecordMap[gameRecord.character].reward[unit].amount +=
-              amount;
-            characterRecordMap[gameRecord.character].reward[unit].details.push({
+        for (const characterId in reward.characterMap) {
+          applyRewardToCharacter(
+            characterId,
+            (reward.amount / reward.denominator) *
+              reward.characterMap[characterId].ratio,
+            reward.unit,
+            outlineItem.description,
+            {
+              outlineItemId: outlineItem.id,
               rewardId: reward.id,
-              amount: amount,
-              unit: unit,
-            });
-          }
-        });
+            }
+          );
+        }
       }
     }
 
-    console.log(characterRecordMap);
+    for (const characterRecord of Object.values(characterRecordMap)) {
+      await strapi.services["character-record"].create(characterRecord);
+    }
+
+    await strapi.services["game"].update({ id: game._id }, { status: "done" });
 
     return {};
   },

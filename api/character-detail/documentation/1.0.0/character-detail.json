@@ -623,6 +623,9 @@
               "coverImage": {
                 "type": "string"
               },
+              "attribute": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },

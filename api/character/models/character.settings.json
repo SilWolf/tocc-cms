@@ -111,6 +111,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "attribute": {
+      "type": "json"
     }
   }
 }

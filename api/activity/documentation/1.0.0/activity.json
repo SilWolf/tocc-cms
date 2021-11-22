@@ -640,6 +640,9 @@
                     "coverImage": {
                       "type": "string"
                     },
+                    "attribute": {
+                      "type": "object"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -771,6 +774,9 @@
                 },
                 "coverImage": {
                   "type": "string"
+                },
+                "attribute": {
+                  "type": "object"
                 },
                 "created_by": {
                   "type": "string"
@@ -908,6 +914,9 @@
                     },
                     "coverImage": {
                       "type": "string"
+                    },
+                    "attribute": {
+                      "type": "object"
                     },
                     "created_by": {
                       "type": "string"

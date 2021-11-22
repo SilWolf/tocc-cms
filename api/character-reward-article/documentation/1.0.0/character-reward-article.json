@@ -707,6 +707,9 @@
               "coverImage": {
                 "type": "string"
               },
+              "attribute": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -746,6 +749,13 @@
               },
               "reward": {
                 "type": "object"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "accepted"
+                ]
               },
               "created_by": {
                 "type": "string"

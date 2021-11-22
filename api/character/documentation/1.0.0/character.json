@@ -1349,6 +1349,9 @@
                 "type": "string"
               }
             }
+          },
+          "attribute": {
+            "type": "object"
           }
         }
       },
@@ -1432,6 +1435,9 @@
           },
           "bioOrganization": {
             "type": "string"
+          },
+          "attribute": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

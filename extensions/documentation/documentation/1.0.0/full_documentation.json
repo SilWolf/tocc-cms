@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/19/2021 6:04:45 PM"
+    "x-generation-date": "11/22/2021 4:30:02 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -15358,6 +15358,9 @@
                     "coverImage": {
                       "type": "string"
                     },
+                    "attribute": {
+                      "type": "object"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -15489,6 +15492,9 @@
                 },
                 "coverImage": {
                   "type": "string"
+                },
+                "attribute": {
+                  "type": "object"
                 },
                 "created_by": {
                   "type": "string"
@@ -15626,6 +15632,9 @@
                     },
                     "coverImage": {
                       "type": "string"
+                    },
+                    "attribute": {
+                      "type": "object"
                     },
                     "created_by": {
                       "type": "string"
@@ -16077,6 +16086,9 @@
               },
               "coverImage": {
                 "type": "string"
+              },
+              "attribute": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -16782,6 +16794,9 @@
               "coverImage": {
                 "type": "string"
               },
+              "attribute": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -16899,6 +16914,14 @@
           },
           "reward": {
             "type": "object"
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "pending",
+              "accepted"
+            ]
           }
         }
       },
@@ -16930,6 +16953,14 @@
           },
           "reward": {
             "type": "object"
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "pending",
+              "accepted"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -17119,6 +17150,9 @@
               "coverImage": {
                 "type": "string"
               },
+              "attribute": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17158,6 +17192,13 @@
               },
               "reward": {
                 "type": "object"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "accepted"
+                ]
               },
               "created_by": {
                 "type": "string"
@@ -17796,6 +17837,9 @@
                 "type": "string"
               }
             }
+          },
+          "attribute": {
+            "type": "object"
           }
         }
       },
@@ -17879,6 +17923,9 @@
           },
           "bioOrganization": {
             "type": "string"
+          },
+          "attribute": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"
@@ -18648,6 +18695,9 @@
               },
               "coverImage": {
                 "type": "string"
+              },
+              "attribute": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
