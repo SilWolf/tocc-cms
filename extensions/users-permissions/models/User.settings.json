@@ -11,35 +11,11 @@
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "displayName": {
-      "type": "string"
-    },
-    "portraitImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "code": {
-      "type": "string",
-      "required": true
-    },
     "email": {
       "type": "email",
       "minLength": 6,
       "configurable": false,
       "required": true
-    },
-    "phone": {
-      "type": "string"
     },
     "username": {
       "type": "string",
@@ -84,6 +60,30 @@
       "plugin": "users-permissions",
       "configurable": false,
       "private": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "portraitImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "code": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string"
     },
     "city": {
       "model": "city"

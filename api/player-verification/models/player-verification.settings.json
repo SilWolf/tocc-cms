@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "player_verifications",
+  "info": {
+    "name": "playerVerification",
+    "displayName": "YI. 玩家驗證",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "verificationCode": {
+      "type": "string"
+    },
+    "playerCode": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "characters": {
+      "collection": "character"
+    },
+    "city": {
+      "model": "city"
+    },
+    "isRegistered": {
+      "type": "boolean",
+      "default": false
+    },
+    "registeredAt": {
+      "type": "datetime"
+    }
+  }
+}

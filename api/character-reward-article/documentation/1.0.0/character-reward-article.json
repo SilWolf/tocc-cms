@@ -544,8 +544,6 @@
           "player": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -554,22 +552,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -594,6 +577,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {

@@ -1187,23 +1187,21 @@
       "UsersPermissionsUser": {
         "required": [
           "id",
-          "username",
           "email",
-          "code",
-          "name",
+          "username",
           "isPlayer"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "username": {
-            "type": "string",
-            "minLength": 3
-          },
           "email": {
             "type": "string",
             "minLength": 6
+          },
+          "username": {
+            "type": "string",
+            "minLength": 3
           },
           "provider": {
             "type": "string"
@@ -1254,7 +1252,10 @@
               }
             }
           },
-          "phone": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
             "type": "string"
           },
           "portraitImage": {
@@ -1327,7 +1328,7 @@
           "code": {
             "type": "string"
           },
-          "name": {
+          "phone": {
             "type": "string"
           },
           "city": {
@@ -1393,28 +1394,23 @@
           },
           "telegramValidationCode": {
             "type": "string"
-          },
-          "displayName": {
-            "type": "string"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
-          "username",
           "email",
-          "code",
-          "name",
+          "username",
           "isPlayer"
         ],
         "properties": {
-          "username": {
-            "type": "string",
-            "minLength": 3
-          },
           "email": {
             "type": "string",
             "minLength": 6
+          },
+          "username": {
+            "type": "string",
+            "minLength": 3
           },
           "provider": {
             "type": "string"
@@ -1441,13 +1437,16 @@
           "role": {
             "type": "string"
           },
-          "phone": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
             "type": "string"
           },
           "code": {
             "type": "string"
           },
-          "name": {
+          "phone": {
             "type": "string"
           },
           "city": {
@@ -1464,9 +1463,6 @@
             "type": "string"
           },
           "telegramValidationCode": {
-            "type": "string"
-          },
-          "displayName": {
             "type": "string"
           },
           "created_by": {

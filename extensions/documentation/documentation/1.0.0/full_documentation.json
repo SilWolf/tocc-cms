@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/22/2021 4:30:02 PM"
+    "x-generation-date": "11/24/2021 4:59:48 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3746,6 +3746,74 @@
                 "schema": {
                   "type": "integer",
                   "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-record"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/character-records/{id}/accept": {
+      "patch": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -10570,6 +10638,601 @@
         ]
       }
     },
+    "/player-verifications": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlayer-verification"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/player-verifications/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "parameters": []
+      }
+    },
+    "/player-verifications/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlayer-verification"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/player-verifications/{id}/register": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Player-verification"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/promotions": {
       "get": {
         "deprecated": false,
@@ -16631,8 +17294,6 @@
           "player": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -16641,22 +17302,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -16681,6 +17327,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
@@ -16987,8 +17648,6 @@
           "player": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -16997,22 +17656,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -17037,6 +17681,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
@@ -17449,8 +18108,6 @@
           "player": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -17459,22 +18116,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -17499,6 +18141,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
@@ -18710,8 +19367,6 @@
           "player": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -18720,22 +19375,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -18760,6 +19400,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
@@ -18803,8 +19458,6 @@
           "applier": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -18813,22 +19466,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -18853,6 +19491,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
@@ -18991,8 +19644,6 @@
           "dm": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -19001,22 +19652,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -19041,6 +19677,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
@@ -19440,6 +20091,228 @@
             "type": "string"
           },
           "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Player-verification": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "verificationCode": {
+            "type": "string"
+          },
+          "playerCode": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "portraitImage": {
+                  "type": "string"
+                },
+                "motto": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "integer"
+                },
+                "xp": {
+                  "type": "integer"
+                },
+                "gp": {
+                  "type": "integer"
+                },
+                "player": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "ruleset": {
+                  "type": "string"
+                },
+                "race": {
+                  "type": "string"
+                },
+                "clses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "background": {
+                  "type": "string"
+                },
+                "features": {
+                  "type": "object"
+                },
+                "nickname": {
+                  "type": "string"
+                },
+                "levelWithClsesString": {
+                  "type": "string"
+                },
+                "deity": {
+                  "type": "string"
+                },
+                "bioAppearance": {
+                  "type": "string"
+                },
+                "bioStory": {
+                  "type": "string"
+                },
+                "bioSpeech": {
+                  "type": "string"
+                },
+                "bioTitle": {
+                  "type": "string"
+                },
+                "bioRole": {
+                  "type": "string"
+                },
+                "bioOrganization": {
+                  "type": "string"
+                },
+                "coverImage": {
+                  "type": "string"
+                },
+                "attribute": {
+                  "type": "object"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "city": {
+            "required": [
+              "id",
+              "name",
+              "code",
+              "shopName",
+              "prosperity",
+              "prosperityMax"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "shopName": {
+                "type": "string"
+              },
+              "shopAddress": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "shopImage": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "prosperity": {
+                "type": "integer"
+              },
+              "prosperityMax": {
+                "type": "integer"
+              },
+              "telegramChatId": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "isRegistered": {
+            "type": "boolean",
+            "default": false
+          },
+          "registeredAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewPlayer-verification": {
+        "properties": {
+          "verificationCode": {
+            "type": "string"
+          },
+          "playerCode": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "city": {
+            "type": "string"
+          },
+          "isRegistered": {
+            "type": "boolean",
+            "default": false
+          },
+          "registeredAt": {
             "type": "string",
             "format": "date-time"
           },
@@ -19890,20 +20763,18 @@
             "items": {
               "required": [
                 "id",
-                "username",
                 "email",
-                "code",
-                "name",
+                "username",
                 "isPlayer"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "username": {
+                "email": {
                   "type": "string"
                 },
-                "email": {
+                "username": {
                   "type": "string"
                 },
                 "provider": {
@@ -19927,7 +20798,10 @@
                 "role": {
                   "type": "string"
                 },
-                "phone": {
+                "name": {
+                  "type": "string"
+                },
+                "displayName": {
                   "type": "string"
                 },
                 "portraitImage": {
@@ -19936,7 +20810,7 @@
                 "code": {
                   "type": "string"
                 },
-                "name": {
+                "phone": {
                   "type": "string"
                 },
                 "city": {
@@ -19952,9 +20826,6 @@
                   "type": "string"
                 },
                 "telegramValidationCode": {
-                  "type": "string"
-                },
-                "displayName": {
                   "type": "string"
                 },
                 "created_by": {
@@ -20006,23 +20877,21 @@
       "UsersPermissionsUser": {
         "required": [
           "id",
-          "username",
           "email",
-          "code",
-          "name",
+          "username",
           "isPlayer"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "username": {
-            "type": "string",
-            "minLength": 3
-          },
           "email": {
             "type": "string",
             "minLength": 6
+          },
+          "username": {
+            "type": "string",
+            "minLength": 3
           },
           "provider": {
             "type": "string"
@@ -20073,7 +20942,10 @@
               }
             }
           },
-          "phone": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
             "type": "string"
           },
           "portraitImage": {
@@ -20146,7 +21018,7 @@
           "code": {
             "type": "string"
           },
-          "name": {
+          "phone": {
             "type": "string"
           },
           "city": {
@@ -20212,28 +21084,23 @@
           },
           "telegramValidationCode": {
             "type": "string"
-          },
-          "displayName": {
-            "type": "string"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
-          "username",
           "email",
-          "code",
-          "name",
+          "username",
           "isPlayer"
         ],
         "properties": {
-          "username": {
-            "type": "string",
-            "minLength": 3
-          },
           "email": {
             "type": "string",
             "minLength": 6
+          },
+          "username": {
+            "type": "string",
+            "minLength": 3
           },
           "provider": {
             "type": "string"
@@ -20260,13 +21127,16 @@
           "role": {
             "type": "string"
           },
-          "phone": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
             "type": "string"
           },
           "code": {
             "type": "string"
           },
-          "name": {
+          "phone": {
             "type": "string"
           },
           "city": {
@@ -20283,9 +21153,6 @@
             "type": "string"
           },
           "telegramValidationCode": {
-            "type": "string"
-          },
-          "displayName": {
             "type": "string"
           },
           "created_by": {

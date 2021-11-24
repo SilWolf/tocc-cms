@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "PATCH",
+      "path": "/character-records/:id/accept",
+      "handler": "character-record.patchToAccepted",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

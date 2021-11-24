@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/player-verifications",
+      "handler": "player-verification.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/player-verifications/count",
+      "handler": "player-verification.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/player-verifications/:id",
+      "handler": "player-verification.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/player-verifications",
+      "handler": "player-verification.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/player-verifications/:id",
+      "handler": "player-verification.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/player-verifications/:id/register",
+      "handler": "player-verification.register",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/player-verifications/:id",
+      "handler": "player-verification.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

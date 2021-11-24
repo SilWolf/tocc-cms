@@ -523,6 +523,74 @@
           }
         ]
       }
+    },
+    "/character-records/{id}/accept": {
+      "patch": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Character-record"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -553,8 +621,6 @@
           "player": {
             "required": [
               "id",
-              "name",
-              "code",
               "email",
               "username",
               "isPlayer"
@@ -563,22 +629,7 @@
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "portraitImage": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
               "email": {
-                "type": "string"
-              },
-              "phone": {
                 "type": "string"
               },
               "username": {
@@ -603,6 +654,21 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "portraitImage": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "phone": {
                 "type": "string"
               },
               "city": {
