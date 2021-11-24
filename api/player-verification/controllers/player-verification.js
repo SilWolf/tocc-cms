@@ -29,7 +29,7 @@ module.exports = {
     }
 
     const { id } = ctx.params;
-    const { name, nickname, email } = ctx.request.body;
+    const { name, displayName, email } = ctx.request.body;
 
     const pv = await strapi.services["player-verification"].findOne({
       verificationCode: id,
@@ -55,7 +55,7 @@ module.exports = {
     const patchPayload = {
       code: pv.playerCode,
       name,
-      nickname,
+      displayName,
       email,
       city: pv.city.id,
       role: playerRole.id,

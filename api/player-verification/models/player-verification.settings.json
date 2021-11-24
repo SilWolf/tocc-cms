@@ -21,7 +21,7 @@
     "name": {
       "type": "string"
     },
-    "nickname": {
+    "displayName": {
       "type": "string"
     },
     "characters": {

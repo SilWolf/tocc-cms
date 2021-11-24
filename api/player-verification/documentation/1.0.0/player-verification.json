@@ -615,7 +615,7 @@
           "name": {
             "type": "string"
           },
-          "nickname": {
+          "displayName": {
             "type": "string"
           },
           "characters": {
@@ -792,7 +792,7 @@
           "name": {
             "type": "string"
           },
-          "nickname": {
+          "displayName": {
             "type": "string"
           },
           "characters": {
