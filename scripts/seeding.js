@@ -109,6 +109,7 @@ const axios = require("axios").default;
         code: "parentRace:human",
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 1000,
       },
       {
         name: "精靈",
@@ -116,6 +117,7 @@ const axios = require("axios").default;
         code: "parentRace:elf",
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 2000,
       },
       {
         name: "矮人",
@@ -123,6 +125,7 @@ const axios = require("axios").default;
         code: "parentRace:dwarf",
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 3000,
       },
       {
         name: "龍裔",
@@ -130,6 +133,7 @@ const axios = require("axios").default;
         code: "parentRace:dragonborn",
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4000,
       },
       {
         name: "半身人",
@@ -137,6 +141,7 @@ const axios = require("axios").default;
         code: "parentRace:halfling",
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 5000,
       },
       {
         name: "侏儒",
@@ -144,6 +149,7 @@ const axios = require("axios").default;
         code: "parentRace:gnome",
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 6000,
       },
     ]
       .map((payload) => ({
@@ -164,6 +170,7 @@ const axios = require("axios").default;
         parentRace: parentHuman.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 1010,
       },
       {
         name: "變種人類",
@@ -172,6 +179,7 @@ const axios = require("axios").default;
         parentRace: parentHuman.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 1020,
       },
       {
         name: "木精靈",
@@ -180,14 +188,7 @@ const axios = require("axios").default;
         parentRace: parentElf.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
-      },
-      {
-        name: "卓爾精靈",
-        nameEn: "Drow",
-        code: "race:drow",
-        parentRace: parentElf.id,
-        ruleset: DND5E.id,
-        rulebook: PHB.id,
+        order: 2010,
       },
       {
         name: "高等精靈",
@@ -196,6 +197,16 @@ const axios = require("axios").default;
         parentRace: parentElf.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 2020,
+      },
+      {
+        name: "卓爾精靈",
+        nameEn: "Drow",
+        code: "race:drow",
+        parentRace: parentElf.id,
+        ruleset: DND5E.id,
+        rulebook: PHB.id,
+        order: 2030,
       },
       {
         name: "山地矮人",
@@ -204,6 +215,7 @@ const axios = require("axios").default;
         parentRace: parentDwarf.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 3010,
       },
       {
         name: "丘陵矮人",
@@ -212,16 +224,23 @@ const axios = require("axios").default;
         parentRace: parentDwarf.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 3020,
       },
       {
         name: "半精靈",
         nameEn: "Half-elf",
         code: "race:half-elf",
+        ruleset: DND5E.id,
+        rulebook: PHB.id,
+        order: 80010,
       },
       {
         name: "半獸人",
         nameEn: "Half-orc",
         code: "race:half-orc",
+        ruleset: DND5E.id,
+        rulebook: PHB.id,
+        order: 80020,
       },
       {
         name: "黑龍裔",
@@ -230,6 +249,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4010,
       },
       {
         name: "藍龍裔",
@@ -238,6 +258,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4020,
       },
       {
         name: "黃銅龍裔",
@@ -246,6 +267,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4030,
       },
       {
         name: "青銅龍裔",
@@ -254,6 +276,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4040,
       },
       {
         name: "赤銅龍裔",
@@ -262,6 +285,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4040,
       },
       {
         name: "金龍裔",
@@ -270,6 +294,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4060,
       },
       {
         name: "綠龍裔",
@@ -278,6 +303,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4070,
       },
       {
         name: "紅龍裔",
@@ -286,6 +312,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4080,
       },
       {
         name: "銀龍裔",
@@ -294,6 +321,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 4090,
       },
       {
         name: "白龍裔",
@@ -302,6 +330,7 @@ const axios = require("axios").default;
         parentRace: parentDragonborn.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 5100,
       },
       {
         name: "輕足半身人",
@@ -310,6 +339,7 @@ const axios = require("axios").default;
         parentRace: parentHalfling.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 5010,
       },
       {
         name: "強魄半身人",
@@ -318,12 +348,15 @@ const axios = require("axios").default;
         parentRace: parentHalfling.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 5020,
       },
       {
         name: "提夫林",
         nameEn: "Tiefling",
         code: "race:tiefling",
-        mainRaceCode: "mainRace:tiefling",
+        ruleset: DND5E.id,
+        rulebook: PHB.id,
+        order: 80030,
       },
       {
         name: "岩侏儒",
@@ -332,6 +365,7 @@ const axios = require("axios").default;
         parentRace: parentGnome.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 6010,
       },
       {
         name: "林侏儒",
@@ -340,26 +374,39 @@ const axios = require("axios").default;
         parentRace: parentGnome.id,
         ruleset: DND5E.id,
         rulebook: PHB.id,
+        order: 6020,
       },
       {
         name: "斑貓人",
         nameEn: "Tabaxi",
         code: "race:tabaxi",
+        ruleset: DND5E.id,
+        rulebook: XGE.id,
+        order: 99010,
       },
       {
         name: "蜥蜴人",
         nameEn: "Lizardfolk",
         code: "race:lizardfolk",
+        ruleset: DND5E.id,
+        rulebook: XGE.id,
+        order: 99020,
       },
       {
         name: "天狗",
         nameEn: "Kenku",
         code: "race:kenku",
+        ruleset: DND5E.id,
+        rulebook: XGE.id,
+        order: 99030,
       },
       {
         name: "狗頭人",
         nameEn: "Kobold",
         code: "race:kobold",
+        ruleset: DND5E.id,
+        rulebook: XGE.id,
+        order: 99040,
       },
     ].map((payload) =>
       createIfNotExist("races", payload, { code: payload.code })
@@ -766,7 +813,7 @@ const axios = require("axios").default;
     )
   );
 
-  const [city] = Promise.all(
+  Promise.all(
     [
       {
         name: "黃金城",

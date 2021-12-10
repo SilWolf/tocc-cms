@@ -586,7 +586,8 @@
         "required": [
           "id",
           "name",
-          "code"
+          "code",
+          "order"
         ],
         "properties": {
           "id": {
@@ -609,7 +610,8 @@
             "required": [
               "id",
               "name",
-              "code"
+              "code",
+              "order"
             ],
             "properties": {
               "id": {
@@ -638,6 +640,12 @@
               },
               "isParentRace": {
                 "type": "boolean"
+              },
+              "introduction": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -706,13 +714,21 @@
           "isParentRace": {
             "type": "boolean",
             "default": false
+          },
+          "introduction": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewRace": {
         "required": [
           "name",
-          "code"
+          "code",
+          "order"
         ],
         "properties": {
           "name": {
@@ -740,6 +756,13 @@
           "isParentRace": {
             "type": "boolean",
             "default": false
+          },
+          "introduction": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer",
+            "default": 0
           },
           "created_by": {
             "type": "string"

@@ -595,7 +595,8 @@
             "required": [
               "id",
               "name",
-              "code"
+              "code",
+              "order"
             ],
             "properties": {
               "id": {
@@ -624,6 +625,12 @@
               },
               "isParentRace": {
                 "type": "boolean"
+              },
+              "introduction": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"

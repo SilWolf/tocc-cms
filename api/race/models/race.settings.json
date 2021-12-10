@@ -41,6 +41,14 @@
     "isParentRace": {
       "type": "boolean",
       "default": false
+    },
+    "introduction": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "required": true
     }
   }
 }
