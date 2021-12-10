@@ -119,7 +119,7 @@ module.exports = {
       );
 
       if (updatedGameSignUp.status === "accepted") {
-        await strapi.services["game-record"].create({
+        await strapi.services["character-record"].create({
           game: id,
           player: updatedGameSignUp.player.id,
           character: updatedGameSignUp.character.id,
