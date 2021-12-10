@@ -120,3 +120,4 @@ build
 .docker-compose-dev
 .strapi-updater.json
 .mongodb-backup
+extensions/documentation/documentation/1.0.0/full_documentation.json
