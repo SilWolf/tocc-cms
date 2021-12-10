@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/09/2021 5:01:20 PM"
+    "x-generation-date": "12/03/2021 5:39:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -95,9 +95,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Activity"
-        ],
+        "tags": ["Activity"],
         "parameters": [
           {
             "name": "_limit",
@@ -283,9 +281,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Activity"
-        ],
+        "tags": ["Activity"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -350,9 +346,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Activity"
-        ],
+        "tags": ["Activity"],
         "parameters": []
       }
     },
@@ -403,9 +397,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Activity"
-        ],
+        "tags": ["Activity"],
         "parameters": [
           {
             "name": "id",
@@ -465,9 +457,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Activity"
-        ],
+        "tags": ["Activity"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -539,9 +529,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Activity"
-        ],
+        "tags": ["Activity"],
         "parameters": [
           {
             "name": "id",
@@ -606,9 +594,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "parameters": [
           {
             "name": "_limit",
@@ -794,9 +780,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -861,9 +845,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "parameters": []
       }
     },
@@ -918,9 +900,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "parameters": []
       }
     },
@@ -971,9 +951,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "parameters": [
           {
             "name": "id",
@@ -1033,9 +1011,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1107,9 +1083,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Attachable"
-        ],
+        "tags": ["Attachable"],
         "parameters": [
           {
             "name": "id",
@@ -1174,9 +1148,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "parameters": [
           {
             "name": "_limit",
@@ -1362,9 +1334,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1429,9 +1399,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "parameters": []
       }
     },
@@ -1486,9 +1454,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "parameters": [
           {
             "name": "id",
@@ -1550,9 +1516,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "parameters": [
           {
             "name": "id",
@@ -1612,9 +1576,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1686,9 +1648,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Background"
-        ],
+        "tags": ["Background"],
         "parameters": [
           {
             "name": "id",
@@ -1754,9 +1714,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-detail"
-        ],
+        "tags": ["Character-detail"],
         "parameters": [
           {
             "name": "_limit",
@@ -1946,9 +1904,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-detail"
-        ],
+        "tags": ["Character-detail"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2013,9 +1969,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-detail"
-        ],
+        "tags": ["Character-detail"],
         "parameters": []
       }
     },
@@ -2070,9 +2024,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-detail"
-        ],
+        "tags": ["Character-detail"],
         "parameters": [
           {
             "name": "id",
@@ -2136,9 +2088,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-detail"
-        ],
+        "tags": ["Character-detail"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2210,9 +2160,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-detail"
-        ],
+        "tags": ["Character-detail"],
         "parameters": [
           {
             "name": "id",
@@ -2278,9 +2226,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-learnable"
-        ],
+        "tags": ["Character-learnable"],
         "parameters": [
           {
             "name": "_limit",
@@ -2470,9 +2416,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-learnable"
-        ],
+        "tags": ["Character-learnable"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2537,9 +2481,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-learnable"
-        ],
+        "tags": ["Character-learnable"],
         "parameters": []
       }
     },
@@ -2594,9 +2536,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-learnable"
-        ],
+        "tags": ["Character-learnable"],
         "parameters": [
           {
             "name": "id",
@@ -2660,9 +2600,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-learnable"
-        ],
+        "tags": ["Character-learnable"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2734,9 +2672,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-learnable"
-        ],
+        "tags": ["Character-learnable"],
         "parameters": [
           {
             "name": "id",
@@ -2802,9 +2738,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-ownable"
-        ],
+        "tags": ["Character-ownable"],
         "parameters": [
           {
             "name": "_limit",
@@ -2994,9 +2928,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-ownable"
-        ],
+        "tags": ["Character-ownable"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -3061,9 +2993,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-ownable"
-        ],
+        "tags": ["Character-ownable"],
         "parameters": []
       }
     },
@@ -3118,9 +3048,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-ownable"
-        ],
+        "tags": ["Character-ownable"],
         "parameters": [
           {
             "name": "id",
@@ -3184,9 +3112,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-ownable"
-        ],
+        "tags": ["Character-ownable"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -3258,9 +3184,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-ownable"
-        ],
+        "tags": ["Character-ownable"],
         "parameters": [
           {
             "name": "id",
@@ -3326,9 +3250,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "parameters": [
           {
             "name": "_limit",
@@ -3518,9 +3440,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -3585,9 +3505,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "parameters": []
       }
     },
@@ -3642,9 +3560,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "parameters": [
           {
             "name": "id",
@@ -3708,9 +3624,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -3782,9 +3696,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "parameters": [
           {
             "name": "id",
@@ -3850,9 +3762,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-record"
-        ],
+        "tags": ["Character-record"],
         "parameters": [
           {
             "name": "id",
@@ -3918,9 +3828,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-reward-article"
-        ],
+        "tags": ["Character-reward-article"],
         "parameters": [
           {
             "name": "_limit",
@@ -4110,9 +4018,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-reward-article"
-        ],
+        "tags": ["Character-reward-article"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4177,9 +4083,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-reward-article"
-        ],
+        "tags": ["Character-reward-article"],
         "parameters": []
       }
     },
@@ -4234,9 +4138,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-reward-article"
-        ],
+        "tags": ["Character-reward-article"],
         "parameters": [
           {
             "name": "id",
@@ -4300,9 +4202,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-reward-article"
-        ],
+        "tags": ["Character-reward-article"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4374,9 +4274,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character-reward-article"
-        ],
+        "tags": ["Character-reward-article"],
         "parameters": [
           {
             "name": "id",
@@ -4441,9 +4339,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": [
           {
             "name": "_limit",
@@ -4629,9 +4525,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4696,9 +4590,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": []
       }
     },
@@ -4753,9 +4645,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": []
       }
     },
@@ -4806,9 +4696,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": [
           {
             "name": "id",
@@ -4868,9 +4756,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4942,9 +4828,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": [
           {
             "name": "id",
@@ -5010,9 +4894,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": [
           {
             "name": "id",
@@ -5078,9 +4960,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "parameters": [
           {
             "name": "id",
@@ -5144,9 +5024,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -5213,9 +5091,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Character"
-        ],
+        "tags": ["Character"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -5295,9 +5171,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "parameters": [
           {
             "name": "_limit",
@@ -5483,9 +5357,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -5550,9 +5422,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "parameters": []
       }
     },
@@ -5607,9 +5477,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "parameters": []
       }
     },
@@ -5660,9 +5528,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "parameters": [
           {
             "name": "id",
@@ -5722,9 +5588,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -5796,9 +5660,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "City"
-        ],
+        "tags": ["City"],
         "parameters": [
           {
             "name": "id",
@@ -5868,9 +5730,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Unclassified"
-        ],
+        "tags": ["Unclassified"],
         "parameters": [
           {
             "name": "_limit",
@@ -6061,9 +5921,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Unclassified"
-        ],
+        "tags": ["Unclassified"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -6131,9 +5989,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Unclassified"
-        ],
+        "tags": ["Unclassified"],
         "parameters": []
       }
     },
@@ -6188,9 +6044,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Cls"
-        ],
+        "tags": ["Cls"],
         "parameters": [
           {
             "name": "id",
@@ -6257,9 +6111,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Unclassified"
-        ],
+        "tags": ["Unclassified"],
         "parameters": [
           {
             "name": "id",
@@ -6324,9 +6176,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Unclassified"
-        ],
+        "tags": ["Unclassified"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -6398,9 +6248,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Unclassified"
-        ],
+        "tags": ["Unclassified"],
         "parameters": [
           {
             "name": "id",
@@ -6413,6 +6261,61 @@
             }
           }
         ]
+      }
+    },
+    "/datatable/games": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": ["Datatable"],
+        "parameters": []
       }
     },
     "/deities": {
@@ -6465,9 +6368,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Deity"
-        ],
+        "tags": ["Deity"],
         "parameters": [
           {
             "name": "_limit",
@@ -6653,9 +6554,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Deity"
-        ],
+        "tags": ["Deity"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -6720,9 +6619,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Deity"
-        ],
+        "tags": ["Deity"],
         "parameters": []
       }
     },
@@ -6773,9 +6670,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Deity"
-        ],
+        "tags": ["Deity"],
         "parameters": [
           {
             "name": "id",
@@ -6835,9 +6730,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Deity"
-        ],
+        "tags": ["Deity"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -6909,9 +6802,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Deity"
-        ],
+        "tags": ["Deity"],
         "parameters": [
           {
             "name": "id",
@@ -6977,9 +6868,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-log"
-        ],
+        "tags": ["Game-log"],
         "parameters": [
           {
             "name": "_limit",
@@ -7169,9 +7058,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-log"
-        ],
+        "tags": ["Game-log"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -7236,9 +7123,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-log"
-        ],
+        "tags": ["Game-log"],
         "parameters": []
       }
     },
@@ -7293,9 +7178,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-log"
-        ],
+        "tags": ["Game-log"],
         "parameters": [
           {
             "name": "id",
@@ -7359,9 +7242,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-log"
-        ],
+        "tags": ["Game-log"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -7433,9 +7314,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-log"
-        ],
+        "tags": ["Game-log"],
         "parameters": [
           {
             "name": "id",
@@ -7501,9 +7380,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-sign-up"
-        ],
+        "tags": ["Game-sign-up"],
         "parameters": [
           {
             "name": "_limit",
@@ -7693,9 +7570,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-sign-up"
-        ],
+        "tags": ["Game-sign-up"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -7760,9 +7635,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-sign-up"
-        ],
+        "tags": ["Game-sign-up"],
         "parameters": []
       }
     },
@@ -7817,9 +7690,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-sign-up"
-        ],
+        "tags": ["Game-sign-up"],
         "parameters": [
           {
             "name": "id",
@@ -7883,9 +7754,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-sign-up"
-        ],
+        "tags": ["Game-sign-up"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -7957,9 +7826,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game-sign-up"
-        ],
+        "tags": ["Game-sign-up"],
         "parameters": [
           {
             "name": "id",
@@ -8024,9 +7891,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "_limit",
@@ -8212,9 +8077,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -8279,9 +8142,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": []
       }
     },
@@ -8332,9 +8193,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8394,9 +8253,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -8468,9 +8325,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8536,9 +8391,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8604,9 +8457,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8672,9 +8523,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8740,9 +8589,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8808,9 +8655,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8876,9 +8721,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "parameters": [
           {
             "name": "id",
@@ -8944,9 +8787,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -9015,9 +8856,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Game"
-        ],
+        "tags": ["Game"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -9086,9 +8925,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Global"
-        ],
+        "tags": ["Global"],
         "parameters": []
       }
     },
@@ -9142,9 +8979,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Item"
-        ],
+        "tags": ["Item"],
         "parameters": [
           {
             "name": "_limit",
@@ -9330,9 +9165,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Item"
-        ],
+        "tags": ["Item"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -9397,9 +9230,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Item"
-        ],
+        "tags": ["Item"],
         "parameters": []
       }
     },
@@ -9450,9 +9281,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Item"
-        ],
+        "tags": ["Item"],
         "parameters": [
           {
             "name": "id",
@@ -9512,9 +9341,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Item"
-        ],
+        "tags": ["Item"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -9586,9 +9413,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Item"
-        ],
+        "tags": ["Item"],
         "parameters": [
           {
             "name": "id",
@@ -9654,9 +9479,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location-shop"
-        ],
+        "tags": ["Location-shop"],
         "parameters": [
           {
             "name": "_limit",
@@ -9846,9 +9669,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location-shop"
-        ],
+        "tags": ["Location-shop"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -9913,9 +9734,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location-shop"
-        ],
+        "tags": ["Location-shop"],
         "parameters": []
       }
     },
@@ -9970,9 +9789,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location-shop"
-        ],
+        "tags": ["Location-shop"],
         "parameters": [
           {
             "name": "id",
@@ -10036,9 +9853,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location-shop"
-        ],
+        "tags": ["Location-shop"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -10110,9 +9925,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location-shop"
-        ],
+        "tags": ["Location-shop"],
         "parameters": [
           {
             "name": "id",
@@ -10177,9 +9990,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location"
-        ],
+        "tags": ["Location"],
         "parameters": [
           {
             "name": "_limit",
@@ -10365,9 +10176,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location"
-        ],
+        "tags": ["Location"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -10432,9 +10241,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location"
-        ],
+        "tags": ["Location"],
         "parameters": []
       }
     },
@@ -10485,9 +10292,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location"
-        ],
+        "tags": ["Location"],
         "parameters": [
           {
             "name": "id",
@@ -10547,9 +10352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location"
-        ],
+        "tags": ["Location"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -10621,9 +10424,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Location"
-        ],
+        "tags": ["Location"],
         "parameters": [
           {
             "name": "id",
@@ -10689,9 +10490,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "parameters": [
           {
             "name": "_limit",
@@ -10881,9 +10680,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -10948,9 +10745,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "parameters": []
       }
     },
@@ -11005,9 +10800,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "parameters": [
           {
             "name": "id",
@@ -11071,9 +10864,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -11145,9 +10936,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "parameters": [
           {
             "name": "id",
@@ -11213,9 +11002,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Player-verification"
-        ],
+        "tags": ["Player-verification"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -11283,9 +11070,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Promotion"
-        ],
+        "tags": ["Promotion"],
         "parameters": [
           {
             "name": "_limit",
@@ -11471,9 +11256,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Promotion"
-        ],
+        "tags": ["Promotion"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -11538,9 +11321,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Promotion"
-        ],
+        "tags": ["Promotion"],
         "parameters": []
       }
     },
@@ -11591,9 +11372,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Promotion"
-        ],
+        "tags": ["Promotion"],
         "parameters": [
           {
             "name": "id",
@@ -11653,9 +11432,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Promotion"
-        ],
+        "tags": ["Promotion"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -11727,9 +11504,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Promotion"
-        ],
+        "tags": ["Promotion"],
         "parameters": [
           {
             "name": "id",
@@ -11794,9 +11569,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "parameters": [
           {
             "name": "_limit",
@@ -11982,9 +11755,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -12049,9 +11820,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "parameters": []
       }
     },
@@ -12106,9 +11875,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "parameters": [
           {
             "name": "id",
@@ -12170,9 +11937,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "parameters": [
           {
             "name": "id",
@@ -12232,9 +11997,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -12306,9 +12069,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Race"
-        ],
+        "tags": ["Race"],
         "parameters": [
           {
             "name": "id",
@@ -12373,9 +12134,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Rulebook"
-        ],
+        "tags": ["Rulebook"],
         "parameters": [
           {
             "name": "_limit",
@@ -12561,9 +12320,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Rulebook"
-        ],
+        "tags": ["Rulebook"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -12628,9 +12385,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Rulebook"
-        ],
+        "tags": ["Rulebook"],
         "parameters": []
       }
     },
@@ -12681,9 +12436,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Rulebook"
-        ],
+        "tags": ["Rulebook"],
         "parameters": [
           {
             "name": "id",
@@ -12743,9 +12496,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Rulebook"
-        ],
+        "tags": ["Rulebook"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -12817,9 +12568,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Rulebook"
-        ],
+        "tags": ["Rulebook"],
         "parameters": [
           {
             "name": "id",
@@ -12884,9 +12633,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "parameters": [
           {
             "name": "_limit",
@@ -13072,9 +12819,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -13139,9 +12884,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "parameters": []
       }
     },
@@ -13196,9 +12939,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "parameters": [
           {
             "name": "id",
@@ -13264,9 +13005,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "parameters": []
       }
     },
@@ -13317,9 +13056,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "parameters": [
           {
             "name": "id",
@@ -13379,9 +13116,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -13453,9 +13188,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Ruleset"
-        ],
+        "tags": ["Ruleset"],
         "parameters": [
           {
             "name": "id",
@@ -13521,9 +13254,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Telegram"
-        ],
+        "tags": ["Telegram"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -13592,9 +13323,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Users-extend"
-        ],
+        "tags": ["Users-extend"],
         "parameters": [
           {
             "name": "gameId",
@@ -13660,9 +13389,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Users-extend"
-        ],
+        "tags": ["Users-extend"],
         "parameters": []
       }
     },
@@ -13717,9 +13444,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -13788,9 +13513,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -13859,9 +13582,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "parameters": []
       }
     },
@@ -13916,9 +13637,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -13987,9 +13706,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": []
       }
     },
@@ -14044,9 +13761,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": []
       }
     },
@@ -14101,9 +13816,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -14167,9 +13880,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -14235,9 +13946,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -14299,9 +14008,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "id",
@@ -14366,9 +14073,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "_limit",
@@ -14554,9 +14259,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -14617,9 +14320,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "role",
@@ -14694,9 +14395,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "role",
@@ -14761,9 +14460,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -14965,9 +14662,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": []
       }
     },
@@ -15022,9 +14717,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -15089,9 +14782,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -15156,9 +14847,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "provider",
@@ -15224,9 +14913,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -15295,9 +14982,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -15366,9 +15051,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": []
       }
     },
@@ -15423,9 +15106,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -15493,9 +15174,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "_limit",
@@ -15683,9 +15362,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": []
       }
     },
@@ -15736,9 +15413,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -15798,9 +15473,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -15875,9 +15548,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -15896,10 +15567,7 @@
   "components": {
     "schemas": {
       "Activity": {
-        "required": [
-          "id",
-          "title"
-        ],
+        "required": ["id", "title"],
         "properties": {
           "id": {
             "type": "string"
@@ -15924,21 +15592,13 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "gp",
-                "xp"
-              ],
+              "required": ["id", "gp", "xp"],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "character": {
-                  "required": [
-                    "id",
-                    "name",
-                    "code"
-                  ],
+                  "required": ["id", "name", "code"],
                   "properties": {
                     "id": {
                       "type": "string"
@@ -16036,9 +15696,7 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "required": [
-                      "id"
-                    ],
+                    "required": ["id"],
                     "properties": {
                       "id": {
                         "type": "string"
@@ -16069,11 +15727,7 @@
           "characters": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name",
-                "code"
-              ],
+              "required": ["id", "name", "code"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -16175,9 +15829,7 @@
         }
       },
       "NewActivity": {
-        "required": [
-          "title"
-        ],
+        "required": ["title"],
         "properties": {
           "title": {
             "type": "string"
@@ -16199,21 +15851,13 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "gp",
-                "xp"
-              ],
+              "required": ["id", "gp", "xp"],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "character": {
-                  "required": [
-                    "id",
-                    "name",
-                    "code"
-                  ],
+                  "required": ["id", "name", "code"],
                   "properties": {
                     "id": {
                       "type": "string"
@@ -16311,9 +15955,7 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "required": [
-                      "id"
-                    ],
+                    "required": ["id"],
                     "properties": {
                       "id": {
                         "type": "string"
@@ -16360,9 +16002,7 @@
         }
       },
       "Attachable": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -16380,11 +16020,7 @@
             "type": "object"
           },
           "race": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16422,11 +16058,7 @@
             }
           },
           "cls": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16458,10 +16090,7 @@
             }
           },
           "background": {
-            "required": [
-              "id",
-              "code"
-            ],
+            "required": ["id", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16490,9 +16119,7 @@
             }
           },
           "ruleset": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16551,10 +16178,7 @@
         }
       },
       "Background": {
-        "required": [
-          "id",
-          "code"
-        ],
+        "required": ["id", "code"],
         "properties": {
           "id": {
             "type": "string"
@@ -16569,9 +16193,7 @@
             "type": "string"
           },
           "ruleset": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16594,9 +16216,7 @@
             }
           },
           "rulebook": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16627,9 +16247,7 @@
         }
       },
       "NewBackground": {
-        "required": [
-          "code"
-        ],
+        "required": ["code"],
         "properties": {
           "name": {
             "type": "string"
@@ -16655,19 +16273,13 @@
         }
       },
       "Character-detail": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
           },
           "character": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -16765,17 +16377,13 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "origin": {
-                  "required": [
-                    "id"
-                  ],
+                  "required": ["id"],
                   "properties": {
                     "id": {
                       "type": "string"
@@ -16829,17 +16437,13 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "origin": {
-                  "required": [
-                    "id"
-                  ],
+                  "required": ["id"],
                   "properties": {
                     "id": {
                       "type": "string"
@@ -16891,11 +16495,7 @@
         }
       },
       "Character-learnable": {
-        "required": [
-          "id",
-          "name",
-          "shortDescription"
-        ],
+        "required": ["id", "name", "shortDescription"],
         "properties": {
           "id": {
             "type": "string"
@@ -17053,10 +16653,7 @@
         }
       },
       "NewCharacter-learnable": {
-        "required": [
-          "name",
-          "shortDescription"
-        ],
+        "required": ["name", "shortDescription"],
         "properties": {
           "name": {
             "type": "string"
@@ -17080,11 +16677,7 @@
         }
       },
       "Character-ownable": {
-        "required": [
-          "id",
-          "name",
-          "shortDescription"
-        ],
+        "required": ["id", "name", "shortDescription"],
         "properties": {
           "id": {
             "type": "string"
@@ -17242,10 +16835,7 @@
         }
       },
       "NewCharacter-ownable": {
-        "required": [
-          "name",
-          "shortDescription"
-        ],
+        "required": ["name", "shortDescription"],
         "properties": {
           "name": {
             "type": "string"
@@ -17269,9 +16859,7 @@
         }
       },
       "Character-record": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -17292,12 +16880,7 @@
             "type": "string"
           },
           "player": {
-            "required": [
-              "id",
-              "email",
-              "username",
-              "isPlayer"
-            ],
+            "required": ["id", "email", "username", "isPlayer"],
             "properties": {
               "id": {
                 "type": "string"
@@ -17368,11 +16951,7 @@
             }
           },
           "character": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -17579,10 +17158,7 @@
           "status": {
             "type": "string",
             "default": "pending",
-            "enum": [
-              "pending",
-              "accepted"
-            ]
+            "enum": ["pending", "accepted"]
           }
         }
       },
@@ -17618,10 +17194,7 @@
           "status": {
             "type": "string",
             "default": "pending",
-            "enum": [
-              "pending",
-              "accepted"
-            ]
+            "enum": ["pending", "accepted"]
           },
           "created_by": {
             "type": "string"
@@ -17632,9 +17205,7 @@
         }
       },
       "Character-reward-article": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -17646,12 +17217,7 @@
             "type": "string"
           },
           "player": {
-            "required": [
-              "id",
-              "email",
-              "username",
-              "isPlayer"
-            ],
+            "required": ["id", "email", "username", "isPlayer"],
             "properties": {
               "id": {
                 "type": "string"
@@ -17722,11 +17288,7 @@
             }
           },
           "character": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -17821,9 +17383,7 @@
             }
           },
           "characterRecord": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -17854,10 +17414,7 @@
               },
               "status": {
                 "type": "string",
-                "enum": [
-                  "pending",
-                  "accepted"
-                ]
+                "enum": ["pending", "accepted"]
               },
               "created_by": {
                 "type": "string"
@@ -18005,11 +17562,7 @@
         }
       },
       "Character": {
-        "required": [
-          "id",
-          "name",
-          "code"
-        ],
+        "required": ["id", "name", "code"],
         "properties": {
           "id": {
             "type": "string"
@@ -18106,12 +17659,7 @@
             "default": 0
           },
           "player": {
-            "required": [
-              "id",
-              "email",
-              "username",
-              "isPlayer"
-            ],
+            "required": ["id", "email", "username", "isPlayer"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18233,9 +17781,7 @@
             }
           },
           "ruleset": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18258,11 +17804,7 @@
             }
           },
           "race": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18302,11 +17844,7 @@
           "clses": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name",
-                "code"
-              ],
+              "required": ["id", "name", "code"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -18339,10 +17877,7 @@
             }
           },
           "background": {
-            "required": [
-              "id",
-              "code"
-            ],
+            "required": ["id", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18380,9 +17915,7 @@
             "type": "string"
           },
           "deity": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18501,10 +18034,7 @@
         }
       },
       "NewCharacter": {
-        "required": [
-          "name",
-          "code"
-        ],
+        "required": ["name", "code"],
         "properties": {
           "name": {
             "type": "string"
@@ -18769,13 +18299,7 @@
         }
       },
       "NewCity": {
-        "required": [
-          "name",
-          "code",
-          "shopName",
-          "prosperity",
-          "prosperityMax"
-        ],
+        "required": ["name", "code", "shopName", "prosperity", "prosperityMax"],
         "properties": {
           "name": {
             "type": "string"
@@ -18813,11 +18337,7 @@
         }
       },
       "Cls": {
-        "required": [
-          "id",
-          "name",
-          "code"
-        ],
+        "required": ["id", "name", "code"],
         "properties": {
           "id": {
             "type": "string"
@@ -18832,11 +18352,7 @@
             "type": "string"
           },
           "parentCls": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18877,10 +18393,7 @@
         }
       },
       "NewCls": {
-        "required": [
-          "name",
-          "code"
-        ],
+        "required": ["name", "code"],
         "properties": {
           "name": {
             "type": "string"
@@ -18910,9 +18423,7 @@
         }
       },
       "Deity": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -18927,9 +18438,7 @@
             "type": "string"
           },
           "ruleset": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -18952,9 +18461,7 @@
             }
           },
           "rulebook": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -19010,10 +18517,7 @@
         }
       },
       "Game-log": {
-        "required": [
-          "id",
-          "description"
-        ],
+        "required": ["id", "description"],
         "properties": {
           "id": {
             "type": "string"
@@ -19131,9 +18635,7 @@
         }
       },
       "NewGame-log": {
-        "required": [
-          "description"
-        ],
+        "required": ["description"],
         "properties": {
           "description": {
             "type": "string"
@@ -19150,10 +18652,7 @@
         }
       },
       "Game-sign-up": {
-        "required": [
-          "id",
-          "status"
-        ],
+        "required": ["id", "status"],
         "properties": {
           "id": {
             "type": "string"
@@ -19266,11 +18765,7 @@
             }
           },
           "character": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -19365,12 +18860,7 @@
             }
           },
           "player": {
-            "required": [
-              "id",
-              "email",
-              "username",
-              "isPlayer"
-            ],
+            "required": ["id", "email", "username", "isPlayer"],
             "properties": {
               "id": {
                 "type": "string"
@@ -19456,12 +18946,7 @@
             "type": "string"
           },
           "applier": {
-            "required": [
-              "id",
-              "email",
-              "username",
-              "isPlayer"
-            ],
+            "required": ["id", "email", "username", "isPlayer"],
             "properties": {
               "id": {
                 "type": "string"
@@ -19534,9 +19019,7 @@
         }
       },
       "NewGame-sign-up": {
-        "required": [
-          "status"
-        ],
+        "required": ["status"],
         "properties": {
           "game": {
             "type": "string"
@@ -19642,12 +19125,7 @@
             "type": "string"
           },
           "dm": {
-            "required": [
-              "id",
-              "email",
-              "username",
-              "isPlayer"
-            ],
+            "required": ["id", "email", "username", "isPlayer"],
             "properties": {
               "id": {
                 "type": "string"
@@ -19921,9 +19399,7 @@
         }
       },
       "Item": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -19965,9 +19441,7 @@
         }
       },
       "Location-shop": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -20003,9 +19477,7 @@
         }
       },
       "Location": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -20103,9 +19575,7 @@
         }
       },
       "Player-verification": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -20125,11 +19595,7 @@
           "characters": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name",
-                "code"
-              ],
+              "required": ["id", "name", "code"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -20325,9 +19791,7 @@
         }
       },
       "Promotion": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -20420,11 +19884,7 @@
         }
       },
       "Race": {
-        "required": [
-          "id",
-          "name",
-          "code"
-        ],
+        "required": ["id", "name", "code"],
         "properties": {
           "id": {
             "type": "string"
@@ -20443,11 +19903,7 @@
             "default": true
           },
           "parentRace": {
-            "required": [
-              "id",
-              "name",
-              "code"
-            ],
+            "required": ["id", "name", "code"],
             "properties": {
               "id": {
                 "type": "string"
@@ -20485,9 +19941,7 @@
             }
           },
           "ruleset": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -20510,9 +19964,7 @@
             }
           },
           "rulebook": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -20547,10 +19999,7 @@
         }
       },
       "NewRace": {
-        "required": [
-          "name",
-          "code"
-        ],
+        "required": ["name", "code"],
         "properties": {
           "name": {
             "type": "string"
@@ -20587,9 +20036,7 @@
         }
       },
       "Rulebook": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -20604,9 +20051,7 @@
             "type": "string"
           },
           "ruleset": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -20661,9 +20106,7 @@
         }
       },
       "Ruleset": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -20699,10 +20142,7 @@
         }
       },
       "UsersPermissionsRole": {
-        "required": [
-          "id",
-          "name"
-        ],
+        "required": ["id", "name"],
         "properties": {
           "id": {
             "type": "string"
@@ -20720,13 +20160,7 @@
           "permissions": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
-              ],
+              "required": ["id", "type", "controller", "action", "enabled"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -20761,12 +20195,7 @@
           "users": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "email",
-                "username",
-                "isPlayer"
-              ],
+              "required": ["id", "email", "username", "isPlayer"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -20840,9 +20269,7 @@
         }
       },
       "NewUsersPermissionsRole": {
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string",
@@ -20875,12 +20302,7 @@
         }
       },
       "UsersPermissionsUser": {
-        "required": [
-          "id",
-          "email",
-          "username",
-          "isPlayer"
-        ],
+        "required": ["id", "email", "username", "isPlayer"],
         "properties": {
           "id": {
             "type": "string"
@@ -20905,10 +20327,7 @@
             "default": false
           },
           "role": {
-            "required": [
-              "id",
-              "name"
-            ],
+            "required": ["id", "name"],
             "properties": {
               "id": {
                 "type": "string"
@@ -21088,11 +20507,7 @@
         }
       },
       "NewUsersPermissionsUser": {
-        "required": [
-          "email",
-          "username",
-          "isPlayer"
-        ],
+        "required": ["email", "username", "isPlayer"],
         "properties": {
           "email": {
             "type": "string",
@@ -21164,10 +20579,7 @@
         }
       },
       "Error": {
-        "required": [
-          "code",
-          "message"
-        ],
+        "required": ["code", "message"],
         "properties": {
           "code": {
             "type": "integer",
@@ -21208,6 +20620,9 @@
     },
     {
       "name": "Unclassified"
+    },
+    {
+      "name": "Datatable"
     },
     {
       "name": "Deity"

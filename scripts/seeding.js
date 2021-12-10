@@ -765,4 +765,17 @@ const axios = require("axios").default;
       createIfNotExist("deities", payload, { code: payload.code })
     )
   );
+
+  const [city] = Promise.all(
+    [
+      {
+        name: "黃金城",
+        code: "GD",
+        shopName: "梅莉島",
+        shopAddress: "外海",
+      },
+    ].map((payload) =>
+      createIfNotExist("cities", payload, { code: payload.code })
+    )
+  );
 })();
